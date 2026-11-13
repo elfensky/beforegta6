@@ -7,3 +7,9 @@ export const TAKEDOWN_EMAIL = 'takedown@drunik.be';
 export const ADSENSE_CLIENT = '';
 export const ADSENSE_SLOT = '';
 export const UMAMI_WEBSITE_ID = '';
+// Operator identification for a commercial Belgian site (CEL art. XII.6); Andrei approved publishing it, 2026-11-13.
+export const OPERATOR = {
+  name: 'DRUNIK BV',
+  companyNumber: '1026.002.256',
+  office: 'Chaussée de Tirlemont 513, 1370 Jodoigne, Belgium',
+};
