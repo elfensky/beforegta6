@@ -85,7 +85,7 @@ while [ "$attempt" -le "$MAX_ATTEMPTS" ]; do
   fi
 
   git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-    commit -q -am "chore(deploy): ${ENVIRONMENT} → sha-${SHA:0:12} [skip ci]"
+    commit -q -am "chore(deploy): ${ENVIRONMENT} → sha-${SHA:0:12}"
 
   if git push -q origin "$BRANCH"; then
     echo "pinned sha-${SHA:0:12} on attempt ${attempt}/${MAX_ATTEMPTS}"

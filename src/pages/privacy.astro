@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { TAKEDOWN_EMAIL } from '../data/site.js';
+---
+
+<Base
+  title="Privacy · beforegta6.wtf"
+  description="What beforegta6.wtf collects about visitors, and what it does not."
+  path="/privacy/"
+>
+  <article class="prose">
+    <h1 class="page-title">Privacy</h1>
+    <p>
+      beforegta6.wtf is run by DRUNIK BV, Belgium. Questions or requests:
+      <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
+    </p>
+    <h2>What this site collects</h2>
+    <ul>
+      <li>There are no accounts and no forms. This site sets no cookies of its own.</li>
+      <li>
+        Page views are counted with Umami, which runs on our own server. Umami uses no cookies and
+        does not store your IP address.
+      </li>
+      <li>
+        Cloudflare delivers the site. It processes your IP address to do that and to block attacks (
+        <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">
+          Cloudflare privacy policy
+        </a>
+        ).
+      </li>
+    </ul>
+    <h2>Ads</h2>
+    <p>
+      There are no ads yet. Before Google AdSense goes live, this page will say what Google collects
+      and how you can refuse it.
+    </p>
+    <h2>Links</h2>
+    <p>
+      Every card links to a post on another site, such as Reddit, X, YouTube or TikTok. Those sites
+      have their own privacy policies.
+    </p>
+    <h2>Your rights</h2>
+    <p>
+      Under the GDPR you can ask what we hold about you, and ask us to delete it. You can also
+      complain to the Belgian Data Protection Authority (
+      <a href="https://www.dataprotectionauthority.be" rel="noopener">
+        dataprotectionauthority.be
+      </a>
+      ).
+    </p>
+    <p>
+      <small>
+        Last updated: <time datetime="2026-11-13">13 November 2026</time>.
+      </small>
+    </p>
+  </article>
+</Base>

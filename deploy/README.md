@@ -35,6 +35,18 @@ line by hand. Rollback is `git revert` of the pin commit.
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
 
+## Removing or holding a card
+
+Astro ships the original of every image the cards collection imports, linked or not, and `/_astro/` files are cached
+for a year. So a card that must not be on the site leaves the collection completely:
+
+- **Takedown:** delete `src/content/cards/<id>.md` and `src/assets/cards/<id>.*` (never a `status` change), merge and
+  release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching → Purge by URL).
+- **Hold:** move both files to `research/held/`. To launch a held card, move them back and set `status: "launch"`.
+  `gta5-farewell-drive` waits there until 2026-11-18. `lesbian-niqabi-muslim` waits for Andrei, because its image shows a private couple.
+
+`src/__tests__/content.test.js` fails when a card in the collection is not launched.
+
 ## AdSense
 
 When the AdSense account has a publisher ID:
@@ -47,4 +59,6 @@ When the AdSense account has a publisher ID:
    `$request_id`. A Cloudflare HTML cache would then reuse one nonce per cache lifetime, so decide the Cache Rule
    together with this step.
 4. In AdSense, turn on the Privacy & messaging consent message for the EEA, UK and Switzerland.
-5. On staging, check the browser console for CSP violations before merging to `main`.
+5. Replace the Ads section of `src/pages/privacy.astro`: what Google collects, the consent choice, and Google's
+   partner-sites page.
+6. On staging, check the browser console for CSP violations before merging to `main`.

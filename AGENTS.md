@@ -51,7 +51,7 @@ open with Andrei.
 
 - Pure functions in `src/lib/` decide order, timeline, ad positions and the countdown. `.astro` files only render.
 - Every asset is served from the site, except the AdSense script (above) and Umami (`umami.lav.ren`, self-hosted).
-- Only cards with `status: launch` are built. An `nsfw` card never becomes a link-preview image.
+- Every card in `src/content/cards/` is live. A held card waits in `research/held/`, and a removed card is deleted with its image, because Astro ships every imported image (`deploy/README.md` § Removing or holding a card). An `nsfw` card never becomes a link-preview image.
 - The image tag in a compose file is the deploy. CI writes it, and nobody edits it by hand.
 
 ## Docs
