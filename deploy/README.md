@@ -7,7 +7,7 @@ The shape is the usual Arcane Path B (vault `knowledge/homelab/static-sites-on-t
 | `develop` | `deploy/staging/compose.yaml` | `beforegta6-staging` | Pi swarm | `staging.beforegta6.wtf` | `staging_beforegta6_cloudflared` |
 | `main` | `deploy/production/compose.yaml` | `beforegta6` | Hetzner production swarm | `beforegta6.wtf` | `beforegta6_cloudflared` |
 
-A push to either branch runs `.github/workflows/build.yml`. It builds `ghcr.io/drunikbe/beforegta6.wtf:sha-<commit>`
+A push to either branch runs `.github/workflows/build.yml`. It builds `ghcr.io/elfensky/beforegta6:sha-<commit>`
 and commits that tag into the branch's compose file. Arcane's Git Sync applies the commit. Nobody edits the `image:`
 line by hand. Rollback is `git revert` of the pin commit.
 
@@ -22,14 +22,15 @@ line by hand. Rollback is `git revert` of the pin commit.
 2. **Swarm secrets.** On each swarm's manager, pipe the token in so it never reaches a terminal:
    `op read "op://Infrastructure/cloudflared-beforegta6.wtf-staging/credential" | docker secret create staging_beforegta6_cloudflared -`
    (Pi swarm), and the same with `-production` → `beforegta6_cloudflared` (production swarm).
-3. **Git Sync.** Add two entries to `drunikbe/infra` `vars/arcane-gitops-syncs.yml`: repo `drunikbe/beforegta6.wtf`,
+3. **Git Sync.** Add two entries to `drunikbe/infra` `vars/arcane-gitops-syncs.yml`: repo `elfensky/beforegta6`,
    one on `develop` with `deploy/staging/compose.yaml` on the Pi environment, and one on `main` with
-   `deploy/production/compose.yaml` on production01's environment. Both get `redeployAfterSync: true`. The GHCR package
-   is private, so Arcane's ghcr credential must be able to read `drunikbe` packages.
+   `deploy/production/compose.yaml` on production01's environment. Both get `redeployAfterSync: true`. The repo is
+   public, so its GHCR package is public too and Arcane needs no registry credential for it.
 4. **Cloudflare zone `beforegta6.wtf`.**
    - A Redirect Rule: `https://www.*` → `https://${1}`, 301, keep the query string. Keep a proxied `www` record.
    - A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at Cloudflare.
-5. **Monitoring.** Add an Umami website and an Uptime Kuma monitor for `https://beforegta6.wtf/`. Put the Umami
+5. **Mail.** Create the address `takedown@lav.ren` (footer, privacy page, security.txt).
+6. **Monitoring.** Add an Umami website and an Uptime Kuma monitor for `https://beforegta6.wtf/`. Put the Umami
    website ID in `src/data/site.js` (`UMAMI_WEBSITE_ID`).
 
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block

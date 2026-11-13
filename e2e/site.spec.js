@@ -76,11 +76,16 @@ test('an AdSense unit spans its ad card', async ({ page }) => {
   expect(width[0]).toBeGreaterThan(width[1] / 2);
 });
 
-test('the footer names the operator and links the privacy page', async ({ page }) => {
+test('the footer names the operator, the contact and the privacy page', async ({ page }) => {
   await page.goto('/');
   const footer = page.locator('footer');
-  await expect(footer).toContainText('DRUNIK BV');
-  await expect(footer).toContainText('1026.002.256');
-  await expect(footer).toContainText('Chaussée de Tirlemont 513, 1370 Jodoigne');
+  await expect(footer).toContainText('A hobby site by Andrei Lavrenov');
+  await expect(footer.getByRole('link', { name: 'takedown@lav.ren' })).toHaveAttribute(
+    'href',
+    'mailto:takedown@lav.ren',
+  );
+  // A personal site since 2026-11-13: no company details, no home address.
+  await expect(footer).not.toContainText('DRUNIK');
+  await expect(footer).not.toContainText('Tirlemont');
   await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy/');
 });
