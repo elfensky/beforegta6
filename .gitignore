@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # superpowers plan workspaces
 .superpowers/
+
+# playwright output
+playwright-report/
+test-results/
