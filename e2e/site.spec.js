@@ -6,7 +6,7 @@ const launched = readdirSync('src/content/cards').filter((f) =>
   /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
 ).length;
 
-for (const route of ['/', '/timeline/', '/flying-cars/', '/does-not-exist/']) {
+for (const route of ['/', '/timeline/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     await page.goto(route);
     const { violations } = await new AxeBuilder({ page }).analyze();
@@ -54,4 +54,29 @@ test.describe('without JavaScript', () => {
     await expect(page.locator('.grid article')).toHaveCount(launched);
     await expect(page.getByText('GTA 6: 19 November 2026')).toBeVisible();
   });
+});
+
+// AdSense sizes a responsive unit from its own width; a zero-width <ins> never fills.
+test('an AdSense unit spans its ad card', async ({ page }) => {
+  await page.goto('/');
+  const width = await page.evaluate(() => {
+    const card = /** @type {HTMLElement} */ (
+      [...document.querySelectorAll('.ad-card')].find(
+        (el) => /** @type {HTMLElement} */ (el).offsetParent,
+      )
+    );
+    const ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    card.prepend(ins);
+    return [ins.offsetWidth, card.clientWidth];
+  });
+  expect(width[0]).toBeGreaterThan(width[1] / 2);
+});
+
+test('the footer names the operator and links the privacy page', async ({ page }) => {
+  await page.goto('/');
+  const footer = page.locator('footer');
+  await expect(footer).toContainText('DRUNIK BV');
+  await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy/');
 });

@@ -348,7 +348,7 @@ The cards tests build their entries with a local `card(data)` helper.
   4. Add Umami and Uptime Kuma entries.
 - [ ] **Step 4: Check staging.** Run the post-deploy block of website-standard § 0 against `https://staging.beforegta6.wtf`. Andrei reviews the cards on staging and sets `status` to `drop` on any card he strikes.
 - [ ] **Step 5: Ship production.** Open a PR from `develop` to `main` and merge it. Check the pin commit on `main`. Run § 0 against `https://beforegta6.wtf`.
-- [ ] **Step 6: Change `gta5-farewell-drive` from `hold` to `launch`** after 2026-11-18, by a PR through the same path.
+- [ ] **Step 6: Move `gta5-farewell-drive` back from `research/held/` and set `status: "launch"`** after 2026-11-18, by a PR through the same path (`deploy/README.md` § Removing or holding a card).
 - [ ] **Step 7: Turn on AdSense once Andrei has the publisher ID:**
   - Set `ADSENSE_CLIENT` and `ADSENSE_SLOT`.
   - Add `public/ads.txt` with `google.com, pub-<id>, DIRECT, f08c47fec0942fa0`.

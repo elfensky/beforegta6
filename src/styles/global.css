@@ -381,3 +381,16 @@ main,
     position: relative;
   }
 }
+/* AdSense sizes a responsive unit from its own width; the grid centring above would shrink an empty <ins> to 0. */
+.ad-card .adsbygoogle {
+  width: 100%;
+}
+
+.prose {
+  max-width: 65ch;
+  margin-bottom: 3rem;
+}
+.prose h2 {
+  font-size: var(--step-1);
+  margin: 1.5rem 0 0.5rem;
+}

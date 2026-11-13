@@ -5,7 +5,9 @@ name: Build
 # swarm), develop -> deploy/staging/compose.yaml (Pi swarm). Arcane Git-Syncs each compose and redeploys on that
 # commit, so the image tag in git IS the deploy, and rollback is `git revert` of the pin commit. Copied from miklav.com.
 #
-# The pin commit cannot loop: pushes made with GITHUB_TOKEN never trigger workflows, and it carries [skip ci].
+# The pin commit cannot loop: pushes made with GITHUB_TOKEN never trigger workflows, and both compose files are in
+# paths-ignore. It must NOT carry [skip ci]: a release merge brings it to the tip of main, and the push to main would
+# then build nothing (src/__tests__/deploy.test.js).
 
 on:
   push:
