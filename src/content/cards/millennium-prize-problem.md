@@ -4,7 +4,7 @@ blurb: "OpenAI said on 8 September 2026 that its AI agents found a proof for the
 kind: "real-event"
 date: "2026-09-08"
 source: {"url":"https://www.reddit.com/r/physicsmemes/comments/1way84i/","platform":"reddit","engagement":"2,259 upvotes"}
-imageAlt: "We got a Millennium Prize Problem solved before GTA 6"
+imageAlt: "Red smoke curls into a vortex behind a plane's wingtip in a NASA wake study"
 nsfw: false
 status: "launch"
 eventDate: "2026-09-08"

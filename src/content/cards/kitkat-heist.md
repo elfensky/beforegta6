@@ -4,7 +4,7 @@ blurb: "Thieves stole a truck with about 12 tonnes of KitKat bars on its way fro
 kind: "real-event"
 date: "2026-03-26"
 source: {"url":"https://www.reddit.com/r/GTA6/comments/1scjqg8/","platform":"reddit","engagement":"4,061 upvotes"}
-imageAlt: "We got a KitKat heist before GTA 6"
+imageAlt: "Three big Kit Kat bars, one of them white chocolate"
 nsfw: false
 status: "launch"
 eventDate: "2026-03-26"

@@ -4,7 +4,7 @@ blurb: "Rockstar re-released GTA III, Vice City and San Andreas as 'The Definiti
 kind: "real-event"
 date: "2021-11-11"
 source: {"url":"https://en.wikipedia.org/wiki/Grand_Theft_Auto:_The_Trilogy_%E2%80%93_The_Definitive_Edition","platform":"other"}
-imageAlt: "We got the GTA Trilogy remastered before GTA 6"
+imageAlt: "A close-up of a longhorn beetle on moss"
 nsfw: false
 status: "launch"
 eventDate: "2021-11-11"
