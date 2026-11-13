@@ -9,7 +9,7 @@
 The site is about the meme "We got ___ before GTA 6": a curated wall of cards plus a timeline. Each card has an image of the thing, the
 meme line, one line of fact and a link to the original post. The site must be live before GTA 6 launches, to catch
 launch-week traffic. The launch date is 2026-11-19, set by Rockstar in November 2025. Nobody has confirmed since then that the date still holds.
-Google AdSense pays for the site. The income goes to DRUNIK BV.
+Google AdSense runs on Andrei's personal account. It is a hobby site made for the meme, and little or no income is expected (Andrei, 2026-11-13).
 
 ## Success
 
@@ -103,7 +103,7 @@ rule, and AdSense is a US service, against the EU-first preference. Andrei asked
 **Deployment.** The usual Arcane Path B shape (vault `knowledge/homelab/static-sites-on-the-pi-swarm.md`), copied from
 the miklav.com Astro repo:
 - Build: `astro build` runs on the CI runner. The output goes into `nginx:1.30-alpine`, built for amd64 and arm64.
-- Image: `ghcr.io/drunikbe/beforegta6.wtf:sha-<commit>`.
+- Image: `ghcr.io/elfensky/beforegta6:sha-<commit>`.
 - Staging: `staging.beforegta6.wtf` on the Pi swarm. The stack is `beforegta6-staging`, from `deploy/staging/compose.yaml`, and it deploys from `develop`.
 - Production: `beforegta6.wtf` on the Hetzner production swarm. The stack is `beforegta6`, from `deploy/production/compose.yaml`, and it deploys from `main`. Placement: `role == apps`, spread over the nodes.
 - Each stack: `web` ×2 and `cloudflared` ×2, with its own tunnel. The secrets are `staging_beforegta6_cloudflared` and `beforegta6_cloudflared`.
@@ -111,9 +111,9 @@ the miklav.com Astro repo:
 - Cloudflare: a Redirect Rule sends `www` to the bare domain, and a Cache Rule caches the HTML at the edge for traffic spikes.
 - Monitoring: Umami and Uptime Kuma.
 
-**Repo.** `drunikbe/beforegta6.wtf`: private, owned by DRUNIK because the site is commercial. Default branch `develop`, with rulesets.
+**Repo.** `elfensky/beforegta6`: public, personal (Andrei, 2026-11-13; it replaces the first private repo `drunikbe/beforegta6.wtf`). Default branch `develop`, with rulesets.
 
-**Takedown contact.** The footer shows `takedown@drunik.be`.
+**Operator and contact.** The footer reads "A hobby site by Andrei Lavrenov, Belgium" with `takedown@lav.ren`. No address (Andrei, 2026-11-13).
 
 ## Left to the builder
 
@@ -122,8 +122,8 @@ on desktop, one column on mobile is the starting proposal).
 
 ## Andrei's tasks
 
-- Create `takedown@drunik.be`.
-- Open an AdSense business account with payee DRUNIK BV, and apply once the site is live. Put the publisher ID in `ads.txt`.
+- Create `takedown@lav.ren`.
+- Apply with his personal AdSense account once the site is live. Put the publisher ID in `ads.txt`.
 - Create the staging and production tunnels and store their tokens in 1Password. Then create the swarm secrets and merge the `drunikbe/infra` entries.
 - Add the Cloudflare Redirect Rule and Cache Rule.
 

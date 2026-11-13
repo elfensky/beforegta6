@@ -1,9 +1,9 @@
 # AGENTS.md — beforegta6.wtf
 
-A DRUNIK meme site, "We got ___ before GTA 6": a wall of cards and a timeline. Andrei works on it. It deploys to the Pi swarm (staging) and the Hetzner swarm (production).
+A personal meme site, "We got ___ before GTA 6": a wall of cards and a timeline. Andrei works on it. It deploys to the Pi swarm (staging) and the Hetzner swarm (production).
 
 Shared standards: the developer handbook, `~/vault/knowledge/developer/developer.md` (layout 1.0.0).
-This file holds only what is true of this repo. A Drúnik project: commits as `andrei@lav.ren`, `gh` user `elfensky`
+This file holds only what is true of this repo. A personal project (Andrei, 2026-11-13: made for the meme, ads on his personal AdSense account): commits as `andrei@lav.ren`, `gh` user `elfensky`
 (identity per project: `~/vault/meta/registry.md`).
 
 ## Stack
@@ -68,7 +68,7 @@ commit da7170f on `feat/launch` carries it in its body).
 
 ## Life cockpit
 
-Tracked in the life-cockpit vault under `#drunik` (tracker: `drunikbe/beforegta6.wtf`). The cockpit is the
+Tracked in the life-cockpit vault under `#personal` (tracker: `elfensky/beforegta6`). The cockpit is the
 control plane (what to work on). This repo is where the work happens. Report progress by
 opening and closing issues and PRs as usual. The cockpit pulls from the tracker on its next
 `/sync`. There is nothing to update in the vault. Do not mirror cockpit state (milestones, due dates) here.
