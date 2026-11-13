@@ -100,13 +100,14 @@ A milestones file holds the fixed timeline anchors. Check each date at build tim
 **Documented exceptions** (recorded in `AGENTS.md`): the AdSense script loads from Google's servers, against the no-CDN
 rule, and AdSense is a US service, against the EU-first preference. Andrei asked for AdSense explicitly.
 
-**Deployment.** The usual Arcane Path B shape (vault `knowledge/homelab/static-sites-on-the-pi-swarm.md`):
-- Build: `astro build` runs on the build platform. The output goes into `nginx:1-alpine`.
+**Deployment.** The usual Arcane Path B shape (vault `knowledge/homelab/static-sites-on-the-pi-swarm.md`), copied from
+the miklav.com Astro repo:
+- Build: `astro build` runs on the CI runner. The output goes into `nginx:1.30-alpine`, built for amd64 and arm64.
 - Image: `ghcr.io/drunikbe/beforegta6.wtf:sha-<commit>`.
-- Staging: `staging.beforegta6.wtf` on the Pi swarm, from `deploy/swarm/compose.yaml`.
-- Production: `beforegta6.wtf` on the Hetzner production swarm, from `deploy/production/compose.yaml`. Placement: `role == apps`, spread over the nodes.
-- Each stack: `web` ×2 and `cloudflared` ×2. Each stack has its own tunnel and the secret `beforegta6_cloudflared`.
-- CI pins both compose files on branch `deploy`. Arcane Git Sync runs with `redeployAfterSync: true`, from entries in `drunikbe/infra`.
+- Staging: `staging.beforegta6.wtf` on the Pi swarm. The stack is `beforegta6-staging`, from `deploy/staging/compose.yaml`, and it deploys from `develop`.
+- Production: `beforegta6.wtf` on the Hetzner production swarm. The stack is `beforegta6`, from `deploy/production/compose.yaml`, and it deploys from `main`. Placement: `role == apps`, spread over the nodes.
+- Each stack: `web` ×2 and `cloudflared` ×2, with its own tunnel. The secrets are `staging_beforegta6_cloudflared` and `beforegta6_cloudflared`.
+- CI pins the built image into the branch's compose file and commits it. Arcane Git Sync runs with `redeployAfterSync: true`, from entries in `drunikbe/infra`.
 - Cloudflare: a Redirect Rule sends `www` to the bare domain, and a Cache Rule caches the HTML at the edge for traffic spikes.
 - Monitoring: Umami and Uptime Kuma.
 
