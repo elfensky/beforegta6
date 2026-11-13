@@ -27,8 +27,10 @@ This file holds only what is true of this repo. A Drúnik project: commits as `a
 ## Branches
 
 `develop` integrates and deploys staging, and `main` releases to production. A push to either branch triggers a deploy. Every change goes in by PR, with the
-`check` job green. Merge with `gh pr merge --rebase`. Rulesets on both branches require a PR and the `check` job. The
-GitHub Actions app bypasses them, so the CI pin commit can land.
+`check` job green. Merge with `gh pr merge --rebase`. Rulesets on both branches block force-pushes and deletion only. A
+rule that requires a PR or the `check` job would also block the CI pin commit: GitHub refuses the GitHub Actions app as a
+bypass actor (HTTP 422, 2026-11-13). Enforcing PRs needs a deploy key with bypass for the pin job, and that is still
+open with Andrei.
 
 ## This repo's own rules
 
