@@ -1,0 +1,38 @@
+{
+  "name": "beforegta6.wtf",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "dev:up": "astro dev --background",
+    "dev:down": "astro dev stop"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.5",
+    "astro": "^7.4.12"
+  },
+  "private": "true",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.14.0",
+    "html-validate": "^11.21.1",
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2",
+    "vitest": "^5.1.0",
+    "yaml": "^2.9.1"
+  }
+}
