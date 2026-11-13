@@ -8,6 +8,6 @@ imageAlt: "We got Ado's face before GTA 6"
 nsfw: false
 status: "launch"
 eventDate: "2026-02-28"
-factUrl: "https://animecorner.me/ados-new-song-vivarium-and-what-it-stands-for/"
+factUrl: "https://en.wikipedia.org/wiki/Vivarium_(song)"
 image: "../../assets/cards/ado-face.webp"
 ---

@@ -4,10 +4,10 @@ blurb: "The 'Expanded & Enhanced' GTA V came out for PS5 and Xbox Series X/S on 
 kind: "real-event"
 date: "2022-03-15"
 source: {"url":"https://en.wikipedia.org/wiki/Grand_Theft_Auto_V","platform":"other"}
-imageAlt: "We got GTA 5 on PS5 before GTA 6"
+imageAlt: "A white PlayStation 5 standing upright with its DualSense controller"
 nsfw: false
 status: "launch"
 eventDate: "2022-03-15"
 factUrl: "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"
-image: "../../assets/cards/gta5-ps5-xbox-series.png"
+image: "../../assets/cards/gta5-ps5-xbox-series.jpg"
 ---
