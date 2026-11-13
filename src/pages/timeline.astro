@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import AdCard from '../components/AdCard.astro';
+import { milestones } from '../data/milestones.js';
+import Base from '../layouts/Base.astro';
+import { withAdSlots } from '../lib/ads.js';
+import { byYear, timelineEntries } from '../lib/cards.js';
+
+const entries = timelineEntries(await getCollection('cards'), milestones);
+const years = byYear(withAdSlots(entries));
+/** @param {Date} d */
+const iso = (d) => d.toISOString().slice(0, 10);
+/** @param {Date} d */
+const shown = (d) =>
+  d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+---
+
+<Base
+  title="The timeline of the wait · beforegta6.wtf"
+  description="From GTA V to GTA 6: everything that happened in between, in order."
+  path="/timeline/"
+>
+  <h1 class="page-title">The timeline of the wait</h1>
+  {years.map((group) => (
+    <section class="year" aria-labelledby={`y${group.year}`}>
+      <h2 id={`y${group.year}`}>{group.year}</h2>
+      <ol class="timeline">
+        {group.slots.map((s) =>
+          s.kind === 'ad' ? (
+            <li class="ad-slot" data-desktop={String(s.desktop)}>
+              <AdCard desktop={s.desktop} />
+            </li>
+          ) : s.item.kind === 'milestone' ? (
+            <li class="milestone">
+              <time datetime={iso(s.item.date)}>{shown(s.item.date)}</time>
+              <p class="t-title">{s.item.milestone.title}</p>
+              <p>
+                {s.item.milestone.blurb}{' '}
+                <a href={s.item.milestone.factUrl} rel="noopener">
+                  source<span class="sr-only"> of “{s.item.milestone.title}”</span>{' '}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </p>
+            </li>
+          ) : (
+            <li class="entry">
+              {s.item.card.data.nsfw ? (
+                <span class="thumb nsfw-thumb" aria-hidden="true">
+                  NSFW
+                </span>
+              ) : (
+                <Image
+                  class="thumb"
+                  src={s.item.card.data.image}
+                  alt=""
+                  width={160}
+                  widths={[160, 320]}
+                  sizes="160px"
+                />
+              )}
+              <div>
+                <time datetime={iso(s.item.date)}>{shown(s.item.date)}</time>
+                <p class="t-title">
+                  <a href={`/${s.item.card.id}/`}>{s.item.card.data.title}</a>
+                </p>
+              </div>
+            </li>
+          ),
+        )}
+      </ol>
+    </section>
+  ))}
+</Base>

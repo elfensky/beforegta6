@@ -54,3 +54,21 @@ export function timelineEntries(cards, milestones) {
 export function ogImageOf(card) {
   return card.data.nsfw ? null : card.data.image;
 }
+
+/**
+ * Split the timeline's slots into year sections. An ad slot belongs to the year of the entry before it.
+ * @template {{ year: number }} T
+ * @param {import('./ads.js').Slot<T>[]} slots
+ * @returns {{ year: number, slots: import('./ads.js').Slot<T>[] }[]}
+ */
+export function byYear(slots) {
+  /** @type {{ year: number, slots: import('./ads.js').Slot<T>[] }[]} */
+  const groups = [];
+  for (const slot of slots) {
+    const last = groups.at(-1);
+    if (slot.kind === 'item' && slot.item.year !== last?.year)
+      groups.push({ year: slot.item.year, slots: [slot] });
+    else last?.slots.push(slot);
+  }
+  return groups;
+}

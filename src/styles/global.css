@@ -296,3 +296,88 @@ main,
   font-size: var(--step--1);
   color: var(--muted);
 }
+
+/* Timeline: one column, then a centre line and two entries per row from 960 px. */
+.year h2 {
+  font-size: var(--step-2);
+  margin: 2rem 0 1rem;
+  color: var(--orange);
+}
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.timeline > li {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+}
+.timeline .entry {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+.thumb {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  background: #000;
+}
+.nsfw-thumb {
+  display: grid;
+  place-items: center;
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--orange);
+}
+.timeline time {
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.t-title {
+  margin: 0.15rem 0 0;
+  font-weight: 700;
+}
+.t-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+.t-title a:hover {
+  color: var(--pink);
+}
+.timeline .milestone {
+  border-color: var(--pink);
+  background: linear-gradient(90deg, #3a1046, var(--bg-card));
+}
+.timeline .milestone p {
+  margin: 0.15rem 0 0;
+}
+.timeline .ad-slot {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+@media (min-width: 960px) {
+  .timeline {
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    column-gap: 3rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 50%;
+    border-left: 2px solid var(--line);
+  }
+  .timeline .milestone,
+  .timeline .ad-slot {
+    grid-column: 1 / -1;
+    position: relative;
+  }
+}
