@@ -1,0 +1,75 @@
+# Docker Swarm stack "beforegta6" — beforegta6.wtf on the Hetzner production swarm (tasks on the apps nodes).
+#
+# Deployed by Arcane's Git Sync (swarm mode), pointed at this file on main.
+# Arcane v2.10.0+ forwards its stored GHCR credential on the Git Sync swarm
+# path (getarcaneapp/arcane#3787), so there is no direct-deploy script here —
+# Git Sync is the only writer to this stack. Deploy only what `main` says:
+# rollback is `git revert` of the pin commit, then Arcane's next sync.
+#
+# Prereq — one external Swarm secret, created once on a manager (deploy/README.md):
+#   beforegta6_cloudflared   Cloudflare Tunnel token (remotely-managed)
+#
+# Ingress is the stack's OWN Cloudflare Tunnel: cloudflared dials out to the
+# edge, so nothing publishes a port. It reaches nginx at http://web:80 over the
+# `internal` overlay — the service VIP follows rescheduling, so cloudflared
+# never learns a node IP. The tunnel is remotely managed: the token identifies
+# it and the public hostname (beforegta6.wtf -> http://web:80) live in the
+# Zero Trust dashboard, not here.
+#
+# The `image:` line is written by CI (.github/workflows/build.yml): every green
+# build of main pins `:sha-<commit>` here and commits. The tag in git is the
+# deploy.
+
+networks:
+  internal:
+    driver: overlay
+
+secrets:
+  beforegta6_cloudflared:
+    external: true
+
+services:
+  web:
+    # Rewritten by CI to :sha-<commit> — see the header. `sha-unpinned`
+    # does not exist on purpose: nothing deploys until the first CI bump.
+    image: ghcr.io/drunikbe/beforegta6.wtf:sha-unpinned
+    networks: [internal]
+    # Stateless nginx serving baked-in files: scale freely. Healthcheck is
+    # in the image, so start-first gates the rollout on real health.
+    deploy:
+      replicas: 2
+      placement:
+        # The apps nodes only: production01 (role=db) is kept for Postgres and
+        # the swarm manager.
+        constraints: ['node.labels.role == apps']
+        preferences:
+          - spread: node.id
+      update_config:
+        order: start-first
+        failure_action: rollback
+        monitor: 30s
+      rollback_config:
+        order: start-first
+      restart_policy:
+        condition: any
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    # ENTRYPOINT is already `cloudflared --no-autoupdate`.
+    command: tunnel run
+    networks: [internal]
+    environment:
+      # `tunnel run` honours $TUNNEL_TOKEN_FILE, so the token stays a
+      # Swarm secret and never lands in the service spec. (The image is
+      # distroless — no shell for an entrypoint shim anyway.)
+      TUNNEL_TOKEN_FILE: /run/secrets/beforegta6_cloudflared
+    secrets:
+      - beforegta6_cloudflared
+    # Every replica registers as a connector on the same tunnel and
+    # Cloudflare load-balances across them, so one node dying keeps ingress.
+    deploy:
+      replicas: 2
+      placement:
+        constraints: ['node.labels.role == apps']
+      restart_policy:
+        condition: any

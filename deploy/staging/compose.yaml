@@ -1,0 +1,60 @@
+# Docker Swarm stack "beforegta6-staging" — staging.beforegta6.wtf on the Pi swarm.
+#
+# deploy/production/compose.yaml with three differences: the tunnel secret, the
+# branch that pins the image, and no node-role placement constraint. Deployed by Arcane's Git Sync `beforegta6-staging`
+# (swarm mode, environment swarm01), pointed at this file on `develop`. Git Sync
+# is the only writer to this stack; rollback is `git revert` of the pin commit
+# on `develop`, then Arcane's next sync.
+#
+# Prereq — one external Swarm secret, created once on a manager (deploy/README.md):
+#   staging_beforegta6_cloudflared   Cloudflare Tunnel `beforegta6-staging` token
+#
+# Ingress is the stack's OWN Cloudflare Tunnel, as in production: cloudflared
+# dials out, nothing publishes a port, and the public hostname
+# (staging.beforegta6.wtf -> http://web:80) lives in the Zero Trust dashboard.
+#
+# The `image:` line is written by CI (.github/workflows/build.yml): every green
+# build of `develop` pins `:sha-<commit>` here and commits it to `develop`.
+# Never edit the image line by hand.
+
+networks:
+  internal:
+    driver: overlay
+
+secrets:
+  staging_beforegta6_cloudflared:
+    external: true
+
+services:
+  web:
+    # Rewritten by CI to :sha-<commit> — see the header. `sha-unpinned`
+    # does not exist on purpose: nothing deploys until the first CI bump.
+    image: ghcr.io/drunikbe/beforegta6.wtf:sha-unpinned
+    networks: [internal]
+    deploy:
+      replicas: 2
+      placement:
+        preferences:
+          - spread: node.id
+      update_config:
+        order: start-first
+        failure_action: rollback
+        monitor: 30s
+      rollback_config:
+        order: start-first
+      restart_policy:
+        condition: any
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    # ENTRYPOINT is already `cloudflared --no-autoupdate`.
+    command: tunnel run
+    networks: [internal]
+    environment:
+      TUNNEL_TOKEN_FILE: /run/secrets/staging_beforegta6_cloudflared
+    secrets:
+      - staging_beforegta6_cloudflared
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: any
