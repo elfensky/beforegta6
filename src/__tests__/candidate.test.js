@@ -38,7 +38,13 @@ test('maps a real event', () => {
 
 test('a joke takes the post date', () => {
   const { frontmatter } = toCard(
-    fixture({ kind: 'joke', event_date: null, timeline_date: null, post_date: '2023-11-21', fact_url: null }),
+    fixture({
+      kind: 'joke',
+      event_date: null,
+      timeline_date: null,
+      post_date: '2023-11-21',
+      fact_url: null,
+    }),
   );
   expect(frontmatter.date).toBe('2023-11-21');
   expect(frontmatter.eventDate).toBeUndefined();
