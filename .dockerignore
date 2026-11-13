@@ -1,0 +1,10 @@
+.git/
+node_modules/
+.astro/
+.superpowers/
+research/
+src/
+e2e/
+docs/
+test-results/
+playwright-report/

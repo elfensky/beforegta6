@@ -1,0 +1,79 @@
+name: Build
+
+# Every push to main or develop: build the multi-arch site image, push it to GHCR as :sha-<commit>, then pin that tag
+# into the branch's compose file and commit it to the same branch: main -> deploy/production/compose.yaml (Hetzner
+# swarm), develop -> deploy/staging/compose.yaml (Pi swarm). Arcane Git-Syncs each compose and redeploys on that
+# commit, so the image tag in git IS the deploy, and rollback is `git revert` of the pin commit. Copied from miklav.com.
+#
+# The pin commit cannot loop: pushes made with GITHUB_TOKEN never trigger workflows, and it carries [skip ci].
+
+on:
+  push:
+    branches: [main, develop]
+    # Root-level docs (a single `*` does not cross a `/`), docs/, research/ and the pin commits do not change the
+    # image. Card Markdown under src/content/ is deliberately NOT ignored: it is the site's content.
+    paths-ignore:
+      - '*.md'
+      - 'docs/**'
+      - 'research/**'
+      - 'deploy/production/compose.yaml'
+      - 'deploy/staging/compose.yaml'
+  workflow_dispatch:
+
+# Never cancel: two pin commits racing on one branch is a failed push for nothing. One group per branch.
+concurrency:
+  group: build-${{ github.ref_name }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build & push image
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version-file: '.node-version'
+          cache: npm
+      - run: npm ci
+      # dist/ must exist before the docker build reads it from the context.
+      - run: npm run build
+      # The Pis are arm64, the runner amd64. dist/ is the same on both, so only the nginx stage is multi-arch.
+      - uses: docker/setup-qemu-action@v4.3.0
+      - uses: docker/setup-buildx-action@v4.3.0
+      - uses: docker/login-action@v4.6.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v7.3.0
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
+
+  pin:
+    name: Pin image in compose
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Pin the built image and commit
+        env:
+          SHA: ${{ github.sha }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+        run: bash scripts/pin-image.sh
