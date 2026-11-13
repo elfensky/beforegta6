@@ -11,7 +11,7 @@ jobs:
   check:
     name: check
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v7.0.0
@@ -23,3 +23,5 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npx html-validate "dist/**/*.html"
+      - run: npx playwright install --with-deps chromium webkit firefox
+      - run: npm run test:e2e
