@@ -1,0 +1,29 @@
+---
+import { ADSENSE_CLIENT, ADSENSE_SLOT, SITE_URL } from '../data/site.js';
+
+/** @type {{ desktop: boolean }} */
+const { desktop } = Astro.props;
+---
+
+<!-- A plain block, not an <aside>: dozens of same-named landmarks would swamp the landmark list. -->
+<div class="ad-card" data-desktop={String(desktop)}>
+  {ADSENSE_CLIENT && (
+    <>
+      <p class="ad-label">Advertisement</p>
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client={ADSENSE_CLIENT}
+        data-ad-slot={ADSENSE_SLOT}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </>
+  )}
+  <div class="house">
+    <p class="house-big">Still waiting?</p>
+    <p>
+      Send the wall to someone who is waiting too: <a href={SITE_URL}>beforegta6.wtf</a>
+    </p>
+  </div>
+</div>

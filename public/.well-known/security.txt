@@ -1,0 +1,4 @@
+Contact: mailto:security@drunik.be
+Expires: 2027-02-01T00:00:00.000Z
+Preferred-Languages: en, nl, fr
+Canonical: https://beforegta6.wtf/.well-known/security.txt

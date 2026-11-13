@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Card from '../components/Card.astro';
+import Base from '../layouts/Base.astro';
+import { ogImageOf, visibleCards } from '../lib/cards.js';
+import { pageTitle } from '../lib/meta.js';
+
+export async function getStaticPaths() {
+  const cards = visibleCards(await getCollection('cards'));
+  return cards.map((card, i) => ({
+    params: { id: card.id },
+    props: { card, newer: cards[i - 1] ?? null, older: cards[i + 1] ?? null },
+  }));
+}
+
+/** @typedef {import('../lib/cards.js').Card} CardEntry */
+/** @type {{ card: CardEntry, newer: CardEntry | null, older: CardEntry | null }} */
+const { card, newer, older } = Astro.props;
+---
+
+<Base
+  title={pageTitle(card.data.title)}
+  description={card.data.blurb}
+  path={`/${card.id}/`}
+  ogImage={ogImageOf(card)}
+>
+  <Card card={card} headingLevel={1} eager large />
+  <nav class="pager" aria-label="More cards">
+    {newer && <a href={`/${newer.id}/`}>← {newer.data.title}</a>}
+    <a href="/">All cards</a>
+    {older && <a href={`/${older.id}/`}>{older.data.title} →</a>}
+  </nav>
+</Base>

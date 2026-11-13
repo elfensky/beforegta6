@@ -1,0 +1,66 @@
+---
+import { getImage } from 'astro:assets';
+import ogDefault from '../assets/og-default.png';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { ADSENSE_CLIENT, SITE_NAME, UMAMI_WEBSITE_ID } from '../data/site.js';
+import '../styles/global.css';
+
+/**
+ * @type {{ title: string, description: string, path: string, ogImage?: import('astro').ImageMetadata | null }}
+ */
+const { title, description, path, ogImage = null } = Astro.props;
+const site = /** @type {URL} */ (Astro.site);
+const og = await getImage({ src: ogImage ?? ogDefault, width: 1200, format: 'jpg' });
+const canonical = new URL(path, site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#140a1f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(og.src, site).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {UMAMI_WEBSITE_ID && (
+      <script
+        is:inline
+        defer
+        src="https://umami.lav.ren/script.js"
+        data-website-id={UMAMI_WEBSITE_ID}
+      />
+    )}
+    {ADSENSE_CLIENT && (
+      <script
+        is:inline
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+        crossorigin="anonymous"
+      />
+    )}
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <Header path={path} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../scripts/ads.js';
+    </script>
+  </body>
+</html>
