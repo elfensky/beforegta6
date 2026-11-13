@@ -4,7 +4,7 @@ blurb: "Rockstar announced Red Dead Redemption for iOS and Android via Netflix G
 kind: "real-event"
 date: "2025-12-02"
 source: {"url":"https://www.reddit.com/r/GTA/comments/1ow8aq9/","platform":"reddit","engagement":"1,801 upvotes"}
-imageAlt: "We got Red Dead Redemption on phones before GTA 6"
+imageAlt: "A cowboy riding a horse through a dry grass field"
 nsfw: false
 status: "launch"
 eventDate: "2025-12-02"

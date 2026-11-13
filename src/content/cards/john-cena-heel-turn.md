@@ -4,7 +4,7 @@ blurb: "John Cena turned villain at WWE Elimination Chamber on 1 March 2025, the
 kind: "real-event"
 date: "2025-03-01"
 source: {"url":"https://www.reddit.com/r/SquaredCircle/comments/1j1p268/","platform":"reddit","engagement":"2,534 upvotes"}
-imageAlt: "We got a John Cena heel turn before GTA 6"
+imageAlt: "John Cena in a cap, smiling, at Naval Station Norfolk in 2012"
 nsfw: true
 status: "launch"
 eventDate: "2025-03-01"
