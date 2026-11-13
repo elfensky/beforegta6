@@ -32,6 +32,11 @@ rule that requires a PR or the `check` job would also block the CI pin commit: G
 bypass actor (HTTP 422, 2026-11-13). Enforcing PRs needs a deploy key with bypass for the pin job, and that is still
 open with Andrei.
 
+Never write the GitHub skip marker (square brackets around `skip ci`) anywhere in a commit message, the body included:
+GitHub then skips every workflow for that push, so a staging or production build silently does not happen. Never
+squash-merge a PR whose commits contain it: the squash message concatenates every commit body (2026-11-13,
+commit da7170f on `feat/launch` carries it in its body).
+
 ## This repo's own rules
 
 - **Documented exceptions** (Andrei, 2026-11-13):
