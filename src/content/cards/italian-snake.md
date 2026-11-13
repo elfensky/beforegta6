@@ -4,7 +4,7 @@ blurb: "Kojima revealed Luca Marinelli's Snake-like character Neil in a Death St
 kind: "real-event"
 date: "2025-03-09"
 source: {"url":"https://www.reddit.com/r/DeathStranding/comments/1j841v9/","platform":"reddit","engagement":"7,995 upvotes"}
-imageAlt: "We got Italian Snake before GTA 6"
+imageAlt: "A grass snake flicking its tongue"
 nsfw: false
 status: "launch"
 eventDate: "2025-03-09"
