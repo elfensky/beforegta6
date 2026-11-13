@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { ogImageOf, timelineEntries, visibleCards } from '../lib/cards.js';
+import { byYear, ogImageOf, timelineEntries, visibleCards } from '../lib/cards.js';
 
 // Mirrors a cards collection entry: the schema coerces dates to Date.
 /** @param {{ id: string, date: string, status?: string, nsfw?: boolean, title?: string }} d */
@@ -43,4 +43,21 @@ test('timeline: oldest first, milestone before card on the same date, year set',
 test('nsfw card has no OG image', () => {
   expect(ogImageOf(card({ id: 'x', date: '2025-01-01', nsfw: true }))).toBeNull();
   expect(ogImageOf(card({ id: 'y', date: '2025-01-01' }))).toEqual({ src: '/y.jpg' });
+});
+
+test('byYear: one group per year, an ad slot stays with the entry before it', () => {
+  /** @param {number} year */
+  const e = (year) => ({ kind: 'item', item: { year } });
+  const slots = /** @type {any[]} */ ([
+    e(2013),
+    e(2013),
+    { kind: 'ad', desktop: false },
+    e(2022),
+    e(2023),
+  ]);
+  expect(byYear(slots).map((g) => [g.year, g.slots.length])).toEqual([
+    [2013, 3],
+    [2022, 1],
+    [2023, 1],
+  ]);
 });
