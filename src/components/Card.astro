@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+
+/**
+ * @type {{ card: import('../lib/cards.js').Card, headingLevel?: 1 | 2 | 3, eager?: boolean, large?: boolean }}
+ */
+const { card, headingLevel = 2, eager = false, large = false } = Astro.props;
+const { title, blurb, date, source, factUrl, image, imageAlt, nsfw } = card.data;
+const Heading = /** @type {'h1' | 'h2' | 'h3'} */ (`h${headingLevel}`);
+const iso = date.toISOString().slice(0, 10);
+const shown = date.toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+const img = {
+  src: image,
+  alt: imageAlt,
+  widths: large ? [480, 960, 1200] : [320, 640, 960],
+  sizes: large
+    ? '(min-width: 960px) 800px, 100vw'
+    : '(min-width: 1280px) 300px, (min-width: 960px) 31vw, (min-width: 600px) 46vw, 100vw',
+  loading: eager ? /** @type {const} */ ('eager') : /** @type {const} */ ('lazy'),
+};
+---
+
+<article class:list={['card', { large }]}>
+  {nsfw ? (
+    <details class="nsfw">
+      <summary>NSFW: show the image</summary>
+      <Image {...img} />
+    </details>
+  ) : (
+    <Image {...img} />
+  )}
+  <div class="card-body">
+    <Heading class="card-title">{large ? title : <a href={`/${card.id}/`}>{title}</a>}</Heading>
+    <p>{blurb}</p>
+    <p class="card-meta">
+      <time datetime={iso}>{shown}</time>
+      <a href={source.url} rel="noopener nofollow ugc">
+        source<span class="sr-only"> of “{title}”</span> <span aria-hidden="true">↗</span>
+      </a>
+      {source.engagement && <span>{source.engagement}</span>}
+      {large && factUrl && (
+        <a href={factUrl} rel="noopener">
+          the facts <span aria-hidden="true">↗</span>
+        </a>
+      )}
+    </p>
+  </div>
+</article>
