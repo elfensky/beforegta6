@@ -77,7 +77,12 @@ export function cardMarkdown(frontmatter, imageFile) {
 }
 
 /** @type {Record<string, 'jpg'|'png'|'webp'|'gif'>} */
-const EXTENSIONS = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif' };
+const EXTENSIONS = {
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'image/webp': 'webp',
+  'image/gif': 'gif',
+};
 
 /**
  * @param {string|null} contentType
