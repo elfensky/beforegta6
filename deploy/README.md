@@ -43,7 +43,7 @@ for a year. So a card that must not be on the site leaves the collection complet
 - **Takedown:** delete `src/content/cards/<id>.md` and `src/assets/cards/<id>.*` (never a `status` change), merge and
   release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching → Purge by URL).
 - **Hold:** move both files to `research/held/`. To launch a held card, move them back and set `status: "launch"`.
-  `gta5-farewell-drive` waits there until 2026-11-18. `lesbian-niqabi-muslim` waits for Andrei, because its image shows a private couple.
+  `gta5-farewell-drive` waits there until 2026-11-18. `lesbian-niqabi-muslim` launched with its photo on Andrei's decision (2026-11-13).
 
 `src/__tests__/content.test.js` fails when a card in the collection is not launched.
 

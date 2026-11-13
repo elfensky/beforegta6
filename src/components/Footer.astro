@@ -1,5 +1,5 @@
 ---
-import { TAKEDOWN_EMAIL } from '../data/site.js';
+import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
 ---
 
 <footer class="site-footer">
@@ -12,6 +12,7 @@ import { TAKEDOWN_EMAIL } from '../data/site.js';
     their trademark.
   </p>
   <p>
-    beforegta6.wtf is run by DRUNIK BV, Belgium. <a href="/privacy/">Privacy</a>
+    beforegta6.wtf is run by {OPERATOR.name}, company number {OPERATOR.companyNumber},{' '}
+    {OPERATOR.office}. <a href="/privacy/">Privacy</a>
   </p>
 </footer>

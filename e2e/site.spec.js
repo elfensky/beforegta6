@@ -8,6 +8,8 @@ const launched = readdirSync('src/content/cards').filter((f) =>
 
 for (const route of ['/', '/timeline/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
+    // axe over the full card wall takes ~11 s in Firefox alone; parallel workers can triple that.
+    test.setTimeout(60_000);
     await page.goto(route);
     const { violations } = await new AxeBuilder({ page }).analyze();
     expect(violations.map((v) => `${v.id} (${v.nodes.length})`)).toEqual([]);
@@ -78,5 +80,7 @@ test('the footer names the operator and links the privacy page', async ({ page }
   await page.goto('/');
   const footer = page.locator('footer');
   await expect(footer).toContainText('DRUNIK BV');
+  await expect(footer).toContainText('1026.002.256');
+  await expect(footer).toContainText('Chaussée de Tirlemont 513, 1370 Jodoigne');
   await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy/');
 });
