@@ -8,6 +8,6 @@ imageAlt: "We got a LimeWire tweet before GTA 6"
 nsfw: false
 status: "launch"
 eventDate: "2026-09-29"
-factUrl: "https://en.wikipedia.org/wiki/LimeWire"
+factUrl: "https://www.osnews.com/story/24561/us-music-industry-demands-75-trillion-from-limewire/"
 image: "../../assets/cards/limewire-72-trillion.webp"
 ---
