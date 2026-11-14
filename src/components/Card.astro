@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
  * @type {{ card: import('../lib/cards.js').Card, headingLevel?: 1 | 2 | 3, eager?: boolean, large?: boolean }}
  */
 const { card, headingLevel = 2, eager = false, large = false } = Astro.props;
-const { title, blurb, date, source, factUrl, image, imageAlt, nsfw } = card.data;
+const { title, blurb, date, source, factUrl, image, imageAlt, imageCredit, nsfw } = card.data;
 const Heading = /** @type {'h1' | 'h2' | 'h3'} */ (`h${headingLevel}`);
 const iso = date.toISOString().slice(0, 10);
 const shown = date.toLocaleDateString('en-GB', {
@@ -46,6 +46,11 @@ const img = {
       {large && factUrl && (
         <a href={factUrl} rel="noopener">
           the facts <span aria-hidden="true">↗</span>
+        </a>
+      )}
+      {large && imageCredit && (
+        <a href={imageCredit.url} rel="noopener">
+          image: {imageCredit.text} <span aria-hidden="true">↗</span>
         </a>
       )}
     </p>

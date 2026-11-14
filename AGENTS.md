@@ -45,8 +45,10 @@ commit da7170f on `feat/launch` carries it in its body).
   - Andrei asked for AdSense explicitly.
 - **`.node-version` in place of `mise.toml`.** `actions/setup-node` reads it, and mise reads it locally, so the repo keeps one pin (as in miklav.com).
 - **`research/` is data.** It holds the research output the cards came from. It is not code and never ships.
+  It is also the archive: every find stays there, and only `status: "launch"` candidates become cards.
 - **Content rules** (Andrei, 2026-11-13):
-  - Rank by absurdity and impact.
+  - The site shows highlights only: significant world events that affect a large number of people (Andrei, 2026-11-14).
+    Trivia ("GTA 6 before milk expiring") stays in the research archive.
   - Politics, religion and identity are in when they are funny.
   - Cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate stay out.
   - NSFW cards may be crude, never sexually explicit (AdSense).
