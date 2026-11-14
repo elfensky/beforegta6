@@ -60,7 +60,9 @@ for a year. So a card that must not be on the site leaves the collection complet
   release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching → Purge by URL).
 - **Hold:** move both files to `research/held/`. To launch a held card, move them back and set `status: "launch"`.
   `gta5-farewell-drive` waits there until 2026-11-18. `sex-2` and `durian-condom` wait there until AdSense approves
-  the site (Andrei, 2026-11-13). `lesbian-niqabi-muslim` launched with its photo on Andrei's decision (2026-11-13).
+  the site (Andrei, 2026-11-13).
+- **Archive:** a card below the world-event rule leaves the same way (delete both files, no purge), and its research
+  entry gets `status: "drop"`. 63 pass-2 cards left on 2026-11-14 (Andrei).
 
 `src/__tests__/content.test.js` fails when a card in the collection is not launched.
 

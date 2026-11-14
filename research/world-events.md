@@ -91,7 +91,7 @@ Source: research/world-events.json. Every event the five research agents found i
 | Title | Date | Field | Impact | Meme | Post engagement | Fact | Why not on the site |
 |---|---|---|---|---|---|---|---|
 | We got half the world online before GTA 6 | 2018-12-07 | tech-internet | 8 | 1 | – | [fact](https://www.itu.int/en/mediacentre/Pages/2018-PR40.aspx) | a statistics report, not an event people saw |
-| We got Roe v. Wade overturned before GTA 6 | 2022-06-24 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Dobbs_v._Jackson_Women%27s_Health_Organization) | waits for Andrei: a divisive abortion ruling; the "we got" wording can read as taking a side |
+| We got Roe v. Wade overturned before GTA 6 | 2022-06-24 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Dobbs_v._Jackson_Women%27s_Health_Organization) | kept in the archive by Andrei (2026-11-14): the "we got" wording can read as taking a side on abortion |
 | We got Twitter renamed X before GTA 6 | 2023-07-22 | tech-internet | 7 | 2 | – | [fact](https://en.wikipedia.org/wiki/X_(social_network)) | same story as musk-buys-twitter, whose blurb names the rename |
 | We got half the internet down because of Amazon before GTA 6 | 2025-10-20 | tech-internet | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Amazon_Web_Services) | no image; CrowdStrike and Facebook already cover outages |
 | We got a global chip shortage before GTA 6 | 2020-01-01 | economy-business | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/2020%E2%80%932023_global_chip_shortage) | partly caused by COVID-19, and the source dates it by year only |
