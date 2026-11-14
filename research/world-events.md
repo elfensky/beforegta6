@@ -5,48 +5,52 @@ Source: research/world-events.json. Every event the five research agents found i
 - Criterion (Andrei, 2026-11-14): significant world events that affect a large number of people.
 - Highlight rule: launch when impact_score >= 7, or impact_score >= 5 and meme_score >= 4; else archive only (status drop).
 - Impact 10 = the whole world noticed it, 5 = one large country, 1 = trivial. Meme 10 = a viral "before GTA 6" post, 1 = no post found or not searched.
+- `notre-dame-reopens` : council round 1 (GLM 5.3) added it; the research had missed it.
+- `gamestop-short-squeeze` : council round 1 (Mistral Large 4, GLM 5.3) promoted it from the archive.
 
-## Highlights (71)
+## Highlights (73)
 
 | Title | Date | Field | Impact | Meme | Post engagement | Fact |
 |---|---|---|---|---|---|---|
 | We got Spain winning a second World Cup before GTA 6 | 2026-07-19 | sport-culture | 9 | 6 | 9,220 likes, 163,986 views | [fact](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_final) |
+| We got Trump again before GTA 6 | 2024-11-05 | politics-world | 9 | 3 | 1,171 likes, 226,515 views | [fact](https://en.wikipedia.org/wiki/2024_United_States_presidential_election) |
 | We got ChatGPT before GTA 6 | 2022-11-30 | tech-internet | 9 | 2 | – | [fact](https://en.wikipedia.org/wiki/ChatGPT) |
-| We got a photo of a black hole before GTA 6 | 2019-04-10 | space-science | 9 | 1 | – | [fact](https://en.wikipedia.org/wiki/Event_Horizon_Telescope) |
 | We got Messi winning the World Cup before GTA 6 | 2022-12-18 | sport-culture | 9 | 2 | 105 likes, 2,078 views | [fact](https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final) |
+| We got a photo of a black hole before GTA 6 | 2019-04-10 | space-science | 9 | 1 | – | [fact](https://en.wikipedia.org/wiki/Event_Horizon_Telescope) |
 | We got almost every country agreeing on climate before GTA 6 | 2015-12-12 | politics-world | 9 | 1 | – | [fact](https://en.wikipedia.org/wiki/Paris_Agreement) |
 | We got President Trump before GTA 6 | 2016-11-08 | politics-world | 9 | 1 | – | [fact](https://en.wikipedia.org/wiki/2016_United_States_presidential_election) |
-| We got Trump again before GTA 6 | 2024-11-05 | politics-world | 9 | 3 | 1,171 likes, 226,515 views | [fact](https://en.wikipedia.org/wiki/2024_United_States_presidential_election) |
-| We got India landing near the Moon's south pole before GTA 6 | 2023-08-23 | space-science | 8 | 3 | 59 likes, 5,298 views (read 2026-11-14) | [fact](https://en.wikipedia.org/wiki/Chandrayaan-3) |
+| We got a convicted former president before GTA 6 | 2024-05-30 | politics-world | 8 | 4 | 2,231 likes, 140,612 views | [fact](https://en.wikipedia.org/wiki/Prosecution_of_Donald_Trump_in_New_York) |
+| We got India landing near the Moon's south pole before GTA 6 | 2023-08-23 | space-science | 8 | 3 | 59 likes, 5,298 views | [fact](https://en.wikipedia.org/wiki/Chandrayaan-3) |
 | We got the James Webb Space Telescope before GTA 6 | 2021-12-25 | space-science | 8 | 3 | – | [fact](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope) |
+| We got the biggest IT outage in history before GTA 6 | 2024-07-19 | tech-internet | 8 | 2 | 17 likes, 849 views | [fact](https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages) |
 | We got a total solar eclipse across North America before GTA 6 | 2024-04-08 | space-science | 8 | 2 | – | [fact](https://en.wikipedia.org/wiki/Solar_eclipse_of_April_8,_2024) |
+| We got an Olympic opening ceremony on a river before GTA 6 | 2024-07-26 | sport-culture | 8 | 2 | 4 likes, 298 views | [fact](https://en.wikipedia.org/wiki/2024_Summer_Olympics_opening_ceremony) |
 | We got all of Squid Game before GTA 6 | 2021-09-17 | sport-culture | 8 | 2 | 85 likes, 5,814 views | [fact](https://en.wikipedia.org/wiki/Squid_Game) |
 | We got Avengers: Endgame before GTA 6 | 2019-04-26 | sport-culture | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Avengers:_Endgame) |
 | We got Brexit before GTA 6 | 2016-06-23 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2016_United_Kingdom_European_Union_membership_referendum) |
 | We got a coronation before GTA 6 | 2023-05-06 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Coronation_of_Charles_III_and_Camilla) |
-| We got the biggest IT outage in history before GTA 6 | 2024-07-19 | tech-internet | 8 | 2 | 17 likes, 849 views | [fact](https://en.wikipedia.org/wiki/2024_CrowdStrike-related_IT_outages) |
 | We got the whole Eras Tour before GTA 6 | 2024-12-08 | sport-culture | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/The_Eras_Tour) |
 | We got Facebook, Instagram and WhatsApp down for six hours before GTA 6 | 2021-10-04 | tech-internet | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2021_Facebook_outage) |
 | We got the first year past 1.5 °C of warming before GTA 6 | 2025-01-10 | space-science | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2025_in_science) |
 | We got Germany 7–1 Brazil before GTA 6 | 2014-07-08 | sport-culture | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Brazil_v_Germany_(2014_FIFA_World_Cup)) |
 | We got 'Liberation Day' tariffs before GTA 6 | 2025-04-02 | economy-business | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Liberation_Day_tariffs) |
-| We got an Olympic opening ceremony on a river before GTA 6 | 2024-07-26 | sport-culture | 8 | 2 | 4 likes, 298 views | [fact](https://en.wikipedia.org/wiki/2024_Summer_Olympics_opening_ceremony) |
+| We got Notre-Dame rebuilt before GTA 6 | 2024-12-07 | council | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Notre-Dame_de_Paris_fire) |
 | We got Pokémon Go before GTA 6 | 2016-07-06 | tech-internet | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go) |
-| We got a convicted former president before GTA 6 | 2024-05-30 | politics-world | 8 | 4 | 2,231 likes, 140,612 views | [fact](https://en.wikipedia.org/wiki/Prosecution_of_Donald_Trump_in_New_York) |
 | We got Trump and Kim Jong Un shaking hands before GTA 6 | 2018-06-12 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2018_North_Korea%E2%80%93United_States_Singapore_summit) |
 | We got 9.1% inflation before GTA 6 | 2022-07-13 | economy-business | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2021%E2%80%932023_inflation_surge) |
+| We got the first trillionaire before GTA 6 | 2026-06-12 | economy-business | 7 | 5 | 5,768 likes, 179,218 views | [fact](https://en.wikipedia.org/wiki/Wealth_of_Elon_Musk) |
+| We got Biden quitting the race before GTA 6 | 2024-07-21 | politics-world | 7 | 3 | 572 likes, 33,154 views | [fact](https://en.wikipedia.org/wiki/Withdrawal_of_Joe_Biden_from_the_2024_United_States_presidential_election) |
 | We got another rover on Mars before GTA 6 | 2021-02-18 | space-science | 7 | 3 | – | [fact](https://en.wikipedia.org/wiki/Perseverance_(rover)) |
+| We got America's 250th birthday before GTA 6 | 2026-07-04 | politics-world | 7 | 2 | 2 likes, 195 views | [fact](https://en.wikipedia.org/wiki/United_States_Semiquincentennial) |
+| We got northern lights far from the north before GTA 6 | 2024-05-10 | space-science | 7 | 2 | 26 likes, 2,054 views | [fact](https://en.wikipedia.org/wiki/May_2024_solar_storms) |
 | We got Elon Musk buying Twitter before GTA 6 | 2022-10-27 | economy-business | 7 | 2 | – | [fact](https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk) |
 | We got astronauts stuck in space for nine months before GTA 6 | 2024-06-05 | space-science | 7 | 2 | 233 likes, 24,706 views | [fact](https://en.wikipedia.org/wiki/Boeing_Crew_Flight_Test) |
 | We got Mike Tyson vs Jake Paul before GTA 6 | 2024-11-15 | sport-culture | 7 | 2 | 67 likes, 5,794 views | [fact](https://en.wikipedia.org/wiki/Jake_Paul_vs._Mike_Tyson) |
 | We got Africa free of wild polio before GTA 6 | 2020-08-25 | space-science | 7 | 1 | – | [fact](https://www.who.int/news/item/25-08-2020-global-polio-eradication-initiative-applauds-who-african-region-for-wild-polio-free-certification) |
 | We got AI solving protein shapes before GTA 6 | 2022-07-28 | tech-internet | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/AlphaFold) |
 | We got a computer beating the Go champion before GTA 6 | 2016-03-15 | tech-internet | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol) |
-| We got America's 250th birthday before GTA 6 | 2026-07-04 | politics-world | 7 | 2 | 2 likes, 195 views | [fact](https://en.wikipedia.org/wiki/United_States_Semiquincentennial) |
-| We got northern lights far from the north before GTA 6 | 2024-05-10 | space-science | 7 | 2 | 26 likes, 2,054 views | [fact](https://en.wikipedia.org/wiki/May_2024_solar_storms) |
 | We got a Super Bowl halftime show in Spanish before GTA 6 | 2026-02-08 | sport-culture | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Super_Bowl_LX_halftime_show) |
 | We got Barbenheimer before GTA 6 | 2023-07-21 | sport-culture | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Barbenheimer) |
-| We got Biden quitting the race before GTA 6 | 2024-07-21 | politics-world | 7 | 3 | 572 likes, 33,154 views | [fact](https://en.wikipedia.org/wiki/Withdrawal_of_Joe_Biden_from_the_2024_United_States_presidential_election) |
 | We got Zuckerberg in front of Congress before GTA 6 | 2018-04-10 | tech-internet | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal) |
 | We got gene-edited babies before GTA 6 | 2018-11-26 | space-science | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/He_Jiankui_affair) |
 | We got NASA hitting an asteroid on purpose before GTA 6 | 2022-09-26 | space-science | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Double_Asteroid_Redirection_Test) |
@@ -63,7 +67,6 @@ Source: research/world-events.json. Every event the five research agents found i
 | We got Kendrick Lamar's Super Bowl halftime show before GTA 6 | 2025-02-09 | sport-culture | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Super_Bowl_LIX_halftime_show) |
 | We got KPop Demon Hunters before GTA 6 | 2025-06-20 | sport-culture | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/KPop_Demon_Hunters) |
 | We got the first malaria vaccine before GTA 6 | 2021-10-06 | space-science | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/RTS,S) |
-| We got the first trillionaire before GTA 6 | 2026-06-12 | economy-business | 7 | 5 | 5,768 likes, 179,218 views | [fact](https://en.wikipedia.org/wiki/Wealth_of_Elon_Musk) |
 | We got a $5 trillion company before GTA 6 | 2025-10-29 | economy-business | 7 | 1 | – | [fact](https://www.semafor.com/article/10/29/2025/nvidia-hits-5-trillion-valuation) |
 | We got the Panama Papers before GTA 6 | 2016-04-03 | economy-business | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Panama_Papers) |
 | We got a close-up of Pluto before GTA 6 | 2015-07-14 | space-science | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/New_Horizons) |
@@ -78,11 +81,12 @@ Source: research/world-events.json. Every event the five research agents found i
 | We got a president with no term limit before GTA 6 | 2018-03-11 | politics-world | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/2018_amendment_to_the_Constitution_of_China) |
 | We got Messi's first World Cup hat-trick before GTA 6 | 2026-06-16 | sport-culture | 6 | 5 | 4,096 likes, 78,090 views | [fact](https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_hat-tricks) |
 | We got an Oasis reunion before GTA 6 | 2024-08-27 | sport-culture | 6 | 5 | 5,458 likes, 395,789 views | [fact](https://en.wikipedia.org/wiki/Oasis_Live_%2725_Tour) |
-| We got seven UK prime ministers before GTA 6 | 2026-07-20 | politics-world | 6 | 5 | 5,472 likes, 104,449 views ('Keir Starmer resigning before GTA 6… At least he can't ban it now') | [fact](https://en.wikipedia.org/wiki/Andy_Burnham) |
-| We got Japan's first woman prime minister before GTA 6 | 2025-10-21 | politics-world | 6 | 4 | 2,319 likes, 62,968 views ('We got Japanese Margaret Thatcher before GTA 6') | [fact](https://en.wikipedia.org/wiki/Sanae_Takaichi) |
-| We got Arsenal winning the league before GTA 6 | 2026-05-19 | sport-culture | 5 | 5 | 4,588 likes, 145,018 views (a prediction: 'Arsenal will win the league before it comes out!') | [fact](https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League) |
+| We got seven UK prime ministers before GTA 6 | 2026-07-20 | politics-world | 6 | 5 | 5,472 likes, 104,449 views | [fact](https://en.wikipedia.org/wiki/Andy_Burnham) |
+| We got Japan's first woman prime minister before GTA 6 | 2025-10-21 | politics-world | 6 | 4 | 2,319 likes, 62,968 views | [fact](https://en.wikipedia.org/wiki/Sanae_Takaichi) |
+| We got Reddit squeezing Wall Street before GTA 6 | 2021-01-28 | economy-business | 6 | 2 | – | [fact](https://en.wikipedia.org/wiki/GameStop_short_squeeze) |
+| We got Arsenal winning the league before GTA 6 | 2026-05-19 | sport-culture | 5 | 5 | 4,588 likes, 145,018 views | [fact](https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League) |
 
-## Archive only (220)
+## Archive only (219)
 
 | Title | Date | Field | Impact | Meme | Post engagement | Fact | Why not on the site |
 |---|---|---|---|---|---|---|---|
@@ -95,7 +99,6 @@ Source: research/world-events.json. Every event the five research agents found i
 | We got India banning TikTok before GTA 6 | 2020-06-29 | tech-internet | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Censorship_of_TikTok) | the ban followed the deadly Galwan border clash (war rule) |
 | We got a presidential impeachment before GTA 6 | 2019-12-18 | politics-world | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/First_impeachment_of_Donald_Trump) | a third Trump legal card; the conviction and the mugshot cover it |
 | We got Facebook renamed Meta before GTA 6 | 2021-10-28 | tech-internet | 6 | 2 | – | [fact](https://en.wikipedia.org/wiki/Meta_Platforms) | below the highlight rule |
-| We got Reddit squeezing Wall Street before GTA 6 | 2021-01-28 | economy-business | 6 | 2 | – | [fact](https://en.wikipedia.org/wiki/GameStop_short_squeeze) | below the highlight rule |
 | We got Hollywood writers and actors on strike at once before GTA 6 | 2023-05-02 | economy-business | 6 | 2 | – | [fact](https://en.wikipedia.org/wiki/2023_SAG-AFTRA_strike) | below the highlight rule |
 | We got Katy Perry in space before GTA 6 | 2025-04-14 | space-science | 6 | 2 | 2 likes, 154 views (read 2026-11-14) | [fact](https://en.wikipedia.org/wiki/Blue_Origin_NS-31) | below the highlight rule |
 | We got AI-made movies before GTA 6 | 2024-02-15 | tech-internet | 6 | 2 | – | [fact](https://en.wikipedia.org/wiki/Sora_(text-to-video_model)) | below the highlight rule |
@@ -411,3 +414,4 @@ Source: research/world-events.json. Every event the five research agents found i
 - posts, X search depth: Each search read the first 20 to 40 'Top' results only; a post outside them is not found. The 'Latest' tab was not read, because it lists recent posts and the events are old.
 - posts, Events before December 2023: Date-window searches up to and around the event (Trump 2016, the black hole image, Game of Thrones, Germany 7-1 Brazil, the 2021 Facebook outage, 2022 inflation, the ChatGPT launch, the Messi World Cup) found no post; the meme was rare before the first GTA 6 trailer in December 2023. Most older events have no post.
 - posts, Near misses, not applied: These posts use the meme but are about a related event, not the card's event: chatgpt-launch (x.com/GameJoker_/status/1922406587529847273, 4,434 likes, ChatGPT 'causing divorces'); ice-bucket-challenge (x.com/GameJoker_/status/1915141847669957096, 425 likes, the 2025 return of the challenge); windows-10-end-of-support (x.com/TheBobPony/status/2114290177979920557, 656 likes, Windows 10 on CPUs without NX, one year after end of support); us-same-sex-marriage (x.com/T_BoneBeatbox/status/1802987869440520207, 3 likes, posted on the day of Thailand's bill); liberation-day-tariffs (x.com/hobbyslabs/status/1909925562866426141, 7 likes, '1000% tariffs').
+- council, council round 1: Suggested, not researched: Nintendo Switch launch (2017-03-03), PS4 and Xbox One launch (2013-11), PS5 and Xbox Series launch (2020-11), Windows 11 (2021-10-05).

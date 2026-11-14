@@ -3,7 +3,7 @@ title: "We got Japan's first woman prime minister before GTA 6"
 blurb: "Sanae Takaichi, a former heavy-metal drummer, became Japan's first woman prime minister on 21 October 2025; her party won a record landslide on 8 February 2026."
 kind: "real-event"
 date: "2025-10-21"
-source: {"url":"https://x.com/MsMelChen/status/1980625600453771577","platform":"x","engagement":"2,319 likes, 62,968 views ('We got Japanese Margaret Thatcher before GTA 6')"}
+source: {"url":"https://x.com/MsMelChen/status/1980625600453771577","platform":"x","engagement":"2,319 likes, 62,968 views"}
 imageAlt: "We got Japan's first woman prime minister before GTA 6"
 nsfw: false
 status: "launch"

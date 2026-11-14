@@ -49,7 +49,7 @@ commit da7170f on `feat/launch` carries it in its body).
 - **Content rules** (Andrei, 2026-11-13):
   - The site shows highlights only: significant world events that affect a large number of people (Andrei, 2026-11-14).
     Trivia ("GTA 6 before milk expiring") stays in the research archive.
-  - Politics, religion and identity are in when they are funny.
+  - Politics, religion and identity are in: a real event when it passes the world-event rule, a joke when it is funny.
   - Cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate stay out.
   - NSFW cards may be crude, never sexually explicit (AdSense).
 - **No Rockstar material:** no GTA logo, fonts or key art.

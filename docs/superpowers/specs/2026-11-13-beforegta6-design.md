@@ -43,13 +43,15 @@ Submissions, accounts, likes and dislikes, comments, merch, other languages.
 - Highlights only (Andrei, 2026-11-14): significant world events that affect a large number of people. Every find stays in
   the research archive (`research/*.json`); only `launch` candidates become cards. Rule for pass 3: impact score 7 or
   more, or 5 or more with a real "before GTA 6" post (`research/world-events.md`).
-- Politics, religion and identity are in when they are funny or absurd. Examples: blue Texas, the lesbian niqabi Muslim post.
+- Politics, religion and identity are in: a real event when it passes the world-event rule (blue Texas), a joke when it
+  is funny or absurd (the lesbian niqabi Muslim post).
 - NSFW: crude, profane and absurd posts are in, and their cards carry an `nsfw` flag. Sexually explicit posts are out.
 - One card for each GTA V release and re-release: PS3/X360, PS4/Xbox One, PC, PS5/Xbox Series, Enhanced on PC, and others found.
 - Every card keeps a local copy of its image, credits the creator and links to the source post. A Commons photo under
   CC BY or CC BY-SA carries its author and licence on the card page (`imageCredit`).
-- Launch set: all researched candidates except `jason-irl`, which shows a private person. `gta5-farewell-drive` waits until
-  2026-11-18 (status `hold`).
+- Launch set (2026-11-13): all researched candidates except `jason-irl`, which shows a private person.
+  `gta5-farewell-drive` waits until 2026-11-18 (status `hold`). Pass 3 (2026-11-14) adds the 73 world-event highlights
+  of `research/world-events.json`.
 
 ## Approaches
 
