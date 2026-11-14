@@ -100,10 +100,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/2036987310160384000/img/OVHcEaUjqr78Onw2?format=webp&name=medium",
       "image_note": "video thumbnail of the Adin Ross stream clip",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 10,
       "impact_score": 3,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "john-cena-heel-turn",
@@ -121,10 +122,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:John_Cena_2012.jpg",
       "image_note": "John Cena in a cap, smiling, at Naval Station Norfolk in 2012 (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": true,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 10,
       "impact_score": 4,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "millennium-prize-problem",
@@ -163,10 +165,11 @@
       "image_url": "https://pbs.twimg.com/media/GX88eB6agAAmbri?format=webp&name=large",
       "image_note": "image from the parent post it replies to (@BUDDYHEAD_)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 10,
       "impact_score": 4,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "new-pope",
@@ -205,10 +208,11 @@
       "image_url": "https://i.redd.it/m6x2tei3o5ie1.jpeg",
       "image_note": "headline screenshot about quantum teleportation",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 10,
       "impact_score": 3,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "artemis-ii",
@@ -268,10 +272,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:French_Portrait_card_deck_-_1813_-_7_of_Hearts.jpg",
       "image_note": "the seven of hearts from an 1813 French deck of playing cards (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 1,
-      "meme_score": 8
+      "meme_score": 8,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "iphone-airlift",
@@ -289,10 +294,11 @@
       "image_url": "https://pbs.twimg.com/media/GoCPYmJWcAAzRJB?format=webp&name=large",
       "image_note": "image from the quoted Dexerto post",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 4,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "kitkat-heist",
@@ -310,10 +316,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Big-Kit-Kat-Array.jpg",
       "image_note": "three big Kit Kat bars, one of them white chocolate (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 3,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "mamdani-twitch",
@@ -331,10 +338,11 @@
       "image_url": "https://i.redd.it/yxtnbt56lh2h1.png",
       "image_note": "r/196 meme image",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 4,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "minecraft-beats-itself",
@@ -352,10 +360,11 @@
       "image_url": "https://external-preview.redd.it/b2JtNHh6Z3ZrN3JoMZsGt2i_0GJUDxldPbIpFbT2NsBJy03zvnfa3ITIvDV1.png?width=405&height=212.041884817&auto=webp&crop=405:212.041884817,smart&s=75892b550506cb52dbf1373664da47b0120b0338",
       "image_note": "video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 1,
-      "meme_score": 5
+      "meme_score": 5,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "new-ocean",
@@ -373,10 +382,11 @@
       "image_url": "https://pbs.twimg.com/media/E4rfWIjXMAAryAD?format=webp&name=large",
       "image_note": "IGN news image quoted in the post (Southern Ocean map)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 5,
-      "meme_score": 2
+      "meme_score": 2,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "new-prime-number",
@@ -394,10 +404,11 @@
       "image_url": "https://i.redd.it/affi9cge84wd1.jpeg",
       "image_note": "r/mathmemes meme image",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 4,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "real-oppressor-mk2",
@@ -415,10 +426,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/2053188127347310593/img/XD1pKkLF_MgqAXYa?format=webp&name=medium",
       "image_note": "video thumbnail of the Volonaut Airbike in flight",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 2,
-      "meme_score": 8
+      "meme_score": 8,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "second-moon",
@@ -436,10 +448,11 @@
       "image_url": "https://i.redd.it/pxjz9nb128sd1.jpeg",
       "image_note": "r/196 meme image",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 5,
-      "meme_score": 2
+      "meme_score": 2,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "vatican-anime-mascot",
@@ -457,10 +470,11 @@
       "image_url": "https://i.redd.it/t5nnquo35vxd1.png",
       "image_note": "Luce mascot meme",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 4,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "white-house-saved-america",
@@ -478,10 +492,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:A_rainbow_is_seen_over_the_North_Portico_of_the_White_House,_Saturday,_May_11,_2024.jpg",
       "image_note": "a rainbow over the North Portico of the White House (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 1,
-      "meme_score": 10
+      "meme_score": 10,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "wwe-zero-gravity",
@@ -499,10 +514,11 @@
       "image_url": "https://pbs.twimg.com/ext_tw_video_thumb/1899113118258573313/pu/img/0pDXHtwqtko2CPC-?format=webp&name=medium",
       "image_note": "video thumbnail (not inspected)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 9,
       "impact_score": 1,
-      "meme_score": 10
+      "meme_score": 10,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "ai-generated-gta",
@@ -520,10 +536,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Downtown_Los_Angeles_skyline2.jpg",
       "image_note": "the downtown Los Angeles skyline at dusk, seen from Griffith Park (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 3,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "durian-condom",
@@ -581,10 +598,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Pleiades_supercomputer.jpg",
       "image_note": "rows of server racks of NASA's Pleiades supercomputer (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 6,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta6-award",
@@ -602,10 +620,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Man-chasing-trophy.jpg",
       "image_note": "drawing of a man in a suit running up stairs to a gold trophy (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 3,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta6-before-milk",
@@ -623,10 +642,11 @@
       "image_url": "https://i.redd.it/4pn4nyqa07zh1.jpeg",
       "image_note": "the Reddit post's own photo, cropped to the jug and its NOV 20 date; the GTA VI overlay is cut out",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 1,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta6-delays",
@@ -665,10 +685,11 @@
       "image_url": "https://i.redd.it/ez1k0v1wnabf1.jpeg",
       "image_note": "David Coulthard's Instagram post",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 3,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "lesbian-niqabi-muslim",
@@ -686,10 +707,11 @@
       "image_url": "https://pbs.twimg.com/media/G-gvxTRWIAAZZmT?format=webp&name=large",
       "image_note": "quoted couple photo of private people; check consent and rights before use",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 1,
-      "meme_score": 8
+      "meme_score": 8,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "limewire-72-trillion",
@@ -707,10 +729,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/2105153761983270913/img/YgaGIuIsbv7EjTx-?format=webp&name=medium",
       "image_note": "reaction video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 2,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "microscopic-handbag",
@@ -728,10 +751,11 @@
       "image_url": "https://pbs.twimg.com/media/Gn4kicdW4AAT6TY?format=webp&name=large",
       "image_note": "quoted photo of the tiny bag on a fingertip",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 2,
-      "meme_score": 8
+      "meme_score": 8,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "skittles-tweet",
@@ -749,10 +773,11 @@
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Skittles-Louisiana-2003.jpg",
       "image_note": "Skittles packet (Wikipedia lead image); the post is text only",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 1,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "snoop-quit-smoking",
@@ -770,10 +795,11 @@
       "image_url": "https://pbs.twimg.com/media/F_ElyuUWwAA_RL2?format=webp&name=large",
       "image_note": "Snoop Dogg photo from the quoted news post",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 2,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "stranger-things",
@@ -854,10 +880,11 @@
       "image_url": "https://i.redd.it/yyymvfxye11i1.jpeg",
       "image_note": "r/NonPoliticalTwitter screenshot of the joke (16,854 upvotes)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 8,
       "impact_score": 1,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "ado-face",
@@ -875,10 +902,11 @@
       "image_url": "https://pbs.twimg.com/media/HCP97SjWgAA_lhr?format=webp&name=large",
       "image_note": "still from the Vivarium video",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 3,
-      "meme_score": 8
+      "meme_score": 8,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "catbox-360",
@@ -896,10 +924,11 @@
       "image_url": "https://i.redd.it/g8wqyzb0d2wh1.jpeg",
       "image_note": "litter box with an Xbox logo",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "chatgpt-gta5-real-people",
@@ -917,10 +946,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Aerial_Photo_of_Santa_Monica_Pier.jpg",
       "image_note": "the Santa Monica Pier and its beach seen from the air (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": true,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 3,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "concord",
@@ -938,10 +968,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:%22Closed%22_Sign_Due_to_Coronavirus_-_49703752138.jpg",
       "image_note": "a sign in a shop door: our shop will be temporarily closed (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 3,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "drunk-dog",
@@ -959,10 +990,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Sleeping_dog_in_autumn_sun_(30162628716).jpg",
       "image_note": "dog asleep in the sun (Wikimedia Commons, CC0); the post is text only and the quoted video is gone",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 9
+      "meme_score": 9,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "f1-car-nudes",
@@ -980,10 +1012,11 @@
       "image_url": "https://i.redd.it/5fp8rldtipjc1.jpeg",
       "image_note": "F1 car render without livery (crude title only, no nudity)",
       "nsfw": true,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gary-grand-theft-auto",
@@ -1001,10 +1034,11 @@
       "image_url": "https://external-preview.redd.it/aWk1NXd5ajZycjNkMZrPSBB81hKy0EAFYikaLVkW6nOm2kaWcazPdZqIrpBe.png?width=720&height=376.963350785&auto=webp&crop=720:376.963350785,smart&s=821143bdca386fe891eef092df1cf202ead8c61f",
       "image_note": "video thumbnail (not inspected)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta5-billion-in-3-days",
@@ -1064,10 +1098,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Derbi_madrile%C3%B1o_1919.jpg",
       "image_note": "footballers in striped and white shirts at a 1919 Madrid derby (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 3,
-      "meme_score": 10
+      "meme_score": 10,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "mario-kart-cow",
@@ -1085,10 +1120,11 @@
       "image_url": "https://pbs.twimg.com/media/GnnMKYJWMAAlo5G?format=webp&name=medium",
       "image_note": "video poster: Cow racing in Mario Kart World",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 2,
-      "meme_score": 6
+      "meme_score": 6,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "miami-heat-vice-city",
@@ -1106,10 +1142,11 @@
       "image_url": "https://i.redd.it/y29tkemn02th1.jpeg",
       "image_note": "screenshot of @MiamiHEAT's post, with the bottom logo row (GTA VI, Rockstar) cut off",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 2,
-      "meme_score": 4
+      "meme_score": 4,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "new-colour-olo",
@@ -1127,10 +1164,11 @@
       "image_url": "https://i.redd.it/k3gr9lpu0uve1.png",
       "image_note": "r/shitposting meme image",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 3,
-      "meme_score": 2
+      "meme_score": 2,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "nintendo-alarm-clock",
@@ -1148,10 +1186,11 @@
       "image_url": "https://i.redd.it/k6q6wpr20rtd1.jpeg",
       "image_note": "photo of the Alarmo clock",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "pvz-ai-movie",
@@ -1169,10 +1208,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/2103844066803003393/img/6wlzXSp-k-UtrxMg?format=webp&name=medium",
       "image_note": "film thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "saddam-in-zzz",
@@ -1190,10 +1230,11 @@
       "image_url": "https://external-preview.redd.it/YWVwN2hxenE2OGxlMa6aAxIlEFPLiPSEax6KO-s6Xf2iIJ55J96DIeioRCWq.png?width=1080&height=565.445026178&auto=webp&crop=1080:565.445026178,smart&s=edcf2be9eb975b597b76a30e90468c1fb444c78a",
       "image_note": "video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "silksong",
@@ -1211,10 +1252,11 @@
       "image_url": "https://i.redd.it/phfzqthtuate1.jpeg",
       "image_note": "r/HollowKnightMemes \"Silksong before gta 6 is wild\" image (403 upvotes)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 7,
       "impact_score": 4,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "ash-ketchum",
@@ -1232,10 +1274,11 @@
       "image_url": "https://i.ytimg.com/vi/und9p3YmKKg/hqdefault.jpg",
       "image_note": "thumbnail of jacobweeby's short",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 4,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "beyblade-fatality",
@@ -1253,10 +1296,11 @@
       "image_url": "https://external-preview.redd.it/bjg5NWJoamNoaWljMWQx435pJrW9TALjcIQaGif10RCKh0ctyT7sknHtb1Dc.png?width=720&height=376.963350785&auto=webp&crop=720:376.963350785,smart&s=7b835e9700a1ea1cdfd1ff2eb34510069f672273",
       "image_note": "video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "cancer-cure",
@@ -1274,10 +1318,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Researcher_looking_through_microscope.jpg",
       "image_note": "NCI researchers at a microscope (Wikimedia Commons, public domain); the TikTok is gone",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 10
+      "meme_score": 10,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "cyberpunk-cybertruck",
@@ -1295,10 +1340,11 @@
       "image_url": "https://i.redd.it/pu9tfh3yfdoe1.jpg",
       "image_note": "photo of the wrapped Cybertruck (first gallery image)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "deer-break-in",
@@ -1316,10 +1362,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/1882973251619495936/img/8SZYX5xnK_-3xNjm?format=webp&name=medium",
       "image_note": "video thumbnail: deer inside a house",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta-trilogy-definitive",
@@ -1337,10 +1384,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Macro_extreme_close-up_of_a_longhorn_beetle_resting_on_a_surface.jpg",
       "image_note": "a close-up of a longhorn beetle on moss (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 4,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta5-ps3-x360",
@@ -1400,10 +1448,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:AD2009Aug07_Natrix_helvetica_01.jpg",
       "image_note": "a grass snake flicking its tongue (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "leverkusen-again",
@@ -1421,10 +1470,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Connecticut_Guardsman_represents_Armed_Forces_at_2024_Florida_Classic_Tournament_(3).jpg",
       "image_note": "a football on a grass pitch, with players training behind it (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "medieval-mrbeast",
@@ -1442,10 +1492,11 @@
       "image_url": "https://pbs.twimg.com/ext_tw_video_thumb/1787471283753553920/pu/img/QOcrQVkRIxBOy2OZ?format=webp&name=medium",
       "image_note": "video thumbnail of the medieval skit",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "mini-salt-bae",
@@ -1463,10 +1514,11 @@
       "image_url": "https://external-preview.redd.it/azNkemo1ZWMzaTljMfxtzNK0U7E-0QAL1oVyJiCXU0OdvoSHTunwXrkSQW02.png?width=576&height=301.570680628&auto=webp&crop=576:301.570680628,smart&s=d6622256423d262e6a131e94fd535cfb75644e5f",
       "image_note": "video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "ps5-turning-off",
@@ -1484,10 +1536,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/2113753384612175872/img/HxS_dtSCJKuunSnO?format=webp&name=medium",
       "image_note": "reaction video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "steam-machine",
@@ -1505,10 +1558,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/1988720530225004544/img/mxs4uBrXV2FHirKV?format=webp&name=medium",
       "image_note": "video thumbnail from the post (Steam Machine reveal)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 6,
       "impact_score": 4,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "tom-brady-retired",
@@ -1547,10 +1601,11 @@
       "image_url": "https://external-preview.redd.it/Nmd6Zm1zZXl2dWJlMcZMtXdSLNSc3o_0PRWf3z6sUSyzK9MxxEfaJqtiDpBW.png?width=720&height=376.963350785&auto=webp&crop=720:376.963350785,smart&s=db9edf7ebab6cd8a440d78a1328179d24ca43718",
       "image_note": "video thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "damascus-wood",
@@ -1568,10 +1623,11 @@
       "image_url": "https://external-preview.redd.it/dHJta3lycThkZndnMebHt23cFVe6lsYuqzTzmOiDrqW6wfk9IlWxrTA4cF_q.png?width=720&height=376.963350785&auto=webp&crop=720:376.963350785,smart&s=c55420562994b049ff0944932b49a0ca276e6f63",
       "image_note": "video thumbnail of the wood pattern",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "digital-graffiti",
@@ -1589,10 +1645,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/1944389723830554624/img/FpRGQgntAky9njRY?format=webp&name=medium",
       "image_note": "video thumbnail (not inspected)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "elder-scrolls-6",
@@ -1610,10 +1667,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Portrait_of_dragon_statue_on_coastline.jpeg",
       "image_note": "a grey stone dragon statue by the sea in Lima, Peru (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 2,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gojo-vs-kakashi",
@@ -1631,10 +1689,11 @@
       "image_url": "https://pbs.twimg.com/amplify_video_thumb/2003771672227393536/img/IAw-dkeoh9bv0xw8?format=webp&name=medium",
       "image_note": "animation thumbnail",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gta5-enhanced-pc",
@@ -1734,10 +1793,11 @@
       "image_url": "https://pbs.twimg.com/media/GeSqZdsXQAA0Fmh?format=webp&name=large",
       "image_note": "LEGO Fortnite's GTA-style image (quoted)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 1,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "hytale",
@@ -1755,10 +1815,11 @@
       "image_url": "https://i.redd.it/tqblbzb6niqe1.png",
       "image_note": "r/PhoenixSC Hytale reminder meme (1,001 upvotes)",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 2,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "nintendo-switch-2",
@@ -1797,10 +1858,11 @@
       "image_url": "https://commons.wikimedia.org/wiki/File:Cowboy_on_horse_grazing.jpg",
       "image_note": "a cowboy riding a horse through a dry grass field (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 2,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "the-boys-s5",
@@ -1818,10 +1880,11 @@
       "image_url": "https://i.redd.it/qyvz52ad9uzf1.jpeg",
       "image_note": "The Boys meme image",
       "nsfw": false,
-      "status": "launch",
+      "status": "drop",
       "rank_score": 5,
       "impact_score": 3,
-      "meme_score": 1
+      "meme_score": 1,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-14)"
     },
     {
       "id": "gpt-5",
