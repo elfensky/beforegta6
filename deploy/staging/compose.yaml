@@ -29,7 +29,7 @@ services:
   web:
     # Rewritten by CI to :sha-<commit> — see the header. `sha-unpinned`
     # does not exist on purpose: nothing deploys until the first CI bump.
-    image: ghcr.io/elfensky/beforegta6:sha-11420542497c432c523ba6b05992efd18fc04d38
+    image: ghcr.io/elfensky/beforegta6:sha-528ede282700c19c270395aef35b11bc2a7de3d2
     networks: [internal]
     deploy:
       replicas: 2
