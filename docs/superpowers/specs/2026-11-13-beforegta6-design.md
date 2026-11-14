@@ -93,11 +93,11 @@ A milestones file holds the fixed timeline anchors. Check each date at build tim
 - Launch: 2026-11-19
 
 **Ads.**
-- Units: AdSense in-feed units, shaped like cards.
-- Desktop: one after every 8 cards, which is about one per screen.
-- Mobile: one after every 4 cards. A strict one-per-screen on a phone would make about every third card an ad, and AdSense
-  forbids screens with more ads than content.
-- The timeline follows the same density.
+- Units: AdSense in-feed units. Each slot takes a full row of the timeline: an AdSense unit needs about 250 px, more
+  than a small card.
+- Desktop: one after every 8 timeline entries (cards and milestones), which is about one per screen.
+- Mobile: one after every 4 entries. A strict one-per-screen on a phone would make about every third card an ad, and
+  AdSense forbids screens with more ads than content.
 - Before approval: a house card fills each slot, such as a share prompt or the countdown.
 - Consent: Google's certified "Privacy & messaging" consent tool, for visitors from the EEA, UK and Switzerland.
 - `ads.txt` at the site root.

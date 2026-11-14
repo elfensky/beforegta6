@@ -9,20 +9,8 @@
 const launched = (cards) => cards.filter((c) => c.data.status === 'launch');
 
 /**
- * Cards for the grid: launch status only, newest first, ties by title.
- * @param {Card[]} cards
- * @returns {Card[]}
- */
-export function visibleCards(cards) {
-  return launched(cards).sort(
-    (a, b) =>
-      b.data.date.getTime() - a.data.date.getTime() || a.data.title.localeCompare(b.data.title),
-  );
-}
-
-/**
- * Cards and GTA milestones on one axis, oldest first. On the same day a milestone comes first. Newest first is the
- * exact reverse.
+ * Cards and GTA milestones on one axis, oldest first. On the same day a milestone comes first, then cards by title.
+ * Newest first is the exact reverse. Only launch cards take part.
  * @param {Card[]} cards
  * @param {Milestone[]} milestones
  * @param {'oldest' | 'newest'} [order]
@@ -46,7 +34,14 @@ export function timelineEntries(cards, milestones, order = 'oldest') {
     }),
   ];
   const rank = { milestone: 0, card: 1 };
-  entries.sort((a, b) => a.date.getTime() - b.date.getTime() || rank[a.kind] - rank[b.kind]);
+  /** @param {TimelineEntry} e */
+  const title = (e) => (e.kind === 'card' ? e.card.data.title : e.milestone.title);
+  entries.sort(
+    (a, b) =>
+      a.date.getTime() - b.date.getTime() ||
+      rank[a.kind] - rank[b.kind] ||
+      title(a).localeCompare(title(b)),
+  );
   return order === 'newest' ? entries.reverse() : entries;
 }
 
@@ -57,6 +52,14 @@ export function timelineEntries(cards, milestones, order = 'oldest') {
 export function ogImageOf(card) {
   return card.data.nsfw ? null : card.data.image;
 }
+
+/**
+ * Group keys for groupSlots. Content dates are UTC midnights, so the month is the UTC month.
+ * @param {TimelineEntry} e
+ */
+export const yearOf = (e) => e.year;
+/** @param {TimelineEntry} e */
+export const monthOf = (e) => e.date.getUTCMonth();
 
 /**
  * Split slots into runs of items with the same key, such as the year or the month. An ad slot belongs to the run of
