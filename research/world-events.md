@@ -3,7 +3,7 @@
 Source: research/world-events.json. Every event the five research agents found is here. The site shows the highlights only.
 
 - Criterion (Andrei, 2026-11-14): significant world events that affect a large number of people.
-- Highlight rule: launch when impact_score >= 7, or impact_score >= 5 and meme_score >= 4; else archive only (status drop).
+- Highlight rule: launch when impact_score >= 7, or impact_score >= 5 and meme_score >= 4; else archive only (status drop); council promotions are listed below the rule.
 - Impact 10 = the whole world noticed it, 5 = one large country, 1 = trivial. Meme 10 = a viral "before GTA 6" post, 1 = no post found or not searched.
 - `notre-dame-reopens`: council round 1 (GLM 5.3) added it; the research had missed it.
 - `gamestop-short-squeeze`: council round 1 (Mistral Large 4, GLM 5.3) promoted it from the archive.
@@ -34,7 +34,7 @@ Source: research/world-events.json. Every event the five research agents found i
 | We got the first year past 1.5 °C of warming before GTA 6 | 2025-01-10 | space-science | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2025_in_science) |
 | We got Germany 7–1 Brazil before GTA 6 | 2014-07-08 | sport-culture | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Brazil_v_Germany_(2014_FIFA_World_Cup)) |
 | We got 'Liberation Day' tariffs before GTA 6 | 2025-04-02 | economy-business | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Liberation_Day_tariffs) |
-| We got Notre-Dame rebuilt before GTA 6 | 2024-12-07 | council | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Notre-Dame_de_Paris_fire) |
+| We got Notre-Dame rebuilt before GTA 6 | 2024-12-07 | sport-culture | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Notre-Dame_de_Paris_fire) |
 | We got Pokémon Go before GTA 6 | 2016-07-06 | tech-internet | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Pok%C3%A9mon_Go) |
 | We got Trump and Kim Jong Un shaking hands before GTA 6 | 2018-06-12 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2018_North_Korea%E2%80%93United_States_Singapore_summit) |
 | We got 9.1% inflation before GTA 6 | 2022-07-13 | economy-business | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/2021%E2%80%932023_inflation_surge) |
@@ -86,12 +86,12 @@ Source: research/world-events.json. Every event the five research agents found i
 | We got Reddit squeezing Wall Street before GTA 6 | 2021-01-28 | economy-business | 6 | 2 | – | [fact](https://en.wikipedia.org/wiki/GameStop_short_squeeze) |
 | We got Arsenal winning the league before GTA 6 | 2026-05-19 | sport-culture | 5 | 5 | 4,588 likes, 145,018 views | [fact](https://en.wikipedia.org/wiki/2025%E2%80%9326_Premier_League) |
 
-## Archive only (219)
+## Archive only (218)
 
 | Title | Date | Field | Impact | Meme | Post engagement | Fact | Why not on the site |
 |---|---|---|---|---|---|---|---|
 | We got half the world online before GTA 6 | 2018-12-07 | tech-internet | 8 | 1 | – | [fact](https://www.itu.int/en/mediacentre/Pages/2018-PR40.aspx) | a statistics report, not an event people saw |
-| We got Roe v. Wade overturned before GTA 6 | 2022-06-24 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Dobbs_v._Jackson_Women%27s_Health_Organization) | a serious, divisive abortion ruling; the politics rule asks for funny or absurd |
+| We got Roe v. Wade overturned before GTA 6 | 2022-06-24 | politics-world | 8 | 1 | – | [fact](https://en.wikipedia.org/wiki/Dobbs_v._Jackson_Women%27s_Health_Organization) | waits for Andrei: a divisive abortion ruling; the "we got" wording can read as taking a side |
 | We got Twitter renamed X before GTA 6 | 2023-07-22 | tech-internet | 7 | 2 | – | [fact](https://en.wikipedia.org/wiki/X_(social_network)) | same story as musk-buys-twitter, whose blurb names the rename |
 | We got half the internet down because of Amazon before GTA 6 | 2025-10-20 | tech-internet | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/Amazon_Web_Services) | no image; CrowdStrike and Facebook already cover outages |
 | We got a global chip shortage before GTA 6 | 2020-01-01 | economy-business | 7 | 1 | – | [fact](https://en.wikipedia.org/wiki/2020%E2%80%932023_global_chip_shortage) | partly caused by COVID-19, and the source dates it by year only |
@@ -172,7 +172,6 @@ Source: research/world-events.json. Every event the five research agents found i
 | We got AI winning maths olympiad gold before GTA 6 | 2025-07-21 | tech-internet | 5 | 1 | – | [fact](https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/) | below the highlight rule |
 | We got Google telling people to put glue on pizza before GTA 6 | 2024-05-23 | tech-internet | 5 | 1 | – | [fact](https://en.wikipedia.org/wiki/AI_Overviews) | below the highlight rule |
 | We got a social media ban for under-16s before GTA 6 | 2025-12-10 | politics-world | 5 | 1 | – | [fact](https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024) | below the highlight rule |
-| We got a social media ban for under-16s before GTA 6 | 2025-12-10 | tech-internet | 5 | 1 | – | [fact](https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024) | below the highlight rule |
 | We got Baby Shark as the most-viewed video ever before GTA 6 | 2020-11-02 | tech-internet | 5 | 1 | – | [fact](https://en.wikipedia.org/wiki/Baby_Shark) | below the highlight rule |
 | We got a new Beatles song before GTA 6 | 2023-11-02 | sport-culture | 5 | 1 | – | [fact](https://en.wikipedia.org/wiki/Now_and_Then_(Beatles_song)) | below the highlight rule |
 | We got X blocked in Brazil before GTA 6 | 2024-08-30 | tech-internet | 5 | 1 | – | [fact](https://en.wikipedia.org/wiki/Blocking_of_X_in_Brazil) | below the highlight rule |
