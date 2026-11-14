@@ -35,13 +35,18 @@ Done on 2026-11-13:
      `vars/arcane-gitops-syncs.yml`, so a rebuild of production01 recreates it.
 5. **Mail.** The address `takedown@lav.ren` (footer, privacy page, security.txt).
 
+Done on 2026-11-14:
+
+6. **www redirect.** Zone `beforegta6.wtf` has the Redirect Rule `Redirect from WWW to root [Template]`:
+   `https://www.*` → `https://${1}`, 301, query string kept. The `www` record is a proxied CNAME to the apex.
+7. **Monitoring.** Umami website `beforegta6.wtf` (`8c3edd71-c06b-4836-9a7c-38aec4df3a57`, in `src/data/site.js` as
+   `UMAMI_WEBSITE_ID`). The tracker counts only the apex (`data-domains`), so staging and local runs stay out of the
+   stats. Uptime Kuma monitor 136 `beforegta6.wtf` in group `production`.
+
 Still to do:
 
-6. **Cloudflare zone `beforegta6.wtf`.**
-   - A Redirect Rule: `https://www.*` → `https://${1}`, 301, keep the query string. Keep a proxied `www` record.
-   - A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at Cloudflare.
-7. **Monitoring.** Add an Umami website and an Uptime Kuma monitor for `https://beforegta6.wtf/`. Put the Umami
-   website ID in `src/data/site.js` (`UMAMI_WEBSITE_ID`).
+8. **HTML Cache Rule.** A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at
+   Cloudflare. It waits for § AdSense step 3: a cached page reuses one CSP nonce for its whole cache lifetime.
 
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
