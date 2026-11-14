@@ -21,7 +21,7 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
 
 - **Timeline** at `/`, the only view: every card on one time axis, from the GTA V release (2013-09-17) to the GTA 6
   launch, with year markers and fixed GTA milestones (below). Toggles set the order (newest first by default, or oldest
-  first) and the view (small cards under each month by default, or lines). Each combination is a static page:
+  first) and the view (small cards by default, with a tile for each month in the grid, or lines). Each combination is a static page:
   `/`, `/oldest/`, `/lines/`, `/lines/oldest/` (Andrei, 2026-11-14).
 - **One page per card** at `/<id>/`, with Open Graph tags whose image is the card's meme.
 - **Countdown** to 2026-11-19 in the header. After that moment the header reads "We got all of this before GTA 6."

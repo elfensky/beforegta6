@@ -62,11 +62,14 @@ const monthName = (year, month) =>
           ))}
         </ol>
       ) : (
-        groupSlots(year.slots, monthOf).map((month) => (
-          <>
-            {/* No <section> per month: 40 named regions would swamp the landmark list. */}
-            <h3>{monthName(year.key, month.key)}</h3>
-            <ol class="grid">
+        // One grid per year with a month tile in the row: most months hold one or two cards, and a grid per month
+        // would leave most of each desktop row empty.
+        <ol class="grid">
+          {groupSlots(year.slots, monthOf).map((month) => (
+            <>
+              <li class="month">
+                <h3>{monthName(year.key, month.key)}</h3>
+              </li>
               {month.slots.map((slot) => (
                 <TimelineItem
                   slot={slot}
@@ -78,9 +81,9 @@ const monthName = (year, month) =>
                   }
                 />
               ))}
-            </ol>
-          </>
-        ))
+            </>
+          ))}
+        </ol>
       )}
     </section>
   ))}

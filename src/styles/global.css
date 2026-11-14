@@ -333,9 +333,18 @@ main,
   margin: 2rem 0 1rem;
   color: var(--orange);
 }
-.year h3 {
+/* A month is one tile in the card grid, before its cards. */
+.grid > .month {
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.month h3 {
   font-size: var(--step-1);
-  margin: 1.25rem 0 0.75rem;
+  margin: 0;
   color: var(--muted);
 }
 .year:last-child {
