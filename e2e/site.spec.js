@@ -6,9 +6,9 @@ const launched = readdirSync('src/content/cards').filter((f) =>
   /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
 ).length;
 
-for (const route of ['/', '/timeline/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
+for (const route of ['/', '/lines/oldest/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
-    // axe over the full card wall takes ~11 s in Firefox alone; parallel workers can triple that.
+    // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
     test.setTimeout(60_000);
     await page.goto(route);
     const { violations } = await new AxeBuilder({ page }).analyze();
@@ -19,7 +19,7 @@ for (const route of ['/', '/timeline/', '/flying-cars/', '/privacy/', '/does-not
 test.describe('at 320 px', () => {
   test.use({ viewport: { width: 320, height: 640 } });
 
-  for (const route of ['/', '/timeline/']) {
+  for (const route of ['/', '/lines/']) {
     test(`no horizontal scroll on ${route}`, async ({ page }) => {
       await page.goto(route);
       const [scroll, client] = await page.evaluate(() => [
@@ -30,12 +30,13 @@ test.describe('at 320 px', () => {
     });
   }
 
-  test('ad slots come no more often than every 4 cards', async ({ page }) => {
+  test('ad slots come no more often than every 4 entries', async ({ page }) => {
     await page.goto('/');
-    const cards = await page.locator('.grid article').count();
+    // Milestones are timeline entries too, and withAdSlots counts them.
+    const entries = await page.locator('.grid > li:not(.ad-slot)').count();
     const ads = await page.locator('.grid .ad-slot:visible').count();
     expect(ads).toBeGreaterThan(0);
-    expect(ads).toBeLessThanOrEqual(Math.floor(cards / 4));
+    expect(ads).toBeLessThanOrEqual(Math.floor(entries / 4));
   });
 });
 
@@ -51,11 +52,25 @@ test('the skip link moves focus to main', async ({ page, browserName }) => {
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 
-  test('the wall reads in full and shows the launch date', async ({ page }) => {
+  test('the timeline reads in full and shows the launch date', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('.grid article')).toHaveCount(launched);
     await expect(page.getByText('GTA 6: 19 November 2026')).toBeVisible();
+    await page.getByRole('link', { name: 'Oldest first' }).click();
+    await expect(page).toHaveURL('/oldest/');
   });
+});
+
+test('the toggles switch order and view', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.year h2').first()).toHaveText('2026');
+  await page.getByRole('link', { name: 'Oldest first' }).click();
+  await expect(page).toHaveURL('/oldest/');
+  await expect(page.locator('.year h2').first()).toHaveText('2013');
+  await page.getByRole('link', { name: 'Lines' }).click();
+  await expect(page).toHaveURL('/lines/oldest/');
+  await expect(page.getByRole('link', { name: 'Lines' })).toHaveAttribute('aria-current', 'page');
+  await expect(page.locator('.timeline .entry')).toHaveCount(launched);
 });
 
 // AdSense sizes a responsive unit from its own width; a zero-width <ins> never fills.

@@ -1,12 +1,12 @@
 # beforegta6.wtf — design
 
 - Date: 2026-11-13
-- Status: approved by Andrei on 2026-11-13. This document includes his later additions from the same session: the timeline, the content rules and the GTA V re-release cards.
+- Status: approved by Andrei on 2026-11-13. This document includes his later additions from the same session: the timeline, the content rules and the GTA V re-release cards. The timeline-only change of 2026-11-14 (`2026-11-14-timeline-only-design.md`) replaces the card grid and the header switch.
 - Sources: the brainstorming session of 2026-11-13. Candidate research is in `research/` once imported.
 
 ## Intent
 
-The site is about the meme "We got ___ before GTA 6": a curated wall of cards plus a timeline. Each card has an image of the thing, the
+The site is about the meme "We got ___ before GTA 6": a curated timeline of cards. Each card has an image of the thing, the
 meme line, one line of fact and a link to the original post. The site must be live before GTA 6 launches, to catch
 launch-week traffic. The launch date is 2026-11-19, set by Rockstar in November 2025. Nobody has confirmed since then that the date still holds.
 Google AdSense runs on Andrei's personal account. It is a hobby site made for the meme, and little or no income is expected (Andrei, 2026-11-13).
@@ -19,9 +19,10 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
 
 ## Goals
 
-- **Card grid** at `/`: newest first.
-- **Timeline** at `/timeline/`: every card on one vertical time axis, from the GTA V release (2013-09-17) to the GTA 6
-  launch, with year markers and fixed GTA milestones (below). A header switch moves between Cards and Timeline.
+- **Timeline** at `/`, the only view: every card on one time axis, from the GTA V release (2013-09-17) to the GTA 6
+  launch, with year markers and fixed GTA milestones (below). Toggles set the order (newest first by default, or oldest
+  first) and the view (small cards under each month by default, or lines). Each combination is a static page:
+  `/`, `/oldest/`, `/lines/`, `/lines/oldest/` (Andrei, 2026-11-14).
 - **One page per card** at `/<id>/`, with Open Graph tags whose image is the card's meme.
 - **Countdown** to 2026-11-19 in the header. After that moment the header reads "We got all of this before GTA 6."
 - **Ad cards:** one per screenful (see Ads).

@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import { milestones } from '../data/milestones.js';
+import Base from '../layouts/Base.astro';
+import { withAdSlots } from '../lib/ads.js';
+import { groupSlots, timelineEntries } from '../lib/cards.js';
+import TimelineItem from './TimelineItem.astro';
+
+/** @typedef {'oldest' | 'newest'} Order */
+/** @typedef {'cards' | 'lines'} View */
+/** @type {{ order: Order, view: View }} */
+const { order, view } = Astro.props;
+const entries = timelineEntries(await getCollection('cards'), milestones, order);
+const cards = entries.flatMap((e) => (e.kind === 'card' ? [e.card] : []));
+const years = groupSlots(withAdSlots(entries), (e) => e.year);
+// The first cards on the page are the largest paint: load them at once.
+const eager = new Set(cards.slice(0, 4).map((c) => c.id));
+/** @param {Order} o @param {View} v */
+const href = (o, v) => `${v === 'lines' ? '/lines' : ''}/${o === 'oldest' ? 'oldest/' : ''}`;
+/** @param {boolean} on */
+const current = (on) => (on ? /** @type {const} */ ('page') : undefined);
+/** @param {number} year @param {number} month */
+const monthName = (year, month) =>
+  new Date(Date.UTC(year, month)).toLocaleDateString('en-GB', { month: 'long', timeZone: 'UTC' });
+---
+
+<Base
+  title="Everything we got before GTA 6 · beforegta6.wtf"
+  description={`${cards.length} things that happened while the world waited for GTA 6.`}
+  path="/"
+>
+  <h1 class="page-title" data-launch-title>
+    Everything we got before GTA 6
+  </h1>
+  <nav class="toggles" aria-label="Timeline options">
+    <p>
+      <span>Order:</span>
+      <a href={href('newest', view)} aria-current={current(order === 'newest')}>
+        Newest first
+      </a>
+      <a href={href('oldest', view)} aria-current={current(order === 'oldest')}>
+        Oldest first
+      </a>
+    </p>
+    <p>
+      <span>View:</span>
+      <a href={href(order, 'cards')} aria-current={current(view === 'cards')}>
+        Cards
+      </a>
+      <a href={href(order, 'lines')} aria-current={current(view === 'lines')}>
+        Lines
+      </a>
+    </p>
+  </nav>
+  {years.map((year) => (
+    <section class="year" aria-labelledby={`y${year.key}`}>
+      <h2 id={`y${year.key}`}>{year.key}</h2>
+      {view === 'lines' ? (
+        <ol class="timeline">
+          {year.slots.map((slot) => (
+            <TimelineItem slot={slot} view={view} />
+          ))}
+        </ol>
+      ) : (
+        groupSlots(year.slots, (e) => e.date.getUTCMonth()).map((month) => (
+          <>
+            {/* No <section> per month: 40 named regions would swamp the landmark list. */}
+            <h3>{monthName(year.key, month.key)}</h3>
+            <ol class="grid">
+              {month.slots.map((slot) => (
+                <TimelineItem
+                  slot={slot}
+                  view={view}
+                  eager={
+                    slot.kind === 'item' &&
+                    slot.item.kind === 'card' &&
+                    eager.has(slot.item.card.id)
+                  }
+                />
+              ))}
+            </ol>
+          </>
+        ))
+      )}
+    </section>
+  ))}
+</Base>

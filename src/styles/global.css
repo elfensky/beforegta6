@@ -112,24 +112,6 @@ main,
   color: var(--orange);
   font-weight: 700;
 }
-.site-header nav {
-  margin-inline-start: auto;
-  display: flex;
-  gap: 0.25rem;
-}
-.site-header nav a {
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  color: var(--text);
-  text-decoration: none;
-  border: 1px solid var(--line);
-}
-.site-header nav a[aria-current='page'] {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: var(--bg);
-  font-weight: 700;
-}
 
 .page-title {
   font-size: var(--step-3);
@@ -151,23 +133,60 @@ main,
   max-width: 65ch;
 }
 
-/* The grid: 1, 2, 3 and 4 columns. Mobile-only ad slots disappear where the desktop rhythm takes over. */
+/* Order and view toggles: two groups of pill links above the timeline. */
+.toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.toggles p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+.toggles span {
+  color: var(--muted);
+  margin-inline-end: 0.25rem;
+}
+.toggles a {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--line);
+}
+.toggles a[aria-current='page'] {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+/* Small cards under each month: 2, 3, 4 and 5 columns. Milestones and ad slots take a full row: an AdSense unit needs
+   about 250 px. Mobile-only ad slots disappear where the desktop rhythm takes over. */
 .grid {
   list-style: none;
   padding: 0;
-  margin: 0 0 3rem;
+  margin: 0;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid > .milestone,
+.grid > .ad-slot {
+  grid-column: 1 / -1;
 }
 @media (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media (min-width: 960px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   [data-desktop='false'] {
     display: none;
@@ -175,7 +194,7 @@ main,
 }
 @media (min-width: 1280px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -229,6 +248,17 @@ main,
   font-weight: 700;
   color: var(--orange);
   background: repeating-linear-gradient(45deg, #2a1636 0 12px, #241030 12px 24px);
+}
+
+.card.small {
+  overflow-wrap: anywhere;
+}
+.card.small .card-body {
+  padding: 0.6rem 0.7rem 0.7rem;
+  font-size: var(--step--1);
+}
+.card.small .card-title {
+  font-size: var(--step-0);
 }
 
 .card.large {
@@ -297,11 +327,19 @@ main,
   color: var(--muted);
 }
 
-/* Timeline: one column, then a centre line and two entries per row from 960 px. */
+/* Lines: one column, then a centre line and two entries per row from 960 px. */
 .year h2 {
   font-size: var(--step-2);
   margin: 2rem 0 1rem;
   color: var(--orange);
+}
+.year h3 {
+  font-size: var(--step-1);
+  margin: 1.25rem 0 0.75rem;
+  color: var(--muted);
+}
+.year:last-child {
+  margin-bottom: 3rem;
 }
 .timeline {
   list-style: none;
@@ -310,7 +348,8 @@ main,
   display: grid;
   gap: 0.75rem;
 }
-.timeline > li {
+.timeline > li,
+.milestone {
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -336,7 +375,8 @@ main,
   font-weight: 700;
   color: var(--orange);
 }
-.timeline time {
+.timeline time,
+.milestone time {
   font-size: var(--step--1);
   color: var(--muted);
 }
@@ -351,11 +391,12 @@ main,
 .t-title a:hover {
   color: var(--pink);
 }
+.milestone,
 .timeline .milestone {
   border-color: var(--pink);
   background: linear-gradient(90deg, #3a1046, var(--bg-card));
 }
-.timeline .milestone p {
+.milestone p {
   margin: 0.15rem 0 0;
 }
 .timeline .ad-slot {
