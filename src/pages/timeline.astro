@@ -5,10 +5,10 @@ import AdCard from '../components/AdCard.astro';
 import { milestones } from '../data/milestones.js';
 import Base from '../layouts/Base.astro';
 import { withAdSlots } from '../lib/ads.js';
-import { byYear, timelineEntries } from '../lib/cards.js';
+import { groupSlots, timelineEntries } from '../lib/cards.js';
 
 const entries = timelineEntries(await getCollection('cards'), milestones);
-const years = byYear(withAdSlots(entries));
+const years = groupSlots(withAdSlots(entries), (e) => e.year);
 /** @param {Date} d */
 const iso = (d) => d.toISOString().slice(0, 10);
 /** @param {Date} d */
@@ -23,8 +23,8 @@ const shown = (d) =>
 >
   <h1 class="page-title">The timeline of the wait</h1>
   {years.map((group) => (
-    <section class="year" aria-labelledby={`y${group.year}`}>
-      <h2 id={`y${group.year}`}>{group.year}</h2>
+    <section class="year" aria-labelledby={`y${group.key}`}>
+      <h2 id={`y${group.key}`}>{group.key}</h2>
       <ol class="timeline">
         {group.slots.map((s) =>
           s.kind === 'ad' ? (

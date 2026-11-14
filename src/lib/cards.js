@@ -21,12 +21,14 @@ export function visibleCards(cards) {
 }
 
 /**
- * Cards and GTA milestones on one axis, oldest first. On the same day a milestone comes first.
+ * Cards and GTA milestones on one axis, oldest first. On the same day a milestone comes first. Newest first is the
+ * exact reverse.
  * @param {Card[]} cards
  * @param {Milestone[]} milestones
+ * @param {'oldest' | 'newest'} [order]
  * @returns {TimelineEntry[]}
  */
-export function timelineEntries(cards, milestones) {
+export function timelineEntries(cards, milestones, order = 'oldest') {
   /** @type {TimelineEntry[]} */
   const entries = [
     ...milestones.map((m) => {
@@ -44,7 +46,8 @@ export function timelineEntries(cards, milestones) {
     }),
   ];
   const rank = { milestone: 0, card: 1 };
-  return entries.sort((a, b) => a.date.getTime() - b.date.getTime() || rank[a.kind] - rank[b.kind]);
+  entries.sort((a, b) => a.date.getTime() - b.date.getTime() || rank[a.kind] - rank[b.kind]);
+  return order === 'newest' ? entries.reverse() : entries;
 }
 
 /**
@@ -56,18 +59,20 @@ export function ogImageOf(card) {
 }
 
 /**
- * Split the timeline's slots into year sections. An ad slot belongs to the year of the entry before it.
- * @template {{ year: number }} T
+ * Split slots into runs of items with the same key, such as the year or the month. An ad slot belongs to the run of
+ * the item before it.
+ * @template T
  * @param {import('./ads.js').Slot<T>[]} slots
- * @returns {{ year: number, slots: import('./ads.js').Slot<T>[] }[]}
+ * @param {(item: T) => number} keyOf
+ * @returns {{ key: number, slots: import('./ads.js').Slot<T>[] }[]}
  */
-export function byYear(slots) {
-  /** @type {{ year: number, slots: import('./ads.js').Slot<T>[] }[]} */
+export function groupSlots(slots, keyOf) {
+  /** @type {{ key: number, slots: import('./ads.js').Slot<T>[] }[]} */
   const groups = [];
   for (const slot of slots) {
     const last = groups.at(-1);
-    if (slot.kind === 'item' && slot.item.year !== last?.year)
-      groups.push({ year: slot.item.year, slots: [slot] });
+    if (slot.kind === 'item' && keyOf(slot.item) !== last?.key)
+      groups.push({ key: keyOf(slot.item), slots: [slot] });
     else last?.slots.push(slot);
   }
   return groups;
