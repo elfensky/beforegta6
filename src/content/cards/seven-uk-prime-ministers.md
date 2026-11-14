@@ -3,7 +3,7 @@ title: "We got seven UK prime ministers before GTA 6"
 blurb: "Keir Starmer announced his resignation on 22 June 2026; Andy Burnham became prime minister on 20 July 2026, the seventh since GTA V's release."
 kind: "real-event"
 date: "2026-07-20"
-source: {"url":"https://x.com/RockStationOnX/status/2068977004192374840","platform":"x","engagement":"5,472 likes, 104,449 views ('Keir Starmer resigning before GTA 6… At least he can't ban it now')"}
+source: {"url":"https://x.com/RockStationOnX/status/2068977004192374840","platform":"x","engagement":"5,472 likes, 104,449 views"}
 imageAlt: "We got seven UK prime ministers before GTA 6"
 nsfw: false
 status: "launch"

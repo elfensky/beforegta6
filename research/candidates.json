@@ -17,7 +17,9 @@
       "image_note": "image from @JefferyxBball's aliens post (14K likes, same day)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 7,
+      "meme_score": 6
     },
     {
       "id": "blue-texas",
@@ -36,7 +38,9 @@
       "image_note": "r/CuratedTumblr 'We got Blexas before GTA 6' image (9,073 upvotes); the Atrioc post is text only",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 6,
+      "meme_score": 10
     },
     {
       "id": "dire-wolves",
@@ -55,7 +59,9 @@
       "image_note": "TIME cover with a dire wolf pup (quoted)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 7,
+      "meme_score": 1
     },
     {
       "id": "flying-cars",
@@ -74,7 +80,9 @@
       "image_note": "the SkyDrive SD-03 single-seat flying car on display at the Japan Mobility Show 2023 (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 6,
+      "meme_score": 10
     },
     {
       "id": "jesus-before-gta6-bet",
@@ -93,7 +101,9 @@
       "image_note": "video thumbnail of the Adin Ross stream clip",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 3,
+      "meme_score": 6
     },
     {
       "id": "john-cena-heel-turn",
@@ -112,7 +122,9 @@
       "image_note": "John Cena in a cap, smiling, at Naval Station Norfolk in 2012 (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": true,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 4,
+      "meme_score": 4
     },
     {
       "id": "millennium-prize-problem",
@@ -131,7 +143,9 @@
       "image_note": "red smoke curls into a vortex behind a plane's wingtip in a NASA wake study (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 8,
+      "meme_score": 4
     },
     {
       "id": "new-mozart",
@@ -150,7 +164,9 @@
       "image_note": "image from the parent post it replies to (@BUDDYHEAD_)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 4,
+      "meme_score": 6
     },
     {
       "id": "new-pope",
@@ -169,7 +185,9 @@
       "image_note": "tweet screenshot",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 9,
+      "meme_score": 5
     },
     {
       "id": "quantum-teleportation",
@@ -188,7 +206,9 @@
       "image_note": "headline screenshot about quantum teleportation",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 10
+      "rank_score": 10,
+      "impact_score": 3,
+      "meme_score": 4
     },
     {
       "id": "artemis-ii",
@@ -207,7 +227,9 @@
       "image_note": "NASA \"Earthset\" photo taken by the Artemis II crew (Wikipedia lead image)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 9,
+      "meme_score": 1
     },
     {
       "id": "booster-catch",
@@ -226,7 +248,9 @@
       "image_note": "Super Heavy booster on final approach to the tower (Wikipedia lead image)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 8,
+      "meme_score": 1
     },
     {
       "id": "gta-7-before-gta-6",
@@ -245,7 +269,9 @@
       "image_note": "the seven of hearts from an 1813 French deck of playing cards (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 1,
+      "meme_score": 8
     },
     {
       "id": "iphone-airlift",
@@ -264,7 +290,9 @@
       "image_note": "image from the quoted Dexerto post",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 4,
+      "meme_score": 6
     },
     {
       "id": "kitkat-heist",
@@ -283,7 +311,9 @@
       "image_note": "three big Kit Kat bars, one of them white chocolate (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 3,
+      "meme_score": 4
     },
     {
       "id": "mamdani-twitch",
@@ -302,7 +332,9 @@
       "image_note": "r/196 meme image",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 4,
+      "meme_score": 4
     },
     {
       "id": "minecraft-beats-itself",
@@ -321,7 +353,9 @@
       "image_note": "video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 1,
+      "meme_score": 5
     },
     {
       "id": "new-ocean",
@@ -340,7 +374,9 @@
       "image_note": "IGN news image quoted in the post (Southern Ocean map)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 5,
+      "meme_score": 2
     },
     {
       "id": "new-prime-number",
@@ -359,7 +395,9 @@
       "image_note": "r/mathmemes meme image",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 4,
+      "meme_score": 6
     },
     {
       "id": "real-oppressor-mk2",
@@ -378,7 +416,9 @@
       "image_note": "video thumbnail of the Volonaut Airbike in flight",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 2,
+      "meme_score": 8
     },
     {
       "id": "second-moon",
@@ -397,7 +437,9 @@
       "image_note": "r/196 meme image",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 5,
+      "meme_score": 2
     },
     {
       "id": "vatican-anime-mascot",
@@ -416,7 +458,9 @@
       "image_note": "Luce mascot meme",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 4,
+      "meme_score": 6
     },
     {
       "id": "white-house-saved-america",
@@ -435,7 +479,9 @@
       "image_note": "a rainbow over the North Portico of the White House (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 1,
+      "meme_score": 10
     },
     {
       "id": "wwe-zero-gravity",
@@ -454,7 +500,9 @@
       "image_note": "video thumbnail (not inspected)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 9
+      "rank_score": 9,
+      "impact_score": 1,
+      "meme_score": 10
     },
     {
       "id": "ai-generated-gta",
@@ -473,7 +521,9 @@
       "image_note": "the downtown Los Angeles skyline at dusk, seen from Griffith Park (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 3,
+      "meme_score": 4
     },
     {
       "id": "durian-condom",
@@ -511,7 +561,9 @@
       "image_note": "GAME video game shop in Umeå (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 7,
+      "meme_score": 1
     },
     {
       "id": "gta5-free-on-epic",
@@ -530,7 +582,9 @@
       "image_note": "rows of server racks of NASA's Pleiades supercomputer (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 6,
+      "meme_score": 1
     },
     {
       "id": "gta6-award",
@@ -549,7 +603,9 @@
       "image_note": "drawing of a man in a suit running up stairs to a gold trophy (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 3,
+      "meme_score": 4
     },
     {
       "id": "gta6-before-milk",
@@ -568,7 +624,9 @@
       "image_note": "the Reddit post's own photo, cropped to the jug and its NOV 20 date; the GTA VI overlay is cut out",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 1,
+      "meme_score": 6
     },
     {
       "id": "gta6-delays",
@@ -587,7 +645,9 @@
       "image_note": "the departures and arrivals board in the TWA Flight Center at JFK Airport (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 7,
+      "meme_score": 9
     },
     {
       "id": "hulkenberg-podium",
@@ -606,7 +666,9 @@
       "image_note": "David Coulthard's Instagram post",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 3,
+      "meme_score": 6
     },
     {
       "id": "lesbian-niqabi-muslim",
@@ -625,7 +687,9 @@
       "image_note": "quoted couple photo of private people; check consent and rights before use",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 1,
+      "meme_score": 8
     },
     {
       "id": "limewire-72-trillion",
@@ -644,7 +708,9 @@
       "image_note": "reaction video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 2,
+      "meme_score": 6
     },
     {
       "id": "microscopic-handbag",
@@ -663,7 +729,9 @@
       "image_note": "quoted photo of the tiny bag on a fingertip",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 2,
+      "meme_score": 8
     },
     {
       "id": "skittles-tweet",
@@ -682,7 +750,9 @@
       "image_note": "Skittles packet (Wikipedia lead image); the post is text only",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 1,
+      "meme_score": 6
     },
     {
       "id": "snoop-quit-smoking",
@@ -701,7 +771,9 @@
       "image_note": "Snoop Dogg photo from the quoted news post",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 2,
+      "meme_score": 6
     },
     {
       "id": "stranger-things",
@@ -720,7 +792,9 @@
       "image_note": "photo of Gaten Matarazzo",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 6,
+      "meme_score": 9
     },
     {
       "id": "tiktok-ban",
@@ -739,7 +813,9 @@
       "image_note": "TikTok's in-app 'restored' screen (Wikipedia lead image); Wendy's post is text only",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 8,
+      "meme_score": 6
     },
     {
       "id": "trump-gamer-tax",
@@ -758,7 +834,9 @@
       "image_note": "image from the quoted price-rise news post",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 5,
+      "meme_score": 6
     },
     {
       "id": "winds-of-winter",
@@ -777,7 +855,9 @@
       "image_note": "r/NonPoliticalTwitter screenshot of the joke (16,854 upvotes)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 8
+      "rank_score": 8,
+      "impact_score": 1,
+      "meme_score": 6
     },
     {
       "id": "ado-face",
@@ -796,7 +876,9 @@
       "image_note": "still from the Vivarium video",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 3,
+      "meme_score": 8
     },
     {
       "id": "catbox-360",
@@ -815,7 +897,9 @@
       "image_note": "litter box with an Xbox logo",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 4
     },
     {
       "id": "chatgpt-gta5-real-people",
@@ -834,7 +918,9 @@
       "image_note": "the Santa Monica Pier and its beach seen from the air (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": true,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 3,
+      "meme_score": 4
     },
     {
       "id": "concord",
@@ -853,7 +939,9 @@
       "image_note": "a sign in a shop door: our shop will be temporarily closed (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 3,
+      "meme_score": 1
     },
     {
       "id": "drunk-dog",
@@ -872,7 +960,9 @@
       "image_note": "dog asleep in the sun (Wikimedia Commons, CC0); the post is text only and the quoted video is gone",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 9
     },
     {
       "id": "f1-car-nudes",
@@ -891,7 +981,9 @@
       "image_note": "F1 car render without livery (crude title only, no nudity)",
       "nsfw": true,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 4
     },
     {
       "id": "gary-grand-theft-auto",
@@ -910,7 +1002,9 @@
       "image_note": "video thumbnail (not inspected)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 4
     },
     {
       "id": "gta5-billion-in-3-days",
@@ -929,7 +1023,9 @@
       "image_note": "US dollar banknotes (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 7,
+      "meme_score": 1
     },
     {
       "id": "gta6-trailer",
@@ -948,7 +1044,9 @@
       "image_note": "an old postcard of Ocean Drive, Miami Beach, with palm trees, hotels and old cars (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 8,
+      "meme_score": 1
     },
     {
       "id": "madrid-derbies",
@@ -967,7 +1065,9 @@
       "image_note": "footballers in striped and white shirts at a 1919 Madrid derby (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 3,
+      "meme_score": 10
     },
     {
       "id": "mario-kart-cow",
@@ -986,7 +1086,9 @@
       "image_note": "video poster: Cow racing in Mario Kart World",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 2,
+      "meme_score": 6
     },
     {
       "id": "miami-heat-vice-city",
@@ -1005,7 +1107,9 @@
       "image_note": "screenshot of @MiamiHEAT's post, with the bottom logo row (GTA VI, Rockstar) cut off",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 2,
+      "meme_score": 4
     },
     {
       "id": "new-colour-olo",
@@ -1024,7 +1128,9 @@
       "image_note": "r/shitposting meme image",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 3,
+      "meme_score": 2
     },
     {
       "id": "nintendo-alarm-clock",
@@ -1043,7 +1149,9 @@
       "image_note": "photo of the Alarmo clock",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "pvz-ai-movie",
@@ -1062,7 +1170,9 @@
       "image_note": "film thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "saddam-in-zzz",
@@ -1081,7 +1191,9 @@
       "image_note": "video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "silksong",
@@ -1100,7 +1212,9 @@
       "image_note": "r/HollowKnightMemes \"Silksong before gta 6 is wild\" image (403 upvotes)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 7
+      "rank_score": 7,
+      "impact_score": 4,
+      "meme_score": 1
     },
     {
       "id": "ash-ketchum",
@@ -1119,7 +1233,9 @@
       "image_note": "thumbnail of jacobweeby's short",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 4,
+      "meme_score": 1
     },
     {
       "id": "beyblade-fatality",
@@ -1138,7 +1254,9 @@
       "image_note": "video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "cancer-cure",
@@ -1157,7 +1275,9 @@
       "image_note": "NCI researchers at a microscope (Wikimedia Commons, public domain); the TikTok is gone",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 10
     },
     {
       "id": "cyberpunk-cybertruck",
@@ -1176,7 +1296,9 @@
       "image_note": "photo of the wrapped Cybertruck (first gallery image)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "deer-break-in",
@@ -1195,7 +1317,9 @@
       "image_note": "video thumbnail: deer inside a house",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "gta-trilogy-definitive",
@@ -1214,7 +1338,9 @@
       "image_note": "a close-up of a longhorn beetle on moss (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 4,
+      "meme_score": 1
     },
     {
       "id": "gta5-ps3-x360",
@@ -1233,7 +1359,9 @@
       "image_note": "a PlayStation 3 Slim console with a DualShock 3 controller (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 8,
+      "meme_score": 1
     },
     {
       "id": "gta5-ps5-xbox-series",
@@ -1252,7 +1380,9 @@
       "image_note": "PS5 with DualSense (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 5,
+      "meme_score": 1
     },
     {
       "id": "italian-snake",
@@ -1271,7 +1401,9 @@
       "image_note": "a grass snake flicking its tongue (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "leverkusen-again",
@@ -1290,7 +1422,9 @@
       "image_note": "a football on a grass pitch, with players training behind it (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "medieval-mrbeast",
@@ -1309,7 +1443,9 @@
       "image_note": "video thumbnail of the medieval skit",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "mini-salt-bae",
@@ -1328,7 +1464,9 @@
       "image_note": "video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "ps5-turning-off",
@@ -1347,7 +1485,9 @@
       "image_note": "reaction video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "steam-machine",
@@ -1366,7 +1506,9 @@
       "image_note": "video thumbnail from the post (Steam Machine reveal)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 4,
+      "meme_score": 1
     },
     {
       "id": "tom-brady-retired",
@@ -1385,7 +1527,9 @@
       "image_note": "thumbnail of TheNinjaSlime's 'What did we get before GTA VI?' short",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 6
+      "rank_score": 6,
+      "impact_score": 5,
+      "meme_score": 6
     },
     {
       "id": "4k-freddie",
@@ -1404,7 +1548,9 @@
       "image_note": "video thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "damascus-wood",
@@ -1423,7 +1569,9 @@
       "image_note": "video thumbnail of the wood pattern",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "digital-graffiti",
@@ -1442,7 +1590,9 @@
       "image_note": "video thumbnail (not inspected)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "elder-scrolls-6",
@@ -1461,7 +1611,9 @@
       "image_note": "a grey stone dragon statue by the sea in Lima, Peru (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 2,
+      "meme_score": 1
     },
     {
       "id": "gojo-vs-kakashi",
@@ -1480,7 +1632,9 @@
       "image_note": "animation thumbnail",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "gta5-enhanced-pc",
@@ -1499,7 +1653,9 @@
       "image_note": "a PNY GeForce 6600 GT graphics card (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 4,
+      "meme_score": 1
     },
     {
       "id": "gta5-farewell-drive",
@@ -1537,7 +1693,9 @@
       "image_note": "gaming PC (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 5,
+      "meme_score": 1
     },
     {
       "id": "gta5-ps4-xbox-one",
@@ -1556,7 +1714,9 @@
       "image_note": "PS4 with DualShock 4 by Evan-Amos (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 6,
+      "meme_score": 1
     },
     {
       "id": "gta6-in-fortnite",
@@ -1575,7 +1735,9 @@
       "image_note": "LEGO Fortnite's GTA-style image (quoted)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 1,
+      "meme_score": 1
     },
     {
       "id": "hytale",
@@ -1594,7 +1756,9 @@
       "image_note": "r/PhoenixSC Hytale reminder meme (1,001 upvotes)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 2,
+      "meme_score": 1
     },
     {
       "id": "nintendo-switch-2",
@@ -1613,7 +1777,9 @@
       "image_note": "Nintendo Switch 2 logo (Wikipedia lead image)",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 6,
+      "meme_score": 4
     },
     {
       "id": "rdr-on-phones",
@@ -1632,7 +1798,9 @@
       "image_note": "a cowboy riding a horse through a dry grass field (Wikimedia Commons, public domain); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 2,
+      "meme_score": 1
     },
     {
       "id": "the-boys-s5",
@@ -1651,7 +1819,9 @@
       "image_note": "The Boys meme image",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 5
+      "rank_score": 5,
+      "impact_score": 3,
+      "meme_score": 1
     },
     {
       "id": "gpt-5",
@@ -1670,7 +1840,9 @@
       "image_note": "r/IndiaTech post image",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 4
+      "rank_score": 4,
+      "impact_score": 7,
+      "meme_score": 3
     },
     {
       "id": "gta-online-standalone",
@@ -1689,7 +1861,9 @@
       "image_note": "a cobalt-blue DualSense controller for the PlayStation 5 (Wikimedia Commons, CC0); no Rockstar art",
       "nsfw": false,
       "status": "launch",
-      "rank_score": 4
+      "rank_score": 4,
+      "impact_score": 5,
+      "meme_score": 1
     },
     {
       "id": "sex-2",

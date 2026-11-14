@@ -3,7 +3,7 @@ title: "We got India landing near the Moon's south pole before GTA 6"
 blurb: "On 23 August 2023, India's Chandrayaan-3 landed near the lunar south pole, the first soft landing there, making India the fourth nation to land on the Moon."
 kind: "real-event"
 date: "2023-08-23"
-source: {"url":"https://x.com/mygovindia/status/1804430577958817986","platform":"x","engagement":"59 likes, 5,298 views (read 2026-11-14)"}
+source: {"url":"https://x.com/mygovindia/status/1804430577958817986","platform":"x","engagement":"59 likes, 5,298 views"}
 imageAlt: "We got India landing near the Moon's south pole before GTA 6"
 nsfw: false
 status: "launch"

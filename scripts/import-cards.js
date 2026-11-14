@@ -61,7 +61,7 @@ for (const c of candidates) {
   }
 }
 console.log(
-  `imported ${imported}, skipped (exists) ${skipped}, archive only ${archived}, failed ${failed.length}`,
+  `imported ${imported}, skipped (exists) ${skipped}, not launch (archive or hold) ${archived}, failed ${failed.length}`,
 );
 for (const f of failed) console.log(`  ${f}`);
 process.exit(failed.length ? 1 : 0);
