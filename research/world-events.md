@@ -5,8 +5,8 @@ Source: research/world-events.json. Every event the five research agents found i
 - Criterion (Andrei, 2026-11-14): significant world events that affect a large number of people.
 - Highlight rule: launch when impact_score >= 7, or impact_score >= 5 and meme_score >= 4; else archive only (status drop).
 - Impact 10 = the whole world noticed it, 5 = one large country, 1 = trivial. Meme 10 = a viral "before GTA 6" post, 1 = no post found or not searched.
-- `notre-dame-reopens` : council round 1 (GLM 5.3) added it; the research had missed it.
-- `gamestop-short-squeeze` : council round 1 (Mistral Large 4, GLM 5.3) promoted it from the archive.
+- `notre-dame-reopens`: council round 1 (GLM 5.3) added it; the research had missed it.
+- `gamestop-short-squeeze`: council round 1 (Mistral Large 4, GLM 5.3) promoted it from the archive.
 
 ## Highlights (73)
 
