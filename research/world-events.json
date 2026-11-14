@@ -1,7 +1,7 @@
 {
   "pass": 3,
   "date": "2026-11-14",
-  "rule": "launch when impact_score >= 7, or impact_score >= 5 and meme_score >= 4; else archive only (status drop)",
+  "rule": "launch when impact_score >= 7, or impact_score >= 5 and meme_score >= 4; else archive only (status drop); council promotions are listed below the rule",
   "fields": [
     {
       "field": "economy-business",
@@ -904,7 +904,7 @@
       "impact": "Watched worldwide; about 15 million visitors a year before the fire.",
       "impact_score": 8,
       "meme_score": 1,
-      "field": "council",
+      "field": "sport-culture",
       "status": "launch",
       "promoted": "council round 1 (GLM 5.3) added it; the research had missed it"
     },
@@ -956,7 +956,7 @@
       "meme_score": 1,
       "field": "politics-world",
       "status": "drop",
-      "archive_reason": "a serious, divisive abortion ruling; the politics rule asks for funny or absurd"
+      "archive_reason": "waits for Andrei: a divisive abortion ruling; the \"we got\" wording can read as taking a side"
     },
     {
       "id": "trump-kim-summit",
@@ -4105,30 +4105,6 @@
       "impact_score": 5,
       "meme_score": 1,
       "field": "politics-world",
-      "status": "drop"
-    },
-    {
-      "id": "australia-under-16-ban",
-      "title": "We got a social media ban for under-16s before GTA 6",
-      "blurb": "From 10 December 2025, Australia banned under-16s from Facebook, Instagram, TikTok, Snapchat, YouTube, Reddit, X and other platforms.",
-      "kind": "real-event",
-      "event_date": "2025-12-10",
-      "post_date": null,
-      "timeline_date": "2025-12-10",
-      "fact_url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
-      "verified": true,
-      "source_url": "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
-      "source_platform": "other",
-      "source_engagement": null,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Anika_Wells_2023.jpg",
-      "image_page": "https://commons.wikimedia.org/wiki/File:Anika_Wells_2023.jpg",
-      "image_license": "CC BY 4.0 (DFAT/Sarah Hodges)",
-      "image_note": "Anika Wells, Australia's communications minister.",
-      "nsfw": false,
-      "impact": "Every Australian child under 16.",
-      "impact_score": 5,
-      "meme_score": 1,
-      "field": "tech-internet",
       "status": "drop"
     },
     {

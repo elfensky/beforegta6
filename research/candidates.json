@@ -541,7 +541,7 @@
       "image_url": "https://i.redd.it/naxjag39x3qf1.jpeg",
       "image_note": "product packaging photo (not inspected); check AdSense fit",
       "nsfw": true,
-      "status": "launch",
+      "status": "hold",
       "rank_score": 8
     },
     {
@@ -1881,7 +1881,7 @@
       "image_url": "https://i.redd.it/m5emjcjeelge1.png",
       "image_note": "meme image (not inspected); title alone may limit ads",
       "nsfw": false,
-      "status": "launch",
+      "status": "hold",
       "rank_score": 4
     },
     {
