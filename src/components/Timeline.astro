@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { milestones } from '../data/milestones.js';
 import Base from '../layouts/Base.astro';
 import { withAdSlots } from '../lib/ads.js';
-import { groupSlots, timelineEntries } from '../lib/cards.js';
+import { groupSlots, monthOf, timelineEntries, yearOf } from '../lib/cards.js';
 import TimelineItem from './TimelineItem.astro';
 
 /** @typedef {'oldest' | 'newest'} Order */
@@ -12,7 +12,7 @@ import TimelineItem from './TimelineItem.astro';
 const { order, view } = Astro.props;
 const entries = timelineEntries(await getCollection('cards'), milestones, order);
 const cards = entries.flatMap((e) => (e.kind === 'card' ? [e.card] : []));
-const years = groupSlots(withAdSlots(entries), (e) => e.year);
+const years = groupSlots(withAdSlots(entries), yearOf);
 // The first cards on the page are the largest paint: load them at once.
 const eager = new Set(cards.slice(0, 4).map((c) => c.id));
 /** @param {Order} o @param {View} v */
@@ -62,7 +62,7 @@ const monthName = (year, month) =>
           ))}
         </ol>
       ) : (
-        groupSlots(year.slots, (e) => e.date.getUTCMonth()).map((month) => (
+        groupSlots(year.slots, monthOf).map((month) => (
           <>
             {/* No <section> per month: 40 named regions would swamp the landmark list. */}
             <h3>{monthName(year.key, month.key)}</h3>

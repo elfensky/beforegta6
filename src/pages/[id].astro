@@ -2,11 +2,14 @@
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
 import Base from '../layouts/Base.astro';
-import { ogImageOf, visibleCards } from '../lib/cards.js';
+import { ogImageOf, timelineEntries } from '../lib/cards.js';
 import { pageTitle } from '../lib/meta.js';
 
 export async function getStaticPaths() {
-  const cards = visibleCards(await getCollection('cards'));
+  // The timeline's own order, so "newer" and "older" match what / shows.
+  const cards = timelineEntries(await getCollection('cards'), [], 'newest').flatMap((e) =>
+    e.kind === 'card' ? [e.card] : [],
+  );
   return cards.map((card, i) => ({
     params: { id: card.id },
     props: { card, newer: cards[i - 1] ?? null, older: cards[i + 1] ?? null },
