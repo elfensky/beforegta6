@@ -66,7 +66,8 @@ Submissions, accounts, likes and dislikes, comments, merch, other languages.
 
 **Stack.** Astro (latest release), Node 26 LTS, plain JavaScript with JSDoc (no TypeScript). The images go through `astro:assets`
 and come out as WebP in several widths. The site uses system fonts only. Every asset is served from the site, except the AdSense script.
-Analytics: self-hosted Umami.
+Analytics: self-hosted Umami, cookieless, with no consent banner. It counts page views and Web Vitals (`data-performance`), and
+never loads Umami's `recorder.js` (session replay and heatmaps).
 
 **Content model.** One Markdown file per card, `src/content/cards/<id>.md`, with this frontmatter:
 

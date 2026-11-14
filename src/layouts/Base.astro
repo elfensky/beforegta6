@@ -34,6 +34,7 @@ const canonical = new URL(path, site).href;
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(og.src, site).href} />
     <meta name="twitter:card" content="summary_large_image" />
+    {/* Cookieless page views and Web Vitals. Never add Umami's recorder.js: it is session replay and heatmaps. */}
     {UMAMI_WEBSITE_ID && (
       <script
         is:inline
@@ -41,6 +42,7 @@ const canonical = new URL(path, site).href;
         src="https://umami.lav.ren/script.js"
         data-website-id={UMAMI_WEBSITE_ID}
         data-domains={site.hostname}
+        data-performance="true"
       />
     )}
     {ADSENSE_CLIENT && (
