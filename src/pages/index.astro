@@ -1,34 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
-import AdCard from '../components/AdCard.astro';
-import Card from '../components/Card.astro';
-import Base from '../layouts/Base.astro';
-import { withAdSlots } from '../lib/ads.js';
-import { visibleCards } from '../lib/cards.js';
-
-const cards = visibleCards(await getCollection('cards'));
-const slots = withAdSlots(cards);
+import Timeline from '../components/Timeline.astro';
 ---
 
-<Base
-  title="Everything we got before GTA 6 · beforegta6.wtf"
-  description={`${cards.length} things that happened while the world waited for GTA 6.`}
-  path="/"
->
-  <h1 class="page-title" data-launch-title>
-    Everything we got before GTA 6
-  </h1>
-  <ul class="grid">
-    {slots.map((s, i) =>
-      s.kind === 'item' ? (
-        <li>
-          <Card card={s.item} eager={i < 4} />
-        </li>
-      ) : (
-        <li class="ad-slot" data-desktop={String(s.desktop)}>
-          <AdCard desktop={s.desktop} />
-        </li>
-      ),
-    )}
-  </ul>
-</Base>
+<Timeline order="newest" view="cards" />

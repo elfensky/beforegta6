@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import AdCard from './AdCard.astro';
+import Card from './Card.astro';
+
+/**
+ * @type {{
+ *   slot: import('../lib/ads.js').Slot<import('../lib/cards.js').TimelineEntry>,
+ *   view: 'cards' | 'lines',
+ *   eager?: boolean,
+ * }}
+ */
+const { slot, view, eager = false } = Astro.props;
+/** @param {Date} d */
+const iso = (d) => d.toISOString().slice(0, 10);
+/** @param {Date} d */
+const shown = (d) =>
+  d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+---
+
+{slot.kind === 'ad' ? (
+  <li class="ad-slot" data-desktop={String(slot.desktop)}>
+    <AdCard desktop={slot.desktop} />
+  </li>
+) : slot.item.kind === 'milestone' ? (
+  <li class="milestone">
+    <time datetime={iso(slot.item.date)}>{shown(slot.item.date)}</time>
+    <p class="t-title">{slot.item.milestone.title}</p>
+    <p>
+      {slot.item.milestone.blurb}{' '}
+      <a href={slot.item.milestone.factUrl} rel="noopener">
+        source<span class="sr-only"> of “{slot.item.milestone.title}”</span>{' '}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </p>
+  </li>
+) : view === 'cards' ? (
+  <li>
+    <Card card={slot.item.card} headingLevel={4} eager={eager} small />
+  </li>
+) : (
+  <li class="entry">
+    {slot.item.card.data.nsfw ? (
+      <span class="thumb nsfw-thumb" aria-hidden="true">
+        NSFW
+      </span>
+    ) : (
+      <Image
+        class="thumb"
+        src={slot.item.card.data.image}
+        alt=""
+        width={160}
+        widths={[160, 320]}
+        sizes="160px"
+      />
+    )}
+    <div>
+      <time datetime={iso(slot.item.date)}>{shown(slot.item.date)}</time>
+      <p class="t-title">
+        <a href={`/${slot.item.card.id}/`}>{slot.item.card.data.title}</a>
+      </p>
+    </div>
+  </li>
+)}
