@@ -14,6 +14,8 @@
  * @property {string} source_platform
  * @property {string|null} source_engagement
  * @property {string|null} image_url
+ * @property {string|null} [image_page] Commons file page of the image
+ * @property {string|null} [image_license] licence and author, e.g. "CC BY 4.0 (EHT Collaboration)"
  * @property {boolean} [nsfw]
  * @property {'launch'|'hold'|'drop'} [status]
  */
@@ -28,6 +30,7 @@
  * @property {{ url: string, platform: string, engagement?: string }} source
  * @property {string} [factUrl]
  * @property {string} imageAlt
+ * @property {{ text: string, url: string }} [imageCredit]
  * @property {boolean} nsfw
  * @property {'launch'|'hold'|'drop'} status
  */
@@ -61,6 +64,8 @@ export function toCard(c) {
   if (c.event_date) frontmatter.eventDate = c.event_date;
   if (c.source_engagement) frontmatter.source.engagement = c.source_engagement;
   if (c.fact_url) frontmatter.factUrl = c.fact_url;
+  if (c.image_page && c.image_license)
+    frontmatter.imageCredit = { text: c.image_license, url: c.image_page };
   return { id: c.id, frontmatter };
 }
 

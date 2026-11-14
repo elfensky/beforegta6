@@ -29,9 +29,15 @@ if (dupes.length) {
 const assets = await readdir(ASSETS);
 let imported = 0;
 let skipped = 0;
+let archived = 0;
 /** @type {string[]} */
 const failed = [];
 for (const c of candidates) {
+  // The research file is the archive: only launch candidates become cards. Held cards wait in research/held/.
+  if ((c.status ?? 'launch') !== 'launch') {
+    archived++;
+    continue;
+  }
   try {
     const { id, frontmatter } = toCard(c);
     if (existsSync(`${CARDS}/${id}.md`)) {
@@ -54,6 +60,8 @@ for (const c of candidates) {
     failed.push(`${c.id} ${c.image_url} — ${/** @type {Error} */ (err).message}`);
   }
 }
-console.log(`imported ${imported}, skipped (exists) ${skipped}, failed ${failed.length}`);
+console.log(
+  `imported ${imported}, skipped (exists) ${skipped}, archive only ${archived}, failed ${failed.length}`,
+);
 for (const f of failed) console.log(`  ${f}`);
 process.exit(failed.length ? 1 : 0);
