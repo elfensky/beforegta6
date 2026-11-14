@@ -29,8 +29,10 @@ A visitor can turn the order (newest first, oldest first) and the view (small ca
 
 ## Design (builder's calls, open to correction)
 
-- **Small cards:** a year heading, then a month heading, then a grid of small cards (image, title, blurb, date, source).
-  It reuses `Card.astro` with a smaller variant. Milestones and ad slots span the full row of the grid.
+- **Small cards:** a year heading, then one grid of small cards (image, title, blurb, date, source) for the year.
+  Each month is a tile in the grid, before its cards (Andrei, 2026-11-14): most months hold one or two cards, and a grid
+  per month left most of each desktop row empty. It reuses `Card.astro` with a smaller variant. Milestones and ad
+  slots span the full row of the grid.
 - **Lines:** today's `/timeline/` rows, with year headings: thumbnail, date, title, milestones highlighted.
 - **Order:** "newest first" is the exact reverse of "oldest first". The order and the month grouping are pure functions in
   `src/lib/cards.js`, with unit tests.

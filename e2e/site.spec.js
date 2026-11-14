@@ -32,8 +32,8 @@ test.describe('at 320 px', () => {
 
   test('ad slots come no more often than every 4 entries', async ({ page }) => {
     await page.goto('/');
-    // Milestones are timeline entries too, and withAdSlots counts them.
-    const entries = await page.locator('.grid > li:not(.ad-slot)').count();
+    // Milestones are timeline entries too, and withAdSlots counts them. Month tiles are not entries.
+    const entries = await page.locator('.grid > li:not(.ad-slot, .month)').count();
     const ads = await page.locator('.grid .ad-slot:visible').count();
     expect(ads).toBeGreaterThan(0);
     expect(ads).toBeLessThanOrEqual(Math.floor(entries / 4));
@@ -71,6 +71,13 @@ test('the toggles switch order and view', async ({ page }) => {
   await expect(page).toHaveURL('/lines/oldest/');
   await expect(page.getByRole('link', { name: 'Lines' })).toHaveAttribute('aria-current', 'page');
   await expect(page.locator('.timeline .entry')).toHaveCount(launched);
+});
+
+// Most months hold one or two cards: a grid per month would leave most of each desktop row empty.
+test('the card view has one grid per year, with a month tile in the row', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.year > .grid')).toHaveCount(await page.locator('.year').count());
+  await expect(page.locator('.grid > .month h3').first()).toHaveText('November');
 });
 
 // AdSense sizes a responsive unit from its own width; a zero-width <ins> never fills.
