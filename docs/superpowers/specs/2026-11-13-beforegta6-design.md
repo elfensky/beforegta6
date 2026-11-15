@@ -107,7 +107,8 @@ A milestones file holds the fixed timeline anchors. Check each date at build tim
 - Consent: Google's certified "Privacy & messaging" consent tool, for visitors from the EEA, UK and Switzerland.
 - `ads.txt` at the site root.
 - The script loads on the apex only, so staging never shows real ads (Andrei, 2026-11-15).
-- The Content Security Policy is Google's strict policy: a per-request nonce on every script tag, and no host allowlist.
+- The Content Security Policy sets no `script-src`: AdSense loads from Google hosts that Google does not list, and Google's
+  nonce policy would stop the HTML edge cache (Andrei, 2026-11-15). It limits objects, the base URL, form targets and framing.
 
 **Documented exceptions** (recorded in `AGENTS.md`): the AdSense script loads from Google's servers, against the no-CDN
 rule, and AdSense is a US service, against the EU-first preference. Andrei asked for AdSense explicitly.
@@ -120,7 +121,7 @@ the miklav.com Astro repo:
 - Production: `beforegta6.wtf` on the Hetzner production swarm. The stack is `beforegta6`, from `deploy/production/compose.yaml`, and it deploys from `main`. Placement: `role == apps`, spread over the nodes.
 - Each stack: `web` ×2 and `cloudflared` ×2, with its own tunnel. The secrets are `staging_beforegta6_cloudflared` and `beforegta6_cloudflared`.
 - CI pins the built image into the branch's compose file and commits it. Arcane Git Sync runs with `redeployAfterSync: true`, from entries in `drunikbe/infra`.
-- Cloudflare: a Redirect Rule sends `www` to the bare domain. An HTML Cache Rule is open: it would share one CSP nonce among visitors (`deploy/README.md` step 8).
+- Cloudflare: a Redirect Rule sends `www` to the bare domain. A Cache Rule keeps the HTML at the edge for 5 minutes, with Smart Tiered Cache, so a spike stays at Cloudflare (`deploy/README.md` step 8).
 - Monitoring: Umami and Uptime Kuma.
 
 **Repo.** `elfensky/beforegta6`: public, personal (Andrei, 2026-11-13; it replaces the first private repo `drunikbe/beforegta6.wtf`). Default branch `develop`, with rulesets.
@@ -137,7 +138,8 @@ on desktop, one column on mobile is the starting proposal).
 - Create `takedown@lav.ren`.
 - Apply with his personal AdSense account once the site is live. Put the publisher ID in `ads.txt`.
 - Create the staging and production tunnels and store their tokens in 1Password. Then create the swarm secrets and merge the `drunikbe/infra` entries.
-- Add the Cloudflare Redirect Rule. Decide the HTML Cache Rule.
+- Add the Cloudflare Redirect Rule.
+- Add the Cloudflare Cache Rule `HTML at the edge`, and set Tiered Cache to Smart (`deploy/README.md` step 8).
 - In AdSense: turn on Auto ads for the site, and publish the consent message for the EEA, UK and Switzerland.
 
 ## Later (v2): likes and dislikes
