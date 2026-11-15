@@ -93,6 +93,8 @@ test('the AdSense script loads on the apex only', async ({ page, baseURL }) => {
   );
   await page.goto('https://beforegta6.wtf/');
   await expect.poll(() => google.length).toBe(1);
+  // Other page requests can still be in the handler here, and the page close disposes their fetched responses.
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
 });
 
 // The order is the only control: there is no view toggle.
