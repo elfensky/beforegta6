@@ -46,7 +46,16 @@ Done on 2026-11-14:
 Still to do:
 
 8. **HTML Cache Rule.** A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at
-   Cloudflare. It waits for § AdSense step 2: a cached page reuses one CSP nonce for its whole cache lifetime.
+   Cloudflare. Andrei chose it for the launch-week push (2026-11-15, `docs/PROMOTION.md`). The CSP has no nonce yet,
+   so caching is safe until § AdSense step 2. In zone `beforegta6.wtf`, Caching → Cache Rules → Create rule:
+   - Name: `HTML at the edge`.
+   - Custom filter expression: `(http.host eq "beforegta6.wtf" and not http.request.uri.path contains "/_astro/")`.
+     Staging stays uncached, and the hashed assets keep their own one-year lifetime.
+   - Cache eligibility: Eligible for cache. Edge TTL: Ignore cache-control header and use this TTL, 5 minutes.
+     Browser TTL: Respect origin (nginx sends `no-cache` for HTML).
+
+   Check: `/usr/bin/curl -sI https://beforegta6.wtf/ | /usr/bin/grep -i cf-cache-status` shows `HIT` on the second
+   request. A release then shows within 5 minutes, or at once after a purge of the page URL.
 
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
