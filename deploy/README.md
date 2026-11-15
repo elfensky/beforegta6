@@ -51,6 +51,9 @@ Still to do:
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
 
+`deploy/nginx.conf` sends `/timeline/` to `/` with a 301: the old timeline page was live in production until the line
+timeline replaced it (2026-11-15).
+
 ## Removing or holding a card
 
 Astro ships the original of every image the cards collection imports, linked or not, and `/_astro/` files are cached

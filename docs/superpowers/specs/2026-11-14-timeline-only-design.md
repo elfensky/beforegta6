@@ -2,6 +2,8 @@
 
 - Date: 2026-11-14
 - Status: approved by Andrei on 2026-11-14. It changes the Goals of `2026-11-13-beforegta6-design.md`.
+  `2026-11-15-line-timeline-design.md` replaces its two views (small cards, lines) and the view toggle. The pages, the
+  order toggle and the ad rules below still hold where that doc does not change them.
 
 ## Intent
 
