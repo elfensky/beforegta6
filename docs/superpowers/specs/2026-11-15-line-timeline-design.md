@@ -1,7 +1,7 @@
 # Line timeline — design
 
 - Date: 2026-11-15
-- Status: proposed. It replaces the views of `2026-11-14-timeline-only-design.md`: the small cards and the view toggle go.
+- Status: approved by Andrei on 2026-11-15, built the same day. It replaces the views of `2026-11-14-timeline-only-design.md`: the small cards and the view toggle go.
 - Council record: `2026-11-15-line-timeline-council.md` (Mistral Large 4, DeepSeek V4.1 Flash, 2 rounds).
 
 ## Intent
@@ -65,8 +65,8 @@ event. The card page (`/<id>/`) keeps the image, the blurb and the sources.
 - `src/pages/lines/index.astro` and `src/pages/lines/oldest.astro` are deleted. They exist only on staging, so they get
   no redirect.
 - `/timeline/` is live in production today (`origin/main` has `src/pages/timeline.astro`). When this change reaches
-  `main`, nginx sends `/timeline/` to `/` with a 301: a `location = /timeline/ { return 301 /; }` block in
-  `deploy/nginx.conf`, beside the existing `location /`.
+  `main`, nginx sends `/timeline/` and `/timeline` to `/` with a 301: a `location ~ ^/timeline/?$ { return 301 /; }`
+  block in `deploy/nginx.conf`, before the existing `location /`.
 
 ### A card row
 
@@ -107,8 +107,9 @@ The DOM order of a row is: date, node, title link, day count, hover image.
 - **When it shows:** from 960 px, on pointer hover where the device can hover (`@media (hover: hover)`), and when the row's
   link has keyboard focus (`:focus-visible` inside the row). A tap on a touch screen opens the card page and shows no
   image.
-- **Where:** in the left half, at its left edge, about 16rem wide, centred on the row's height. A pink arrow runs from the
-  image to the row, and the node turns pink.
+- **Where:** in the left half, at its left edge, about 16rem wide, hanging down from the row. A pink arrow runs from the
+  image to the row, and the node turns pink. Hanging, not centred: centred, the first rows under the launch milestone
+  showed only a strip of their image. The row just above a milestone or an ad shows the top of its image only.
 - **It covers no content.** The dates sit at the right end of the left column, so the image and the arrow stay clear of
   them. Milestone and ad rows stack above the figure (`z-index`), so a figure near them goes under them. WCAG 1.4.13 asks
   that on-hover content can be dismissed unless it covers nothing, so no dismiss control is needed. The figure is inside
