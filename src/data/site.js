@@ -5,9 +5,8 @@ export const LAUNCH = { year: 2026, monthIndex: 10, day: 19 };
 export const TAKEDOWN_EMAIL = 'takedown@lav.ren';
 // The publisher ID (public). It verifies site ownership on its own; ads stay off while ADSENSE_CLIENT is empty.
 export const ADSENSE_ACCOUNT = 'ca-pub-4995099892738113';
-// Empty = off. Set ADSENSE_CLIENT to ADSENSE_ACCOUNT and fill ADSENSE_SLOT to serve ads (deploy/README.md § AdSense).
+// Empty = off. Set it to ADSENSE_ACCOUNT to load Auto ads: Google places them (deploy/README.md § AdSense).
 export const ADSENSE_CLIENT = '';
-export const ADSENSE_SLOT = '';
 export const UMAMI_WEBSITE_ID = '8c3edd71-c06b-4836-9a7c-38aec4df3a57';
 // A personal hobby site: name and contact only, no address (Andrei, 2026-11-13).
 export const OPERATOR = 'Andrei Lavrenov';

@@ -165,8 +165,7 @@ main,
   font-weight: 700;
 }
 
-.card,
-.ad-card {
+.card {
   height: 100%;
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -239,27 +238,6 @@ main,
   gap: 1rem;
 }
 
-.ad-card {
-  display: grid;
-  place-items: center;
-  min-height: 16rem;
-  padding: 1.25rem;
-  text-align: center;
-  border-style: dashed;
-}
-.ad-card:has(ins[data-ad-status='filled']) .house {
-  display: none;
-}
-.ad-card ins[data-ad-status='unfilled'] {
-  display: none !important;
-}
-.house-big {
-  font-size: var(--step-2);
-  font-weight: 800;
-  margin: 0 0 0.5rem;
-  color: var(--orange);
-}
-
 .site-footer {
   border-top: 1px solid var(--line);
   padding-block: 1.5rem 2.5rem;
@@ -277,12 +255,6 @@ main,
     transition: none !important;
   }
 }
-.ad-label {
-  margin: 0 0 0.5rem;
-  font-size: var(--step--1);
-  color: var(--muted);
-}
-
 /* The line timeline: one row per event. Below 960 px the line runs at the left edge, and a row holds the date and the
    day count, then the title. From 960 px the line runs down the centre: date left of it, title and day count right.
    Each row and each year heading draws its own piece of the line, so milestones and ads pause it. */
@@ -373,13 +345,14 @@ main,
   color: var(--muted);
   font-weight: 400;
 }
-.milestone,
-.ad-slot {
+.milestone {
   position: relative;
   margin-block: 0.6rem;
 }
-/* Ads stack above a row's hover image, so the image never covers an ad (AdSense). Milestones go under the image. */
-.ad-slot {
+/* Ads stack above a row's hover image, so the image never covers an ad (AdSense). Milestones go under the image.
+   shortcut: .google-auto-placed is Google's undocumented in-page Auto ads box; check it on the live site once ads serve. */
+.google-auto-placed {
+  position: relative;
   z-index: 4;
 }
 .milestone {
@@ -411,9 +384,6 @@ main,
   display: none;
 }
 @media (min-width: 960px) {
-  [data-desktop='false'] {
-    display: none;
-  }
   .year h2 {
     padding-left: 0;
     text-align: center;
@@ -514,11 +484,6 @@ main,
     background: var(--pink);
   }
 }
-/* AdSense sizes a responsive unit from its own width; the grid centring above would shrink an empty <ins> to 0. */
-.ad-card .adsbygoogle {
-  width: 100%;
-}
-
 .prose {
   max-width: 65ch;
   margin-bottom: 3rem;

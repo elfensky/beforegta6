@@ -65,29 +65,3 @@ export function splitTitle(title) {
     ? { before: m[1], event: m[2], after: ' before GTA 6' }
     : { before: '', event: title, after: '' };
 }
-
-/**
- * Group key for groupSlots: the year, set from the UTC date.
- * @param {TimelineEntry} e
- */
-export const yearOf = (e) => e.year;
-
-/**
- * Split slots into runs of items with the same key, such as the year. An ad slot belongs to the run of the item before
- * it.
- * @template T
- * @param {import('./ads.js').Slot<T>[]} slots
- * @param {(item: T) => number} keyOf
- * @returns {{ key: number, slots: import('./ads.js').Slot<T>[] }[]}
- */
-export function groupSlots(slots, keyOf) {
-  /** @type {{ key: number, slots: import('./ads.js').Slot<T>[] }[]} */
-  const groups = [];
-  for (const slot of slots) {
-    const last = groups.at(-1);
-    if (slot.kind === 'item' && keyOf(slot.item) !== last?.key)
-      groups.push({ key: keyOf(slot.item), slots: [slot] });
-    else last?.slots.push(slot);
-  }
-  return groups;
-}

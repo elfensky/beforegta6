@@ -78,11 +78,15 @@ never create a second one. The site proves ownership with the `google-adsense-ac
 
 To serve ads, after AdSense approves the site:
 
-1. Create a responsive display ad unit (Ads → By ad unit). Set `ADSENSE_CLIENT` to the `ADSENSE_ACCOUNT` value and
-   `ADSENSE_SLOT` to the unit's slot ID in `src/data/site.js`. Leave Auto ads off: the timeline places its own slots.
-   In the same change, make `src/scripts/ads.js` set `data-adtest="on"` on each slot before it pushes, on every host
-   but the apex, so staging and local visits do not count as real impressions (Andrei, 2026-11-15). Google does not
-   document that flag, so never click an ad on any host: a click on your own ad is invalid traffic.
+1. Set `ADSENSE_CLIENT` to the `ADSENSE_ACCOUNT` value in `src/data/site.js`, and turn on Auto ads for the site
+   (Ads → By site). Google chooses where the ads go, and the site has no ad slots of its own (Andrei, 2026-11-15).
+   - Before turning them on, look at the placements in the Auto ads preview. If an in-page ad breaks the line
+     timeline, add `.timeline` as an excluded area. Set the density to about one ad per screen (Andrei, 2026-11-13).
+   - Staging and local visits must not count as real impressions (Andrei, 2026-11-15). `data-adtest="on"` goes on an
+     `<ins>` ad unit, and Auto ads insert their own, so in the same change load the AdSense script on the apex only.
+     Never click an ad on any host: a click on your own ad is invalid traffic.
+   - `.google-auto-placed` in `src/styles/global.css` keeps a row's hover image under an in-page ad. Google does not
+     document that class, so check it on the live site.
 2. Replace the CSP in `deploy/nginx.conf` with Google's nonce-based policy from
    [AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098). Google publishes no
    host allowlist for its ad code. nginx can stamp a per-request nonce into the HTML with `sub_filter` and
@@ -91,4 +95,5 @@ To serve ads, after AdSense approves the site:
 3. In AdSense, turn on the Privacy & messaging consent message for the EEA, UK and Switzerland.
 4. Replace the Ads section of `src/pages/privacy.astro`: what Google collects, the consent choice, and Google's
    partner-sites page.
-5. On staging, check the browser console for CSP violations before merging to `main`.
+5. Check the browser console for CSP violations on staging before merging to `main`, and on the apex right after the
+   release: only the apex loads Google's script.
