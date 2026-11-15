@@ -7,10 +7,9 @@ import { Image } from 'astro:assets';
  *   headingLevel?: 1 | 2 | 3 | 4,
  *   eager?: boolean,
  *   large?: boolean,
- *   small?: boolean,
  * }}
  */
-const { card, headingLevel = 2, eager = false, large = false, small = false } = Astro.props;
+const { card, headingLevel = 2, eager = false, large = false } = Astro.props;
 const { title, blurb, date, source, factUrl, image, imageAlt, imageCredit, nsfw } = card.data;
 const Heading = /** @type {'h1' | 'h2' | 'h3' | 'h4'} */ (`h${headingLevel}`);
 const iso = date.toISOString().slice(0, 10);
@@ -20,19 +19,17 @@ const shown = date.toLocaleDateString('en-GB', {
   year: 'numeric',
   timeZone: 'UTC',
 });
-// The small sizes follow the timeline grid in global.css: 2, 3, 4 and 5 columns.
+// The card page is the one place a card renders since the line timeline (2026-11-15).
 const img = {
   src: image,
   alt: imageAlt,
-  widths: large ? [480, 960, 1200] : [240, 480, 720],
-  sizes: large
-    ? '(min-width: 960px) 800px, 100vw'
-    : '(min-width: 1280px) 16rem, (min-width: 960px) 23vw, (min-width: 600px) 31vw, 47vw',
+  widths: [480, 960, 1200],
+  sizes: '(min-width: 960px) 800px, 100vw',
   loading: eager ? /** @type {const} */ ('eager') : /** @type {const} */ ('lazy'),
 };
 ---
 
-<article class:list={['card', { large, small }]}>
+<article class:list={['card', { large }]}>
   {nsfw ? (
     <details class="nsfw">
       <summary>NSFW: show the image</summary>

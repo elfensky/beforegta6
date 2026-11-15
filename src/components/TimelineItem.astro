@@ -1,16 +1,20 @@
 ---
 import { Image } from 'astro:assets';
+import { LAUNCH } from '../data/site.js';
+import { splitTitle } from '../lib/cards.js';
+import { daysBefore } from '../lib/countdown.js';
 import AdCard from './AdCard.astro';
-import Card from './Card.astro';
 
 /**
  * @type {{
  *   slot: import('../lib/ads.js').Slot<import('../lib/cards.js').TimelineEntry>,
- *   view: 'cards' | 'lines',
- *   eager?: boolean,
  * }}
  */
-const { slot, view, eager = false } = Astro.props;
+const { slot } = Astro.props;
+const item = slot.kind === 'item' ? slot.item : null;
+const left = item ? daysBefore(item.date, LAUNCH) : 0;
+const title =
+  item?.kind === 'card' ? splitTitle(item.card.data.title) : { before: '', event: '', after: '' };
 /** @param {Date} d */
 const iso = (d) => d.toISOString().slice(0, 10);
 /** @param {Date} d */
@@ -23,9 +27,15 @@ const shown = (d) =>
     <AdCard desktop={slot.desktop} />
   </li>
 ) : slot.item.kind === 'milestone' ? (
-  <li class="milestone">
-    <time datetime={iso(slot.item.date)}>{shown(slot.item.date)}</time>
-    <p class="t-title">{slot.item.milestone.title}</p>
+  // The launch ends the line, whichever end the order puts it at.
+  <li class:list={['milestone', { cap: left === 0 }]}>
+    <time datetime={iso(slot.item.date)}>
+      {shown(slot.item.date)}
+      {left === 0 && ` ${slot.item.year}`}
+    </time>
+    <p class="t-title">
+      <span aria-hidden="true">◆</span> {slot.item.milestone.title}
+    </p>
     <p>
       {slot.item.milestone.blurb}{' '}
       <a href={slot.item.milestone.factUrl} rel="noopener">
@@ -34,31 +44,45 @@ const shown = (d) =>
       </a>
     </p>
   </li>
-) : view === 'cards' ? (
-  <li>
-    <Card card={slot.item.card} headingLevel={4} eager={eager} small />
-  </li>
 ) : (
   <li class="entry">
-    {slot.item.card.data.nsfw ? (
-      <span class="thumb nsfw-thumb" aria-hidden="true">
-        NSFW
-      </span>
-    ) : (
-      <Image
-        class="thumb"
-        src={slot.item.card.data.image}
-        alt=""
-        width={160}
-        widths={[160, 320]}
-        sizes="160px"
-      />
-    )}
-    <div>
-      <time datetime={iso(slot.item.date)}>{shown(slot.item.date)}</time>
+    <time class="date" datetime={iso(slot.item.date)}>
+      {shown(slot.item.date)}
+    </time>
+    <span class="node" aria-hidden="true" />
+    <div class="what">
       <p class="t-title">
-        <a href={`/${slot.item.card.id}/`}>{slot.item.card.data.title}</a>
+        <a href={`/${slot.item.card.id}/`}>
+          <span class="frame">{title.before}</span>
+          {title.event}
+          <span class="frame">{title.after}</span>
+        </a>
       </p>
+      {left > 0 && (
+        <span class="days">
+          {left.toLocaleString('en-GB')} {left === 1 ? 'day' : 'days'}
+        </span>
+      )}
     </div>
+    {/* Desktop hover only. display: none at rest, so the lazy image loads only when it shows. */}
+    {slot.item.card.data.nsfw ? (
+      <figure class="media nsfw" aria-hidden="true">
+        <span>NSFW</span>
+      </figure>
+    ) : (
+      <figure class="media">
+        <Image
+          src={slot.item.card.data.image}
+          alt=""
+          width={256}
+          widths={[256, 512]}
+          sizes="16rem"
+          loading="lazy"
+        />
+        {slot.item.card.data.imageCredit && (
+          <figcaption>photo: {slot.item.card.data.imageCredit.text}</figcaption>
+        )}
+      </figure>
+    )}
   </li>
 )}
