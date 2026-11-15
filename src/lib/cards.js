@@ -67,16 +67,14 @@ export function splitTitle(title) {
 }
 
 /**
- * Group keys for groupSlots. Content dates are UTC midnights, so the month is the UTC month.
+ * Group key for groupSlots: the year, set from the UTC date.
  * @param {TimelineEntry} e
  */
 export const yearOf = (e) => e.year;
-/** @param {TimelineEntry} e */
-export const monthOf = (e) => e.date.getUTCMonth();
 
 /**
- * Split slots into runs of items with the same key, such as the year or the month. An ad slot belongs to the run of
- * the item before it.
+ * Split slots into runs of items with the same key, such as the year. An ad slot belongs to the run of the item before
+ * it.
  * @template T
  * @param {import('./ads.js').Slot<T>[]} slots
  * @param {(item: T) => number} keyOf

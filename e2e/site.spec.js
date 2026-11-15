@@ -6,7 +6,7 @@ const launched = readdirSync('src/content/cards').filter((f) =>
   /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
 ).length;
 
-for (const route of ['/', '/lines/oldest/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
+for (const route of ['/', '/oldest/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
     test.setTimeout(60_000);
@@ -19,7 +19,7 @@ for (const route of ['/', '/lines/oldest/', '/flying-cars/', '/privacy/', '/does
 test.describe('at 320 px', () => {
   test.use({ viewport: { width: 320, height: 640 } });
 
-  for (const route of ['/', '/lines/']) {
+  for (const route of ['/', '/oldest/']) {
     test(`no horizontal scroll on ${route}`, async ({ page }) => {
       await page.goto(route);
       const [scroll, client] = await page.evaluate(() => [
@@ -30,13 +30,14 @@ test.describe('at 320 px', () => {
     });
   }
 
-  test('ad slots come no more often than every 4 entries', async ({ page }) => {
+  // About one ad per screen of one-line rows.
+  test('ad slots come no more often than every 10 entries', async ({ page }) => {
     await page.goto('/');
-    // Milestones are timeline entries too, and withAdSlots counts them. Month tiles are not entries.
-    const entries = await page.locator('.grid > li:not(.ad-slot, .month)').count();
-    const ads = await page.locator('.grid .ad-slot:visible').count();
+    // Milestones are timeline entries too, and withAdSlots counts them.
+    const entries = await page.locator('.timeline > li:not(.ad-slot)').count();
+    const ads = await page.locator('.timeline .ad-slot:visible').count();
     expect(ads).toBeGreaterThan(0);
-    expect(ads).toBeLessThanOrEqual(Math.floor(entries / 4));
+    expect(ads).toBeLessThanOrEqual(Math.floor(entries / 10));
   });
 });
 
@@ -54,30 +55,45 @@ test.describe('without JavaScript', () => {
 
   test('the timeline reads in full and shows the launch date', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('.grid article')).toHaveCount(launched);
+    await expect(page.locator('.timeline .entry')).toHaveCount(launched);
     await expect(page.getByText('GTA 6: 19 November 2026')).toBeVisible();
     await page.getByRole('link', { name: 'Oldest first' }).click();
     await expect(page).toHaveURL('/oldest/');
   });
 });
 
-test('the toggles switch order and view', async ({ page }) => {
+// The order is the only control: there is no view toggle.
+test('the order toggle switches between newest and oldest first', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.year h2').first()).toHaveText('2026');
+  await expect(page.getByRole('link', { name: 'Lines' })).toHaveCount(0);
   await page.getByRole('link', { name: 'Oldest first' }).click();
   await expect(page).toHaveURL('/oldest/');
   await expect(page.locator('.year h2').first()).toHaveText('2013');
-  await page.getByRole('link', { name: 'Lines' }).click();
-  await expect(page).toHaveURL('/lines/oldest/');
-  await expect(page.getByRole('link', { name: 'Lines' })).toHaveAttribute('aria-current', 'page');
-  await expect(page.locator('.timeline .entry')).toHaveCount(launched);
+  await expect(page.getByRole('link', { name: 'Oldest first' })).toHaveAttribute(
+    'aria-current',
+    'page',
+  );
 });
 
-// Most months hold one or two cards: a grid per month would leave most of each desktop row empty.
-test('the card view has one grid per year, with a month tile in the row', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.locator('.year > .grid')).toHaveCount(await page.locator('.year').count());
-  await expect(page.locator('.grid > .month h3').first()).toHaveText('November');
+// The image of a row is hover-only on desktop: the first view of the timeline loads no card image.
+test.describe('at 1280 px', () => {
+  test.use({ viewport: { width: 1280, height: 900 } });
+
+  test('a row shows its image on hover, and no card image loads before', async ({ page }) => {
+    /** @type {string[]} */
+    const images = [];
+    // Card images are built into /_astro/. Firefox also reports the favicon as an image request.
+    page.on('request', (r) => {
+      if (r.resourceType() === 'image' && r.url().includes('/_astro/')) images.push(r.url());
+    });
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    expect(images).toEqual([]);
+    const row = page.locator('.timeline .entry').first();
+    await row.hover();
+    await expect(row.locator('.media img')).toBeVisible();
+  });
 });
 
 // AdSense sizes a responsive unit from its own width; a zero-width <ins> never fills.
