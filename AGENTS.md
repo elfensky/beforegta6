@@ -2,7 +2,7 @@
 
 A personal meme site, "We got ___ before GTA 6": a timeline of cards, newest first, as small cards or lines. Andrei works on it. It deploys to the Pi swarm (staging) and the Hetzner swarm (production).
 
-Shared standards: the developer handbook, `~/vault/knowledge/developer/developer.md` (layout 1.0.0).
+Shared standards: the developer handbook, `~/vault/knowledge/developer/developer.md` (layout 1.1.0).
 This file holds only what is true of this repo. A personal project (Andrei, 2026-11-13: made for the meme, ads on his personal AdSense account): commits as `andrei@lav.ren`, `gh` user `elfensky`
 (identity per project: `~/vault/meta/registry.md`).
 
@@ -19,23 +19,17 @@ This file holds only what is true of this repo. A personal project (Andrei, 2026
 
 | Command | Purpose |
 |---|---|
-| `npm run dev:up` / `npm run dev:down` | Dev server in the background (Astro's own `--background` mode) |
+| `npm run dev:up` / `npm run dev:down` | Dev server on port 4321, in the background (Astro's own `--background` mode). Run it before human verification |
 | `npm run lint && npm test && npm run build && npx html-validate "dist/**/*.html"` | **Verification gate**, in CI's order. Run it before calling work done |
 | `npm run test:e2e` | Playwright: axe, reflow, skip link, no-JS checks on the built site |
 | `npm run cards` | Make the cards match `research/candidates.json`, and regenerate `research/candidates.md`. Run it after every edit to the JSON |
 
 ## Branches
 
-`develop` integrates and deploys staging, and `main` releases to production. A push to either branch triggers a deploy. Every change goes in by PR, with the
-`check` job green. Merge with `gh pr merge --rebase`. Rulesets on both branches block force-pushes and deletion only. A
-rule that requires a PR or the `check` job would also block the CI pin commit: GitHub refuses the GitHub Actions app as a
-bypass actor (HTTP 422, 2026-11-13). Enforcing PRs needs a deploy key with bypass for the pin job, and that is still
-open with Andrei.
-
-Never write the GitHub skip marker (square brackets around `skip ci`) anywhere in a commit message, the body included:
-GitHub then skips every workflow for that push, so a staging or production build silently does not happen. Never
-squash-merge a PR whose commits contain it: the squash message concatenates every commit body (2026-11-13,
-commit da7170f on `feat/launch` carries it in its body).
+`develop` integrates and deploys staging. `main` releases to production on a push. Merge with
+`gh pr merge --rebase`, then `git push origin --delete <branch>`. Rulesets on both branches block force-pushes and
+deletion only. A rule that requires a PR or the `check` job would also block the CI pin commit: GitHub refuses the
+GitHub Actions app as a bypass actor (HTTP 422, 2026-11-13). The fix is Andrei's decision, in issue #24.
 
 ## This repo's own rules
 
@@ -43,7 +37,7 @@ commit da7170f on `feat/launch` carries it in its body).
   - The AdSense script loads from Google's servers. This goes against the no-CDN rule.
   - AdSense is a US service. This goes against the EU-first preference.
   - Andrei asked for AdSense explicitly.
-- **`.node-version` in place of `mise.toml`.** `actions/setup-node` reads it, and mise reads it locally, so the repo keeps one pin (as in miklav.com).
+- **`.node-version` in place of `mise.toml`** (launch plan, 2026-11-13). `actions/setup-node` reads it, and mise reads it locally, so the repo keeps one pin (as in miklav.com).
 - **`research/` is data.** `research/candidates.json` is the one place to edit cards. It holds every find, and
   `status: "launch"` puts one on the site. `research/images/` keeps the image of every find that is not live.
   Neither ships.
@@ -72,8 +66,15 @@ commit da7170f on `feat/launch` carries it in its body).
 ## Life cockpit
 
 Tracked in the life-cockpit vault under `#personal` (tracker: `elfensky/beforegta6`). The cockpit is the
-control plane (what to work on). This repo is where the work happens. Report progress by
-opening and closing issues and PRs as usual. The cockpit pulls from the tracker on its next
-`/sync`. There is nothing to update in the vault. Do not mirror cockpit state (milestones, due dates) here.
+control plane (what to work on); this repo is where the work happens. Report progress by
+opening/closing issues and PRs as usual — the cockpit pulls from the tracker on its next
+`/sync`. Nothing to update in the vault; don't mirror cockpit state (milestones, due dates) here.
+GSD projects: after `/gsd-new-project`, run `/cockpit-gsd-profile` once in this repo before planning the first slice.
+Roadmap: this repo owns its roadmap. `.planning/ROADMAP.md` (GSD) is the one roadmap file here; no second
+roadmap file lives in this repo.
+Pages: /handbook-align-pages in this repo updates the architecture notes and publishes the roadmap and architecture pages (~/vault/knowledge/developer/stack/page-kit.md).
+
+Display: <https://projects.lav.ren/beforegta6/roadmap/> and <https://projects.lav.ren/beforegta6/architecture/>.
+Republish only on request, through the handbook-align-pages skill.
 
 <!-- A new convention for this repo goes here in the same session, never into per-machine agent memory. -->
