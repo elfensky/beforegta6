@@ -3,7 +3,7 @@ import { getImage } from 'astro:assets';
 import ogDefault from '../assets/og-default.png';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { ADSENSE_CLIENT, SITE_NAME, UMAMI_WEBSITE_ID } from '../data/site.js';
+import { ADSENSE_ACCOUNT, ADSENSE_CLIENT, SITE_NAME, UMAMI_WEBSITE_ID } from '../data/site.js';
 import '../styles/global.css';
 
 /**
@@ -26,6 +26,7 @@ const canonical = new URL(path, site).href;
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#140a1f" />
+    <meta name="google-adsense-account" content={ADSENSE_ACCOUNT} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:title" content={title} />
