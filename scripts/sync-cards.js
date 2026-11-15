@@ -27,6 +27,8 @@ if (errors.length) {
   console.error(`${errors.length} problems in ${DATA}; nothing written`);
   process.exit(1);
 }
+// Built before any write: a malformed file stops the run here, with nothing changed.
+const table = reviewTable(data);
 for (const dir of [CARDS, ASSETS, IMAGES]) await mkdir(dir, { recursive: true });
 
 /** @param {string} file */
@@ -63,7 +65,10 @@ for (const c of launch) {
       if (!c.image_url) throw new Error('image_url missing');
       const res = await fetch(c.image_url, { headers: { 'user-agent': UA } });
       const ext = res.ok ? imageExtension(res.headers.get('content-type')) : null;
-      if (!ext) throw new Error(`HTTP ${res.status}, ${res.headers.get('content-type')}`);
+      if (!ext)
+        throw new Error(
+          `HTTP ${res.status}, ${res.headers.get('content-type')}: not an image, so save ${c.id}.jpg (or .png, .webp) in ${IMAGES}/ by hand`,
+        );
       image = `${c.id}.${ext}`;
       await writeFile(`${ASSETS}/${image}`, Buffer.from(await res.arrayBuffer()));
       fetched.push(c.id);
@@ -81,15 +86,16 @@ for (const c of launch) {
 
 const live = new Set(launch.map((c) => c.id));
 let removed = 0;
-for (const f of await readdir(CARDS)) {
+for (const f of (await readdir(CARDS)).filter((f) => f.endsWith('.md'))) {
   const id = idOf(f);
   if (live.has(id)) continue;
-  await rm(`${CARDS}/${f}`);
+  // The image first: a failed move then leaves the card in place, not an orphaned image.
   await moveImage(id, ASSETS, IMAGES);
+  await rm(`${CARDS}/${f}`);
   removed++;
 }
 
-await writeFile(TABLE, reviewTable(data));
+await writeFile(TABLE, table);
 console.log(
   `launch ${launch.length}, changed ${changed}, removed ${removed}, fetched ${fetched.length}, failed ${failed.length}`,
 );

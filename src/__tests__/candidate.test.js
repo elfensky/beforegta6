@@ -143,3 +143,22 @@ test('reviewTable groups by first subject tag and escapes pipes', () => {
   expect(md).toContain('- `covid-pandemic`: Global pandemic; deaths.');
   expect(md).toMatch(/\| Total \| 1 \| 0 \| 1 \| 2 \|/);
 });
+
+test('checkCandidates names a tag list that is not a list or holds an unknown tag', () => {
+  expect(
+    checkCandidates([
+      fixture({ id: 'not-a-list', tags: 'gta' }),
+      fixture({ id: 'typo-tag', status: 'drop', tags: ['Politics', 'world-event'] }),
+      fixture({ id: 'no-tags', tags: undefined }),
+    ]),
+  ).toEqual(['not-a-list: tags must be a list', 'typo-tag: unknown tag Politics']);
+});
+
+test('reviewTable shows the id to edit and escapes every cell', () => {
+  const md = reviewTable({
+    passes: [],
+    candidates: [fixture({ id: 'pipe-tag', tags: ['te|ch'], timeline_date: '2026|10' })],
+    excluded: [],
+  });
+  expect(md).toContain('| `pipe-tag` | We got flying cars before GTA 6 | 2026\\|10 | te\\|ch |');
+});

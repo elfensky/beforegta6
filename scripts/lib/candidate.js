@@ -87,6 +87,10 @@ export function checkCandidates(candidates) {
     (id) => `duplicate id: ${id}`,
   );
   for (const c of candidates) {
+    if (c.tags !== undefined && !Array.isArray(c.tags)) errors.push(`${c.id}: tags must be a list`);
+    for (const t of Array.isArray(c.tags) ? c.tags : [])
+      if (t !== 'world-event' && !SUBJECT_TAGS.includes(t))
+        errors.push(`${c.id}: unknown tag ${t}`);
     if (!STATUSES.includes(c.status)) errors.push(`${c.id}: status must be launch, hold or drop`);
     else if (c.status === 'launch') {
       try {
@@ -168,9 +172,9 @@ const dateOf = (c) => c.timeline_date ?? c.event_date ?? c.post_date ?? '';
 function row(c) {
   const post = c.source_url ? `[${cell(c.source_platform)}](${link(c.source_url)})` : '–';
   const fact = c.fact_url ? `[fact](${link(c.fact_url)})` : '–';
-  const tags = c.tags?.length ? c.tags.join(', ') : '–';
+  const tags = c.tags?.length ? cell(c.tags.join(', ')) : '–';
   const world = c.tags?.includes('world-event') ? 'yes' : '';
-  return `| ${cell(c.title)} | ${dateOf(c)} | ${tags} | ${world} | ${cell(c.impact_score)} | ${cell(c.meme_score)} | ${c.status} | ${post} | ${fact} |`;
+  return `| \`${c.id}\` | ${cell(c.title)} | ${cell(dateOf(c))} | ${tags} | ${world} | ${cell(c.impact_score)} | ${cell(c.meme_score)} | ${c.status} | ${post} | ${fact} |`;
 }
 
 /**
@@ -211,8 +215,8 @@ export function reviewTable({ passes, candidates, excluded }) {
         STATUS_ORDER[a.status] - STATUS_ORDER[b.status] || dateOf(b).localeCompare(dateOf(a)),
     );
     lines.push('', `## ${label(tag)} (${items.length})`, '');
-    lines.push('| Title | Date | Tags | World event | Impact | Meme | Status | Post | Fact |');
-    lines.push('|---|---|---|---|---|---|---|---|---|', ...sorted.map(row));
+    lines.push('| Id | Title | Date | Tags | World event | Impact | Meme | Status | Post | Fact |');
+    lines.push('|---|---|---|---|---|---|---|---|---|---|', ...sorted.map(row));
   }
   lines.push('', `## Excluded (${excluded.length})`, '');
   lines.push(...excluded.map((e) => `- \`${e.id}\`${e.field ? ` (${e.field})` : ''}: ${e.reason}`));

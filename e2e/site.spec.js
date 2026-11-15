@@ -7,7 +7,10 @@ const launched = readdirSync('src/content/cards').filter((f) =>
 ).length;
 
 // Any live card stands for every card page; a review can drop any one of them.
-const firstCard = readdirSync('src/content/cards').sort()[0].replace(/\.md$/, '');
+const firstCard = readdirSync('src/content/cards')
+  .filter((f) => f.endsWith('.md'))
+  .sort()[0]
+  .replace(/\.md$/, '');
 
 for (const route of ['/', '/oldest/', `/${firstCard}/`, '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
@@ -55,7 +58,7 @@ test.describe('without JavaScript', () => {
   });
 
   test('a card page shows no share button', async ({ page }) => {
-    await page.goto('/flying-cars/');
+    await page.goto(`/${firstCard}/`);
     await expect(page.getByRole('button')).toHaveCount(0);
   });
 });
@@ -141,10 +144,10 @@ test.describe('the share button on a card page', () => {
         value: async (/** @type {ShareData} */ d) => /** @type {any} */ (window).shared.push(d.url),
       });
     });
-    await page.goto('/flying-cars/');
+    await page.goto(`/${firstCard}/`);
     await page.getByRole('button', { name: 'Share this card' }).click();
     expect(await page.evaluate(() => /** @type {any} */ (window).shared)).toEqual([
-      'https://beforegta6.wtf/flying-cars/',
+      `https://beforegta6.wtf/${firstCard}/`,
     ]);
   });
 
@@ -159,11 +162,11 @@ test.describe('the share button on a card page', () => {
         },
       });
     });
-    await page.goto('/flying-cars/');
+    await page.goto(`/${firstCard}/`);
     await page.getByRole('button', { name: 'Copy link' }).click();
     await expect(page.getByRole('status')).toHaveText('Link copied.');
     expect(await page.evaluate(() => /** @type {any} */ (window).copied)).toEqual([
-      'https://beforegta6.wtf/flying-cars/',
+      `https://beforegta6.wtf/${firstCard}/`,
     ]);
   });
 });

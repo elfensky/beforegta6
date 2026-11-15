@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { expect, test } from 'vitest';
-import { cardMarkdown, toCard } from '../../scripts/lib/candidate.js';
+import { cardMarkdown, checkCandidates, reviewTable, toCard } from '../../scripts/lib/candidate.js';
 
 const DIR = 'src/content/cards';
 const cards = readdirSync(DIR).map((f) => ({ f, text: readFileSync(`${DIR}/${f}`, 'utf8') }));
@@ -28,8 +28,14 @@ test('every card in the collection is launched', () => {
 
 // The cards are generated: research/candidates.json decides, `npm run cards` writes. A hand edit to a card fails here.
 test('the cards are exactly the launch candidates, as npm run cards writes them', () => {
-  /** @type {{ candidates: import('../../scripts/lib/candidate.js').Candidate[] }} */
-  const { candidates } = JSON.parse(readFileSync('research/candidates.json', 'utf8'));
+  /** @type {import('../../scripts/lib/candidate.js').ResearchFile} */
+  const data = JSON.parse(readFileSync('research/candidates.json', 'utf8'));
+  const { candidates } = data;
+  // A status typo would hide a find without a word; the sync stops on it, and so does CI.
+  expect(checkCandidates(candidates)).toEqual([]);
+  expect(readFileSync('research/candidates.md', 'utf8'), 'run npm run cards').toBe(
+    reviewTable(data),
+  );
   const assets = readdirSync('src/assets/cards');
   const launch = candidates.filter((c) => c.status === 'launch');
   expect(cards.map(({ f }) => f.replace(/\.md$/, '')).sort()).toEqual(

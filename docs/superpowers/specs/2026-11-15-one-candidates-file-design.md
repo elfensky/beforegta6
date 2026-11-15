@@ -103,7 +103,8 @@ difference into the item. Measured on 2026-11-15:
 - For each `launch` item: write the card from `toCard` (it overwrites, because the JSON wins now) and place the image.
 - For each card file without a `launch` item: delete the card and move its image.
 - A failed image fetch skips that card, and the run lists the failures and exits 1, as today. 17 candidates that are
-  not live have a Commons file page in `image_url`, not an image, and 4 have none. These need an image by hand.
+  not live have a Commons file page in `image_url`, not an image, but each has a kept image in `research/images/`.
+  4 have no `image_url` and no image, and need an image by hand.
 - The run prints the ids whose image came from `image_url`. Each one is looked at before the merge, because that is
   how Rockstar art got in before `a21ce3c`.
 - It writes `research/candidates.md`: the pass notes and the counts per tag and status at the top, then one section
