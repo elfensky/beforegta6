@@ -29,3 +29,11 @@ pnpm-debug.log*
 # playwright output
 playwright-report/
 test-results/
+
+# GSD runtime files (vault meta/conventions.md § Dev projects)
+.planning/state.json
+.planning/estimation-calibration.json
+.planning/milestone.lock
+.planning/research/.cache/
+.planning/intel/
+.planning/ui-reviews/
