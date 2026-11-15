@@ -90,24 +90,28 @@ upgraded at `adsense.google.com/start`, with `beforegta6.wtf` as its site. AdSen
 never create a second one. The site proves ownership with the `google-adsense-account` meta tag (`ADSENSE_ACCOUNT` in
 `src/data/site.js`), and `public/ads.txt` names the account as a direct seller. Neither loads Google code.
 
-To serve ads, after AdSense approves the site:
+The site loads AdSense Auto ads, and Google chooses where the ads go (Andrei, 2026-11-15). The site has no ad slots of
+its own. Ads appear once AdSense approves the site: its status was "Getting ready" on 2026-11-15.
 
-1. Set `ADSENSE_CLIENT` to the `ADSENSE_ACCOUNT` value in `src/data/site.js`, and turn on Auto ads for the site
-   (Ads → By site). Google chooses where the ads go, and the site has no ad slots of its own (Andrei, 2026-11-15).
-   - Before turning them on, look at the placements in the Auto ads preview. If an in-page ad breaks the line
-     timeline, add `.timeline` as an excluded area. Set the density to about one ad per screen (Andrei, 2026-11-13).
-   - Staging and local visits must not count as real impressions (Andrei, 2026-11-15). `data-adtest="on"` goes on an
-     `<ins>` ad unit, and Auto ads insert their own, so in the same change load the AdSense script on the apex only.
-     Never click an ad on any host: a click on your own ad is invalid traffic.
-   - `.google-auto-placed` in `src/styles/global.css` keeps a row's hover image under an in-page ad. Google does not
-     document that class, so check it on the live site.
-2. Replace the CSP in `deploy/nginx.conf` with Google's nonce-based policy from
-   [AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098). Google publishes no
-   host allowlist for its ad code. nginx can stamp a per-request nonce into the HTML with `sub_filter` and
-   `$request_id`. A Cloudflare HTML cache would then reuse one nonce per cache lifetime, so decide the Cache Rule
-   together with this step.
-3. In AdSense, turn on the Privacy & messaging consent message for the EEA, UK and Switzerland.
-4. Replace the Ads section of `src/pages/privacy.astro`: what Google collects, the consent choice, and Google's
-   partner-sites page.
-5. Check the browser console for CSP violations on staging before merging to `main`, and on the apex right after the
-   release: only the apex loads Google's script.
+- **Apex only.** `ADSENSE_CLIENT` in `src/data/site.js` turns the loader in `src/layouts/Base.astro` on. The loader
+  adds Google's script only when the host is `beforegta6.wtf`, so staging and local visits never load real ads
+  (Andrei, 2026-11-15). The e2e test "the AdSense script loads on the apex only" holds both sides. Never click an ad on
+  any host: a click on your own ad is invalid traffic.
+- **CSP.** `deploy/nginx.conf` sends Google's strict policy from
+  [AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098). Google supports only
+  that policy and publishes no host allowlist, so the CSP limits scripts, objects, the base URL, form targets and
+  framing, and no other fetches. nginx stamps a per-request nonce (`$request_id`) into every `<script` tag with
+  `sub_filter`. A Cloudflare HTML cache would give every visitor in its lifetime the same nonce (step 8 above).
+- **Hover images.** `.google-auto-placed` in `src/styles/global.css` keeps a row's hover image under an in-page ad.
+  Google does not document that class, so check it on the live site once ads show.
+
+In the AdSense dashboard (Andrei):
+
+1. Ads → By site → `beforegta6.wtf`: turn on Auto ads. Look at the placements in the preview. If an in-page ad breaks
+   the line timeline, add `.timeline` as an excluded area. Set the density to about one ad per screen (Andrei,
+   2026-11-13).
+2. Privacy & messaging: create and publish the consent message for the EEA, the UK and Switzerland. The privacy page
+   tells visitors that this message comes first.
+
+After each release, check the browser console on `beforegta6.wtf` for CSP violations. Only the apex loads Google's
+script, so staging shows only the site's own scripts under the policy.

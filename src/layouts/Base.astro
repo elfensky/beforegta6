@@ -46,14 +46,19 @@ const canonical = new URL(path, site).href;
         data-performance="true"
       />
     )}
-    {ADSENSE_CLIENT && (
-      <script
-        is:inline
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-        crossorigin="anonymous"
-      />
-    )}
+    {/* Real ads on the apex only: staging and local visits never load them (Andrei, 2026-11-15). */}
+    {ADSENSE_CLIENT && <script is:inline data-host={site.hostname} data-client={ADSENSE_CLIENT}>
+      {
+        const { host, client } = document.currentScript.dataset;
+        if (location.hostname === host) {
+          const s = document.createElement('script');
+          s.async = true;
+          s.crossOrigin = 'anonymous';
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + client;
+          document.head.append(s);
+        }
+      }
+    </script>}
   </head>
   <body>
     <a class="skip" href="#main">
