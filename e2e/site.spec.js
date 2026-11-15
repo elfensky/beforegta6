@@ -6,7 +6,10 @@ const launched = readdirSync('src/content/cards').filter((f) =>
   /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
 ).length;
 
-for (const route of ['/', '/oldest/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
+// Any live card stands for every card page; a review can drop any one of them.
+const firstCard = readdirSync('src/content/cards').sort()[0].replace(/\.md$/, '');
+
+for (const route of ['/', '/oldest/', `/${firstCard}/`, '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
     test.setTimeout(60_000);
