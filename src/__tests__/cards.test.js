@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { groupSlots, ogImageOf, splitTitle, timelineEntries, yearOf } from '../lib/cards.js';
+import { ogImageOf, splitTitle, timelineEntries } from '../lib/cards.js';
 
 // Mirrors a cards collection entry: the schema coerces dates to Date.
 /** @param {{ id: string, date: string, status?: string, nsfw?: boolean, title?: string }} d */
@@ -46,23 +46,6 @@ test('timeline: newest first is the exact reverse of oldest first', () => {
 test('nsfw card has no OG image', () => {
   expect(ogImageOf(card({ id: 'x', date: '2025-01-01', nsfw: true }))).toBeNull();
   expect(ogImageOf(card({ id: 'y', date: '2025-01-01' }))).toEqual({ src: '/y.jpg' });
-});
-
-test('groupSlots: one group per key, an ad slot stays with the entry before it', () => {
-  /** @param {number} year */
-  const e = (year) => ({ kind: 'item', item: { year } });
-  const slots = /** @type {any[]} */ ([
-    e(2013),
-    e(2013),
-    { kind: 'ad', desktop: false },
-    e(2022),
-    e(2023),
-  ]);
-  expect(groupSlots(slots, yearOf).map((g) => [g.key, g.slots.length])).toEqual([
-    [2013, 3],
-    [2022, 1],
-    [2023, 1],
-  ]);
 });
 
 // The frame repeats on every row: it renders muted, and "GTA 6" never breaks before the 6.

@@ -15,7 +15,7 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
 
 - `beforegta6.wtf` is live before 2026-11-19 with the curated launch set.
 - Every card has its own address. A shared link previews that card's meme.
-- AdSense approves the site after launch. Ad slots show house cards until then.
+- AdSense approves the site after launch. The site shows no ads until then.
 
 ## Goals
 
@@ -25,7 +25,7 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
   `/`, `/oldest/`, `/lines/`, `/lines/oldest/` (Andrei, 2026-11-14).
 - **One page per card** at `/<id>/`, with Open Graph tags whose image is the card's meme.
 - **Countdown** to 2026-11-19 in the header. After that moment the header reads "We got all of this before GTA 6."
-- **Ad cards:** one per screenful (see Ads).
+- **Ads:** AdSense Auto ads, about one per screen (see Ads).
 
 ## Non-goals (launch)
 
@@ -94,12 +94,9 @@ A milestones file holds the fixed timeline anchors. Check each date at build tim
 - Launch: 2026-11-19
 
 **Ads.**
-- Units: AdSense in-feed units. Each slot takes a full row of the timeline: an AdSense unit needs about 250 px, more
-  than a small card.
-- Desktop: one after every 8 timeline entries (cards and milestones), which is about one per screen.
-- Mobile: one after every 4 entries. A strict one-per-screen on a phone would make about every third card an ad, and
-  AdSense forbids screens with more ads than content.
-- Before approval: a house card fills each slot, such as a share prompt or the countdown.
+- AdSense Auto ads: Google chooses where the ads go (Andrei, 2026-11-15). The site has no ad slots of its own.
+- Density: about one ad per screen (Andrei, 2026-11-13), set in the Auto ads settings.
+- Before approval: no ads and no placeholder.
 - Consent: Google's certified "Privacy & messaging" consent tool, for visitors from the EEA, UK and Switzerland.
 - `ads.txt` at the site root.
 - The Content Security Policy allows the Google ad origins.
@@ -124,7 +121,7 @@ the miklav.com Astro repo:
 
 ## Left to the builder
 
-Colours, spacing, the exact breakpoints, the copy, the house-card content, the timeline's visual form (alternating sides
+Colours, spacing, the exact breakpoints, the copy, the timeline's visual form (alternating sides
 on desktop, one column on mobile is the starting proposal).
 
 ## Andrei's tasks

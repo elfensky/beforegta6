@@ -29,16 +29,6 @@ test.describe('at 320 px', () => {
       expect(scroll).toBeLessThanOrEqual(client);
     });
   }
-
-  // About one ad per screen of one-line rows.
-  test('ad slots come no more often than every 10 entries', async ({ page }) => {
-    await page.goto('/');
-    // Milestones are timeline entries too, and withAdSlots counts them.
-    const entries = await page.locator('.timeline > li:not(.ad-slot)').count();
-    const ads = await page.locator('.timeline .ad-slot:visible').count();
-    expect(ads).toBeGreaterThan(0);
-    expect(ads).toBeLessThanOrEqual(Math.floor(entries / 10));
-  });
 });
 
 test('the skip link moves focus to main', async ({ page, browserName }) => {
@@ -107,31 +97,17 @@ test.describe('at 1280 px', () => {
   test('a hover image covers a milestone, never an ad', async ({ page }) => {
     await page.goto('/');
     const z = await page.evaluate(() => {
+      // Ads are off in the build: a bare box stands in for an in-page Auto ad.
+      const ad = document.createElement('div');
+      ad.className = 'google-auto-placed';
+      document.querySelector('.timeline')?.append(ad);
       const zOf = (/** @type {string} */ s) =>
         Number(getComputedStyle(document.querySelector(s) ?? document.body).zIndex) || 0;
-      return { media: zOf('.media'), milestone: zOf('.milestone'), ad: zOf('.ad-slot') };
+      return { media: zOf('.media'), milestone: zOf('.milestone'), ad: zOf('.google-auto-placed') };
     });
     expect(z.media).toBeGreaterThan(z.milestone);
     expect(z.ad).toBeGreaterThan(z.media);
   });
-});
-
-// AdSense sizes a responsive unit from its own width; a zero-width <ins> never fills.
-test('an AdSense unit spans its ad card', async ({ page }) => {
-  await page.goto('/');
-  const width = await page.evaluate(() => {
-    const card = /** @type {HTMLElement} */ (
-      [...document.querySelectorAll('.ad-card')].find(
-        (el) => /** @type {HTMLElement} */ (el).offsetParent,
-      )
-    );
-    const ins = document.createElement('ins');
-    ins.className = 'adsbygoogle';
-    ins.style.display = 'block';
-    card.prepend(ins);
-    return [ins.offsetWidth, card.clientWidth];
-  });
-  expect(width[0]).toBeGreaterThan(width[1] / 2);
 });
 
 test('the footer names the operator, the contact and the privacy page', async ({ page }) => {
