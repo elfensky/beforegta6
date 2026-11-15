@@ -66,6 +66,7 @@ commit da7170f on `feat/launch` carries it in its body).
 | Code path | Doc path | What drifts |
 |---|---|---|
 | `src/`, `scripts/` | `docs/superpowers/specs/2026-11-13-beforegta6-design.md` | Features, content model |
+| `research/`, `scripts/sync-cards.js`, `scripts/lib/candidate.js` | `docs/superpowers/specs/2026-11-15-one-candidates-file-design.md` | The candidates file, tags, the sync |
 | `deploy/`, `.github/workflows/` | `deploy/README.md` | Stacks, secrets, one-time setup |
 
 ## Life cockpit

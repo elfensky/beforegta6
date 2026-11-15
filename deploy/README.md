@@ -72,8 +72,11 @@ and `npm run cards` moves the files:
 - **Hold or archive:** set `status` to `hold` or `drop`, then run `npm run cards`. The card file goes, and its image
   moves to `research/images/`. `gta5-farewell-drive` waits until 2026-11-18. `sex-2` and `durian-condom` wait until
   AdSense approves the site (Andrei, 2026-11-13).
-- **Launch:** set `status: "launch"` and run `npm run cards`. It takes the image from `research/images/`, else it
-  fetches `image_url`. Look at every image that the run lists as fetched before the merge (no Rockstar art).
+- **Launch:** set `status: "launch"` and run `npm run cards`. It takes the image from `src/assets/cards/`, then from
+  `research/images/`, else it fetches `image_url`. To replace an image, delete `<id>.*` in both folders first. Look at
+  every image that the run lists as fetched before the merge (no Rockstar art). Four finds have no `image_url`
+  (2026-11-15): `aws-outage-2025`, `pope-meets-patriarch`, `uk-age-checks` and `brain-rot-word-of-the-year`. Save
+  their image in `research/images/` by hand before a launch.
 - **Takedown:** set `status: "drop"`, run `npm run cards`, then delete `research/images/<id>.*`, because the repo is
   public. Merge and release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching →
   Purge by URL).
