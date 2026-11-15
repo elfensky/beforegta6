@@ -4,7 +4,7 @@
 
 beforegta6.wtf is a meme timeline, "We got ___ before GTA 6", that must be live and fast on GTA 6 launch week (launch: 2026-11-19). The roadmap holds one milestone, v1.0. Phases 1 to 5 are backdated groups of the work done on 2026-11-13 to 2026-11-15: the plan, the research, the launch site, the timeline and the ads. Each carries its completion date and its evidence. Phases 6 and 7 are the open work: the launch-week promotion and the candidate review page.
 
-This repo owns this plan. Phase structure follows Andrei's own frame (2026-11-15). There is no `config.json`, so granularity is not set and phase IDs are sequential.
+This repo owns this plan. Phase structure follows Andrei's own frame (2026-11-15). `.planning/config.json` sets granularity `standard` and sequential phase IDs.
 
 ## Milestones
 
@@ -51,7 +51,7 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
   4. `research/candidates.json` holds all 383 finds with tags and status (97 launch, 3 hold, 283 drop, checked 2026-11-15). `npm run cards` makes the 97 card files match it, and a test fails when they differ.
 **Plans**: Backdated. No plan files.
 **Status**: Complete, 2026-11-15.
-**Evidence**: PR #1 (88 launch cards per the PR list; 89 card files with status launch at the PR head 8f1ecdb), #3, #4, #5, #8 (2026-11-14), #16, #21 (landed on `develop` by rebase at 0c89808 on 2026-11-15; GitHub shows it CLOSED after a 502).
+**Evidence**: PR #1 (88 launch cards per the PR list; 89 card files at 8f1ecdb), #3, #4, #5, #8 (2026-11-14), #16, #21 (landed on `develop` by rebase at 0c89808 on 2026-11-15; GitHub shows it CLOSED after a 502).
 
 ### Phase 3: Launch site (site v1)
 **Goal**: The site is live on production before the launch, with a page for every card.
@@ -104,7 +104,7 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
   2. Production card pages carry the share button. After the launch moment on 2026-11-19 the title reads "We got all of this before GTA 6." and the line "And we got GTA 6 before The Winds of Winter." shows under it.
   3. The posts in `docs/PROMOTION.md` go out from 2026-11-15 to 2026-11-22, and each stop rule holds: a Reddit link post with no Umami referrer visit after 1 hour means no other Reddit link post that day.
   4. The card `gta5-farewell-drive` is live on 2026-11-18.
-  5. On 2026-11-22 Andrei reads Umami referrers per channel, and the AdSense approval state is written down (approved, pending or refused).
+  5. On 2026-11-22 Andrei reads Umami referrers per channel, and the AdSense approval state is written down (approved, pending or refused). Phase 6 can close with ADS-03 still open: Google's approval is external.
 **Plans**: TBD
 **Status**: In progress since 2026-11-15. The share button and the post-launch line are built (PR #22). The posting schedule is human work. The first scheduled post is Sunday 2026-11-15 at 19:00 CET, and it needs the Cache Rule first.
 
@@ -119,12 +119,12 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
   4. The page never ships: no file from it appears in `dist/`.
 **Plans**: TBD
 **UI hint**: yes
-**Status**: Not started. Issue #19 asked for it for 2026-11-16. Open question for planning: a yes on a find with no image fails the sync (four such finds, see REV-02).
+**Status**: Not started (#19). Open question for planning: a yes on a find with no image fails the sync (four such finds, see REV-02).
 
 ## Progress
 
 **Execution Order:**
-Phases run in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7. Phases 1 to 5 are complete and backdated. Phase 7 may start while Phase 6 runs.
+Phases 1 to 5 are complete and backdated; they overlap in time. The open phases run in numeric order, 6 then 7. Phase 7 may start while Phase 6 runs.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|

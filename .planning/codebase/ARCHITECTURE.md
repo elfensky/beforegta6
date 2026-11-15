@@ -53,8 +53,8 @@ collection. Pure functions decide order, timeline and countdown. Templates only 
 - Type checking is done with JSDoc, not TypeScript: `jsconfig.json` sets `checkJs` and `strict`.
 - Browser scripts are shipped as separate files. `vite.build.assetsInlineLimit` is 0 in `astro.config.mjs`,
   so no inline `<script>` is needed. This keeps the CSP free of `'unsafe-inline'` (`deploy/nginx.conf`).
-- Two external scripts are loaded on the apex only: Umami (`umami.lav.ren`) and AdSense (Google). Both are
-  documented exceptions in `AGENTS.md` and `deploy/README.md`.
+- Two external scripts: Umami (`umami.lav.ren`) loads on every host and counts on the apex only (`data-domains`
+  in `src/layouts/Base.astro`). AdSense (Google) loads on the apex only. `AGENTS.md` and `deploy/README.md` record both.
 
 ## Layers
 

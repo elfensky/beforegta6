@@ -8,7 +8,7 @@
 - Scope `v1` means milestone v1.0 (the launch-week site). Scope `v2` means later. "Out of Scope" means not planned.
 - The site-version labels in the phase names (site v1, v2, v3) are build stages. They are not requirement scopes.
 - `[x]` means complete: built, verified and committed. The evidence follows each line. Commit hashes are short.
-- A source tag such as `REQ-card-pages` points to an entry in `.planning/intel/requirements.md`.
+- A source tag such as `REQ-card-pages` points to an entry in `.planning/intel/requirements.md`. That folder is local (a GSD runtime folder, gitignored): `/gsd-ingest-docs` rebuilds it from `docs/superpowers/` and `docs/PROMOTION.md`.
 - "Unverified" means the intel, the code and the git log cannot show it.
 - Dates of merged PRs are UTC merge dates from `gh pr list` (2026-11-15). Open issues are not repeated here. See #19 and #24.
 
@@ -30,7 +30,7 @@
 ### Site
 
 - [x] **SITE-01**: The site is live in production before 2026-11-19 with the curated launch set. Source: `REQ-live-before-launch`. Evidence: PR #1 (2026-11-13 20:07), release PR #6 (2026-11-13 23:24); first production pin 1db66e6 (2026-11-13 22:48 UTC); production live 2026-11-13 23:58 CET (journal of that day).
-- [x] **SITE-02**: Every card has a page at `/<id>/` with Open Graph tags whose image is the card's meme. Source: `REQ-card-pages` (page and preview part). Evidence: `src/pages/[id].astro`, and `og:image` in `src/layouts/Base.astro`.
+- [x] **SITE-02**: Every card has a page at `/<id>/` with Open Graph tags whose image is the card's meme. An `nsfw` card uses the default image instead (`ogImageOf` in `src/lib/`). Source: `REQ-card-pages` (page and preview part). Evidence: `src/pages/[id].astro`, and `og:image` in `src/layouts/Base.astro`.
 - [x] **SITE-03**: The header counts down to 2026-11-19. After that moment it reads "We got all of this before GTA 6." Source: `REQ-countdown` (header part). Evidence: `src/components/Countdown.astro`, `src/scripts/countdown.js`; e2e "shows after the launch, with the flipped title".
 - [x] **SITE-04**: A push to `develop` deploys staging, and a push to `main` deploys production. The site runs as an nginx image on Docker Swarm with its own Cloudflare Tunnel per stack, and CI pins the image. Evidence: a465b6c, PR #1, PR #6; `.github/workflows/build.yml`; `deploy/README.md`.
 - [x] **SITE-05**: `www.beforegta6.wtf` redirects to the bare domain with a 301. Evidence: PR #7 (1142054, 2026-11-14); `deploy/README.md` step 6.

@@ -12,12 +12,13 @@ name: Build
 on:
   push:
     branches: [main, develop]
-    # Root-level docs (a single `*` does not cross a `/`), docs/, research/ and the pin commits do not change the
+    # Root-level docs (a single `*` does not cross a `/`), docs/, research/, .planning/ and the pin commits do not change the
     # image. Card Markdown under src/content/ is deliberately NOT ignored: it is the site's content.
     paths-ignore:
       - '*.md'
       - 'docs/**'
       - 'research/**'
+      - '.planning/**'
       - 'deploy/production/compose.yaml'
       - 'deploy/staging/compose.yaml'
   workflow_dispatch:

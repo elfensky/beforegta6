@@ -33,7 +33,7 @@ npm run test:e2e            # Playwright against the built site (needs npm run b
 npm run lint                # eslint . && prettier --check .
 npm run build               # Astro static build into dist/
 npx html-validate "dist/**/*.html"   # HTML validation of the build output
-npm run cards               # Regenerate cards and research/candidates.md, then run the Vitest content tests
+npm run cards               # Regenerate cards and research/candidates.md (runs no tests; run npm test after it)
 ```
 
 **Verification gate (from `AGENTS.md`, in CI order):**
@@ -202,7 +202,7 @@ await page.addInitScript(() => {
 **E2E Tests:**
 - Framework: Playwright. Run with `npm run test:e2e` after `npm run build`.
 - Routes checked by axe: `/`, `/oldest/`, one card page, `/privacy/`, and `/does-not-exist/` (the 404 page).
-- Do not run the e2e suite as part of a local check in an agent session unless asked. It is slow: axe over the full timeline takes about 11 s in Firefox alone (`e2e/site.spec.js` comment).
+- The e2e suite is slow: axe over the full timeline takes about 11 s in Firefox alone (`e2e/site.spec.js` comment). CI runs it after the HTML validation (`.github/workflows/ci.yml`).
 
 ## Common Patterns
 
