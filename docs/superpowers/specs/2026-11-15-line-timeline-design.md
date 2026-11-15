@@ -110,10 +110,11 @@ The DOM order of a row is: date, node, title link, day count, hover image.
 - **Where:** in the left half, at its left edge, about 16rem wide, hanging down from the row. A pink arrow runs from the
   image to the row, and the node turns pink. Hanging, not centred: centred, the first rows under the launch milestone
   showed only a strip of their image. The row just above a milestone or an ad shows the top of its image only.
-- **It covers no content.** The dates sit at the right end of the left column, so the image and the arrow stay clear of
-  them. Milestone and ad rows stack above the figure (`z-index`), so a figure near them goes under them. WCAG 1.4.13 asks
-  that on-hover content can be dismissed unless it covers nothing, so no dismiss control is needed. The figure is inside
-  the row, so the pointer can move onto it and it stays open.
+- **It covers milestones, never ads.** The dates sit at the right end of the left column, so the image and the arrow stay
+  clear of them. The figure stacks above a milestone row and below an ad row (`z-index`): AdSense forbids content over an
+  ad. WCAG 1.4.13 asks that on-hover content that covers content can be dismissed, so Escape hides the figure until the
+  pointer or focus leaves the row (`src/scripts/media.js`). The figure is inside the row, so the pointer can move onto it
+  and it stays open.
 - **Image:** `astro:assets` `<Image>`, `alt=""` (the title link names the row; the card page has the full alt text),
   `loading="lazy"`, widths 256 and 512, `sizes="16rem"`, a 3:2 crop. At rest the figure is hidden with `display: none`
   at every width, never with `visibility` or `opacity`: a lazy image in a `display: none` box loads only when the box
