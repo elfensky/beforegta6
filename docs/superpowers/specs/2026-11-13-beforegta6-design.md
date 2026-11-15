@@ -2,7 +2,7 @@
 
 - Date: 2026-11-13
 - Status: approved by Andrei on 2026-11-13. This document includes his later additions from the same session: the timeline, the content rules and the GTA V re-release cards. The timeline-only change of 2026-11-14 (`2026-11-14-timeline-only-design.md`) replaces the card grid and the header switch.
-- Sources: the brainstorming session of 2026-11-13. Candidate research is in `research/` once imported.
+- Sources: the brainstorming session of 2026-11-13. Candidate research is in `research/candidates.json`.
 
 ## Intent
 
@@ -44,17 +44,18 @@ Submissions, accounts, likes and dislikes, comments, merch, other languages.
 
 ## Content rules (Andrei, 2026-11-13)
 
-- Highlights only (Andrei, 2026-11-14): significant world events that affect a large number of people. Every find stays in
-  the research archive (`research/*.json`); only `launch` candidates become cards. Rule for pass 3: impact score 7 or
-  more, or 5 or more with a real "before GTA 6" post (`research/world-events.md`).
-- Politics, religion and identity are in when the event passes the world-event rule (blue Texas).
+- Andrei's picks (Andrei, 2026-11-15). From 2026-11-14 to 2026-11-15 the rule was highlights only: significant world
+  events that affect a large number of people. Every find stays in `research/candidates.json`; only `launch`
+  candidates become cards. The research bar for world events: impact score 7 or more, or 5 or more with a real
+  "before GTA 6" post (the pass 3 notes in `research/candidates.json`).
+- Politics, religion and identity are in (blue Texas).
 - NSFW: crude, profane and absurd posts are in, and their cards carry an `nsfw` flag. Sexually explicit posts are out.
 - One card for each GTA V release and re-release: PS3/X360, PS4/Xbox One, PC, PS5/Xbox Series, Enhanced on PC, and others found.
 - Every card keeps a local copy of its image, credits the creator and links to the source post. A Commons photo under
   CC BY or CC BY-SA carries its author and licence on the card page (`imageCredit`).
 - Launch set (2026-11-13): all researched candidates except `jason-irl`, which shows a private person.
   `gta5-farewell-drive` waits until 2026-11-18 (status `hold`). Pass 3 (2026-11-14) adds the 73 world-event highlights
-  of `research/world-events.json` and moves the 63 pass-2 cards below the rule to the archive (`status: "drop"`);
+  of research pass 3 (now in `research/candidates.json`) and moves the 63 pass-2 cards below the rule to the archive (`status: "drop"`);
   24 stay (Andrei).
 
 ## Approaches
@@ -86,6 +87,9 @@ imageAlt: …
 nsfw: false
 status: launch                                # launch | hold | drop
 ```
+
+`npm run cards` writes these files from `research/candidates.json` (2026-11-15), so nobody edits them by hand.
+`imageAlt` is the candidate's `image_alt`, else its title.
 
 A milestones file holds the fixed timeline anchors. Check each date at build time:
 - GTA V release: 2013-09-17

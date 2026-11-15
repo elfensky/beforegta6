@@ -66,17 +66,19 @@ timeline replaced it (2026-11-15).
 ## Removing or holding a card
 
 Astro ships the original of every image the cards collection imports, linked or not, and `/_astro/` files are cached
-for a year. So a card that must not be on the site leaves the collection completely:
+for a year. So a card that must not be on the site leaves the collection completely. `research/candidates.json` decides,
+and `npm run cards` moves the files:
 
-- **Takedown:** delete `src/content/cards/<id>.md` and `src/assets/cards/<id>.*` (never a `status` change), merge and
-  release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching → Purge by URL).
-- **Hold:** move both files to `research/held/`. To launch a held card, move them back and set `status: "launch"`.
-  `gta5-farewell-drive` waits there until 2026-11-18. `sex-2` and `durian-condom` wait there until AdSense approves
-  the site (Andrei, 2026-11-13).
-- **Archive:** a card below the world-event rule leaves the same way (delete both files, no purge), and its research
-  entry gets `status: "drop"`. 63 pass-2 cards left on 2026-11-14 (Andrei).
+- **Hold or archive:** set `status` to `hold` or `drop`, then run `npm run cards`. The card file goes, and its image
+  moves to `research/images/`. `gta5-farewell-drive` waits until 2026-11-18. `sex-2` and `durian-condom` wait until
+  AdSense approves the site (Andrei, 2026-11-13).
+- **Launch:** set `status: "launch"` and run `npm run cards`. It takes the image from `research/images/`, else it
+  fetches `image_url`. Look at every image that the run lists as fetched before the merge (no Rockstar art).
+- **Takedown:** set `status: "drop"`, run `npm run cards`, then delete `research/images/<id>.*`, because the repo is
+  public. Merge and release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching →
+  Purge by URL).
 
-`src/__tests__/content.test.js` fails when a card in the collection is not launched.
+`src/__tests__/content.test.js` fails when a card is not exactly what `npm run cards` writes for a launch candidate.
 
 ## AdSense
 
