@@ -46,7 +46,7 @@ Done on 2026-11-14:
 Still to do:
 
 8. **HTML Cache Rule.** A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at
-   Cloudflare. It waits for § AdSense step 3: a cached page reuses one CSP nonce for its whole cache lifetime.
+   Cloudflare. It waits for § AdSense step 2: a cached page reuses one CSP nonce for its whole cache lifetime.
 
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
@@ -71,16 +71,24 @@ for a year. So a card that must not be on the site leaves the collection complet
 
 ## AdSense
 
-When the AdSense account has a publisher ID:
+Andrei's AdSense account `pub-4995099892738113` started as a hosted AdSense for YouTube account. On 2026-11-15 it was
+upgraded at `adsense.google.com/start`, with `beforegta6.wtf` as its site. AdSense allows one account per publisher, so
+never create a second one. The site proves ownership with the `google-adsense-account` meta tag (`ADSENSE_ACCOUNT` in
+`src/data/site.js`), and `public/ads.txt` names the account as a direct seller. Neither loads Google code.
 
-1. Set `ADSENSE_CLIENT` (`ca-pub-…`) and `ADSENSE_SLOT` in `src/data/site.js`.
-2. Add `public/ads.txt` with `google.com, pub-<id>, DIRECT, f08c47fec0942fa0`.
-3. Replace the CSP in `deploy/nginx.conf` with Google's nonce-based policy from
+To serve ads, after AdSense approves the site:
+
+1. Create a responsive display ad unit (Ads → By ad unit). Set `ADSENSE_CLIENT` to the `ADSENSE_ACCOUNT` value and
+   `ADSENSE_SLOT` to the unit's slot ID in `src/data/site.js`. Leave Auto ads off: the timeline places its own slots.
+   In the same change, make `src/scripts/ads.js` set `data-adtest="on"` on each slot before it pushes, on every host
+   but the apex, so staging and local visits do not count as real impressions (Andrei, 2026-11-15). Google does not
+   document that flag, so never click an ad on any host: a click on your own ad is invalid traffic.
+2. Replace the CSP in `deploy/nginx.conf` with Google's nonce-based policy from
    [AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098). Google publishes no
    host allowlist for its ad code. nginx can stamp a per-request nonce into the HTML with `sub_filter` and
    `$request_id`. A Cloudflare HTML cache would then reuse one nonce per cache lifetime, so decide the Cache Rule
    together with this step.
-4. In AdSense, turn on the Privacy & messaging consent message for the EEA, UK and Switzerland.
-5. Replace the Ads section of `src/pages/privacy.astro`: what Google collects, the consent choice, and Google's
+3. In AdSense, turn on the Privacy & messaging consent message for the EEA, UK and Switzerland.
+4. Replace the Ads section of `src/pages/privacy.astro`: what Google collects, the consent choice, and Google's
    partner-sites page.
-6. On staging, check the browser console for CSP violations before merging to `main`.
+5. On staging, check the browser console for CSP violations before merging to `main`.
