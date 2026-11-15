@@ -34,23 +34,31 @@ const canonical = new URL(path, site).href;
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(og.src, site).href} />
     <meta name="twitter:card" content="summary_large_image" />
+    {/* Cookieless page views and Web Vitals. Never add Umami's recorder.js: it is session replay and heatmaps. */}
+    {/* async, not defer: a deferred tag that never loads holds back the site's own module scripts. */}
     {UMAMI_WEBSITE_ID && (
       <script
         is:inline
-        defer
+        async
         src="https://umami.lav.ren/script.js"
         data-website-id={UMAMI_WEBSITE_ID}
         data-domains={site.hostname}
+        data-performance="true"
       />
     )}
-    {ADSENSE_CLIENT && (
-      <script
-        is:inline
-        async
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-        crossorigin="anonymous"
-      />
-    )}
+    {/* Real ads on the apex only: staging and local visits never load them (Andrei, 2026-11-15). */}
+    {ADSENSE_CLIENT && <script is:inline data-host={site.hostname} data-client={ADSENSE_CLIENT}>
+      {
+        const { host, client } = document.currentScript.dataset;
+        if (location.hostname === host) {
+          const s = document.createElement('script');
+          s.async = true;
+          s.crossOrigin = 'anonymous';
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + client;
+          document.head.append(s);
+        }
+      }
+    </script>}
   </head>
   <body>
     <a class="skip" href="#main">
@@ -61,8 +69,5 @@ const canonical = new URL(path, site).href;
       <slot />
     </main>
     <Footer />
-    <script>
-      import '../scripts/ads.js';
-    </script>
   </body>
 </html>

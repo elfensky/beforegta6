@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
+import { SITE_URL } from '../data/site.js';
 import Base from '../layouts/Base.astro';
 import { ogImageOf, timelineEntries } from '../lib/cards.js';
 import { pageTitle } from '../lib/meta.js';
@@ -28,6 +29,15 @@ const { card, newer, older } = Astro.props;
   ogImage={ogImageOf(card)}
 >
   <Card card={card} headingLevel={1} eager large />
+  <p class="share" data-share hidden>
+    <button type="button" data-url={new URL(`/${card.id}/`, SITE_URL).href}>
+      Copy link
+    </button>
+    <span role="status"></span>
+  </p>
+  <script>
+    import '../scripts/share.js';
+  </script>
   <nav class="pager" aria-label="More cards">
     {newer && <a href={`/${newer.id}/`}>← {newer.data.title}</a>}
     <a href="/">All cards</a>

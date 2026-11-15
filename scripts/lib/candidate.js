@@ -1,8 +1,11 @@
-// Pure mapping from one research candidate to one card file. No I/O here: scripts/import-cards.js does the fetching.
+// Pure functions over research/candidates.json: one candidate to one card file, the pre-flight check and the review
+// table. No I/O here: scripts/sync-cards.js reads and writes the files.
 
 /**
  * @typedef {object} Candidate
  * @property {string} id
+ * @property {'launch'|'hold'|'drop'} status
+ * @property {string[]} [tags] subject tags first, then `world-event`
  * @property {string} title
  * @property {string} blurb
  * @property {'real-event'|'joke'} kind
@@ -16,8 +19,10 @@
  * @property {string|null} image_url
  * @property {string|null} [image_page] Commons file page of the image
  * @property {string|null} [image_license] licence and author, e.g. "CC BY 4.0 (EHT Collaboration)"
+ * @property {string|null} [image_alt] a hand-written image description; the title when absent
+ * @property {number} [impact_score]
+ * @property {number} [meme_score]
  * @property {boolean} [nsfw]
- * @property {'launch'|'hold'|'drop'} [status]
  */
 
 /**
@@ -36,6 +41,7 @@
  */
 
 const ID = /^[a-z0-9-]+$/;
+const STATUSES = ['launch', 'hold', 'drop'];
 
 /**
  * @param {Candidate} c
@@ -46,6 +52,7 @@ export function toCard(c) {
   for (const field of /** @type {const} */ (['title', 'blurb', 'kind', 'source_url'])) {
     if (!c[field]) throw new Error(`${c.id}: ${field} missing`);
   }
+  if (!STATUSES.includes(c.status)) throw new Error(`${c.id}: status must be launch, hold or drop`);
   const date = c.timeline_date ?? c.event_date ?? c.post_date;
   if (!date) throw new Error(`${c.id}: date missing`);
 
@@ -56,10 +63,10 @@ export function toCard(c) {
     kind: c.kind,
     date,
     source: { url: /** @type {string} */ (c.source_url), platform: c.source_platform },
-    // The title is the image's purpose on every card; image_note in the research is provenance, not a description.
-    imageAlt: c.title,
+    // The title is the image's purpose unless someone described the image; image_note is provenance, not a description.
+    imageAlt: c.image_alt ?? c.title,
     nsfw: c.nsfw === true,
-    status: c.status ?? 'launch',
+    status: c.status,
   };
   if (c.event_date) frontmatter.eventDate = c.event_date;
   if (c.source_engagement) frontmatter.source.engagement = c.source_engagement;
@@ -67,6 +74,38 @@ export function toCard(c) {
   if (c.image_page && c.image_license)
     frontmatter.imageCredit = { text: c.image_license, url: c.image_page };
   return { id: c.id, frontmatter };
+}
+
+/**
+ * The sync's pre-flight: every problem in the file, before anything is written. Empty means the file is good.
+ * @param {Candidate[]} candidates
+ * @returns {string[]}
+ */
+export function checkCandidates(candidates) {
+  const ids = candidates.map((c) => c.id);
+  const errors = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))].map(
+    (id) => `duplicate id: ${id}`,
+  );
+  for (const c of candidates) {
+    // Every id reaches the review table, so a bad one is an error even before its launch.
+    if (!ID.test(c.id ?? '')) {
+      errors.push(`${c.id}: id must match ${ID}`);
+      continue;
+    }
+    if (c.tags !== undefined && !Array.isArray(c.tags)) errors.push(`${c.id}: tags must be a list`);
+    for (const t of Array.isArray(c.tags) ? c.tags : [])
+      if (t !== 'world-event' && !SUBJECT_TAGS.includes(t))
+        errors.push(`${c.id}: unknown tag ${t}`);
+    if (!STATUSES.includes(c.status)) errors.push(`${c.id}: status must be launch, hold or drop`);
+    else if (c.status === 'launch') {
+      try {
+        toCard(c);
+      } catch (err) {
+        errors.push(/** @type {Error} */ (err).message);
+      }
+    }
+  }
+  return errors;
 }
 
 /**
@@ -96,4 +135,95 @@ const EXTENSIONS = {
 export function imageExtension(contentType) {
   const type = contentType?.split(';')[0].trim().toLowerCase() ?? '';
   return EXTENSIONS[type] ?? null;
+}
+
+/** Subject tags in the order of the review table. `world-event` is a size, not a subject, and goes last in `tags`. */
+export const SUBJECT_TAGS = [
+  'politics',
+  'economy',
+  'tech',
+  'internet',
+  'science',
+  'sport',
+  'culture',
+  'gaming',
+  'gta',
+  'creators',
+];
+
+/**
+ * @typedef {object} ResearchFile
+ * @property {{ pass: number, date: string, notes: string[] }[]} passes
+ * @property {Candidate[]} candidates
+ * @property {{ id: string, reason: string, field?: string }[]} excluded
+ */
+
+const STATUS_ORDER = { launch: 0, hold: 1, drop: 2 };
+/** @param {unknown} v */
+const cell = (v) =>
+  String(v ?? '–')
+    .replaceAll('|', '\\|')
+    .replace(/\s*\n\s*/g, ' ');
+/** @param {string} url */
+const link = (url) => `<${url.replaceAll('|', '%7C')}>`;
+/** @param {string} tag */
+const label = (tag) => (tag === 'gta' ? 'GTA' : tag[0].toUpperCase() + tag.slice(1));
+/** @param {Candidate} c */
+const sectionOf = (c) => c.tags?.find((t) => SUBJECT_TAGS.includes(t)) ?? 'untagged';
+/** @param {Candidate} c */
+const dateOf = (c) => c.timeline_date ?? c.event_date ?? c.post_date ?? '';
+
+/** @param {Candidate} c */
+function row(c) {
+  const post = c.source_url ? `[${cell(c.source_platform)}](${link(c.source_url)})` : '–';
+  const fact = c.fact_url ? `[fact](${link(c.fact_url)})` : '–';
+  const tags = c.tags?.length ? cell(c.tags.join(', ')) : '–';
+  const world = c.tags?.includes('world-event') ? 'yes' : '';
+  return `| \`${c.id}\` | ${cell(c.title)} | ${cell(dateOf(c))} | ${tags} | ${world} | ${cell(c.impact_score)} | ${cell(c.meme_score)} | ${c.status} | ${post} | ${fact} |`;
+}
+
+/**
+ * The human-readable view of research/candidates.json for a review pass: one section per first subject tag.
+ * @param {ResearchFile} data
+ * @returns {string}
+ */
+export function reviewTable({ passes, candidates, excluded }) {
+  const sections = [...SUBJECT_TAGS, 'untagged']
+    .map((tag) => ({ tag, items: candidates.filter((c) => sectionOf(c) === tag) }))
+    .filter((s) => s.items.length);
+  /** @param {Candidate[]} items */
+  const counts = (items) =>
+    ['launch', 'hold', 'drop']
+      .map((st) => items.filter((c) => c.status === st).length)
+      .concat(items.length);
+  const lines = [
+    '# Research candidates',
+    '',
+    'Generated from `research/candidates.json` by `npm run cards`. Edit the JSON, not this file.',
+    ...passes.flatMap((p) => [
+      '',
+      `## Pass ${p.pass} (${p.date})`,
+      '',
+      ...p.notes.map((n) => `- ${n}`),
+    ]),
+    '',
+    '## Counts',
+    '',
+    '| Tag | Launch | Hold | Drop | Total |',
+    '|---|---|---|---|---|',
+    ...sections.map((s) => `| ${label(s.tag)} | ${counts(s.items).join(' | ')} |`),
+    `| Total | ${counts(candidates).join(' | ')} |`,
+  ];
+  for (const { tag, items } of sections) {
+    const sorted = items.toSorted(
+      (a, b) =>
+        STATUS_ORDER[a.status] - STATUS_ORDER[b.status] || dateOf(b).localeCompare(dateOf(a)),
+    );
+    lines.push('', `## ${label(tag)} (${items.length})`, '');
+    lines.push('| Id | Title | Date | Tags | World event | Impact | Meme | Status | Post | Fact |');
+    lines.push('|---|---|---|---|---|---|---|---|---|---|', ...sorted.map(row));
+  }
+  lines.push('', `## Excluded (${excluded.length})`, '');
+  lines.push(...excluded.map((e) => `- \`${e.id}\`${e.field ? ` (${e.field})` : ''}: ${e.reason}`));
+  return `${lines.join('\n')}\n`;
 }

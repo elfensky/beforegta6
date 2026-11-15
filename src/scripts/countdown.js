@@ -12,6 +12,7 @@ function tick() {
     document
       .querySelectorAll('[data-launch-title]')
       .forEach((el) => (el.textContent = 'We got all of this before GTA 6.'));
+    document.querySelectorAll('[data-after-launch]').forEach((el) => el.removeAttribute('hidden'));
     return;
   }
   setTimeout(tick, 60_000 - (Date.now() % 60_000));

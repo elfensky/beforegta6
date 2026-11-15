@@ -2,8 +2,7 @@
 import { getCollection } from 'astro:content';
 import { milestones } from '../data/milestones.js';
 import Base from '../layouts/Base.astro';
-import { withAdSlots } from '../lib/ads.js';
-import { groupSlots, timelineEntries, yearOf } from '../lib/cards.js';
+import { timelineEntries } from '../lib/cards.js';
 import TimelineItem from './TimelineItem.astro';
 
 /** @typedef {'oldest' | 'newest'} Order */
@@ -11,7 +10,8 @@ import TimelineItem from './TimelineItem.astro';
 const { order } = Astro.props;
 const entries = timelineEntries(await getCollection('cards'), milestones, order);
 const cards = entries.filter((e) => e.kind === 'card');
-const years = groupSlots(withAdSlots(entries), yearOf);
+// The entries are in date order, so each year is one run and keeps its place.
+const years = [...Map.groupBy(entries, (e) => e.year)];
 /** @param {Order} o */
 const href = (o) => (o === 'oldest' ? '/oldest/' : '/');
 /** @param {boolean} on */
@@ -26,6 +26,10 @@ const current = (on) => (on ? /** @type {const} */ ('page') : undefined);
   <h1 class="page-title" data-launch-title>
     Everything we got before GTA 6
   </h1>
+  {/* Shown by the countdown script at launch: the meme flips to "We got GTA 6 before ___" (Reddit, Nov 2026). */}
+  <p class="after-launch" data-after-launch hidden>
+    And we got GTA 6 before The Winds of Winter.
+  </p>
   <nav class="toggles" aria-label="Timeline order">
     <p>
       <span>Order:</span>
@@ -37,14 +41,14 @@ const current = (on) => (on ? /** @type {const} */ ('page') : undefined);
       </a>
     </p>
   </nav>
-  {years.map((year) => (
-    <section class="year" aria-labelledby={`y${year.key}`}>
-      <h2 id={`y${year.key}`}>
-        <span>{year.key}</span>
+  {years.map(([year, yearEntries]) => (
+    <section class="year" aria-labelledby={`y${year}`}>
+      <h2 id={`y${year}`}>
+        <span>{year}</span>
       </h2>
       <ol class="timeline">
-        {year.slots.map((slot) => (
-          <TimelineItem slot={slot} />
+        {yearEntries.map((entry) => (
+          <TimelineItem entry={entry} />
         ))}
       </ol>
     </section>

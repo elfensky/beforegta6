@@ -6,7 +6,13 @@ const launched = readdirSync('src/content/cards').filter((f) =>
   /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
 ).length;
 
-for (const route of ['/', '/oldest/', '/flying-cars/', '/privacy/', '/does-not-exist/']) {
+// Any live card stands for every card page; a review can drop any one of them.
+const firstCard = readdirSync('src/content/cards')
+  .filter((f) => f.endsWith('.md'))
+  .sort()[0]
+  .replace(/\.md$/, '');
+
+for (const route of ['/', '/oldest/', `/${firstCard}/`, '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
     test.setTimeout(60_000);
@@ -29,16 +35,6 @@ test.describe('at 320 px', () => {
       expect(scroll).toBeLessThanOrEqual(client);
     });
   }
-
-  // About one ad per screen of one-line rows.
-  test('ad slots come no more often than every 10 entries', async ({ page }) => {
-    await page.goto('/');
-    // Milestones are timeline entries too, and withAdSlots counts them.
-    const entries = await page.locator('.timeline > li:not(.ad-slot)').count();
-    const ads = await page.locator('.timeline .ad-slot:visible').count();
-    expect(ads).toBeGreaterThan(0);
-    expect(ads).toBeLessThanOrEqual(Math.floor(entries / 10));
-  });
 });
 
 test('the skip link moves focus to main', async ({ page, browserName }) => {
@@ -60,6 +56,45 @@ test.describe('without JavaScript', () => {
     await page.getByRole('link', { name: 'Oldest first' }).click();
     await expect(page).toHaveURL('/oldest/');
   });
+
+  test('a card page shows no share button', async ({ page }) => {
+    await page.goto(`/${firstCard}/`);
+    await expect(page.getByRole('button')).toHaveCount(0);
+  });
+});
+
+// A deferred tracker holds back every module script until it loads: a stalled Umami froze the countdown.
+test('the countdown runs while the Umami script never answers', async ({ page }) => {
+  await page.route('https://umami.lav.ren/**', () => {});
+  await page.goto('/', { waitUntil: 'commit' });
+  await expect(page.locator('.countdown [data-left]')).not.toBeEmpty();
+});
+
+// Real ads on the apex only (Andrei, 2026-11-15). Google and Umami are blocked: a test run sends neither a request.
+test('the AdSense script loads on the apex only', async ({ page, baseURL }) => {
+  /** @type {string[]} */
+  const google = [];
+  await page.route('https://pagead2.googlesyndication.com/**', (r) => {
+    google.push(r.request().url());
+    return r.abort();
+  });
+  await page.route('https://umami.lav.ren/**', (r) => r.abort());
+  await page.goto('/');
+  await page.waitForLoadState('networkidle');
+  expect(google).toEqual([]);
+  // The apex host name, answered by the test server. No forwarded headers: the preview server refuses Firefox's Host.
+  await page.route('https://beforegta6.wtf/**', async (r) =>
+    r.fulfill({
+      response: await r.fetch({
+        url: r.request().url().replace('https://beforegta6.wtf', `${baseURL}`),
+        headers: {},
+      }),
+    }),
+  );
+  await page.goto('https://beforegta6.wtf/');
+  await expect.poll(() => google.length).toBe(1);
+  // Other page requests can still be in the handler here, and the page close disposes their fetched responses.
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
 });
 
 // The order is the only control: there is no view toggle.
@@ -100,31 +135,17 @@ test.describe('at 1280 px', () => {
   test('a hover image covers a milestone, never an ad', async ({ page }) => {
     await page.goto('/');
     const z = await page.evaluate(() => {
+      // Ads are off in the build: a bare box stands in for an in-page Auto ad.
+      const ad = document.createElement('div');
+      ad.className = 'google-auto-placed';
+      document.querySelector('.timeline')?.append(ad);
       const zOf = (/** @type {string} */ s) =>
         Number(getComputedStyle(document.querySelector(s) ?? document.body).zIndex) || 0;
-      return { media: zOf('.media'), milestone: zOf('.milestone'), ad: zOf('.ad-slot') };
+      return { media: zOf('.media'), milestone: zOf('.milestone'), ad: zOf('.google-auto-placed') };
     });
     expect(z.media).toBeGreaterThan(z.milestone);
     expect(z.ad).toBeGreaterThan(z.media);
   });
-});
-
-// AdSense sizes a responsive unit from its own width; a zero-width <ins> never fills.
-test('an AdSense unit spans its ad card', async ({ page }) => {
-  await page.goto('/');
-  const width = await page.evaluate(() => {
-    const card = /** @type {HTMLElement} */ (
-      [...document.querySelectorAll('.ad-card')].find(
-        (el) => /** @type {HTMLElement} */ (el).offsetParent,
-      )
-    );
-    const ins = document.createElement('ins');
-    ins.className = 'adsbygoogle';
-    ins.style.display = 'block';
-    card.prepend(ins);
-    return [ins.offsetWidth, card.clientWidth];
-  });
-  expect(width[0]).toBeGreaterThan(width[1] / 2);
 });
 
 test('the footer names the operator, the contact and the privacy page', async ({ page }) => {
@@ -139,4 +160,57 @@ test('the footer names the operator, the contact and the privacy page', async ({
   await expect(footer).not.toContainText('DRUNIK');
   await expect(footer).not.toContainText('Tirlemont');
   await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy/');
+});
+
+test.describe('the share button on a card page', () => {
+  test('uses the share sheet where the browser has one', async ({ page }) => {
+    await page.addInitScript(() => {
+      /** @type {any} */ (window).shared = [];
+      Object.defineProperty(navigator, 'share', {
+        configurable: true,
+        value: async (/** @type {ShareData} */ d) => /** @type {any} */ (window).shared.push(d.url),
+      });
+    });
+    await page.goto(`/${firstCard}/`);
+    await page.getByRole('button', { name: 'Share this card' }).click();
+    expect(await page.evaluate(() => /** @type {any} */ (window).shared)).toEqual([
+      `https://beforegta6.wtf/${firstCard}/`,
+    ]);
+  });
+
+  test('copies the link where there is no share sheet', async ({ page }) => {
+    await page.addInitScript(() => {
+      /** @type {any} */ (window).copied = [];
+      Object.defineProperty(navigator, 'share', { configurable: true, value: undefined });
+      Object.defineProperty(navigator, 'clipboard', {
+        configurable: true,
+        value: {
+          writeText: async (/** @type {string} */ t) => /** @type {any} */ (window).copied.push(t),
+        },
+      });
+    });
+    await page.goto(`/${firstCard}/`);
+    await page.getByRole('button', { name: 'Copy link' }).click();
+    await expect(page.getByRole('status')).toHaveText('Link copied.');
+    expect(await page.evaluate(() => /** @type {any} */ (window).copied)).toEqual([
+      `https://beforegta6.wtf/${firstCard}/`,
+    ]);
+  });
+});
+
+test.describe('the line under the title', () => {
+  test('stays hidden before the launch', async ({ page }) => {
+    await page.clock.setFixedTime(new Date(2026, 10, 15, 12));
+    await page.goto('/');
+    await expect(page.getByText('And we got GTA 6 before')).toBeHidden();
+  });
+
+  test('shows after the launch, with the flipped title', async ({ page }) => {
+    await page.clock.setFixedTime(new Date(2026, 10, 19, 0, 1));
+    await page.goto('/');
+    await expect(page.locator('[data-launch-title]')).toHaveText(
+      'We got all of this before GTA 6.',
+    );
+    await expect(page.getByText('And we got GTA 6 before The Winds of Winter.')).toBeVisible();
+  });
 });

@@ -2,7 +2,7 @@
 
 - Date: 2026-11-13
 - Status: approved by Andrei on 2026-11-13. This document includes his later additions from the same session: the timeline, the content rules and the GTA V re-release cards. The timeline-only change of 2026-11-14 (`2026-11-14-timeline-only-design.md`) replaces the card grid and the header switch.
-- Sources: the brainstorming session of 2026-11-13. Candidate research is in `research/` once imported.
+- Sources: the brainstorming session of 2026-11-13. Candidate research is in `research/candidates.json`.
 
 ## Intent
 
@@ -15,7 +15,7 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
 
 - `beforegta6.wtf` is live before 2026-11-19 with the curated launch set.
 - Every card has its own address. A shared link previews that card's meme.
-- AdSense approves the site after launch. Ad slots show house cards until then.
+- AdSense approves the site after launch. The site shows no ads until then.
 
 ## Goals
 
@@ -24,8 +24,11 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
   first) and the view (small cards by default, with a tile for each month in the grid, or lines). Each combination is a static page:
   `/`, `/oldest/`, `/lines/`, `/lines/oldest/` (Andrei, 2026-11-14).
 - **One page per card** at `/<id>/`, with Open Graph tags whose image is the card's meme.
+  A share button under the card opens the browser's share sheet, or copies the card's link where there is none. It
+  stays hidden without JavaScript (Andrei, 2026-11-15).
 - **Countdown** to 2026-11-19 in the header. After that moment the header reads "We got all of this before GTA 6."
-- **Ad cards:** one per screenful (see Ads).
+  A line under it then reads "And we got GTA 6 before The Winds of Winter.", for the inverted meme (Andrei, 2026-11-15).
+- **Ads:** AdSense Auto ads, about one per screen (see Ads).
 
 ## Non-goals (launch)
 
@@ -41,17 +44,18 @@ Submissions, accounts, likes and dislikes, comments, merch, other languages.
 
 ## Content rules (Andrei, 2026-11-13)
 
-- Highlights only (Andrei, 2026-11-14): significant world events that affect a large number of people. Every find stays in
-  the research archive (`research/*.json`); only `launch` candidates become cards. Rule for pass 3: impact score 7 or
-  more, or 5 or more with a real "before GTA 6" post (`research/world-events.md`).
-- Politics, religion and identity are in when the event passes the world-event rule (blue Texas).
+- Andrei's picks (Andrei, 2026-11-15). From 2026-11-14 to 2026-11-15 the rule was highlights only: significant world
+  events that affect a large number of people. Every find stays in `research/candidates.json`; only `launch`
+  candidates become cards. The research bar for world events: impact score 7 or more, or 5 or more with a real
+  "before GTA 6" post (the pass 3 notes in `research/candidates.json`).
+- Politics, religion and identity are in (blue Texas).
 - NSFW: crude, profane and absurd posts are in, and their cards carry an `nsfw` flag. Sexually explicit posts are out.
 - One card for each GTA V release and re-release: PS3/X360, PS4/Xbox One, PC, PS5/Xbox Series, Enhanced on PC, and others found.
 - Every card keeps a local copy of its image, credits the creator and links to the source post. A Commons photo under
   CC BY or CC BY-SA carries its author and licence on the card page (`imageCredit`).
 - Launch set (2026-11-13): all researched candidates except `jason-irl`, which shows a private person.
   `gta5-farewell-drive` waits until 2026-11-18 (status `hold`). Pass 3 (2026-11-14) adds the 73 world-event highlights
-  of `research/world-events.json` and moves the 63 pass-2 cards below the rule to the archive (`status: "drop"`);
+  of research pass 3 (now in `research/candidates.json`) and moves the 63 pass-2 cards below the rule to the archive (`status: "drop"`);
   24 stay (Andrei).
 
 ## Approaches
@@ -66,7 +70,8 @@ Submissions, accounts, likes and dislikes, comments, merch, other languages.
 
 **Stack.** Astro (latest release), Node 26 LTS, plain JavaScript with JSDoc (no TypeScript). The images go through `astro:assets`
 and come out as WebP in several widths. The site uses system fonts only. Every asset is served from the site, except the AdSense script.
-Analytics: self-hosted Umami.
+Analytics: self-hosted Umami, cookieless, with no consent banner. It counts page views and Web Vitals (`data-performance`), and
+never loads Umami's `recorder.js` (session replay and heatmaps).
 
 **Content model.** One Markdown file per card, `src/content/cards/<id>.md`, with this frontmatter:
 
@@ -83,6 +88,9 @@ nsfw: false
 status: launch                                # launch | hold | drop
 ```
 
+`npm run cards` writes these files from `research/candidates.json` (2026-11-15), so nobody edits them by hand.
+`imageAlt` is the candidate's `image_alt`, else its title.
+
 A milestones file holds the fixed timeline anchors. Check each date at build time:
 - GTA V release: 2013-09-17
 - GTA 6 confirmed: 2022-02-04
@@ -93,15 +101,14 @@ A milestones file holds the fixed timeline anchors. Check each date at build tim
 - Launch: 2026-11-19
 
 **Ads.**
-- Units: AdSense in-feed units. Each slot takes a full row of the timeline: an AdSense unit needs about 250 px, more
-  than a small card.
-- Desktop: one after every 8 timeline entries (cards and milestones), which is about one per screen.
-- Mobile: one after every 4 entries. A strict one-per-screen on a phone would make about every third card an ad, and
-  AdSense forbids screens with more ads than content.
-- Before approval: a house card fills each slot, such as a share prompt or the countdown.
+- AdSense Auto ads: Google chooses where the ads go (Andrei, 2026-11-15). The site has no ad slots of its own.
+- Density: about one ad per screen (Andrei, 2026-11-13), set in the Auto ads settings.
+- Before approval: no ads and no placeholder.
 - Consent: Google's certified "Privacy & messaging" consent tool, for visitors from the EEA, UK and Switzerland.
 - `ads.txt` at the site root.
-- The Content Security Policy allows the Google ad origins.
+- The script loads on the apex only, so staging never shows real ads (Andrei, 2026-11-15).
+- The Content Security Policy sets no `script-src`: AdSense loads from Google hosts that Google does not list, and Google's
+  nonce policy would stop the HTML edge cache (Andrei, 2026-11-15). It limits objects, the base URL, form targets and framing.
 
 **Documented exceptions** (recorded in `AGENTS.md`): the AdSense script loads from Google's servers, against the no-CDN
 rule, and AdSense is a US service, against the EU-first preference. Andrei asked for AdSense explicitly.
@@ -114,7 +121,7 @@ the miklav.com Astro repo:
 - Production: `beforegta6.wtf` on the Hetzner production swarm. The stack is `beforegta6`, from `deploy/production/compose.yaml`, and it deploys from `main`. Placement: `role == apps`, spread over the nodes.
 - Each stack: `web` ×2 and `cloudflared` ×2, with its own tunnel. The secrets are `staging_beforegta6_cloudflared` and `beforegta6_cloudflared`.
 - CI pins the built image into the branch's compose file and commits it. Arcane Git Sync runs with `redeployAfterSync: true`, from entries in `drunikbe/infra`.
-- Cloudflare: a Redirect Rule sends `www` to the bare domain, and a Cache Rule caches the HTML at the edge for traffic spikes.
+- Cloudflare: a Redirect Rule sends `www` to the bare domain. A Cache Rule keeps the HTML at the edge for 5 minutes, with Smart Tiered Cache, so a spike stays at Cloudflare (`deploy/README.md` step 8).
 - Monitoring: Umami and Uptime Kuma.
 
 **Repo.** `elfensky/beforegta6`: public, personal (Andrei, 2026-11-13; it replaces the first private repo `drunikbe/beforegta6.wtf`). Default branch `develop`, with rulesets.
@@ -123,7 +130,7 @@ the miklav.com Astro repo:
 
 ## Left to the builder
 
-Colours, spacing, the exact breakpoints, the copy, the house-card content, the timeline's visual form (alternating sides
+Colours, spacing, the exact breakpoints, the copy, the timeline's visual form (alternating sides
 on desktop, one column on mobile is the starting proposal).
 
 ## Andrei's tasks
@@ -131,7 +138,9 @@ on desktop, one column on mobile is the starting proposal).
 - Create `takedown@lav.ren`.
 - Apply with his personal AdSense account once the site is live. Put the publisher ID in `ads.txt`.
 - Create the staging and production tunnels and store their tokens in 1Password. Then create the swarm secrets and merge the `drunikbe/infra` entries.
-- Add the Cloudflare Redirect Rule and Cache Rule.
+- Add the Cloudflare Redirect Rule.
+- Add the Cloudflare Cache Rule `HTML at the edge`, and set Tiered Cache to Smart (`deploy/README.md` step 8).
+- In AdSense: turn on Auto ads for the site, and publish the consent message for the EEA, UK and Switzerland.
 
 ## Later (v2): likes and dislikes
 

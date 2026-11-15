@@ -45,8 +45,28 @@ Done on 2026-11-14:
 
 Still to do:
 
-8. **HTML Cache Rule.** A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at
-   Cloudflare. It waits for § AdSense step 2: a cached page reuses one CSP nonce for its whole cache lifetime.
+8. **HTML edge cache.** Cloudflare keeps each page for 5 minutes, so a traffic spike stays at the edge (Andrei,
+   2026-11-15, for the launch-week push in `docs/PROMOTION.md`). nginx sends Cloudflare
+   `CDN-Cache-Control: max-age=300, stale-if-error=86400`, and browsers `Cache-Control: public, max-age=0`. In zone
+   `beforegta6.wtf`:
+   - Caching → Cache Rules → Create rule. Name: `HTML at the edge`. Custom filter expression:
+     `(http.host eq "beforegta6.wtf")`, so staging stays uncached. Cache eligibility: Eligible for cache. Edge TTL: Use
+     cache-control header if present, bypass cache if not. Browser TTL: Respect origin.
+   - Caching → Tiered Cache: Smart Tiered Caching Topology.
+   - Keep Always Online off. Cloudflare ignores `stale-if-error` while it is on.
+
+   nginx uses `CDN-Cache-Control`, not `s-maxage`, because an `s-maxage` makes Cloudflare ignore `stale-if-error`
+   ([Cloudflare: Cache-Control](https://developers.cloudflare.com/cache/concepts/cache-control/) ·
+   [🔖 2026-11-15](https://linkding.lav.ren/bookmarks?details=6461)). When the origin sends `CDN-Cache-Control`,
+   Cloudflare caches by it and not by `Cache-Control`
+   ([Cloudflare: CDN-Cache-Control](https://developers.cloudflare.com/cache/concepts/cdn-cache-control/) ·
+   [🔖 2026-11-15](https://linkding.lav.ren/bookmarks?details=6462)). `stale-if-error` serves the cached page for a
+   day while the origin answers `5xx`.
+
+   Check: `/usr/bin/curl -sI https://beforegta6.wtf/ | /usr/bin/grep -i cf-cache-status` shows `HIT` on the second
+   request. `REVALIDATED` on each request means Cloudflare follows `Cache-Control` and not `CDN-Cache-Control`. A
+   release shows within 5 minutes, or at once after a purge of the page URL. Accepted risk (Andrei, 2026-11-15): for
+   up to 5 minutes after a release, a cached old page can ask for `/_astro/` files that the new build does not have.
 
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
@@ -57,17 +77,22 @@ timeline replaced it (2026-11-15).
 ## Removing or holding a card
 
 Astro ships the original of every image the cards collection imports, linked or not, and `/_astro/` files are cached
-for a year. So a card that must not be on the site leaves the collection completely:
+for a year. So a card that must not be on the site leaves the collection completely. `research/candidates.json` decides,
+and `npm run cards` moves the files:
 
-- **Takedown:** delete `src/content/cards/<id>.md` and `src/assets/cards/<id>.*` (never a `status` change), merge and
-  release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching → Purge by URL).
-- **Hold:** move both files to `research/held/`. To launch a held card, move them back and set `status: "launch"`.
-  `gta5-farewell-drive` waits there until 2026-11-18. `sex-2` and `durian-condom` wait there until AdSense approves
-  the site (Andrei, 2026-11-13).
-- **Archive:** a card below the world-event rule leaves the same way (delete both files, no purge), and its research
-  entry gets `status: "drop"`. 63 pass-2 cards left on 2026-11-14 (Andrei).
+- **Hold or archive:** set `status` to `hold` or `drop`, then run `npm run cards`. The card file goes, and its image
+  moves to `research/images/`. `gta5-farewell-drive` waits until 2026-11-18. `sex-2` and `durian-condom` wait until
+  AdSense approves the site (Andrei, 2026-11-13).
+- **Launch:** set `status: "launch"` and run `npm run cards`. It takes the image from `src/assets/cards/`, then from
+  `research/images/`, else it fetches `image_url`. To replace an image, delete `<id>.*` in both folders first. Look at
+  every image that the run lists as fetched before the merge (no Rockstar art). Four finds have no `image_url`
+  (2026-11-15): `aws-outage-2025`, `pope-meets-patriarch`, `uk-age-checks` and `brain-rot-word-of-the-year`. Save
+  their image in `research/images/` by hand before a launch.
+- **Takedown:** set `status: "drop"`, run `npm run cards`, then delete `research/images/<id>.*`, because the repo is
+  public. Merge and release. Then purge the card page and its old `/_astro/<id>.*` image URLs in Cloudflare (Caching →
+  Purge by URL).
 
-`src/__tests__/content.test.js` fails when a card in the collection is not launched.
+`src/__tests__/content.test.js` fails when a card is not exactly what `npm run cards` writes for a launch candidate.
 
 ## AdSense
 
@@ -76,19 +101,28 @@ upgraded at `adsense.google.com/start`, with `beforegta6.wtf` as its site. AdSen
 never create a second one. The site proves ownership with the `google-adsense-account` meta tag (`ADSENSE_ACCOUNT` in
 `src/data/site.js`), and `public/ads.txt` names the account as a direct seller. Neither loads Google code.
 
-To serve ads, after AdSense approves the site:
+The site loads AdSense Auto ads, and Google chooses where the ads go (Andrei, 2026-11-15). The site has no ad slots of
+its own. Ads appear once AdSense approves the site: its status was "Getting ready" on 2026-11-15.
 
-1. Create a responsive display ad unit (Ads → By ad unit). Set `ADSENSE_CLIENT` to the `ADSENSE_ACCOUNT` value and
-   `ADSENSE_SLOT` to the unit's slot ID in `src/data/site.js`. Leave Auto ads off: the timeline places its own slots.
-   In the same change, make `src/scripts/ads.js` set `data-adtest="on"` on each slot before it pushes, on every host
-   but the apex, so staging and local visits do not count as real impressions (Andrei, 2026-11-15). Google does not
-   document that flag, so never click an ad on any host: a click on your own ad is invalid traffic.
-2. Replace the CSP in `deploy/nginx.conf` with Google's nonce-based policy from
-   [AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098). Google publishes no
-   host allowlist for its ad code. nginx can stamp a per-request nonce into the HTML with `sub_filter` and
-   `$request_id`. A Cloudflare HTML cache would then reuse one nonce per cache lifetime, so decide the Cache Rule
-   together with this step.
-3. In AdSense, turn on the Privacy & messaging consent message for the EEA, UK and Switzerland.
-4. Replace the Ads section of `src/pages/privacy.astro`: what Google collects, the consent choice, and Google's
-   partner-sites page.
-5. On staging, check the browser console for CSP violations before merging to `main`.
+- **Apex only.** `ADSENSE_CLIENT` in `src/data/site.js` turns the loader in `src/layouts/Base.astro` on. The loader
+  adds Google's script only when the host is `beforegta6.wtf`, so staging and local visits never load real ads
+  (Andrei, 2026-11-15). The e2e test "the AdSense script loads on the apex only" holds both sides. Never click an ad on
+  any host: a click on your own ad is invalid traffic.
+- **CSP.** `deploy/nginx.conf` sends `object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'`,
+  with no `script-src` (Andrei, 2026-11-15). AdSense loads scripts from Google hosts, and Google publishes no host
+  allowlist. Google's own policy ([AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098))
+  needs a per-request nonce, and that nonce would stop the HTML edge cache (step 8). On this static site it would also
+  protect little: nginx would stamp the nonce into every `<script` tag, an injected one too.
+- **Hover images.** `.google-auto-placed` in `src/styles/global.css` keeps a row's hover image under an in-page ad.
+  Google does not document that class, so check it on the live site once ads show.
+
+In the AdSense dashboard (Andrei):
+
+1. Ads → By site → `beforegta6.wtf`: turn on Auto ads. Look at the placements in the preview. If an in-page ad breaks
+   the line timeline, add `.timeline` as an excluded area. Set the density to about one ad per screen (Andrei,
+   2026-11-13).
+2. Privacy & messaging: create and publish the consent message for the EEA, the UK and Switzerland. The privacy page
+   tells visitors that this message comes first.
+
+After each release, check the browser console on `beforegta6.wtf` for CSP violations, with the ad requests blocked
+(never click an ad). Only the apex loads Google's script, so staging cannot show a violation that the ads cause.
