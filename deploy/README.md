@@ -45,17 +45,28 @@ Done on 2026-11-14:
 
 Still to do:
 
-8. **HTML Cache Rule.** A Cache Rule that caches HTML at the edge for 5 minutes, so a traffic spike stays at
-   Cloudflare. Andrei chose it for the launch-week push (2026-11-15, `docs/PROMOTION.md`). The CSP has no nonce yet,
-   so caching is safe until § AdSense step 2. In zone `beforegta6.wtf`, Caching → Cache Rules → Create rule:
-   - Name: `HTML at the edge`.
-   - Custom filter expression: `(http.host eq "beforegta6.wtf" and not http.request.uri.path contains "/_astro/")`.
-     Staging stays uncached, and the hashed assets keep their own one-year lifetime.
-   - Cache eligibility: Eligible for cache. Edge TTL: Ignore cache-control header and use this TTL, 5 minutes.
-     Browser TTL: Respect origin (nginx sends `no-cache` for HTML).
+8. **HTML edge cache.** Cloudflare keeps each page for 5 minutes, so a traffic spike stays at the edge (Andrei,
+   2026-11-15, for the launch-week push in `docs/PROMOTION.md`). nginx sends Cloudflare
+   `CDN-Cache-Control: max-age=300, stale-if-error=86400`, and browsers `Cache-Control: public, max-age=0`. In zone
+   `beforegta6.wtf`:
+   - Caching → Cache Rules → Create rule. Name: `HTML at the edge`. Custom filter expression:
+     `(http.host eq "beforegta6.wtf")`, so staging stays uncached. Cache eligibility: Eligible for cache. Edge TTL: Use
+     cache-control header if present, bypass cache if not. Browser TTL: Respect origin.
+   - Caching → Tiered Cache: Smart Tiered Caching Topology.
+   - Keep Always Online off. Cloudflare ignores `stale-if-error` while it is on.
+
+   nginx uses `CDN-Cache-Control`, not `s-maxage`, because an `s-maxage` makes Cloudflare ignore `stale-if-error`
+   ([Cloudflare: Cache-Control](https://developers.cloudflare.com/cache/concepts/cache-control/) ·
+   [🔖 2026-11-15](https://linkding.lav.ren/bookmarks?details=6461)). When the origin sends `CDN-Cache-Control`,
+   Cloudflare caches by it and not by `Cache-Control`
+   ([Cloudflare: CDN-Cache-Control](https://developers.cloudflare.com/cache/concepts/cdn-cache-control/) ·
+   [🔖 2026-11-15](https://linkding.lav.ren/bookmarks?details=6462)). `stale-if-error` serves the cached page for a
+   day while the origin answers `5xx`.
 
    Check: `/usr/bin/curl -sI https://beforegta6.wtf/ | /usr/bin/grep -i cf-cache-status` shows `HIT` on the second
-   request. A release then shows within 5 minutes, or at once after a purge of the page URL.
+   request. `REVALIDATED` on each request means Cloudflare follows `Cache-Control` and not `CDN-Cache-Control`. A
+   release shows within 5 minutes, or at once after a purge of the page URL. Accepted risk (Andrei, 2026-11-15): for
+   up to 5 minutes after a release, a cached old page can ask for `/_astro/` files that the new build does not have.
 
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
@@ -97,11 +108,11 @@ its own. Ads appear once AdSense approves the site: its status was "Getting read
   adds Google's script only when the host is `beforegta6.wtf`, so staging and local visits never load real ads
   (Andrei, 2026-11-15). The e2e test "the AdSense script loads on the apex only" holds both sides. Never click an ad on
   any host: a click on your own ad is invalid traffic.
-- **CSP.** `deploy/nginx.conf` sends Google's strict policy from
-  [AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098). Google supports only
-  that policy and publishes no host allowlist, so the CSP limits scripts, objects, the base URL, form targets and
-  framing, and no other fetches. nginx stamps a per-request nonce (`$request_id`) into every `<script` tag with
-  `sub_filter`. A Cloudflare HTML cache would give every visitor in its lifetime the same nonce (step 8 above).
+- **CSP.** `deploy/nginx.conf` sends `object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'`,
+  with no `script-src` (Andrei, 2026-11-15). AdSense loads scripts from Google hosts, and Google publishes no host
+  allowlist. Google's own policy ([AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098))
+  needs a per-request nonce, and that nonce would stop the HTML edge cache (step 8). On this static site it would also
+  protect little: nginx would stamp the nonce into every `<script` tag, an injected one too.
 - **Hover images.** `.google-auto-placed` in `src/styles/global.css` keeps a row's hover image under an in-page ad.
   Google does not document that class, so check it on the live site once ads show.
 
@@ -113,5 +124,5 @@ In the AdSense dashboard (Andrei):
 2. Privacy & messaging: create and publish the consent message for the EEA, the UK and Switzerland. The privacy page
    tells visitors that this message comes first.
 
-After each release, check the browser console on `beforegta6.wtf` for CSP violations. Only the apex loads Google's
-script, so staging shows only the site's own scripts under the policy.
+After each release, check the browser console on `beforegta6.wtf` for CSP violations, with the ad requests blocked
+(never click an ad). Only the apex loads Google's script, so staging cannot show a violation that the ads cause.
