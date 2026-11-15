@@ -1965,6 +1965,28 @@
       "nsfw": false,
       "status": "drop",
       "rank_score": 3
+    },
+    {
+      "id": "matpat-returns",
+      "title": "We got the Game Theory guy back before GTA 6",
+      "blurb": "MatPat stepped down from Game Theory in March 2024 after 'Goodbye Internet'; on 12 November 2026 he posted 'Hello (again) Internet'.",
+      "kind": "real-event",
+      "event_date": "2026-11-12",
+      "post_date": "2026-11-12",
+      "timeline_date": "2026-11-12",
+      "fact_url": "https://en.wikipedia.org/wiki/MatPat",
+      "verified": true,
+      "source_url": "https://www.youtube.com/watch?v=Zlh2gD7p5xE",
+      "source_platform": "youtube",
+      "source_engagement": "597,051 likes, 7.35M views (13 November 2026)",
+      "image_url": "https://i.ytimg.com/vi/Zlh2gD7p5xE/maxresdefault.jpg",
+      "image_note": "the video's own thumbnail, 1280x720",
+      "nsfw": false,
+      "status": "drop",
+      "rank_score": null,
+      "impact_score": null,
+      "meme_score": null,
+      "archive_reason": "below the world-event rule (Andrei, 2026-11-15); was PR #2"
     }
   ],
   "excluded": [

@@ -95,3 +95,4 @@ Source: research/candidates.json. Sorted by rank (absurdity and impact first).
 | 89 | We got GTA Online as its own game before GTA 6 | 2022-03-15 | other | – | yes | launch | [link](https://en.wikipedia.org/wiki/Grand_Theft_Auto_Online) |
 | 90 | Sex 2 might release before GTA 6 | 2025-02-01 | reddit | 3,661 upvotes | – | hold | [link](https://www.reddit.com/r/BatmanArkham/comments/1ifge1u/) |
 | 91 | We got Jason in real life before GTA 6 | 2025-05-16 | reddit | 7,061 upvotes | – | drop | [link](https://www.reddit.com/r/GTA/comments/1ko1efg/) |
+| 92 | We got the Game Theory guy back before GTA 6 | 2026-11-12 | youtube | 597,051 likes, 7.35M views | yes | drop | [link](https://www.youtube.com/watch?v=Zlh2gD7p5xE) |
