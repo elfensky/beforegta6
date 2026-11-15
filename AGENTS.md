@@ -1,6 +1,6 @@
 # AGENTS.md — beforegta6.wtf
 
-A personal meme site, "We got ___ before GTA 6": a timeline of cards, newest first, as small cards or lines. Andrei works on it. It deploys to the Pi swarm (staging) and the Hetzner swarm (production).
+A personal meme site, "We got ___ before GTA 6": a timeline of cards on one centred line, newest first at `/` and oldest first at `/oldest/`. Andrei works on it. It deploys to the Pi swarm (staging) and the Hetzner swarm (production).
 
 Shared standards: the developer handbook, `~/vault/knowledge/developer/developer.md` (layout 1.1.0).
 This file holds only what is true of this repo. A personal project (Andrei, 2026-11-13: made for the meme, ads on his personal AdSense account): commits as `andrei@lav.ren`, `gh` user `elfensky`
@@ -59,7 +59,7 @@ GitHub Actions app as a bypass actor (HTTP 422, 2026-11-13). The fix is Andrei's
 
 | Code path | Doc path | What drifts |
 |---|---|---|
-| `src/`, `scripts/` | `docs/superpowers/specs/2026-11-13-beforegta6-design.md` | Features, content model |
+| `src/`, `scripts/` | `.planning/PROJECT.md`, `.planning/REQUIREMENTS.md` | Features, requirements, constraints |
 | `research/`, `scripts/sync-cards.js`, `scripts/lib/candidate.js` | `docs/superpowers/specs/2026-11-15-one-candidates-file-design.md` | The candidates file, tags, the sync |
 | `deploy/`, `.github/workflows/` | `deploy/README.md` | Stacks, secrets, one-time setup |
 

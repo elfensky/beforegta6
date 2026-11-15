@@ -159,9 +159,9 @@ last_mapped_at: 2026-11-15
 
 ## Git and Commit Conventions
 
-- Branches: `develop` integrates and deploys staging. `main` deploys production. Work lands by pull request (`AGENTS.md`).
+- Branches: `develop` integrates and deploys staging. `main` deploys production. Work lands by pull request (the developer handbook, `git-and-prs.md`).
 - Commit messages in recent history use Conventional Commits with a scope: `feat(ads): ...`, `chore(deploy): staging → sha-...`, `docs(agents): ...`.
-- Never write the GitHub skip marker (square brackets around `skip ci`) in any commit message. `src/__tests__/deploy.test.js` checks `scripts/pin-image.sh`. Follow `AGENTS.md` for the full rule.
+- Never write the GitHub skip marker (square brackets around `skip ci`) in any commit message. `src/__tests__/deploy.test.js` checks `scripts/pin-image.sh`. The full rule is in the developer handbook, `git-and-prs.md` § Merging.
 
 ## Documentation Conventions
 
