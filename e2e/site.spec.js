@@ -50,6 +50,11 @@ test.describe('without JavaScript', () => {
     await page.getByRole('link', { name: 'Oldest first' }).click();
     await expect(page).toHaveURL('/oldest/');
   });
+
+  test('a card page shows no share button', async ({ page }) => {
+    await page.goto('/flying-cars/');
+    await expect(page.getByRole('button')).toHaveCount(0);
+  });
 });
 
 // A deferred tracker holds back every module script until it loads: a stalled Umami froze the countdown.
@@ -122,4 +127,57 @@ test('the footer names the operator, the contact and the privacy page', async ({
   await expect(footer).not.toContainText('DRUNIK');
   await expect(footer).not.toContainText('Tirlemont');
   await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy/');
+});
+
+test.describe('the share button on a card page', () => {
+  test('uses the share sheet where the browser has one', async ({ page }) => {
+    await page.addInitScript(() => {
+      /** @type {any} */ (window).shared = [];
+      Object.defineProperty(navigator, 'share', {
+        configurable: true,
+        value: async (/** @type {ShareData} */ d) => /** @type {any} */ (window).shared.push(d.url),
+      });
+    });
+    await page.goto('/flying-cars/');
+    await page.getByRole('button', { name: 'Share this card' }).click();
+    expect(await page.evaluate(() => /** @type {any} */ (window).shared)).toEqual([
+      'https://beforegta6.wtf/flying-cars/',
+    ]);
+  });
+
+  test('copies the link where there is no share sheet', async ({ page }) => {
+    await page.addInitScript(() => {
+      /** @type {any} */ (window).copied = [];
+      Object.defineProperty(navigator, 'share', { configurable: true, value: undefined });
+      Object.defineProperty(navigator, 'clipboard', {
+        configurable: true,
+        value: {
+          writeText: async (/** @type {string} */ t) => /** @type {any} */ (window).copied.push(t),
+        },
+      });
+    });
+    await page.goto('/flying-cars/');
+    await page.getByRole('button', { name: 'Copy link' }).click();
+    await expect(page.getByRole('status')).toHaveText('Link copied.');
+    expect(await page.evaluate(() => /** @type {any} */ (window).copied)).toEqual([
+      'https://beforegta6.wtf/flying-cars/',
+    ]);
+  });
+});
+
+test.describe('the line under the title', () => {
+  test('stays hidden before the launch', async ({ page }) => {
+    await page.clock.setFixedTime(new Date(2026, 10, 15, 12));
+    await page.goto('/');
+    await expect(page.getByText('And we got GTA 6 before')).toBeHidden();
+  });
+
+  test('shows after the launch, with the flipped title', async ({ page }) => {
+    await page.clock.setFixedTime(new Date(2026, 10, 19, 0, 1));
+    await page.goto('/');
+    await expect(page.locator('[data-launch-title]')).toHaveText(
+      'We got all of this before GTA 6.',
+    );
+    await expect(page.getByText('And we got GTA 6 before The Winds of Winter.')).toBeVisible();
+  });
 });

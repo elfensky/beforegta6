@@ -24,7 +24,10 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
   first) and the view (small cards by default, with a tile for each month in the grid, or lines). Each combination is a static page:
   `/`, `/oldest/`, `/lines/`, `/lines/oldest/` (Andrei, 2026-11-14).
 - **One page per card** at `/<id>/`, with Open Graph tags whose image is the card's meme.
+  A share button under the card opens the browser's share sheet, or copies the card's link where there is none. It
+  stays hidden without JavaScript (Andrei, 2026-11-15).
 - **Countdown** to 2026-11-19 in the header. After that moment the header reads "We got all of this before GTA 6."
+  A line under it then reads "And we got GTA 6 before The Winds of Winter.", for the inverted meme (Andrei, 2026-11-15).
 - **Ads:** AdSense Auto ads, about one per screen (see Ads).
 
 ## Non-goals (launch)
