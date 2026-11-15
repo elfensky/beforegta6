@@ -70,6 +70,31 @@ test('the countdown runs while the Umami script never answers', async ({ page })
   await expect(page.locator('.countdown [data-left]')).not.toBeEmpty();
 });
 
+// Real ads on the apex only (Andrei, 2026-11-15). Google and Umami are blocked: a test run sends neither a request.
+test('the AdSense script loads on the apex only', async ({ page, baseURL }) => {
+  /** @type {string[]} */
+  const google = [];
+  await page.route('https://pagead2.googlesyndication.com/**', (r) => {
+    google.push(r.request().url());
+    return r.abort();
+  });
+  await page.route('https://umami.lav.ren/**', (r) => r.abort());
+  await page.goto('/');
+  await page.waitForLoadState('networkidle');
+  expect(google).toEqual([]);
+  // The apex host name, answered by the test server. No forwarded headers: the preview server refuses Firefox's Host.
+  await page.route('https://beforegta6.wtf/**', async (r) =>
+    r.fulfill({
+      response: await r.fetch({
+        url: r.request().url().replace('https://beforegta6.wtf', `${baseURL}`),
+        headers: {},
+      }),
+    }),
+  );
+  await page.goto('https://beforegta6.wtf/');
+  await expect.poll(() => google.length).toBe(1);
+});
+
 // The order is the only control: there is no view toggle.
 test('the order toggle switches between newest and oldest first', async ({ page }) => {
   await page.goto('/');
