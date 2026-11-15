@@ -373,12 +373,14 @@ main,
   color: var(--muted);
   font-weight: 400;
 }
-/* Milestones and ads stack above a row's hover image, so the image never covers them. */
 .milestone,
 .ad-slot {
   position: relative;
-  z-index: 4;
   margin-block: 0.6rem;
+}
+/* Ads stack above a row's hover image, so the image never covers an ad (AdSense). Milestones go under the image. */
+.ad-slot {
+  z-index: 4;
 }
 .milestone {
   padding: 0.75rem 1rem;
@@ -494,7 +496,7 @@ main,
     border: 6px solid transparent;
     border-left-color: var(--pink);
   }
-  .entry:has(a:focus-visible) .media {
+  .entry:not(.dismissed):has(a:focus-visible) .media {
     display: block;
   }
   .entry:has(a:focus-visible) .node {
@@ -504,7 +506,7 @@ main,
 }
 /* Touch screens get no hover image: a tap opens the card page. */
 @media (min-width: 960px) and (hover: hover) {
-  .entry:hover .media {
+  .entry:not(.dismissed):hover .media {
     display: block;
   }
   .entry:hover .node {

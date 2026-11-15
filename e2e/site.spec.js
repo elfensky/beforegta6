@@ -93,6 +93,19 @@ test.describe('at 1280 px', () => {
     const row = page.locator('.timeline .entry').first();
     await row.hover();
     await expect(row.locator('.media img')).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(row.locator('.media')).toBeHidden();
+  });
+
+  test('a hover image covers a milestone, never an ad', async ({ page }) => {
+    await page.goto('/');
+    const z = await page.evaluate(() => {
+      const zOf = (/** @type {string} */ s) =>
+        Number(getComputedStyle(document.querySelector(s) ?? document.body).zIndex) || 0;
+      return { media: zOf('.media'), milestone: zOf('.milestone'), ad: zOf('.ad-slot') };
+    });
+    expect(z.media).toBeGreaterThan(z.milestone);
+    expect(z.ad).toBeGreaterThan(z.media);
   });
 });
 
