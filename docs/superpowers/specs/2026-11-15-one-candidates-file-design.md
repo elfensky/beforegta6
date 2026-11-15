@@ -21,8 +21,9 @@ shows.
 - No new research. Andrei adds the missed fun events himself, in the review.
 - No review web page in this change. The review on 2026-11-15 is the table plus chat ("launch X, drop Y") or edits to
   the JSON. A swipe-style yes/no review page follows on 2026-11-16 (Andrei). It reads and writes `status` in this file.
-- No change to the pages, the components, the card schema or the deploy. The code changes are the sync, `toCard`, the
-  content test, one e2e route and the comments that describe the old flow.
+- No change to the pages, the components, the card schema or the deploy. The code changes are the sync, its
+  `npm run cards` script in `package.json`, `toCard`, the content test, one e2e route and the comments that describe
+  the old flow.
 
 ## Anti-goals
 
@@ -45,7 +46,8 @@ shows.
 
 - Merge `research/world-events.json` into `research/candidates.json`. Delete `world-events.json`, `world-events.md`
   and `research/held/*.md`. Git history keeps them.
-- Top level: `passes`, `candidates`, `excluded`.
+- Top level: `passes`, `candidates`, `excluded`. The two `candidates` arrays join (91 + 291), and the two `excluded`
+  arrays join (31 + 53).
   - `passes` holds one entry per pass with its search notes, as they are: pass 2 keeps `login_walls` and
     `not_covered`, and pass 3 keeps `pass`, `date`, `rule` and `fields`.
   - Each pass also gets `notes`: the prose of its old Markdown file. For pass 3 this is the criterion, the score scale
@@ -85,6 +87,7 @@ difference into the item. Measured on 2026-11-15:
 - The sync takes the image of a launched item from `src/assets/cards/`, then from `research/images/` (it moves the
   file), then from `image_url`. A hand-saved image always wins over `image_url`.
 - An item that stops being live moves its image to `research/images/`.
+- A move deletes any other `<id>.*` file in the target folder, so one id never has two images.
 - A takedown is the exception. The repo is public, so after the sync the image in `research/images/` is deleted by
   hand, and the Cloudflare purge in `deploy/README.md` still applies.
 - The migration restores the 63 images archived in `528ede2` from `528ede2^`, which is after `a21ce3c`. A re-launch
@@ -92,9 +95,11 @@ difference into the item. Measured on 2026-11-15:
 
 ### Sync
 
-- `scripts/import-cards.js` becomes `scripts/sync-cards.js`, run with `npm run cards`.
-- Pre-flight, before any write: the duplicate-id check, and `toCard` on every `launch` item. Any error stops the run
-  with exit 1 and no file changed.
+- `scripts/import-cards.js` becomes `scripts/sync-cards.js`, run with `npm run cards`
+  (`"cards": "node scripts/sync-cards.js"`).
+- Pre-flight, before any write: the duplicate-id check, a `status` of `launch`, `hold` or `drop` on every candidate,
+  and `toCard` on every `launch` item. Any error stops the run with exit 1 and no file changed. A typo such as
+  `"Launch"` then stops the run and does not silently hide the item.
 - For each `launch` item: write the card from `toCard` (it overwrites, because the JSON wins now) and place the image.
 - For each card file without a `launch` item: delete the card and move its image.
 - A failed image fetch skips that card, and the run lists the failures and exits 1, as today. 17 candidates that are
@@ -102,7 +107,7 @@ difference into the item. Measured on 2026-11-15:
 - The run prints the ids whose image came from `image_url`. Each one is looked at before the merge, because that is
   how Rockstar art got in before `a21ce3c`.
 - It writes `research/candidates.md`: the pass notes and the counts per tag and status at the top, then one section
-  per first subject tag, then the excluded items. Columns: Title, Date, Tags, World event, Impact, Meme, Status, Post,
+  per first subject tag, then an "Untagged" section for items with no subject tag, then the excluded items. Columns: Title, Date, Tags, World event, Impact, Meme, Status, Post,
   Fact.
 
 ### Guard
@@ -118,16 +123,19 @@ difference into the item. Measured on 2026-11-15:
 ### Docs
 
 - AGENTS.md: the commands table, the `research/` rule and the held-card invariant.
-- AGENTS.md content rules: only the highlights bullet changes, to "The site shows Andrei's picks" (Andrei,
-  2026-11-15). The first picks are the 97 cards on production on 2026-11-15. The exclusions (deaths, war, violence,
-  sexual-abuse cases, harassment, hate) and the NSFW limits stay as they are.
-- `deploy/README.md` § Removing or holding a card, and the content model in the 2026-11-13 design spec.
-- The comments in `src/content.config.js` and `src/__tests__/content.test.js` that describe hand-edited cards and
-  `research/held/`.
+- AGENTS.md content rules: the highlights bullet becomes "The site shows Andrei's picks" (Andrei, 2026-11-15). The
+  first picks are the 97 cards on production on 2026-11-15. The politics bullet loses "when the event passes the
+  world-event rule". The exclusions (deaths, war, violence, sexual-abuse cases, harassment, hate) and the NSFW limits
+  stay as they are.
+- `deploy/README.md` § Removing or holding a card.
+- The 2026-11-13 design spec: the content model, and the content rules that point to `research/world-events.*`.
+- The comments in `src/content.config.js`, `src/__tests__/content.test.js` and the header of
+  `scripts/lib/candidate.js` that describe hand-edited cards, `research/held/` or `import-cards.js`.
 
 ## Acceptance
 
-- After the migration and one `npm run cards`, `git diff src/` is empty: the same 97 cards, byte for byte.
+- After the migration and one `npm run cards`, `git diff src/content src/assets` is empty: the same 97 cards and
+  images, byte for byte.
 - For each held and archived item, `cardMarkdown(toCard(item))` equals its last card file. This is a one-time check of
   the migration, not a test.
 - The verification gate in AGENTS.md passes, `npm run test:e2e` included.
@@ -147,3 +155,15 @@ public-repo takedown, the restore commit and the archived-card comparison, the g
 - A sweep of orphan images in `src/assets/cards/`: Astro ships only imported images, and nothing creates an orphan.
 - A cap on how many cards one sync may delete: `git diff` shows every deletion before the commit, and the PR review
   sees it.
+
+## Council review, round 2 (2026-11-15)
+
+Claude Opus 8/10 and Mistral Large 4 8/10, no P0 or P1. Accepted: the status check on every candidate in the
+pre-flight, the `package.json` script, the joined arrays, one image per id, the "Untagged" section, the narrower
+acceptance path, the politics bullet, and the stale references in the 2026-11-13 spec and `candidate.js`. Declined:
+
+- A note that an item without `source_url` cannot launch: every one of the 382 candidates has a `source_url`
+  (measured 2026-11-15), and the pre-flight names a new item that lacks it.
+
+DeepSeek V4.1 Flash, round 2: no result. It asked to run a shell command, which its rules forbid, and waits for an
+approval.
