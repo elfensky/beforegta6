@@ -6,13 +6,13 @@
 /**
  * Interleave ad slots: one after every `every` items, never after the last item. Every `desktopEvery`-th position is a
  * desktop slot; the others show on narrow screens only (CSS hides them from 960 px), so desktop sees one per
- * `desktopEvery` items.
+ * `desktopEvery` items. The defaults give about one ad per screen of one-line timeline rows.
  * @template T
  * @param {T[]} items
  * @param {{ every?: number, desktopEvery?: number }} [opts]
  * @returns {Slot<T>[]}
  */
-export function withAdSlots(items, { every = 4, desktopEvery = 8 } = {}) {
+export function withAdSlots(items, { every = 10, desktopEvery = 20 } = {}) {
   /** @type {Slot<T>[]} */
   const slots = [];
   items.forEach((item, i) => {

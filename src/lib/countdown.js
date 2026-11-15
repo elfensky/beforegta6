@@ -13,3 +13,15 @@ export function remaining(nowMs, targetMs) {
     done: left === 0,
   };
 }
+
+/**
+ * Whole days from a content date to the launch day, both as UTC midnights. 0 on the launch day, negative after it.
+ * @param {Date} date
+ * @param {{ year: number, monthIndex: number, day: number }} launch
+ * @returns {number}
+ */
+export function daysBefore(date, launch) {
+  return Math.round(
+    (Date.UTC(launch.year, launch.monthIndex, launch.day) - date.getTime()) / 86_400_000,
+  );
+}
