@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import yaml from 'yaml';
-import { cardMarkdown, imageExtension, toCard } from '../../scripts/lib/candidate.js';
+import { cardMarkdown, checkCandidates, imageExtension, toCard } from '../../scripts/lib/candidate.js';
 
 /** @param {Record<string, unknown>} overrides */
 const fixture = (overrides = {}) => ({
@@ -86,4 +86,31 @@ test('only image content types pass', () => {
   expect(imageExtension('image/gif')).toBe('gif');
   expect(imageExtension('text/html; charset=utf-8')).toBeNull();
   expect(imageExtension(null)).toBeNull();
+});
+
+test('uses a hand-written alt text, else the title', () => {
+  expect(toCard(fixture({ image_alt: 'A Roadster in the air' })).frontmatter.imageAlt).toBe(
+    'A Roadster in the air',
+  );
+  expect(toCard(fixture()).frontmatter.imageAlt).toBe('We got flying cars before GTA 6');
+});
+
+test('rejects a missing or unknown status', () => {
+  expect(() => toCard(fixture({ status: undefined }))).toThrow('flying-cars: status');
+  expect(() => toCard(fixture({ status: 'Launch' }))).toThrow('flying-cars: status');
+});
+
+test('checkCandidates names duplicates, bad statuses and broken launch items', () => {
+  const errors = checkCandidates([
+    fixture(),
+    fixture(),
+    fixture({ id: 'typo', status: 'Launch' }),
+    fixture({ id: 'no-post', source_url: null }),
+    fixture({ id: 'archived-no-post', status: 'drop', source_url: null }),
+  ]);
+  expect(errors).toEqual([
+    'duplicate id: flying-cars',
+    'typo: status must be launch, hold or drop',
+    'no-post: source_url missing',
+  ]);
 });
