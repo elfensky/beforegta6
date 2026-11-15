@@ -54,6 +54,19 @@ export function ogImageOf(card) {
 }
 
 /**
+ * Split "We got <event> before GTA 6" into the frame and the event, so the frame can render muted. The space in
+ * "GTA 6" becomes a no-break space. A title without the frame comes back whole, as the event.
+ * @param {string} title
+ * @returns {{ before: string, event: string, after: string }}
+ */
+export function splitTitle(title) {
+  const m = title.match(/^(We got )(.+) before GTA 6$/);
+  return m
+    ? { before: m[1], event: m[2], after: ' before GTA 6' }
+    : { before: '', event: title, after: '' };
+}
+
+/**
  * Group keys for groupSlots. Content dates are UTC midnights, so the month is the UTC month.
  * @param {TimelineEntry} e
  */
