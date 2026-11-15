@@ -1,6 +1,12 @@
 import { expect, test } from 'vitest';
 import yaml from 'yaml';
-import { cardMarkdown, checkCandidates, imageExtension, toCard } from '../../scripts/lib/candidate.js';
+import {
+  cardMarkdown,
+  checkCandidates,
+  imageExtension,
+  reviewTable,
+  toCard,
+} from '../../scripts/lib/candidate.js';
 
 /** @param {Record<string, unknown>} overrides */
 const fixture = (overrides = {}) => ({
@@ -113,4 +119,27 @@ test('checkCandidates names duplicates, bad statuses and broken launch items', (
     'typo: status must be launch, hold or drop',
     'no-post: source_url missing',
   ]);
+});
+
+test('reviewTable groups by first subject tag and escapes pipes', () => {
+  const md = reviewTable({
+    passes: [{ pass: 3, date: '2026-11-14', notes: ['Impact 10 = the whole world noticed it.'] }],
+    candidates: [
+      fixture({
+        id: 'a',
+        title: 'We got A | B before GTA 6',
+        tags: ['tech', 'internet', 'world-event'],
+        impact_score: 8,
+      }),
+      fixture({ id: 'b', status: 'drop', tags: ['world-event'] }),
+    ],
+    excluded: [{ id: 'covid-pandemic', reason: 'Global pandemic; deaths.' }],
+  });
+  expect(md).toContain('- Impact 10 = the whole world noticed it.');
+  expect(md).toContain('## Tech (1)');
+  expect(md).not.toContain('## Internet');
+  expect(md).toContain('We got A \\| B before GTA 6');
+  expect(md).toContain('## Untagged (1)');
+  expect(md).toContain('- `covid-pandemic`: Global pandemic; deaths.');
+  expect(md).toMatch(/\| Total \| 1 \| 0 \| 1 \| 2 \|/);
 });
