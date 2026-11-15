@@ -97,29 +97,30 @@ difference into the item. Measured on 2026-11-15:
 
 - `scripts/import-cards.js` becomes `scripts/sync-cards.js`, run with `npm run cards`
   (`"cards": "node scripts/sync-cards.js"`).
-- Pre-flight, before any write: the duplicate-id check, a `status` of `launch`, `hold` or `drop` on every candidate,
-  and `toCard` on every `launch` item. Any error stops the run with exit 1 and no file changed. A typo such as
+- Pre-flight, before any write: the duplicate-id check, and on every candidate a valid id, a `status` of `launch`,
+  `hold` or `drop`, and `tags` that is a list of known tags. Then `toCard` on every `launch` item, and the table. Any error stops the run with exit 1 and no file changed. A typo such as
   `"Launch"` then stops the run and does not silently hide the item.
 - For each `launch` item: write the card from `toCard` (it overwrites, because the JSON wins now) and place the image.
-- For each card file without a `launch` item: delete the card and move its image.
+- For each card file without a `launch` item: move its image, then delete the card.
 - A failed image fetch skips that card, and the run lists the failures and exits 1, as today. 17 candidates that are
   not live have a Commons file page in `image_url`, not an image, but each has a kept image in `research/images/`.
   4 have no `image_url` and no image, and need an image by hand.
 - The run prints the ids whose image came from `image_url`. Each one is looked at before the merge, because that is
   how Rockstar art got in before `a21ce3c`.
 - It writes `research/candidates.md`: the pass notes and the counts per tag and status at the top, then one section
-  per first subject tag, then an "Untagged" section for items with no subject tag, then the excluded items. Columns: Title, Date, Tags, World event, Impact, Meme, Status, Post,
-  Fact.
+  per first subject tag, then an "Untagged" section for items with no subject tag, then the excluded items. Columns:
+  Id, Title, Date, Tags, World event, Impact, Meme, Status, Post, Fact.
 
 ### Guard
 
 - `src/__tests__/content.test.js` gets one test. For each `launch` item, the card file equals
   `cardMarkdown(toCard(c).frontmatter, <image file for the id>)` and that image exists in `src/assets/cards/`. No card
-  is missing and no card is extra. `ci.yml` runs `check` on every PR, with no path filter, so a JSON edit without
+  is missing and no card is extra. The same test runs the pre-flight check and compares `research/candidates.md`
+  with `reviewTable`. `ci.yml` runs `check` on every PR, with no path filter, so a JSON edit without
   `npm run cards` fails the PR.
 - The table builder is a pure function in `scripts/lib/candidate.js`, with one small test.
-- `e2e/site.spec.js` opens the first card in `src/content/cards/` in place of the fixed `/flying-cars/`, because a
-  review can drop that card.
+- `e2e/site.spec.js` opens the first card in `src/content/cards/` in place of the fixed `/flying-cars/`, in the axe
+  route and in the card-page and share tests, because a review can drop that card.
 
 ### Docs
 
@@ -168,3 +169,10 @@ acceptance path, the politics bullet, and the stale references in the 2026-11-13
 
 DeepSeek V4.1 Flash, round 2: no result. It asked to run a shell command, which its rules forbid, and waits for an
 approval.
+
+## Council code review, PR #21 (2026-11-15)
+
+Round 1: Claude Opus 8/10, Mistral Large 4 8/10, DeepSeek V4.1 Flash 8/10, no P0 or P1. Round 2: 9/10, 9/10 and 8/10,
+P3 only. The fixes are in the PR. Declined: moving every image of one id (only a hand save makes two, and neither
+ships), escaping `[`, `]` and `<` in cells (no data holds them), and the plan's expected output line (the ledger has
+the ruling).

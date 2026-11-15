@@ -87,6 +87,11 @@ export function checkCandidates(candidates) {
     (id) => `duplicate id: ${id}`,
   );
   for (const c of candidates) {
+    // Every id reaches the review table, so a bad one is an error even before its launch.
+    if (!ID.test(c.id ?? '')) {
+      errors.push(`${c.id}: id must match ${ID}`);
+      continue;
+    }
     if (c.tags !== undefined && !Array.isArray(c.tags)) errors.push(`${c.id}: tags must be a list`);
     for (const t of Array.isArray(c.tags) ? c.tags : [])
       if (t !== 'world-event' && !SUBJECT_TAGS.includes(t))
