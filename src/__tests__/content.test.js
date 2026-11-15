@@ -3,7 +3,9 @@ import { expect, test } from 'vitest';
 import { cardMarkdown, checkCandidates, reviewTable, toCard } from '../../scripts/lib/candidate.js';
 
 const DIR = 'src/content/cards';
-const cards = readdirSync(DIR).map((f) => ({ f, text: readFileSync(`${DIR}/${f}`, 'utf8') }));
+const cards = readdirSync(DIR)
+  .filter((f) => f.endsWith('.md'))
+  .map((f) => ({ f, text: readFileSync(`${DIR}/${f}`, 'utf8') }));
 
 // Visitors read blurbs in the grid, on card pages and in link previews; research notes must not reach them.
 test('no research notes in blurbs', () => {

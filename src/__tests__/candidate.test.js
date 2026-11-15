@@ -162,3 +162,9 @@ test('reviewTable shows the id to edit and escapes every cell', () => {
   });
   expect(md).toContain('| `pipe-tag` | We got flying cars before GTA 6 | 2026\\|10 | te\\|ch |');
 });
+
+test('checkCandidates checks the id of every candidate, live or not', () => {
+  expect(checkCandidates([fixture({ id: 'Bad|Id', status: 'drop' })])).toEqual([
+    'Bad|Id: id must match /^[a-z0-9-]+$/',
+  ]);
+});

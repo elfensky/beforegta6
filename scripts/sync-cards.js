@@ -62,12 +62,15 @@ for (const c of launch) {
       (await readdir(ASSETS)).find((f) => idOf(f) === c.id) ??
       (await moveImage(c.id, IMAGES, ASSETS));
     if (!image) {
-      if (!c.image_url) throw new Error('image_url missing');
+      if (!c.image_url)
+        throw new Error(
+          `image_url missing, so save ${c.id}.jpg (or .png, .webp, .gif) in ${IMAGES}/ by hand`,
+        );
       const res = await fetch(c.image_url, { headers: { 'user-agent': UA } });
       const ext = res.ok ? imageExtension(res.headers.get('content-type')) : null;
       if (!ext)
         throw new Error(
-          `HTTP ${res.status}, ${res.headers.get('content-type')}: not an image, so save ${c.id}.jpg (or .png, .webp) in ${IMAGES}/ by hand`,
+          `HTTP ${res.status}, ${res.headers.get('content-type')}: not an image, so save ${c.id}.jpg (or .png, .webp, .gif) in ${IMAGES}/ by hand`,
         );
       image = `${c.id}.${ext}`;
       await writeFile(`${ASSETS}/${image}`, Buffer.from(await res.arrayBuffer()));
