@@ -2,7 +2,7 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
-// Keys match scripts/lib/candidate.js CardFrontmatter; the import writes them, people edit them.
+// Keys match scripts/lib/candidate.js CardFrontmatter. npm run cards writes the cards; nobody edits them by hand.
 const cards = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/cards' }),
   schema: ({ image }) =>
