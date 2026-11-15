@@ -1,12 +1,12 @@
 # beforegta6.wtf — design
 
 - Date: 2026-11-13
-- Status: approved by Andrei on 2026-11-13. This document includes his later additions from the same session: the timeline, the content rules and the GTA V re-release cards.
+- Status: approved by Andrei on 2026-11-13. This document includes his later additions from the same session: the timeline, the content rules and the GTA V re-release cards. The timeline-only change of 2026-11-14 (`2026-11-14-timeline-only-design.md`) replaces the card grid and the header switch.
 - Sources: the brainstorming session of 2026-11-13. Candidate research is in `research/` once imported.
 
 ## Intent
 
-The site is about the meme "We got ___ before GTA 6": a curated wall of cards plus a timeline. Each card has an image of the thing, the
+The site is about the meme "We got ___ before GTA 6": a curated timeline of cards. Each card has an image of the thing, the
 meme line, one line of fact and a link to the original post. The site must be live before GTA 6 launches, to catch
 launch-week traffic. The launch date is 2026-11-19, set by Rockstar in November 2025. Nobody has confirmed since then that the date still holds.
 Google AdSense runs on Andrei's personal account. It is a hobby site made for the meme, and little or no income is expected (Andrei, 2026-11-13).
@@ -19,9 +19,10 @@ Google AdSense runs on Andrei's personal account. It is a hobby site made for th
 
 ## Goals
 
-- **Card grid** at `/`: newest first.
-- **Timeline** at `/timeline/`: every card on one vertical time axis, from the GTA V release (2013-09-17) to the GTA 6
-  launch, with year markers and fixed GTA milestones (below). A header switch moves between Cards and Timeline.
+- **Timeline** at `/`, the only view: every card on one time axis, from the GTA V release (2013-09-17) to the GTA 6
+  launch, with year markers and fixed GTA milestones (below). Toggles set the order (newest first by default, or oldest
+  first) and the view (small cards by default, with a tile for each month in the grid, or lines). Each combination is a static page:
+  `/`, `/oldest/`, `/lines/`, `/lines/oldest/` (Andrei, 2026-11-14).
 - **One page per card** at `/<id>/`, with Open Graph tags whose image is the card's meme.
 - **Countdown** to 2026-11-19 in the header. After that moment the header reads "We got all of this before GTA 6."
 - **Ad cards:** one per screenful (see Ads).
@@ -40,13 +41,18 @@ Submissions, accounts, likes and dislikes, comments, merch, other languages.
 
 ## Content rules (Andrei, 2026-11-13)
 
-- Rank by absurdity and impact first, engagement second.
-- Politics, religion and identity are in when they are funny or absurd. Examples: blue Texas, the lesbian niqabi Muslim post.
+- Highlights only (Andrei, 2026-11-14): significant world events that affect a large number of people. Every find stays in
+  the research archive (`research/*.json`); only `launch` candidates become cards. Rule for pass 3: impact score 7 or
+  more, or 5 or more with a real "before GTA 6" post (`research/world-events.md`).
+- Politics, religion and identity are in when the event passes the world-event rule (blue Texas).
 - NSFW: crude, profane and absurd posts are in, and their cards carry an `nsfw` flag. Sexually explicit posts are out.
 - One card for each GTA V release and re-release: PS3/X360, PS4/Xbox One, PC, PS5/Xbox Series, Enhanced on PC, and others found.
-- Every card keeps a local copy of its image, credits the creator and links to the source post.
-- Launch set: all researched candidates except `jason-irl`, which shows a private person. `gta5-farewell-drive` waits until
-  2026-11-18 (status `hold`).
+- Every card keeps a local copy of its image, credits the creator and links to the source post. A Commons photo under
+  CC BY or CC BY-SA carries its author and licence on the card page (`imageCredit`).
+- Launch set (2026-11-13): all researched candidates except `jason-irl`, which shows a private person.
+  `gta5-farewell-drive` waits until 2026-11-18 (status `hold`). Pass 3 (2026-11-14) adds the 73 world-event highlights
+  of `research/world-events.json` and moves the 63 pass-2 cards below the rule to the archive (`status: "drop"`);
+  24 stay (Andrei).
 
 ## Approaches
 
@@ -87,11 +93,11 @@ A milestones file holds the fixed timeline anchors. Check each date at build tim
 - Launch: 2026-11-19
 
 **Ads.**
-- Units: AdSense in-feed units, shaped like cards.
-- Desktop: one after every 8 cards, which is about one per screen.
-- Mobile: one after every 4 cards. A strict one-per-screen on a phone would make about every third card an ad, and AdSense
-  forbids screens with more ads than content.
-- The timeline follows the same density.
+- Units: AdSense in-feed units. Each slot takes a full row of the timeline: an AdSense unit needs about 250 px, more
+  than a small card.
+- Desktop: one after every 8 timeline entries (cards and milestones), which is about one per screen.
+- Mobile: one after every 4 entries. A strict one-per-screen on a phone would make about every third card an ad, and
+  AdSense forbids screens with more ads than content.
 - Before approval: a house card fills each slot, such as a share prompt or the countdown.
 - Consent: Google's certified "Privacy & messaging" consent tool, for visitors from the EEA, UK and Switzerland.
 - `ads.txt` at the site root.

@@ -1,12 +1,5 @@
 ---
 import Countdown from './Countdown.astro';
-
-/** @type {{ path: string }} */
-const { path } = Astro.props;
-const views = [
-  { href: '/', label: 'Cards' },
-  { href: '/timeline/', label: 'Timeline' },
-];
 ---
 
 <header class="site-header">
@@ -14,11 +7,4 @@ const views = [
     before<span>gta6</span>.wtf
   </a>
   <Countdown />
-  <nav aria-label="Views">
-    {views.map((v) => (
-      <a href={v.href} aria-current={path === v.href ? 'page' : undefined}>
-        {v.label}
-      </a>
-    ))}
-  </nav>
 </header>

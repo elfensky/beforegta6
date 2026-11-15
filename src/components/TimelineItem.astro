@@ -1,0 +1,88 @@
+---
+import { Image } from 'astro:assets';
+import { LAUNCH } from '../data/site.js';
+import { splitTitle } from '../lib/cards.js';
+import { daysBefore } from '../lib/countdown.js';
+import AdCard from './AdCard.astro';
+
+/**
+ * @type {{
+ *   slot: import('../lib/ads.js').Slot<import('../lib/cards.js').TimelineEntry>,
+ * }}
+ */
+const { slot } = Astro.props;
+const item = slot.kind === 'item' ? slot.item : null;
+const left = item ? daysBefore(item.date, LAUNCH) : 0;
+const title =
+  item?.kind === 'card' ? splitTitle(item.card.data.title) : { before: '', event: '', after: '' };
+/** @param {Date} d */
+const iso = (d) => d.toISOString().slice(0, 10);
+/** @param {Date} d */
+const shown = (d) =>
+  d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+---
+
+{slot.kind === 'ad' ? (
+  <li class="ad-slot" data-desktop={String(slot.desktop)}>
+    <AdCard desktop={slot.desktop} />
+  </li>
+) : slot.item.kind === 'milestone' ? (
+  // The launch ends the line, whichever end the order puts it at.
+  <li class:list={['milestone', { cap: left === 0 }]}>
+    <time datetime={iso(slot.item.date)}>
+      {shown(slot.item.date)}
+      {left === 0 && ` ${slot.item.year}`}
+    </time>
+    <p class="t-title">
+      <span aria-hidden="true">◆</span> {slot.item.milestone.title}
+    </p>
+    <p>
+      {slot.item.milestone.blurb}{' '}
+      <a href={slot.item.milestone.factUrl} rel="noopener">
+        source<span class="sr-only"> of “{slot.item.milestone.title}”</span>{' '}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </p>
+  </li>
+) : (
+  <li class="entry">
+    <time class="date" datetime={iso(slot.item.date)}>
+      {shown(slot.item.date)}
+    </time>
+    <span class="node" aria-hidden="true" />
+    <div class="what">
+      <p class="t-title">
+        <a href={`/${slot.item.card.id}/`}>
+          <span class="frame">{title.before}</span>
+          {title.event}
+          <span class="frame">{title.after}</span>
+        </a>
+      </p>
+      {left > 0 && (
+        <span class="days">
+          {left.toLocaleString('en-GB')} {left === 1 ? 'day' : 'days'}
+        </span>
+      )}
+    </div>
+    {/* Desktop hover only. display: none at rest, so the lazy image loads only when it shows. */}
+    {slot.item.card.data.nsfw ? (
+      <figure class="media nsfw" aria-hidden="true">
+        <span>NSFW</span>
+      </figure>
+    ) : (
+      <figure class="media">
+        <Image
+          src={slot.item.card.data.image}
+          alt=""
+          width={256}
+          widths={[256, 512]}
+          sizes="16rem"
+          loading="lazy"
+        />
+        {slot.item.card.data.imageCredit && (
+          <figcaption>photo: {slot.item.card.data.imageCredit.text}</figcaption>
+        )}
+      </figure>
+    )}
+  </li>
+)}

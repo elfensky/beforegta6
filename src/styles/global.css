@@ -112,24 +112,6 @@ main,
   color: var(--orange);
   font-weight: 700;
 }
-.site-header nav {
-  margin-inline-start: auto;
-  display: flex;
-  gap: 0.25rem;
-}
-.site-header nav a {
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  color: var(--text);
-  text-decoration: none;
-  border: 1px solid var(--line);
-}
-.site-header nav a[aria-current='page'] {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: var(--bg);
-  font-weight: 700;
-}
 
 .page-title {
   font-size: var(--step-3);
@@ -151,32 +133,36 @@ main,
   max-width: 65ch;
 }
 
-/* The grid: 1, 2, 3 and 4 columns. Mobile-only ad slots disappear where the desktop rhythm takes over. */
-.grid {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 3rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
+/* The order toggle: two pill links above the timeline. */
+.toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 0.5rem;
 }
-@media (min-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.toggles p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
 }
-@media (min-width: 960px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  [data-desktop='false'] {
-    display: none;
-  }
+.toggles span {
+  color: var(--muted);
+  margin-inline-end: 0.25rem;
 }
-@media (min-width: 1280px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.toggles a {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--line);
+}
+.toggles a[aria-current='page'] {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--bg);
+  font-weight: 700;
 }
 
 .card,
@@ -297,52 +283,83 @@ main,
   color: var(--muted);
 }
 
-/* Timeline: one column, then a centre line and two entries per row from 960 px. */
+/* The line timeline: one row per event. Below 960 px the line runs at the left edge, and a row holds the date and the
+   day count, then the title. From 960 px the line runs down the centre: date left of it, title and day count right.
+   Each row and each year heading draws its own piece of the line, so milestones and ads pause it. */
+.year,
+.timeline {
+  max-width: 56rem;
+  margin-inline: auto;
+}
+.year:last-child {
+  margin-bottom: 3rem;
+}
 .year h2 {
+  position: relative;
+  margin: 0;
+  padding: 1.5rem 0 0.5rem 1.75rem;
   font-size: var(--step-2);
-  margin: 2rem 0 1rem;
   color: var(--orange);
+}
+.year h2::before,
+.entry::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: 0.55rem;
+  border-left: 2px solid var(--line);
+}
+.year h2 span {
+  position: relative;
+  background: var(--bg);
 }
 .timeline {
   list-style: none;
-  margin: 0;
+  margin-block: 0;
   padding: 0;
+}
+.entry {
+  position: relative;
   display: grid;
-  gap: 0.75rem;
+  grid-template-columns: auto 1fr;
+  gap: 0 0.75rem;
+  padding: 0.45rem 0 0.45rem 1.75rem;
 }
-.timeline > li {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 0.75rem;
+.node {
+  position: absolute;
+  left: 0.3rem;
+  top: 0.85rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  background: var(--bg);
 }
-.timeline .entry {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: 0.75rem;
-  align-items: center;
-}
-.thumb {
-  width: 5rem;
-  height: 5rem;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  background: #000;
-}
-.nsfw-thumb {
-  display: grid;
-  place-items: center;
-  font-size: var(--step--1);
-  font-weight: 700;
-  color: var(--orange);
-}
-.timeline time {
+.entry .date,
+.days {
+  grid-row: 1;
   font-size: var(--step--1);
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.entry .date {
+  grid-column: 1;
+}
+.what {
+  display: contents;
+}
+.days {
+  grid-column: 2;
+  justify-self: end;
 }
 .t-title {
   margin: 0.15rem 0 0;
   font-weight: 700;
+}
+.entry .t-title {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
 }
 .t-title a {
   color: var(--text);
@@ -351,34 +368,150 @@ main,
 .t-title a:hover {
   color: var(--pink);
 }
-.timeline .milestone {
-  border-color: var(--pink);
+/* The "We got … before GTA 6" frame repeats on every row: it steps back so the event reads first. */
+.frame {
+  color: var(--muted);
+  font-weight: 400;
+}
+.milestone,
+.ad-slot {
+  position: relative;
+  margin-block: 0.6rem;
+}
+/* Ads stack above a row's hover image, so the image never covers an ad (AdSense). Milestones go under the image. */
+.ad-slot {
+  z-index: 4;
+}
+.milestone {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--pink);
+  border-radius: var(--radius);
   background: linear-gradient(90deg, #3a1046, var(--bg-card));
 }
-.timeline .milestone p {
+.milestone time {
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.milestone p {
   margin: 0.15rem 0 0;
 }
-.timeline .ad-slot {
-  padding: 0;
-  border: 0;
-  background: none;
+.milestone .t-title span {
+  color: var(--pink);
+}
+.milestone.cap {
+  padding-block: 1.25rem;
+  text-align: center;
+}
+.milestone.cap .t-title {
+  font-size: var(--step-1);
+}
+/* A row's image: desktop only, on hover or keyboard focus, hanging from the row so the first rows under the launch show
+   it whole. display: none at rest keeps the lazy image unloaded. */
+.media {
+  display: none;
 }
 @media (min-width: 960px) {
-  .timeline {
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    column-gap: 3rem;
+  [data-desktop='false'] {
+    display: none;
   }
-  .timeline::before {
+  .year h2 {
+    padding-left: 0;
+    text-align: center;
+  }
+  .year h2::before,
+  .entry::before {
+    left: calc(50% - 1px);
+  }
+  .entry {
+    grid-template-columns: 1fr 2.5rem 1fr;
+    align-items: baseline;
+    padding-left: 0;
+  }
+  .node {
+    left: calc(50% - 0.33rem);
+  }
+  .entry .date {
+    text-align: right;
+  }
+  .what {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .entry .t-title {
+    flex: 1;
+  }
+  .days {
+    white-space: nowrap;
+  }
+  .media {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 16rem;
+    margin: 0;
+    padding: 0.4rem;
+    border: 1px solid var(--line);
+    border-radius: 0.8rem;
+    background: var(--bg);
+  }
+  .media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background: #000;
+  }
+  .media figcaption {
+    margin: 0.3rem 0.1rem 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .media.nsfw span {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 3 / 2;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  /* The arrow from the image to its row; the dates sit further right, so it covers none of them. */
+  .media::after {
     content: '';
     position: absolute;
-    inset: 0 auto 0 50%;
-    border-left: 2px solid var(--line);
+    left: calc(100% + 0.5rem);
+    top: calc(1.15rem - 1px);
+    width: 4.5rem;
+    border-top: 2px solid var(--pink);
   }
-  .timeline .milestone,
-  .timeline .ad-slot {
-    grid-column: 1 / -1;
-    position: relative;
+  .media::before {
+    content: '';
+    position: absolute;
+    left: calc(100% + 5rem);
+    top: calc(1.15rem - 6px);
+    border: 6px solid transparent;
+    border-left-color: var(--pink);
+  }
+  .entry:not(.dismissed):has(a:focus-visible) .media {
+    display: block;
+  }
+  .entry:has(a:focus-visible) .node {
+    border-color: var(--pink);
+    background: var(--pink);
+  }
+}
+/* Touch screens get no hover image: a tap opens the card page. */
+@media (min-width: 960px) and (hover: hover) {
+  .entry:not(.dismissed):hover .media {
+    display: block;
+  }
+  .entry:hover .node {
+    border-color: var(--pink);
+    background: var(--pink);
   }
 }
 /* AdSense sizes a responsive unit from its own width; the grid centring above would shrink an empty <ins> to 0. */

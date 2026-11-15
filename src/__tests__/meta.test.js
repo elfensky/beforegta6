@@ -11,6 +11,12 @@ test('a title that only fits without the suffix drops it', () => {
   expect(t.length).toBeLessThanOrEqual(70);
   expect(pageTitle(t)).toBe(t);
 });
+test('an apostrophe counts as its HTML escape', () => {
+  const t = "We got Messi's first World Cup hat-trick before GTA 6";
+  expect((t + ' · beforegta6.wtf').length).toBe(70);
+  expect(pageTitle(t)).toBe(t);
+  expect(pageTitle(`${"'".repeat(20)}x`)).toBe(`${"'".repeat(13)}…`);
+});
 test('a title over 70 characters is cut with an ellipsis', () => {
   const t = 'x'.repeat(90);
   expect(pageTitle(t)).toHaveLength(70);

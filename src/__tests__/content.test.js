@@ -12,6 +12,12 @@ test('no research notes in blurbs', () => {
   expect(leaks.map((c) => c.f)).toEqual([]);
 });
 
+// Cards show the engagement text as it is; a research note in brackets ("read 2026-11-14") must stay in research/.
+test('no research notes in engagement', () => {
+  const leaks = cards.filter(({ text }) => /"engagement":"[^"]*[()]/.test(text));
+  expect(leaks.map((c) => c.f)).toEqual([]);
+});
+
 // Astro ships the original of every image the collection imports, linked or not. A card that is not live waits
 // in research/held/ (or is deleted), so its image never reaches the site.
 test('every card in the collection is launched', () => {

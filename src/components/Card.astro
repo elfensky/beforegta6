@@ -2,11 +2,16 @@
 import { Image } from 'astro:assets';
 
 /**
- * @type {{ card: import('../lib/cards.js').Card, headingLevel?: 1 | 2 | 3, eager?: boolean, large?: boolean }}
+ * @type {{
+ *   card: import('../lib/cards.js').Card,
+ *   headingLevel?: 1 | 2 | 3 | 4,
+ *   eager?: boolean,
+ *   large?: boolean,
+ * }}
  */
 const { card, headingLevel = 2, eager = false, large = false } = Astro.props;
-const { title, blurb, date, source, factUrl, image, imageAlt, nsfw } = card.data;
-const Heading = /** @type {'h1' | 'h2' | 'h3'} */ (`h${headingLevel}`);
+const { title, blurb, date, source, factUrl, image, imageAlt, imageCredit, nsfw } = card.data;
+const Heading = /** @type {'h1' | 'h2' | 'h3' | 'h4'} */ (`h${headingLevel}`);
 const iso = date.toISOString().slice(0, 10);
 const shown = date.toLocaleDateString('en-GB', {
   day: 'numeric',
@@ -14,13 +19,12 @@ const shown = date.toLocaleDateString('en-GB', {
   year: 'numeric',
   timeZone: 'UTC',
 });
+// The card page is the one place a card renders since the line timeline (2026-11-15).
 const img = {
   src: image,
   alt: imageAlt,
-  widths: large ? [480, 960, 1200] : [320, 640, 960],
-  sizes: large
-    ? '(min-width: 960px) 800px, 100vw'
-    : '(min-width: 1280px) 300px, (min-width: 960px) 31vw, (min-width: 600px) 46vw, 100vw',
+  widths: [480, 960, 1200],
+  sizes: '(min-width: 960px) 800px, 100vw',
   loading: eager ? /** @type {const} */ ('eager') : /** @type {const} */ ('lazy'),
 };
 ---
@@ -46,6 +50,11 @@ const img = {
       {large && factUrl && (
         <a href={factUrl} rel="noopener">
           the facts <span aria-hidden="true">↗</span>
+        </a>
+      )}
+      {large && imageCredit && (
+        <a href={imageCredit.url} rel="noopener">
+          image: {imageCredit.text} <span aria-hidden="true">↗</span>
         </a>
       )}
     </p>

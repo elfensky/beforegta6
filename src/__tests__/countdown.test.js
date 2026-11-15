@@ -1,5 +1,13 @@
 import { expect, test } from 'vitest';
-import { remaining } from '../lib/countdown.js';
+import { daysBefore, remaining } from '../lib/countdown.js';
+
+const LAUNCH = { year: 2026, monthIndex: 10, day: 19 };
+test('daysBefore: whole UTC days to the launch day', () => {
+  expect(daysBefore(new Date('2025-03-12'), LAUNCH)).toBe(617);
+  expect(daysBefore(new Date('2026-11-18'), LAUNCH)).toBe(1);
+  expect(daysBefore(new Date('2026-11-19'), LAUNCH)).toBe(0);
+  expect(daysBefore(new Date('2026-11-20'), LAUNCH)).toBe(-1);
+});
 
 test('counts down', () => {
   expect(remaining(0, 90061000)).toEqual({

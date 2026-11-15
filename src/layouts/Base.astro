@@ -39,6 +39,7 @@ const canonical = new URL(path, site).href;
         defer
         src="https://umami.lav.ren/script.js"
         data-website-id={UMAMI_WEBSITE_ID}
+        data-domains={site.hostname}
       />
     )}
     {ADSENSE_CLIENT && (
@@ -54,7 +55,7 @@ const canonical = new URL(path, site).href;
     <a class="skip" href="#main">
       Skip to content
     </a>
-    <Header path={path} />
+    <Header />
     <main id="main" tabindex="-1">
       <slot />
     </main>

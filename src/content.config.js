@@ -16,6 +16,8 @@ const cards = defineCollection({
       factUrl: z.url().optional(),
       image: image(),
       imageAlt: z.string(),
+      // Author and licence of a Commons photo: CC BY and CC BY-SA require them beside the image.
+      imageCredit: z.object({ text: z.string(), url: z.url() }).optional(),
       nsfw: z.boolean().default(false),
       status: z.enum(['launch', 'hold', 'drop']).default('launch'),
     }),

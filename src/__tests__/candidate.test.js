@@ -51,6 +51,18 @@ test('a joke takes the post date', () => {
   expect(frontmatter.factUrl).toBeUndefined();
 });
 
+test('a Commons image carries its credit; a post image has none', () => {
+  const commons = fixture({
+    image_page: 'https://commons.wikimedia.org/wiki/File:M87.jpg',
+    image_license: 'CC BY 4.0 (EHT Collaboration)',
+  });
+  expect(toCard(commons).frontmatter.imageCredit).toEqual({
+    text: 'CC BY 4.0 (EHT Collaboration)',
+    url: 'https://commons.wikimedia.org/wiki/File:M87.jpg',
+  });
+  expect(toCard(fixture({ image_license: 'post image' })).frontmatter.imageCredit).toBeUndefined();
+});
+
 test('rejects a bad id', () => {
   expect(() => toCard(fixture({ id: 'Flying Cars!' }))).toThrow('id');
 });
