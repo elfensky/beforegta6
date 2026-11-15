@@ -62,6 +62,13 @@ test.describe('without JavaScript', () => {
   });
 });
 
+// A deferred tracker holds back every module script until it loads: a stalled Umami froze the countdown.
+test('the countdown runs while the Umami script never answers', async ({ page }) => {
+  await page.route('https://umami.lav.ren/**', () => {});
+  await page.goto('/', { waitUntil: 'commit' });
+  await expect(page.locator('.countdown [data-left]')).not.toBeEmpty();
+});
+
 // The order is the only control: there is no view toggle.
 test('the order toggle switches between newest and oldest first', async ({ page }) => {
   await page.goto('/');
