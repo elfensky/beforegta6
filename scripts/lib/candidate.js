@@ -20,6 +20,8 @@
  * @property {string|null} [image_page] Commons file page of the image
  * @property {string|null} [image_license] licence and author, e.g. "CC BY 4.0 (EHT Collaboration)"
  * @property {string|null} [image_alt] a hand-written image description; the title when absent
+ * @property {number} [impact_score]
+ * @property {number} [meme_score]
  * @property {boolean} [nsfw]
  */
 
@@ -81,7 +83,9 @@ export function toCard(c) {
  */
 export function checkCandidates(candidates) {
   const ids = candidates.map((c) => c.id);
-  const errors = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))].map((id) => `duplicate id: ${id}`);
+  const errors = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))].map(
+    (id) => `duplicate id: ${id}`,
+  );
   for (const c of candidates) {
     if (!STATUSES.includes(c.status)) errors.push(`${c.id}: status must be launch, hold or drop`);
     else if (c.status === 'launch') {
@@ -122,4 +126,95 @@ const EXTENSIONS = {
 export function imageExtension(contentType) {
   const type = contentType?.split(';')[0].trim().toLowerCase() ?? '';
   return EXTENSIONS[type] ?? null;
+}
+
+/** Subject tags in the order of the review table. `world-event` is a size, not a subject, and goes last in `tags`. */
+export const SUBJECT_TAGS = [
+  'politics',
+  'economy',
+  'tech',
+  'internet',
+  'science',
+  'sport',
+  'culture',
+  'gaming',
+  'gta',
+  'creators',
+];
+
+/**
+ * @typedef {object} ResearchFile
+ * @property {{ pass: number, date: string, notes: string[] }[]} passes
+ * @property {Candidate[]} candidates
+ * @property {{ id: string, reason: string, field?: string }[]} excluded
+ */
+
+const STATUS_ORDER = { launch: 0, hold: 1, drop: 2 };
+/** @param {unknown} v */
+const cell = (v) =>
+  String(v ?? '–')
+    .replaceAll('|', '\\|')
+    .replace(/\s*\n\s*/g, ' ');
+/** @param {string} url */
+const link = (url) => `<${url.replaceAll('|', '%7C')}>`;
+/** @param {string} tag */
+const label = (tag) => (tag === 'gta' ? 'GTA' : tag[0].toUpperCase() + tag.slice(1));
+/** @param {Candidate} c */
+const sectionOf = (c) => c.tags?.find((t) => SUBJECT_TAGS.includes(t)) ?? 'untagged';
+/** @param {Candidate} c */
+const dateOf = (c) => c.timeline_date ?? c.event_date ?? c.post_date ?? '';
+
+/** @param {Candidate} c */
+function row(c) {
+  const post = c.source_url ? `[${cell(c.source_platform)}](${link(c.source_url)})` : '–';
+  const fact = c.fact_url ? `[fact](${link(c.fact_url)})` : '–';
+  const tags = c.tags?.length ? c.tags.join(', ') : '–';
+  const world = c.tags?.includes('world-event') ? 'yes' : '';
+  return `| ${cell(c.title)} | ${dateOf(c)} | ${tags} | ${world} | ${cell(c.impact_score)} | ${cell(c.meme_score)} | ${c.status} | ${post} | ${fact} |`;
+}
+
+/**
+ * The human-readable view of research/candidates.json for a review pass: one section per first subject tag.
+ * @param {ResearchFile} data
+ * @returns {string}
+ */
+export function reviewTable({ passes, candidates, excluded }) {
+  const sections = [...SUBJECT_TAGS, 'untagged']
+    .map((tag) => ({ tag, items: candidates.filter((c) => sectionOf(c) === tag) }))
+    .filter((s) => s.items.length);
+  /** @param {Candidate[]} items */
+  const counts = (items) =>
+    ['launch', 'hold', 'drop']
+      .map((st) => items.filter((c) => c.status === st).length)
+      .concat(items.length);
+  const lines = [
+    '# Research candidates',
+    '',
+    'Generated from `research/candidates.json` by `npm run cards`. Edit the JSON, not this file.',
+    ...passes.flatMap((p) => [
+      '',
+      `## Pass ${p.pass} (${p.date})`,
+      '',
+      ...p.notes.map((n) => `- ${n}`),
+    ]),
+    '',
+    '## Counts',
+    '',
+    '| Tag | Launch | Hold | Drop | Total |',
+    '|---|---|---|---|---|',
+    ...sections.map((s) => `| ${label(s.tag)} | ${counts(s.items).join(' | ')} |`),
+    `| Total | ${counts(candidates).join(' | ')} |`,
+  ];
+  for (const { tag, items } of sections) {
+    const sorted = items.toSorted(
+      (a, b) =>
+        STATUS_ORDER[a.status] - STATUS_ORDER[b.status] || dateOf(b).localeCompare(dateOf(a)),
+    );
+    lines.push('', `## ${label(tag)} (${items.length})`, '');
+    lines.push('| Title | Date | Tags | World event | Impact | Meme | Status | Post | Fact |');
+    lines.push('|---|---|---|---|---|---|---|---|---|', ...sorted.map(row));
+  }
+  lines.push('', `## Excluded (${excluded.length})`, '');
+  lines.push(...excluded.map((e) => `- \`${e.id}\`${e.field ? ` (${e.field})` : ''}: ${e.reason}`));
+  return `${lines.join('\n')}\n`;
 }
