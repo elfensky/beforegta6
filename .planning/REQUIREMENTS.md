@@ -70,7 +70,7 @@
 
 ### Protected deployments
 
-- [ ] **DEPLOY-01**: CI pins staging and production images on dedicated deployment branches. Arcane reads those branches. Both source branches require PRs and the `check` status. Integration uses rebase merges, and releases use merge commits. Force pushes and deletion remain blocked. Source: issue #24, included by Andrei on 2026-11-16.
+- [x] **DEPLOY-01**: CI pins staging and production images on dedicated deployment branches. Arcane reads those branches. Both source branches require PRs and the `check` status. Integration uses rebase merges, and releases use merge commits. Force pushes and deletion remain blocked. Source: issue #24, included by Andrei on 2026-11-16. Evidence: live replicas, Git Sync records, recovery registry, and effective branch rules verified in `.planning/verification/2026-11-16-completion.md`.
 
 ## v2 Requirements
 
@@ -131,12 +131,12 @@ Each v1 requirement maps to exactly one phase.
 | REV-01 | Phase 7 | Complete (2026-11-16) |
 | REV-02 | Phase 7 | Complete (2026-11-16) |
 | REV-03 | Phase 7 | Complete (2026-11-16) |
-| DEPLOY-01 | Phase 8 | In progress |
+| DEPLOY-01 | Phase 8 | Complete (2026-11-16) |
 
 **Coverage:**
 - v1 requirements: 34 total
-- Complete: 28
-- Open: 6 (Phase 6: 5, Phase 8: 1)
+- Complete: 29
+- Open: 5 (Phase 6)
 - Mapped to phases: 34
 - Unmapped: 0
 

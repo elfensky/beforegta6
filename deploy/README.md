@@ -12,7 +12,7 @@ The pin job commits the tag on the corresponding deployment branch. Arcane reads
 Nobody edits the `image:` line by hand. The job copies compose configuration from the built commit.
 It preserves the other environment's image tag. Deployment branches do not trigger builds.
 
-Source branches require PRs and the `check` job after the migration below.
+Source branches require PRs and the `check` job. The migration was verified on 2026-11-16.
 Integration PRs to `develop` use rebase merges. Release PRs from `develop` to `main` use merge commits.
 Deployment branches remain writable by the GitHub Actions token. They contain deployment records, not source integration work.
 
@@ -36,7 +36,7 @@ For rollback, revert the latest pin commit on the affected deployment branch and
 This restores its previous image and compose configuration. Verify Arcane's service image and the public response.
 Future successful source builds can deploy again. Revert the source change through a PR for a lasting rollback.
 
-A push that creates `main` at a commit that is already built starts no build (`paths-ignore`). Start it with
+Pushes limited to root Markdown, `docs/`, `research/`, or `.planning/` start no build (`paths-ignore`). To rebuild production explicitly, run
 `gh workflow run build.yml --ref main`.
 
 ## Deployment branch migration
@@ -54,7 +54,11 @@ Complete these steps in order. Existing image tags remain unchanged during branc
 
 The infrastructure playbook creates missing sync records. It does not update existing records.
 The live Arcane branch changes and the recovery registry change are both required.
-Migration remains in progress until the live checks and ruleset changes are recorded in `.planning/STATE.md`.
+Migration completed on 2026-11-16. Both environments run the images selected by their deployment branches.
+Source rulesets require PRs, resolved conversations, and the GitHub Actions `check` job.
+Force pushes and deletion remain blocked. No bypass actors are configured.
+The recovery registry change is merged in [drunikbe/infra#79](https://github.com/drunikbe/infra/pull/79).
+Image, replica, and ruleset evidence is in `.planning/verification/2026-11-16-completion.md`.
 
 ## One-time setup (Andrei)
 
@@ -71,8 +75,8 @@ Done on 2026-11-13:
    `{"spec": {"Name": "<secret name>", "Data": "<base64 of the token>"}}`. Encode the token without a trailing newline.
 4. **Git Sync.** Arcane Git repository `beforegta6` (`https://github.com/elfensky/beforegta6.git`, auth type none: the
    repo and its GHCR package are public).
-   - `beforegta6-staging` on `staging01`: branch `develop`, `deploy/staging/compose.yaml`.
-   - `beforegta6` on `production01`: branch `main`, `deploy/production/compose.yaml`.
+   - `beforegta6-staging` on `staging01`: branch `deploy/staging` since 2026-11-16, `deploy/staging/compose.yaml`.
+   - `beforegta6` on `production01`: branch `deploy/production` since 2026-11-16, `deploy/production/compose.yaml`.
      [drunikbe/infra#75](https://github.com/drunikbe/infra/pull/75) adds it to the `arcane_gitops_syncs` list in
      `vars/arcane-gitops-syncs.yml`, so a rebuild of production01 recreates it.
 5. **Mail.** The address `takedown@lav.ren` (footer, privacy page, security.txt).

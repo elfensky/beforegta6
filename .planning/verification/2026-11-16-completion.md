@@ -41,22 +41,38 @@ The pinned checkout action explicitly supports credentials in temporary worktree
 [checkout v7.0.1](https://raw.githubusercontent.com/actions/checkout/v7.0.1/src/git-auth-helper.ts) ·
 [🔖 2026-11-16](https://linkding.lav.ren/bookmarks?details=6654).
 
-Delivery: [site PR #26](https://github.com/elfensky/beforegta6/pull/26) and
-[infrastructure PR #79](https://github.com/drunikbe/infra/pull/79). Merge and live migration remain pending.
+Delivery is complete: [site PR #26](https://github.com/elfensky/beforegta6/pull/26),
+[release PR #27](https://github.com/elfensky/beforegta6/pull/27), and
+[infrastructure PR #79](https://github.com/drunikbe/infra/pull/79) are merged.
 
 ## Deployment protection
 
 Andrei selected dedicated deployment branches for issue #24 on 2026-11-16.
-The intended mapping is `develop` → `deploy/staging` and `main` → `deploy/production`.
+The verified mapping is `develop` → `deploy/staging` and `main` → `deploy/production`.
 The migration sequence is documented in `deploy/README.md`.
-The infrastructure recovery registry selects `deploy/production` in the prepared companion change.
+The infrastructure recovery registry selects `deploy/production` in merged commit `653e463`.
 Its production-profile `ansible-lint --offline` check passed across 112 files.
 The Arcane recovery playbook passed `--check --diff` with `changed=0`, `failed=0`, and `unreachable=0`.
 The existing `beforegta6` sync record is present. The create-only playbook leaves existing records unchanged.
-Live Arcane migration and source-branch ruleset verification remain pending.
-The current source rulesets contain force-push and deletion protection only, confirmed through the GitHub API.
+Both Arcane Git Sync records read their dedicated deployment branches. Their other configuration fields remain unchanged.
+The source branches retain their release commits without bot-written image pins.
+
+Migration verification, 2026-11-16 at 17:00 UTC. Later releases update these image pins through the same workflow.
+
+| Environment | Source image SHA | Deployment pin commit | Running web replicas | Public response |
+|---|---|---|---|---|
+| Staging | `7c9960833f9c8ca8858dd81b82f8a8502e1c2c00` | `5e47bccb04caeba5a08de6714e81bbb8d4f5d7af` | 2 of 2, matching image | HTTP 200 |
+| Production | `cfc7a345e235d3334e867a7d1b4efeec446b93a7` | `440d00941ec7ee333afd176a981d272490667d1b` | 2 of 2, matching image | HTTP 200 |
+
+Git Sync reports success at each pin commit. Task-level checks confirm the image on every running web replica.
+Both build and pin jobs passed: [staging build](https://github.com/elfensky/beforegta6/actions/runs/43910814472)
+and [production build](https://github.com/elfensky/beforegta6/actions/runs/43912770755).
+Production retains its five-minute CDN cache header and zero-age browser cache header.
+
+GitHub's effective branch rules confirm active rulesets `27228706` (`develop`) and `27228708` (`main`).
+Both require a PR, resolved conversations, and the `check` status. Both block force pushes and deletion.
 The `check` job reports from GitHub Actions integration `15368`.
-The intended rules require PRs, resolved conversations, and that check, with no bypass actors or required self-approval.
+Neither ruleset has bypass actors or a required approval count. Independent review remains part of delivery.
 Integration uses rebase merges and a current base. Releases use merge commits without requiring `main` ancestry in `develop`.
 
 **eli14:** Source branches hold approved changes. Deployment branches hold the image labels read by the servers.
