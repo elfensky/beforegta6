@@ -2,17 +2,59 @@
 
 The shape is the usual Arcane Path B (vault `knowledge/homelab/static-sites-on-the-pi-swarm.md`), copied from miklav.com:
 
-| Branch | Compose file | Stack | Swarm | Host | Tunnel secret |
-|---|---|---|---|---|---|
-| `develop` | `deploy/staging/compose.yaml` | `beforegta6-staging` | Pi swarm, Arcane environment `staging01` | `staging.beforegta6.wtf` | `staging_beforegta6_cloudflared` |
-| `main` | `deploy/production/compose.yaml` | `beforegta6` | Hetzner production swarm, Arcane environment `production01` | `beforegta6.wtf` | `beforegta6_cloudflared` |
+| Source branch | Deployment branch | Compose file | Stack | Swarm | Host | Tunnel secret |
+|---|---|---|---|---|---|---|
+| `develop` | `deploy/staging` | `deploy/staging/compose.yaml` | `beforegta6-staging` | Pi swarm, Arcane environment `staging01` | `staging.beforegta6.wtf` | `staging_beforegta6_cloudflared` |
+| `main` | `deploy/production` | `deploy/production/compose.yaml` | `beforegta6` | Hetzner production swarm, Arcane environment `production01` | `beforegta6.wtf` | `beforegta6_cloudflared` |
 
-A push to either branch runs `.github/workflows/build.yml`. It builds `ghcr.io/elfensky/beforegta6:sha-<commit>`
-and commits that tag into the branch's compose file. Arcane's Git Sync applies the commit. Nobody edits the `image:`
-line by hand. Rollback is `git revert` of the pin commit.
+A source-branch push runs `.github/workflows/build.yml`. It builds `ghcr.io/elfensky/beforegta6:sha-<commit>`.
+The pin job commits the tag on the corresponding deployment branch. Arcane reads that branch's compose file.
+Nobody edits the `image:` line by hand. The job copies compose configuration from the built commit.
+It preserves the other environment's image tag. Deployment branches do not trigger builds.
+
+Source branches require PRs and the `check` job after the migration below.
+Integration PRs to `develop` use rebase merges. Release PRs from `develop` to `main` use merge commits.
+Deployment branches remain writable by the GitHub Actions token. They contain deployment records, not source integration work.
+
+The source rulesets have no bypass actors. They require zero approving reviews because GitHub prevents self-approval.
+Independent review remains part of the delivery workflow. Conversations must be resolved before merge.
+The required `check` comes from GitHub Actions, integration ID `15368`, verified from an actual PR check run.
+`develop` requires the latest base before merge. `main` requires the check without requiring its tip in `develop`.
+Release merge commits remain on `main`, so requiring that ancestry would block the next `develop` release.
+Before each release, verify its checks against the current base.
+
+Ruleset fields: [GitHub REST rules](https://docs.github.com/en/rest/repos/rules?apiVersion=2026-03-10) ·
+[🔖 2026-11-16](https://linkding.lav.ren/bookmarks?details=6651).
+
+**eli14:** Source branches hold approved changes. Deployment branches hold the image labels read by the servers.
+Checks protect the approved changes while automation updates the labels.
+
+The pin job refuses stale builds when source build inputs change. Documentation-only descendants remain safe.
+An older job cannot replace a newer image pin. Rejected pushes retry three times without force-pushing.
+
+For rollback, revert the latest pin commit on the affected deployment branch and push that revert.
+This restores its previous image and compose configuration. Verify Arcane's service image and the public response.
+Future successful source builds can deploy again. Revert the source change through a PR for a lasting rollback.
 
 A push that creates `main` at a commit that is already built starts no build (`paths-ignore`). Start it with
 `gh workflow run build.yml --ref main`.
+
+## Deployment branch migration
+
+Issue #24 moves image pins away from the protected source branches.
+Complete these steps in order. Existing image tags remain unchanged during branch creation.
+
+1. Create `deploy/staging` from the current remote `develop` tip and `deploy/production` from the current remote `main` tip.
+2. Merge the deployment workflow change into `develop`. Verify that its build updates `deploy/staging` successfully.
+3. Change only the staging Arcane Git Sync branch to `deploy/staging`. Verify its service image and public response.
+4. Release the workflow change to `main`. Verify that its build updates `deploy/production` successfully.
+5. Change only the production Arcane Git Sync branch to `deploy/production`. Verify its service image and public response.
+6. Update `vars/arcane-gitops-syncs.yml` in `drunikbe/infra` to recreate production from `deploy/production`.
+7. Finish legacy build runs before requiring PRs and `check` on both source branches. Keep force pushes and deletion blocked.
+
+The infrastructure playbook creates missing sync records. It does not update existing records.
+The live Arcane branch changes and the recovery registry change are both required.
+Migration remains in progress until the live checks and ruleset changes are recorded in `.planning/STATE.md`.
 
 ## One-time setup (Andrei)
 
@@ -43,7 +85,7 @@ Done on 2026-11-14:
    `UMAMI_WEBSITE_ID`). The tracker counts only the apex (`data-domains`), so staging and local runs stay out of the
    stats. Uptime Kuma monitor 136 `beforegta6.wtf` in group `production`.
 
-Still to do:
+Configured and verified on 2026-11-16:
 
 8. **HTML edge cache.** Cloudflare keeps each page for 5 minutes, so a traffic spike stays at the edge (Andrei,
    2026-11-15, for the launch-week push in `docs/PROMOTION.md`). nginx sends Cloudflare
@@ -54,6 +96,10 @@ Still to do:
      cache-control header if present, bypass cache if not. Browser TTL: Respect origin.
    - Caching → Tiered Cache: Smart Tiered Caching Topology.
    - Keep Always Online off. Cloudflare ignores `stale-if-error` while it is on.
+
+   The rule is active for the apex only. Tiered Cache uses Automatic Upper Tiers, and Always Online is off.
+   Two consecutive production requests returned `cf-cache-status: HIT` with `age: 290` on 2026-11-16.
+   The responses retain the five-minute CDN header and the zero-age browser header.
 
    nginx uses `CDN-Cache-Control`, not `s-maxage`, because an `s-maxage` makes Cloudflare ignore `stale-if-error`
    ([Cloudflare: Cache-Control](https://developers.cloudflare.com/cache/concepts/cache-control/) ·
@@ -102,7 +148,7 @@ never create a second one. The site proves ownership with the `google-adsense-ac
 `src/data/site.js`), and `public/ads.txt` names the account as a direct seller. Neither loads Google code.
 
 The site loads AdSense Auto ads, and Google chooses where the ads go (Andrei, 2026-11-15). The site has no ad slots of
-its own. Ads appear once AdSense approves the site: its status was "Getting ready" on 2026-11-15.
+its own. Ads appear once AdSense approves the site. Andrei confirmed that review remains pending on 2026-11-16.
 
 - **Apex only.** `ADSENSE_CLIENT` in `src/data/site.js` turns the loader in `src/layouts/Base.astro` on. The loader
   adds Google's script only when the host is `beforegta6.wtf`, so staging and local visits never load real ads

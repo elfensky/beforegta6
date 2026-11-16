@@ -23,13 +23,18 @@ This file holds only what is true of this repo. A personal project (Andrei, 2026
 | `npm run lint && npm test && npm run build && npx html-validate "dist/**/*.html"` | **Verification gate**, in CI's order. Run it before calling work done |
 | `npm run test:e2e` | Playwright: axe, reflow, skip link, no-JS checks on the built site |
 | `npm run cards` | Make the cards match `research/candidates.json`, and regenerate `research/candidates.md`. Run it after every edit to the JSON |
+| `npm run review` | Local candidate review at `http://127.0.0.1:4322/`; see `docs/REVIEW.md` |
+| `npm run test:review` | Browser tests of the review tool against temporary data |
 
 ## Branches
 
-`develop` integrates and deploys staging. `main` releases to production on a push. Merge with
-`gh pr merge --rebase`, then `git push origin --delete <branch>`. Rulesets on both branches block force-pushes and
-deletion only. A rule that requires a PR or the `check` job would also block the CI pin commit: GitHub refuses the
-GitHub Actions app as a bypass actor (HTTP 422, 2026-11-13). The fix is Andrei's decision, in issue #24.
+`develop` integrates and builds staging. `main` releases to production on a push.
+CI writes image pins to `deploy/staging` and `deploy/production`; Arcane reads those branches.
+Merge feature PRs with `gh pr merge --rebase`, then `git push origin --delete <branch>`.
+Release PRs from `develop` to `main` use `gh pr merge --merge`.
+Both source branches require PRs and the `check` status after the issue #24 migration.
+The migration order and live verification are recorded in `deploy/README.md`.
+Deployment branches remain writable by CI. Never add the source-branch PR requirement to them.
 
 ## This repo's own rules
 
@@ -62,6 +67,7 @@ GitHub Actions app as a bypass actor (HTTP 422, 2026-11-13). The fix is Andrei's
 | `src/`, `scripts/` | `.planning/PROJECT.md`, `.planning/REQUIREMENTS.md` | Features, requirements, constraints |
 | `research/`, `scripts/sync-cards.js`, `scripts/lib/candidate.js` | `docs/superpowers/specs/2026-11-15-one-candidates-file-design.md` | The candidates file, tags, the sync |
 | `deploy/`, `.github/workflows/` | `deploy/README.md` | Stacks, secrets, one-time setup |
+| `scripts/review/`, `scripts/review-candidates.js` | `docs/REVIEW.md` | Local review, image fetching, protected holds, and synchronization |
 
 ## Life cockpit
 

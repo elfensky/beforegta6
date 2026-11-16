@@ -1,9 +1,9 @@
 # Docker Swarm stack "beforegta6" — beforegta6.wtf on the Hetzner production swarm (tasks on the apps nodes).
 #
-# Deployed by Arcane's Git Sync (swarm mode), pointed at this file on main.
+# Deployed by Arcane's Git Sync (swarm mode), pointed at this file on deploy/production.
 # Arcane v2.10.0+ forwards its stored GHCR credential on the Git Sync swarm
 # path (getarcaneapp/arcane#3787), so there is no direct-deploy script here —
-# Git Sync is the only writer to this stack. Deploy only what `main` says:
+# Git Sync is the only writer to this stack. Deploy only what `deploy/production` says:
 # rollback is `git revert` of the pin commit, then Arcane's next sync.
 #
 # Prereq — one external Swarm secret, created once on a manager (deploy/README.md):
@@ -17,8 +17,8 @@
 # Zero Trust dashboard, not here.
 #
 # The `image:` line is written by CI (.github/workflows/build.yml): every green
-# build of main pins `:sha-<commit>` here and commits. The tag in git is the
-# deploy.
+# build of main pins `:sha-<commit>` here on `deploy/production`. The tag in git is the deploy.
+# CI copies compose configuration from the built source commit and preserves the other environment's image pin.
 
 networks:
   internal:
