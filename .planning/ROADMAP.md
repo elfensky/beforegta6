@@ -2,13 +2,15 @@
 
 ## Overview
 
-beforegta6.wtf is a meme timeline, "We got ___ before GTA 6", that must be live and fast on GTA 6 launch week (launch: 2026-11-19). The roadmap holds one milestone, v1.0. Phases 1 to 5 are backdated groups of the work done on 2026-11-13 to 2026-11-15: the plan, the research, the launch site, the timeline and the ads. Each carries its completion date and its evidence. Phases 6 and 7 are the open work: the launch-week promotion and the candidate review page.
+beforegta6.wtf is a meme timeline, "We got ___ before GTA 6", for launch week on 2026-11-19.
+The roadmap holds one milestone, v1.0. Phases 1 to 5 group completed work from 2026-11-13 to 2026-11-15.
+Each carries its completion date and evidence. Phases 6 to 8 cover promotion, candidate review, and protected deployments.
 
 This repo owns this plan. Phase structure follows Andrei's own frame (2026-11-15). `.planning/config.json` sets granularity `standard` and sequential phase IDs.
 
 ## Milestones
 
-- 🚧 **v1.0 Launch-week site** - Phases 1-7 (in progress; GTA 6 launches 2026-11-19)
+- 🚧 **v1.0 Launch-week site** - Phases 1-8 (in progress; GTA 6 launches 2026-11-19)
 
 ## Phases
 
@@ -24,7 +26,8 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
 - [x] **Phase 4: Timeline (site v2)** - The centred line timeline as the only view (completed 2026-11-15)
 - [x] **Phase 5: Ads and measurement (site v3)** - AdSense Auto ads, Web Vitals and the HTML cache header (completed 2026-11-15)
 - [ ] **Phase 6: Launch-week promotion** - Launch-week site changes, the posting schedule and the result read (in progress)
-- [ ] **Phase 7: Candidate review** - A local swipe page that sorts candidates into launch and drop (not started)
+- [x] **Phase 7: Candidate review** - A local swipe page that sorts candidates into launch and drop (completed 2026-11-16)
+- [ ] **Phase 8: Protected deployments** - Dedicated deployment branches and enforced source-branch checks (in progress, added 2026-11-16)
 
 ## Phase Details
 
@@ -92,7 +95,8 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
   4. nginx sends the HTML a 5-minute edge cache header. The Cloudflare rule that uses it is Phase 6 (PROMO-01).
 **Plans**: Backdated. No plan files.
 **Status**: Complete, 2026-11-15.
-**Unverified**: the AdSense approval state ("Getting ready" on 2026-11-15, per `deploy/README.md`), and the live state of release #18. Release PR #18 merged to `main` on 2026-11-15 at 12:38 UTC, and the production pin commit 8a9e1e8 exists (12:39 UTC). Nothing in the repo shows that production serves it.
+**Live evidence, 2026-11-16**: Production serves the AdSense ownership markup, share script, and countdown script from release #18.
+Andrei confirmed AdSense remains in review. Approval and dashboard settings remain external work under ADS-03.
 **Evidence**: PR #14, release PR #15 (2026-11-15 03:00 UTC), #10, #17, #20, #23, release PR #18.
 
 ### Phase 6: Launch-week promotion
@@ -106,7 +110,9 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
   4. The card `gta5-farewell-drive` is live on 2026-11-18.
   5. On 2026-11-22 Andrei reads Umami referrers per channel, and the AdSense approval state is written down (approved, pending or refused). Phase 6 can close with ADS-03 still open: Google's approval is external.
 **Plans**: TBD
-**Status**: In progress since 2026-11-15. The share button and the post-launch line are built (PR #22). The posting schedule is human work. The first scheduled post is Sunday 2026-11-15 at 19:00 CET, and it needs the Cache Rule first.
+**Status**: In progress since 2026-11-15. Production serves the share assets and post-launch code, verified 2026-11-16.
+The HTML cache is active. Two production requests returned `cf-cache-status: HIT`.
+The posting schedule remains human work. The dated card release, launch-day check, and result reading remain pending.
 
 ### Phase 7: Candidate review
 **Goal**: Andrei sorts the finds in `research/candidates.json` into launch and drop by swipe or key, and the site follows.
@@ -119,12 +125,33 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
   4. The page never ships: no file from it appears in `dist/`.
 **Plans**: TBD
 **UI hint**: yes
-**Status**: Not started (#19). Open question for planning: a yes on a find with no image fails the sync (four such finds, see REV-02).
+**Status**: Complete (#19), 2026-11-16. Independent review and merge remain delivery gates.
+**Evidence**: `.planning/verification/2026-11-16-completion.md`: 71 unit tests, six review browser tests, and 63 public-site browser tests pass.
+**Implementation plan**: `docs/superpowers/plans/2026-11-16-candidate-review.md`.
+The tool protects held candidates and requires a local image before launch.
+An explicit fetch action prepares a local preview when an image URL exists.
+
+### Phase 8: Protected deployments
+
+**Goal**: Source branches require reviewed PRs and passing checks without blocking automated deployment pins.
+**Depends on**: Phase 3.
+**Requirements**: DEPLOY-01.
+**Source**: Andrei included issue #24 and selected dedicated deployment branches on 2026-11-16.
+**Success Criteria**:
+  1. Builds of `develop` pin to `deploy/staging`. Builds of `main` pin to `deploy/production`.
+  2. Arcane reads those branches, and both environments deploy successfully.
+  3. The recovery configuration in `drunikbe/infra` names the production deployment branch.
+  4. Both source branches require a PR and the `check` status. `develop` permits rebase merges, and `main` permits release merges.
+  5. Force pushes and branch deletion remain blocked.
+**Status**: In progress, 2026-11-16.
+
+**eli14:** Source branches hold approved changes. Deployment branches hold the image labels used by the servers.
+Keeping these records separate lets checks protect source changes while automation updates the labels.
 
 ## Progress
 
 **Execution Order:**
-Phases 1 to 5 are complete and backdated; they overlap in time. The open phases run in numeric order, 6 then 7. Phase 7 may start while Phase 6 runs.
+Phases 1 to 5 are complete and overlap in time. Phase 7 is complete. Phase 8 proceeds while Phase 6 awaits dates and external actions.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -134,4 +161,5 @@ Phases 1 to 5 are complete and backdated; they overlap in time. The open phases 
 | 4. Timeline (site v2) | backdated | Complete | 2026-11-15 |
 | 5. Ads and measurement (site v3) | backdated | Complete | 2026-11-15 |
 | 6. Launch-week promotion | 0/TBD | In progress | - |
-| 7. Candidate review | 0/TBD | Not started | - |
+| 7. Candidate review | 1/1 | Complete | 2026-11-16 |
+| 8. Protected deployments | 0/1 | In progress | - |

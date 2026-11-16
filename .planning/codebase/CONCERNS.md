@@ -27,7 +27,7 @@ last_mapped_at: 2026-11-15
 - Fix approach: Keep the single component. If the list grows past a few hundred rows, add paging or a build-time split by year.
 
 **Hand-written image provenance in the candidates file:**
-- Issue: `research/candidates.json` holds 467 candidate records. Most descriptions of images live in a free-text `image_note` field, not in the structured `image_alt` or `image_license` fields.
+- Issue: `research/candidates.json` holds 383 candidate records, checked 2026-11-16. Most descriptions of images live in a free-text `image_note` field, not in the structured `image_alt` or `image_license` fields.
 - Files: `research/candidates.json`, `scripts/lib/candidate.js` (`toCard`: `imageAlt` falls back to the title)
 - Impact: A launched card without `image_alt` gets the card title as its alt text. Alt text is then not a description of the picture.
 - Fix approach: Add `image_alt` to every launch candidate. Make `checkCandidates` refuse a launch candidate that has no `image_alt`.
@@ -139,7 +139,7 @@ last_mapped_at: 2026-11-15
 ## Scaling Limits
 
 **Repository size:**
-- Current capacity: About 100 card images in `src/assets/cards/`, 66 held images in `research/images/`, and a 467-record candidates file.
+- Current capacity: 97 card images in `src/assets/cards/`, 66 archived or held images in `research/images/`, and 383 candidates, checked 2026-11-16. Another 220 candidates have no local image. Of these, 216 have an image URL and four need a manually supplied image.
 - Limit: Not measured. Every image in git adds to every clone.
 - Scaling path: Keep images small and in git only when they ship. Move held images to private storage.
 
