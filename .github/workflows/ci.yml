@@ -25,3 +25,4 @@ jobs:
       - run: npx html-validate "dist/**/*.html"
       - run: npx playwright install --with-deps chromium webkit firefox
       - run: npm run test:e2e
+      - run: npm run test:review

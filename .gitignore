@@ -37,3 +37,6 @@ test-results/
 .planning/research/.cache/
 .planning/intel/
 .planning/ui-reviews/
+research/.review-pending
+research/candidates.json.*.tmp
+research/images/.review-*

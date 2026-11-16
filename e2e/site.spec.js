@@ -12,6 +12,22 @@ const firstCard = readdirSync('src/content/cards')
   .sort()[0]
   .replace(/\.md$/, '');
 
+test('the public site does not expose the local review tool or research files', async ({
+  request,
+}) => {
+  for (const route of [
+    '/review/',
+    '/api/state',
+    '/scripts/review/app.js',
+    '/research/candidates.json',
+  ]) {
+    const response = await request.get(route);
+    expect(response.status(), route).toBe(404);
+  }
+  for (const directory of ['scripts', 'research', 'review'])
+    expect(readdirSync('dist')).not.toContain(directory);
+});
+
 for (const route of ['/', '/oldest/', `/${firstCard}/`, '/privacy/', '/does-not-exist/']) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
