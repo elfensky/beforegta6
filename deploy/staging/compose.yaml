@@ -2,9 +2,9 @@
 #
 # deploy/production/compose.yaml with three differences: the tunnel secret, the
 # branch that pins the image, and no node-role placement constraint. Deployed by Arcane's Git Sync `beforegta6-staging`
-# (swarm mode, environment swarm01), pointed at this file on `develop`. Git Sync
+# (swarm mode, environment swarm01), pointed at this file on `deploy/staging`. Git Sync
 # is the only writer to this stack; rollback is `git revert` of the pin commit
-# on `develop`, then Arcane's next sync.
+# on `deploy/staging`, then Arcane's next sync.
 #
 # Prereq — one external Swarm secret, created once on a manager (deploy/README.md):
 #   staging_beforegta6_cloudflared   Cloudflare Tunnel `beforegta6-staging` token
@@ -14,7 +14,8 @@
 # (staging.beforegta6.wtf -> http://web:80) lives in the Zero Trust dashboard.
 #
 # The `image:` line is written by CI (.github/workflows/build.yml): every green
-# build of `develop` pins `:sha-<commit>` here and commits it to `develop`.
+# build of `develop` pins `:sha-<commit>` here on `deploy/staging`.
+# CI copies compose configuration from the built source commit and preserves the other environment's image pin.
 # Never edit the image line by hand.
 
 networks:
