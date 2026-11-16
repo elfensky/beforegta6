@@ -55,6 +55,20 @@ async function setup(options = {}) {
   return { ...fixture, state, origin, post, decide };
 }
 
+test('a cross-site navigation can open the page without exposing the API to cross-site reads', async () => {
+  const { origin } = await setup();
+  const headers = {
+    'sec-fetch-site': 'cross-site',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-dest': 'document',
+  };
+  expect((await rawFetch(origin + '/', { headers })).status).toBe(200);
+  expect((await rawFetch(origin + '/api/state', { headers })).status).toBe(403);
+  expect(
+    (await rawFetch(origin + '/', { headers: { ...headers, 'sec-fetch-mode': 'cors' } })).status,
+  ).toBe(403);
+});
+
 test('an explicit image fetch preserves selections and makes a preview available before launch', async () => {
   const urls = [];
   const { root, data, post, decide, origin } = await setup({

@@ -126,7 +126,7 @@ The posting schedule remains human work. The dated card release, launch-day chec
 **Plans**: TBD
 **UI hint**: yes
 **Status**: Complete (#19), 2026-11-16. Independent review and merge remain delivery gates.
-**Evidence**: `.planning/verification/2026-11-16-completion.md`: 71 unit tests, six review browser tests, and 63 public-site browser tests pass.
+**Evidence**: `.planning/verification/2026-11-16-completion.md`: 72 unit tests, six review browser tests, and 63 public-site browser tests pass.
 **Implementation plan**: `docs/superpowers/plans/2026-11-16-candidate-review.md`.
 The tool protects held candidates and requires a local image before launch.
 An explicit fetch action prepares a local preview when an image URL exists.

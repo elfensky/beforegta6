@@ -16,14 +16,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-11-16)
 
 **Core value:** The site is live, fast and correct on GTA 6 launch week, so the meme has a finished archive when it stops working on 2026-11-19.
-**Current focus:** Independent review, delivery, and Phase 8 protected deployments
+**Current focus:** PR checks, delivery, and Phase 8 protected deployments
 
 ## Current Position
 
 Phase: 7 and 8 of 8 (Candidate review and protected deployments)
 Plan: `docs/superpowers/plans/2026-11-16-candidate-review.md`; issue #24 deployment migration.
 Status: In progress. Phase 6 retains external and calendar-dependent work.
-Last activity: 2026-11-16 — candidate review verified, production cache verified, and deployment code verified. Independent review and live migration remain.
+Last activity: 2026-11-16 — candidate review verified, production cache verified, and deployment code verified. Independent review is complete. PR delivery and live migration remain.
 
 Progress: [███████░░░] 75% (6 of 8 phases complete; phases 1 to 5 are backdated)
 
@@ -49,7 +49,7 @@ Full log in PROJECT.md (Key Decisions).
 
 ### Pending Todos
 
-Finish independent review, PR delivery, deployment migration, and source-branch protection.
+Finish PR delivery, deployment migration, and source-branch protection.
 Phase 6 retains the November 18 card release, November 19 live check, promotion, and November 22 result reading.
 
 ### Blockers/Concerns
@@ -73,5 +73,5 @@ Phase 6 retains the November 18 card release, November 19 live check, promotion,
 ## Session Continuity
 
 Last session: 2026-11-16
-Current branch: `chore/complete-remaining-project-work`. Implementation and verification in progress.
+Current branch: `chore/complete-remaining-project-work`. Local verification and independent review are complete. Site PR #26 and infrastructure PR #79 await delivery.
 Resume file: None

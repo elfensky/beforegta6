@@ -13,11 +13,16 @@ let stale = false;
 let imageReady = false;
 let focusId = null;
 const visited = new Set();
+const IMAGE_ERROR = 'The local image could not load. Check the image, then refresh.';
 
 /** @param {string} message */
 function error(message) {
   element('error').textContent = message;
   element('error').hidden = !message;
+}
+
+function clearImageError() {
+  if (element('error').textContent === IMAGE_ERROR) error('');
 }
 
 /** @param {string|null|undefined} url @param {string} text */
@@ -75,6 +80,7 @@ function render() {
       : `Review complete. ${visited.size} of ${state.candidates.length} visited. ${holds}`;
   }
   if (!candidate) {
+    clearImageError();
     imageReady = false;
     controls();
     return;
@@ -91,6 +97,7 @@ function render() {
   image.hidden = !candidate.image;
   const src = candidate.image ? `${candidate.image}?revision=${state.revision}` : null;
   if (image.getAttribute('src') !== src) {
+    clearImageError();
     imageReady = false;
     if (src) image.src = src;
     else image.removeAttribute('src');
@@ -263,10 +270,11 @@ element('image').addEventListener('error', () => {
   imageReady = false;
   controls();
   element('missing-image').hidden = false;
-  error('The local image could not load. Check the image, then refresh.');
+  error(IMAGE_ERROR);
 });
 element('image').addEventListener('load', () => {
   imageReady = true;
+  clearImageError();
   controls();
 });
 
