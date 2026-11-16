@@ -50,23 +50,27 @@
 
 - [x] **ADS-01**: The site proves ownership to AdSense with a meta tag and `ads.txt`. Evidence: PR #14 (b04c347), release PR #15 (2026-11-15 03:00).
 - [x] **ADS-02**: AdSense Auto ads: Google places the ads, the site has no ad slots of its own, the script loads on the apex only, and the site shows no ads and no placeholder before approval. Source: `REQ-adsense`, `REQ-one-ad-per-screen` (code part). Evidence: PR #17 (87fcd57), PR #20 (25eabbb), PR #23 (aa46e1f); e2e "the AdSense script loads on the apex only".
-- [ ] **ADS-03**: AdSense approves the site after launch. Andrei sets Auto ads to about one ad per screen and publishes the consent message for the EEA, UK and Switzerland. This work is external, in Andrei's AdSense account. Source: `REQ-adsense`, `REQ-one-ad-per-screen`. Status: AdSense showed "Getting ready" on 2026-11-15 (`deploy/README.md`). The approval and the two settings are unverified. Phase 6 records the state on 2026-11-22. The requirement stays open until Google approves.
+- [ ] **ADS-03**: AdSense approves the site after launch. Andrei sets Auto ads to about one ad per screen and publishes the consent message for the EEA, UK and Switzerland. This work is external, in Andrei's AdSense account. Source: `REQ-adsense`, `REQ-one-ad-per-screen`. Status: Andrei confirmed AdSense is in review on 2026-11-16. The two settings remain unverified. Phase 6 records the state on 2026-11-22. The requirement stays open until Google approves.
 - [x] **MEAS-02**: Umami counts Web Vitals and loads async, so a stalled Umami cannot block the site. Evidence: PR #10 (218e281, a8cde0d; 2026-11-15 03:09); e2e "the countdown runs while the Umami script never answers".
 - [x] **PERF-01**: nginx sends `CDN-Cache-Control: max-age=300, stale-if-error=86400` for the HTML. Evidence: ba37c03 (PR #20). The Cloudflare rule that uses it is PROMO-01.
 
 ### Launch week
 
-- [ ] **PROMO-01**: The Cloudflare Cache Rule `HTML at the edge` is applied, and the second request to `/` shows `cf-cache-status: HIT`. This is the gate before the first link post. Andrei applies it in the dashboard. `deploy/README.md` step 8 lists it under "Still to do" and no later record exists, so the state is unverified.
-- [ ] **PROMO-02**: Each card page on production has a share button: the share sheet, else copy link. It stays hidden without JavaScript. Source: `REQ-card-pages` (share part). Built in PR #22 (1ae4c79, 2026-11-15 04:01) with e2e tests. Commit 1ae4c79 is on `origin/main` through release PR #18 (2026-11-15 12:38). Production pin 8a9e1e8 exists (12:39). The live state is unverified.
+- [x] **PROMO-01**: The Cloudflare Cache Rule `HTML at the edge` is active for the apex. Two production requests returned `cf-cache-status: HIT` and `age: 290` on 2026-11-16. Tiered Cache uses Automatic Upper Tiers. Always Online is off. Evidence: `deploy/README.md`, step 8.
+- [x] **PROMO-02**: Production card pages serve the share control and its share-sheet or clipboard script. The control stays hidden without JavaScript. Source: `REQ-card-pages` (share part). Evidence: PR #22 (1ae4c79), release PR #18, and production markup plus script verified on 2026-11-16.
 - [ ] **PROMO-03**: After the launch moment on 2026-11-19, the line "And we got GTA 6 before The Winds of Winter." shows under the title. Source: `REQ-countdown` (second part). Built in PR #22 (1ae4c79) with the e2e test "shows after the launch, with the flipped title". The live check happens on 2026-11-19.
 - [ ] **PROMO-04**: The posting schedule of 2026-11-15 to 2026-11-22 in `docs/PROMOTION.md` runs with its stop rules. This is human work: posts, the press note and X replies.
 - [ ] **PROMO-05**: On 2026-11-22 Andrei reads Umami referrers per channel and records the result.
 
 ### Candidate review
 
-- [ ] **REV-01**: A local review page shows one candidate at a time from `research/candidates.json`, with a yes answer and a no answer by swipe or keys. Source: issue #19.
-- [ ] **REV-02**: Yes sets `status: "launch"` and no sets `status: "drop"` in the JSON. Then `npm run cards` syncs the site. A yes on a find with no image fails the sync. Four such finds exist (list in `deploy/README.md`, § Removing or holding a card). Source: issue #19.
-- [ ] **REV-03**: The page is a dev tool and never ships. No file from it appears in `dist/`. Source: issue #19.
+- [x] **REV-01**: A local review page shows one candidate at a time from `research/candidates.json`, with a yes answer and a no answer by swipe or keys. Source: issue #19. Evidence: `.planning/verification/2026-11-16-completion.md` and the review fixture tests, 2026-11-16.
+- [x] **REV-02**: Yes sets `status: "launch"` and no sets `status: "drop"` in the JSON. The existing sync updates the site. Yes requires a loaded local image. An explicit fetch action prepares a local preview from an image URL. Four finds need manually supplied images. Held candidates remain protected. Source: issue #19. Evidence: `.planning/verification/2026-11-16-completion.md` and the review fixture tests, 2026-11-16.
+- [x] **REV-03**: The page is a dev tool and never ships. No file from it appears in `dist/`. Source: issue #19. Evidence: `.planning/verification/2026-11-16-completion.md` and the review fixture tests, 2026-11-16.
+
+### Protected deployments
+
+- [ ] **DEPLOY-01**: CI pins staging and production images on dedicated deployment branches. Arcane reads those branches. Both source branches require PRs and the `check` status. Integration uses rebase merges, and releases use merge commits. Force pushes and deletion remain blocked. Source: issue #24, included by Andrei on 2026-11-16.
 
 ## v2 Requirements
 
@@ -86,7 +90,6 @@ Deferred. Tracked, not in the current roadmap.
 | Rockstar material (GTA logo, fonts, key art) | Trademark risk. Ads make the site commercial. |
 | Sexually explicit cards; cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate | AdSense rules and Andrei's content rules. |
 | Show HN, a site name inside meme images, a card-grid homepage image, Bluesky, short video | The promotion council or Andrei rejected them (`docs/PROMOTION.md`). |
-| Branch ruleset enforcement | Andrei's decision, issue #24. Not planned here. |
 | Fixes for items in `.planning/codebase/CONCERNS.md` | Not requirements until Andrei picks them. |
 
 ## Traceability
@@ -118,22 +121,23 @@ Each v1 requirement maps to exactly one phase.
 | ADS-02 | Phase 5 | Complete (2026-11-15) |
 | MEAS-02 | Phase 5 | Complete (2026-11-15) |
 | PERF-01 | Phase 5 | Complete (2026-11-15) |
-| PROMO-01 | Phase 6 | Pending (unverified) |
-| PROMO-02 | Phase 6 | In progress (built; live check pending) |
+| PROMO-01 | Phase 6 | Complete (2026-11-16) |
+| PROMO-02 | Phase 6 | Complete (2026-11-16) |
 | PROMO-03 | Phase 6 | In progress (built; live check on 2026-11-19) |
 | PROMO-04 | Phase 6 | In progress |
 | PROMO-05 | Phase 6 | Pending (2026-11-22) |
 | CONT-05 | Phase 6 | Pending (2026-11-18) |
-| ADS-03 | Phase 6 | Pending (external; unverified) |
-| REV-01 | Phase 7 | Pending |
-| REV-02 | Phase 7 | Pending |
-| REV-03 | Phase 7 | Pending |
+| ADS-03 | Phase 6 | Pending (AdSense in review) |
+| REV-01 | Phase 7 | Complete (2026-11-16) |
+| REV-02 | Phase 7 | Complete (2026-11-16) |
+| REV-03 | Phase 7 | Complete (2026-11-16) |
+| DEPLOY-01 | Phase 8 | In progress |
 
 **Coverage:**
-- v1 requirements: 33 total
-- Complete: 23
-- Open: 10 (Phase 6: 7, Phase 7: 3)
-- Mapped to phases: 33
+- v1 requirements: 34 total
+- Complete: 28
+- Open: 6 (Phase 6: 5, Phase 8: 1)
+- Mapped to phases: 34
 - Unmapped: 0
 
 ## Intel traceability
@@ -157,4 +161,4 @@ Every entry of `.planning/intel/requirements.md` maps to at least one requiremen
 
 ---
 *Requirements defined: 2026-11-15*
-*Last updated: 2026-11-15 after the roadmap was created from the ingested specs*
+*Last updated: 2026-11-16 with production cache and share evidence, AdSense review status, and issue #24 scope*

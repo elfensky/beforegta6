@@ -12,9 +12,8 @@ sites are a placeholder, an empty board and an unfinished quiz (checked 2026-11-
 
 ## Before the first link post
 
-1. **Cache the HTML at the edge.** `/` returned `cf-cache-status: DYNAMIC` on 2026-11-15, so each visitor reaches the
-   origin. Add the Cloudflare Cache Rule in `deploy/README.md` § One-time setup, step 8, and run its check. A slow site
-   gets buried in every sub.
+1. **Cache the HTML at the edge.** Verified on 2026-11-16: two production requests returned `cf-cache-status: HIT`.
+   The apex cache rule and Tiered Cache are active. Configuration: `deploy/README.md` § One-time setup, step 8.
 2. **Check the Reddit account.** Open its profile while logged out. If the profile or a recent post is invisible, the
    account is shadowbanned: stop and use the press and X channels only. r/gaming allows self-promotion in at most 10 %
    of an account's submissions.
@@ -145,7 +144,7 @@ self-promotion. Make one only when there is time. It must be original, with no R
 
 | Change | State |
 |---|---|
-| Cloudflare Cache Rule for HTML | Andrei applies it in the dashboard (`deploy/README.md` § One-time setup, step 8) |
-| A share button on each card page: share sheet, else copy link | Built on branch `docs/social-promotion-plan` |
-| After launch, "And we got GTA 6 before The Winds of Winter." under the title | Built on the same branch |
+| Cloudflare Cache Rule for HTML | Active; two production responses returned `HIT` on 2026-11-16 |
+| A share button on each card page: share sheet, else copy link | Production serves the markup and script, verified 2026-11-16 |
+| After launch, "And we got GTA 6 before The Winds of Winter." under the title | Production serves the markup and countdown script; the calendar check remains scheduled for 2026-11-19 |
 | Homepage OG image as a grid of card images | Not chosen |

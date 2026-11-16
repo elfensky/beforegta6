@@ -17,7 +17,7 @@ The site is live, fast and correct on GTA 6 launch week, so the meme has a finis
 - **Success metric** (derived from the design spec `Success` section and `docs/PROMOTION.md`; Andrei has not stated a number):
   1. The site is live before 2026-11-19 with the curated launch set. Met on 2026-11-13.
   2. Every card has its own address, and a shared link previews that card's meme. Met.
-  3. AdSense approves the site after launch, and the site shows no ads until then. Open. AdSense status was "Getting ready" on 2026-11-15 (`deploy/README.md`).
+  3. AdSense approves the site after launch, and the site shows no ads until then. Open. Andrei confirmed review remains pending on 2026-11-16.
   4. Launch-week traffic by channel. No target exists. The plan only reads Umami referrers on 2026-11-22.
 - **Strategy notes**: `docs/PROMOTION.md` (launch-week promotion plan, adopted 2026-11-15).
 
@@ -49,8 +49,10 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - Official-looking Rockstar material (GTA logo, Rockstar fonts, key art) — trademark risk, and ads make the site commercial.
 - Sexually explicit content, and cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate — AdSense rules and Andrei's content rules.
 - A Show HN post, a site name inside meme images, a card-grid homepage image — the promotion council rejected them.
-- Branch ruleset enforcement — Andrei's decision, issue #24. This roadmap does not plan it.
 - Likes and dislikes — a v2 idea, not designed (see REQUIREMENTS.md).
+
+Issue #24 is included in the completion scope by Andrei's decision on 2026-11-16.
+Deployment pins move to dedicated branches before the source branches require PRs and passing checks.
 
 ## Context
 
