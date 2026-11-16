@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Candidate review · beforegta6.wtf</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Candidate review</h1>
+        <p>Local choices prepare cards. Publishing follows the normal release process.</p>
+        <p id="progress" aria-live="polite">Loading candidates…</p>
+      </header>
+      <p id="error" role="alert" hidden></p>
+      <p id="message" role="status"></p>
+      <div class="recovery">
+        <button id="refresh" type="button">Refresh</button>
+        <button id="retry" type="button" hidden>Retry synchronization</button>
+      </div>
+      <article id="candidate" aria-labelledby="title" hidden>
+        <img id="image" alt="" />
+        <p id="missing-image" hidden>No local image. Save an image before selecting Yes.</p>
+        <div class="details">
+          <h2 id="title"></h2>
+          <p id="blurb"></p>
+          <dl>
+            <div>
+              <dt>Date</dt>
+              <dd id="date"></dd>
+            </div>
+            <div>
+              <dt>Tags</dt>
+              <dd id="tags"></dd>
+            </div>
+            <div>
+              <dt>Current status</dt>
+              <dd id="status"></dd>
+            </div>
+          </dl>
+          <nav id="sources" aria-label="Candidate sources"></nav>
+          <button id="fetch" type="button" hidden>Fetch image</button>
+        </div>
+      </article>
+      <div class="actions" aria-label="Review actions">
+        <button id="no" type="button" aria-keyshortcuts="ArrowLeft">No</button>
+        <button id="yes" type="button" aria-keyshortcuts="ArrowRight">Yes</button>
+        <button id="skip" type="button">Skip</button>
+        <button id="previous" type="button">Previous</button>
+      </div>
+      <p class="help">
+        Yes: right arrow or swipe right. No: left arrow or swipe left. Holds stay protected.
+      </p>
+      <noscript>This local review page requires JavaScript.</noscript>
+    </main>
+  </body>
+</html>
