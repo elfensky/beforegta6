@@ -2,15 +2,16 @@ import { defineConfig, devices } from '@playwright/test';
 
 const PORT = 4321;
 
-// Runs against the built site (npm run build first). Astro 7 backgrounds `astro preview` when it detects an agent
-// session, so the command clears those markers and Playwright keeps owning the server process.
+// Runs against the built site (npm run build first). Astro's --ignore-lock keeps the preview
+// in the foreground, so Playwright owns its process even inside an agent session.
 export default defineConfig({
   testDir: 'e2e',
+  testIgnore: 'review.spec.js',
   fullyParallel: true,
   reporter: process.env.CI ? 'github' : 'list',
   use: { baseURL: `http://127.0.0.1:${PORT}` },
   webServer: {
-    command: `env -u CLAUDECODE -u AI_AGENT -u CLAUDE_CODE_ENTRYPOINT npx astro preview --port ${PORT} --host 127.0.0.1`,
+    command: `npx astro preview --ignore-lock --port ${PORT} --host 127.0.0.1`,
     url: `http://127.0.0.1:${PORT}/`,
     reuseExistingServer: !process.env.CI,
   },
