@@ -1,28 +1,24 @@
 name: Build
 
-# Every push to main or develop: build the multi-arch site image, push it to GHCR as :sha-<commit>, then pin that tag
-# into the branch's compose file and commit it to the same branch: main -> deploy/production/compose.yaml (Hetzner
-# swarm), develop -> deploy/staging/compose.yaml (Pi swarm). Arcane Git-Syncs each compose and redeploys on that
-# commit, so the image tag in git IS the deploy, and rollback is `git revert` of the pin commit. Copied from miklav.com.
-#
-# The pin commit cannot loop: pushes made with GITHUB_TOKEN never trigger workflows, and both compose files are in
-# paths-ignore. It must NOT carry [skip ci]: a release merge brings it to the tip of main, and the push to main would
-# then build nothing (src/__tests__/deploy.test.js).
+# Build main and develop as :sha-<commit>. Pin only on dedicated deployment branches:
+# main -> deploy/production, develop -> deploy/staging. Arcane reads the selected environment's compose file there.
+# The pin copies compose configuration from the built SHA and preserves the other environment's image tag.
+# Source branches receive no bot commits. Deployment branches do not trigger this workflow.
 
 on:
   push:
     branches: [main, develop]
-    # Root-level docs (a single `*` does not cross a `/`), docs/, research/ and the pin commits do not change the
-    # image. Card Markdown under src/content/ is deliberately NOT ignored: it is the site's content.
+    # Root-level docs (a single `*` does not cross a `/`), docs/, research/ and .planning/ do not change the image.
+    # Compose changes trigger a build so deployment branches receive the matching configuration.
+    # Card Markdown under src/content/ is deliberately included: it is the site's content.
     paths-ignore:
       - '*.md'
       - 'docs/**'
       - 'research/**'
-      - 'deploy/production/compose.yaml'
-      - 'deploy/staging/compose.yaml'
+      - '.planning/**'
   workflow_dispatch:
 
-# Never cancel: two pin commits racing on one branch is a failed push for nothing. One group per branch.
+# Serialize each source branch. The pin script also rejects stale builds and retries target push races.
 concurrency:
   group: build-${{ github.ref_name }}
   cancel-in-progress: false
@@ -40,6 +36,14 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v7.0.1
+      - name: Validate deployment source
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          case "$BRANCH" in
+            main|develop) ;;
+            *) echo "::error::Only main and develop can deploy"; exit 1 ;;
+          esac
       - uses: actions/setup-node@v7.0.0
         with:
           node-version-file: '.node-version'
@@ -72,7 +76,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7.0.1
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.sha }}
+          # The pin guard checks ancestry and ignores documentation-only descendants.
+          fetch-depth: 0
       - name: Pin the built image and commit
         env:
           SHA: ${{ github.sha }}

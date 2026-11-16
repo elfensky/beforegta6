@@ -16,7 +16,9 @@
     "test:e2e": "playwright test",
     "dev:up": "astro dev --background",
     "dev:down": "astro dev stop",
-    "cards": "node scripts/sync-cards.js"
+    "cards": "node scripts/sync-cards.js",
+    "review": "node scripts/review-candidates.js",
+    "test:review": "playwright test --config playwright.review.config.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.5",
