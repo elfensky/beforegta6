@@ -69,10 +69,15 @@ export function createReviewServer({ root, downloadImage }) {
       const address = server.address();
       const host = `127.0.0.1:${typeof address === 'object' ? address.port : ''}`;
       const origin = `http://${host}`;
+      const pageNavigation =
+        request.method === 'GET' &&
+        request.url === '/' &&
+        request.headers['sec-fetch-mode'] === 'navigate' &&
+        request.headers['sec-fetch-dest'] === 'document';
       if (
         request.headers.host !== host ||
         (request.headers.origin !== undefined && request.headers.origin !== origin) ||
-        request.headers['sec-fetch-site'] === 'cross-site'
+        (request.headers['sec-fetch-site'] === 'cross-site' && !pageNavigation)
       )
         throw failure(403, 'Request refused.');
       const route = request.url;

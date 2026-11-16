@@ -24,7 +24,7 @@ Four candidates need a manually supplied image.
 Verification completed on 2026-11-16:
 
 - `npm run lint` passed.
-- `npm test` passed 71 tests across 10 files.
+- `npm test` passed 72 tests across 10 files.
 - `npm run build` generated 101 pages.
 - `npx html-validate "dist/**/*.html"` passed.
 - `npm run test:review` passed six Chromium tests.
@@ -35,7 +35,14 @@ Verification completed on 2026-11-16:
 - Review tests cover decisions, protected holds, stale tabs, interrupted sync, local access restrictions, and bounded image downloads.
 - Browser tests cover buttons, keys, swipes, preview failures, image fetching, focus, reflow, and accessibility.
 
-Independent review and PR delivery remain pending.
+Claude Opus scored the change 8/10. DeepSeek Flash scored it 9/10. Both approved the infrastructure recovery change.
+No blocking finding remains. Tests cover the corrected page navigation and image-error interactions.
+The pinned checkout action explicitly supports credentials in temporary worktrees:
+[checkout v7.0.1](https://raw.githubusercontent.com/actions/checkout/v7.0.1/src/git-auth-helper.ts) ·
+[🔖 2026-11-16](https://linkding.lav.ren/bookmarks?details=6654).
+
+Delivery: [site PR #26](https://github.com/elfensky/beforegta6/pull/26) and
+[infrastructure PR #79](https://github.com/drunikbe/infra/pull/79). Merge and live migration remain pending.
 
 ## Deployment protection
 

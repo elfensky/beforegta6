@@ -89,6 +89,9 @@ test('failed saves keep the candidate visible and require a fresh state after st
   await expect(page.getByRole('heading', { level: 2 })).toHaveText(
     'First <script>alert(1)</script>',
   );
+  await page.getByRole('button', { name: 'Skip', exact: true }).click();
+  await expect(page.getByRole('heading', { level: 2 })).toHaveText('second');
+  await expect(page.getByRole('alert')).toBeVisible();
 });
 
 test('the page reflows at 320px and exposes accessible controls', async ({ page }) => {
@@ -128,6 +131,11 @@ test('an image that cannot load blocks Yes through buttons, keys, and swipes', a
   await expect(page.getByRole('heading', { level: 2 })).toHaveText(
     'First <script>alert(1)</script>',
   );
+  await page.getByRole('button', { name: 'Skip', exact: true }).click();
+  await expect(page.getByRole('heading', { level: 2 })).toHaveText('second');
+  await expect(page.getByRole('alert')).toBeHidden();
+  await page.getByRole('button', { name: 'Previous', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('image could not load');
   await page.unroute('**/image/first?*');
   await page.getByRole('button', { name: 'Refresh', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Yes', exact: true })).toBeEnabled();
