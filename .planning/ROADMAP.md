@@ -27,7 +27,7 @@ Phases 2 to 5 overlap in time. They are groups of one build, not a strict sequen
 - [x] **Phase 5: Ads and measurement (site v3)** - AdSense Auto ads, Web Vitals and the HTML cache header (completed 2026-11-15)
 - [ ] **Phase 6: Launch-week promotion** - Launch-week site changes, the posting schedule and the result read (in progress)
 - [x] **Phase 7: Candidate review** - A local swipe page that sorts candidates into launch and drop (completed 2026-11-16)
-- [ ] **Phase 8: Protected deployments** - Dedicated deployment branches and enforced source-branch checks (in progress, added 2026-11-16)
+- [x] **Phase 8: Protected deployments** - Dedicated deployment branches and enforced source-branch checks (complete, 2026-11-16)
 
 ## Phase Details
 
@@ -125,7 +125,7 @@ The posting schedule remains human work. The dated card release, launch-day chec
   4. The page never ships: no file from it appears in `dist/`.
 **Plans**: TBD
 **UI hint**: yes
-**Status**: Complete (#19), 2026-11-16. Independent review and merge remain delivery gates.
+**Status**: Complete (#19), 2026-11-16. Independently reviewed and delivered through PR #26 and release PR #27.
 **Evidence**: `.planning/verification/2026-11-16-completion.md`: 72 unit tests, six review browser tests, and 63 public-site browser tests pass.
 **Implementation plan**: `docs/superpowers/plans/2026-11-16-candidate-review.md`.
 The tool protects held candidates and requires a local image before launch.
@@ -143,7 +143,9 @@ An explicit fetch action prepares a local preview when an image URL exists.
   3. The recovery configuration in `drunikbe/infra` names the production deployment branch.
   4. Both source branches require a PR and the `check` status. `develop` permits rebase merges, and `main` permits release merges.
   5. Force pushes and branch deletion remain blocked.
-**Status**: In progress, 2026-11-16.
+**Status**: Complete (#24), 2026-11-16. Both environments run the selected images on two replicas.
+**Evidence**: `.planning/verification/2026-11-16-completion.md`; release PR #27 and `drunikbe/infra#79`.
+GitHub's effective branch rules confirm the PR, status-check, merge-method, force-push, and deletion requirements.
 
 **eli14:** Source branches hold approved changes. Deployment branches hold the image labels used by the servers.
 Keeping these records separate lets checks protect source changes while automation updates the labels.
@@ -151,7 +153,7 @@ Keeping these records separate lets checks protect source changes while automati
 ## Progress
 
 **Execution Order:**
-Phases 1 to 5 are complete and overlap in time. Phase 7 is complete. Phase 8 proceeds while Phase 6 awaits dates and external actions.
+Phases 1 to 5, 7, and 8 are complete. Phase 6 awaits dates and external actions.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -162,4 +164,4 @@ Phases 1 to 5 are complete and overlap in time. Phase 7 is complete. Phase 8 pro
 | 5. Ads and measurement (site v3) | backdated | Complete | 2026-11-15 |
 | 6. Launch-week promotion | 0/TBD | In progress | - |
 | 7. Candidate review | 1/1 | Complete | 2026-11-16 |
-| 8. Protected deployments | 0/1 | In progress | - |
+| 8. Protected deployments | 1/1 | Complete | 2026-11-16 |

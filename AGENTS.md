@@ -32,8 +32,8 @@ This file holds only what is true of this repo. A personal project (Andrei, 2026
 CI writes image pins to `deploy/staging` and `deploy/production`; Arcane reads those branches.
 Merge feature PRs with `gh pr merge --rebase`, then `git push origin --delete <branch>`.
 Release PRs from `develop` to `main` use `gh pr merge --merge`.
-Both source branches require PRs and the `check` status after the issue #24 migration.
-The migration order and live verification are recorded in `deploy/README.md`.
+Both source branches require PRs and the `check` status. Issue #24 was completed on 2026-11-16.
+The migration procedure is in `deploy/README.md`; live evidence is in `.planning/verification/2026-11-16-completion.md`.
 Deployment branches remain writable by CI. Never add the source-branch PR requirement to them.
 
 ## This repo's own rules
