@@ -56,7 +56,9 @@ for (const route of ['/', '/oldest/', `/${safe.id}/`, '/privacy/']) {
         .evaluateAll((links) =>
           links.map((a) => new URL(a.getAttribute('href'), 'https://beforegta6.wtf').href),
         );
-      expect(webpage.mainEntity.itemListElement.map((item) => item.url)).toEqual(visible);
+      expect(webpage.mainEntity.itemListElement.map((item) => item.url)).toEqual(
+        route === '/oldest/' ? visible.toReversed() : visible,
+      );
     }
     if (route === `/${safe.id}/`) {
       expect(await meta('og:title')).toBe(safe.title);
@@ -99,6 +101,10 @@ test('the machine-readable index matches canonical pages and omits research and 
   const sitemap = await (await request.get(sitemapPath)).text();
   expect([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]).sort()).toEqual(urls);
   expect(text).not.toMatch(/review_notes|review_decision|decided_at|merged_into/);
+  for (const card of selected) {
+    const line = text.split('\n').find((line) => line.includes(`](${site}/${card.id}/):`));
+    expect(line.includes('(mature)'), card.id).toBe(Boolean(card.nsfw));
+  }
 });
 
 test('404 pages stay out of structured search data', async ({ page }) => {

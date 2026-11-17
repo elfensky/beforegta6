@@ -8,6 +8,7 @@ import {
   DEFAULT_IMAGE_ALT,
   SOCIAL_WIDTH,
   SOCIAL_HEIGHT,
+  SOCIAL_VERSION,
   structuredData,
   serializeJsonLd,
 } from '../lib/meta.js';
@@ -36,7 +37,7 @@ const og = await getImage({
   width: SOCIAL_WIDTH,
   height: SOCIAL_HEIGHT,
   format: 'jpg',
-  socialPreview: true,
+  socialPreview: SOCIAL_VERSION,
 });
 const canonical = new URL(path, site).href;
 const image = {

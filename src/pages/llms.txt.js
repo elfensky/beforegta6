@@ -25,7 +25,7 @@ export async function GET() {
     ...entries.flatMap((entry) =>
       entry.kind === 'card'
         ? [
-            `- [${entry.card.data.title.replace(/[\\[\]]/g, '\\$&')}](${SITE_URL}/${entry.card.id}/): ${entry.card.data.blurb.replace(/\s+/g, ' ')}`,
+            `- [${entry.card.data.title.replace(/[\\[\]]/g, '\\$&')}](${SITE_URL}/${entry.card.id}/): ${entry.card.data.nsfw ? '(mature) ' : ''}${entry.card.data.blurb.replace(/\s+/g, ' ')}`,
           ]
         : [],
     ),

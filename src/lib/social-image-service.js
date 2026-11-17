@@ -11,12 +11,14 @@ const service = {
   propertiesToHash: [...baseService.propertiesToHash, 'socialPreview'],
   getURL(options, config) {
     const url = sharpService.getURL(options, config);
-    return options.socialPreview ? `${url}&socialPreview=1` : url;
+    return options.socialPreview
+      ? `${url}&socialPreview=${encodeURIComponent(options.socialPreview)}`
+      : url;
   },
   parseURL(url, config) {
     const options = sharpService.parseURL(url, config);
     return options
-      ? { ...options, socialPreview: url.searchParams.get('socialPreview') === '1' }
+      ? { ...options, socialPreview: url.searchParams.get('socialPreview') || undefined }
       : undefined;
   },
   async transform(input, options, config, logger) {

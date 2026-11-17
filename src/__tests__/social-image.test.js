@@ -41,12 +41,12 @@ test('ordinary page image transformations keep their original behavior', async (
 test('the development image URL preserves the social transform and its cache key', () => {
   expect(service.propertiesToHash).toContain('socialPreview');
   const options = service.parseURL(
-    new URL('http://localhost/_image?href=/image.png&w=1200&h=630&f=jpg&socialPreview=1'),
+    new URL('http://localhost/_image?href=/image.png&w=1200&h=630&f=jpg&socialPreview=v1'),
     {},
   );
-  expect(options.socialPreview).toBe(true);
+  expect(options.socialPreview).toBe('v1');
   expect(
     service.parseURL(new URL('http://localhost/_image?href=/image.png&w=400&f=webp'), {})
       .socialPreview,
-  ).toBe(false);
+  ).toBeUndefined();
 });

@@ -11,12 +11,14 @@ The shared `src/layouts/Base.astro` writes metadata into static HTML. Crawlers n
 - Normal page images use Astro's standard image service. Only preview transforms use the fixed canvas.
 - NSFW entries use the default site image and its description in every metadata format.
 - Social titles retain the full entry title. The browser title keeps its existing length limit.
+- Image descriptions must contain non-whitespace text. Invalid descriptions fail the content build.
+- `SOCIAL_VERSION` participates in the preview cache hash. Raise it whenever the canvas colour, quality, or transform logic changes.
 
 ## Structured data
 
 Each indexable page includes one connected JSON-LD graph with stable production URLs.
 The graph describes the WebSite, an ImageObject, and a WebPage or CollectionPage.
-The timeline includes an ItemList in the displayed card order. Milestone pages retain their own entry metadata.
+Both timeline views include the same ItemList in canonical newest-first order. Milestone pages retain their own entry metadata.
 Entry pages add breadcrumbs and a CreativeWork with the visible description and source citations.
 The graph does not invent publication dates, ratings, search actions, or affiliations.
 Event dates are not website publication dates.
@@ -30,13 +32,14 @@ Staging retains nginx's `X-Robots-Tag: noindex` policy.
 
 `/llms.txt` lists the homepage, privacy page, and every selected entry, including milestone pages.
 It uses the public content collection. It exposes no review notes, decisions, or excluded entries.
+Each NSFW entry carries an explicit `(mature)` label.
 A regression test compares its URLs with the generated sitemap.
 This file follows the website handbook's GEO-03 convention. It does not promise crawler adoption or ranking benefits.
 
 ## Verification
 
 Unit tests cover JSON-LD escaping, graph references, source citations, and actual image dimensions.
-Browser tests read metadata with JavaScript disabled, fetch preview images, and compare timeline lists with visible links.
+Browser tests read metadata with JavaScript disabled, fetch preview images, and compare canonical timeline lists with visible links.
 They also check the NSFW fallback, full titles, sitemap parity, and 404 behavior.
 Use `SITE_TEST_PORT=4324 npm run test:e2e` to verify the built site while the local development server remains available.
 
