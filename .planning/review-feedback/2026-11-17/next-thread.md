@@ -1,4 +1,13 @@
-# Next thread: finish selected images and release
+# Historical handoff: finish selected images and release
+
+## Current state — latest instruction, 17 November 2026
+
+All 46 images are complete. The reviewed selection is released and verified on staging and production.
+Andrei will publish every social post himself. The assistant prepares drafts and assets only; it must not publish or contact moderators.
+Current drafts are in `docs/promotion/2026-11-17-posts.md` and `docs/promotion/2026-11-17-subreddit-posts.md`.
+The original launch brief below is historical. Its request for agent publication is superseded. Do not repeat image integration or deployment work.
+
+## Original launch brief
 
 Continue beforegta6 in the EXISTING worktree `/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94`, branch `chore/audit-remaining-design-work`. Clone: `/Users/andrei/Developer/beforegta6`. This worktree has extensive uncommitted user review selections, review-tool fixes, content edits, and image files. Preserve them; do not start from the remote branch or rerun `integrate.mjs`.
 

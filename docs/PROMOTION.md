@@ -5,18 +5,26 @@
 - Window: Sunday 2026-11-15 to Sunday 2026-11-22. GTA 6 launches on Thursday 2026-11-19 (Take-Two Q2 FY27 earnings, 9 Nov 2026).
 - Budget: 1 to 2 hours a day, finished before 23:00 CET.
 
-## Start condition and urgency — confirmed 2026-11-17
+## Publication owner — confirmed 2026-11-17
+
+Andrei will publish every post himself. The assistant prepares drafts, assets, and rule checks only.
+This instruction supersedes the earlier request for immediate agent publication. No moderator message, social post, or reply is authorized for the assistant.
+Andrei named Playwright when answering the earlier X-access question. No posting connection is needed for the current drafts-only task.
+The pending moderator-contact and X-connection questions are closed. Andrei handles any moderator contact himself.
+
+## Production-first order
 
 The local Yes/No tool and manual sort are complete.
 Finish the remaining image work, then update and verify staging and production with the reviewed selection.
-**Create and publish social-media posts immediately after production verification, as soon as possible.** Drafts alone do not complete this goal.
+The reviewed selection is verified on staging and production. Prepare the promotion materials for Andrei to publish manually.
+Draft preparation completes the assistant's promotion task. Public promotion remains open until Andrei publishes and records the URLs.
 
 This production-first order supersedes missed dates in the original schedule below.
 Refresh draft counts, dates, examples, and card links against the deployed site before posting.
 Keep the agreed channel limits and stop rules. Recheck current platform and community rules before each post.
 Record each published post's URL, channel, and time so completion can be verified.
 
-Andrei excluded r/SideProject on 2026-11-17. Prioritize relevant gaming communities, starting with r/gaming.
+Andrei excluded r/SideProject on 2026-11-17. Prioritize relevant gaming communities. r/gaming is closed after its moderator removal.
 GTA and meme communities remain subject to the existing exclusions and their current rules.
 The original r/SideProject schedule and draft below are historical and must not be published.
 
@@ -70,7 +78,7 @@ Showcase thread. r/InternetIsBeautiful bans "aggregates" and "collections", whic
 ## Stop rules
 
 - **r/gaming is closed for this project.** AutoModerator removed [the 17 November post](https://www.reddit.com/r/gaming/comments/1xyn10b/) for insufficient community participation. The no-repost rule below applies permanently.
-- **X requires an approved API route.** Its current automation rules prohibit website scripting and unsolicited automated replies. The reply drafts below are not authorization to ignore those rules.
+- **Andrei posts manually on X.** The current task needs no automation connection. X's automation rules still prohibit website scripting and unsolicited automated replies.
 - A link post that shows 0 visits from its referrer in Umami 1 hour after posting is removed or filtered. Make no other
   Reddit link post that day.
 - A mod removal in r/gaming: never post the link there again.
@@ -78,6 +86,7 @@ Showcase thread. r/InternetIsBeautiful bans "aggregates" and "collections", whic
 
 ## Drafts
 
+These original drafts are historical. Use the refreshed copy in `promotion/2026-11-17-posts.md` and the community-specific pack instead.
 Rewrite each draft in your own words before you post. r/webdev removes posts that read as LLM-generated.
 
 **1. r/SideProject**

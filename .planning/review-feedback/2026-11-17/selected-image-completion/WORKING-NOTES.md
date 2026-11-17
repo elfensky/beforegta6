@@ -74,3 +74,10 @@
 - r/GamingMemes is banned and unavailable. Do not confuse it with r/GTAmemes. The unavailable community is not a publication route.
 - A recent-topic search found existing broad GTA-wait retrospectives. The r/GTA draft uses a narrower comparison; a final duplicate check remains required before submission.
 - Nowledge retrieval recovered during this continuation. The targeted thread search for beforegta6 promotion returned the prior promotion plan and the parent continuation instructions.
+
+## Manual publication handoff
+
+- Andrei answered the pending questions: he will publish everything himself and wants drafts only. The earlier agent-publication instruction is superseded. No moderator message or new social post was sent.
+- His X-access answer named Playwright. The current drafts-only task needs no posting connection, so no browser publication or credential setup was attempted.
+- The X main post now avoids a relative launch-date promise. The Reddit drafts retain their promotion and AI limits, which still apply when a person submits them.
+- PR #33 remains the documentation release. Merge the manual-publication clarification into develop before that release, so main records the current owner correctly.
