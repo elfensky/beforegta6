@@ -41,3 +41,12 @@
 ## Integration correction
 
 - The content gate rejected `trump-mcdonalds` because its inherited engagement string contained `(video post)`. The metrics remain unchanged; the annotation moved to `source_note`, following the existing engagement rule. The existing content test reproduces this failure.
+
+## Independent review disposition
+
+- Opus 5.5 found no code or release blocker and assessed the changes at 8.5/10. The review covered persistence, missing-image handling, milestones, protected holds, synchronization, public-data boundaries, and approved media scope.
+- P2 concerned five launch records whose preserved No click conflicts with a Yes note: `oumuamua`, `spacex-ipo`, `tariffs-struck-down`, `gaga-copacabana`, and `k2-18b-life-hint`. No candidate data was changed after this review.
+- The parent verified the earlier user instructions in T3 thread `adf4d34f-ed15-4256-a848-abc70de46241`. At position 310, 2026-11-17 12:49 UTC, Andrei said: “I can't save items as \"launch\" if the image fetch fails. I edited the note for them instead.” At position 385, after sorting, Andrei said: “the review is complete. Review all items with notes, and update them based on the feedback. Use (cheaper) opus subangets.”
+- Those instructions support the existing note-based selections. The original No clicks remain historical records, not reconstructed votes. The existing five outcomes explicitly record selection from the note. The P2 does not require another confirmation or a reversal of the completed note pass.
+- P3 was accepted: promotion copy now states “192 cards and 18 GTA milestones” instead of “206 cards”. Counts and examples still require production verification before posting.
+- The required Nowledge history retry returned connection refused. The exact T3 source messages above supplied the missing context.
