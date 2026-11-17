@@ -11,17 +11,13 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
   <article class="prose">
     <h1 class="page-title">Privacy</h1>
     <p>
-      beforegta6.wtf is a hobby site by {OPERATOR}, Belgium. Questions or requests:
+      beforegta6.wtf is a hobby site by {OPERATOR}, Belgium. Questions or requests: the
+      <a href="/contact/">contact form</a> or
       <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
     </p>
     <h2>What this site collects</h2>
     <ul>
-      <li>There are no accounts and no forms. This site sets no cookies of its own.</li>
-      <li>
-        Page views and page load times are counted with Umami, which runs on our own server. Umami
-        uses no cookies and does not store your IP address. It does not record your screen or where
-        you click.
-      </li>
+      <li>There are no accounts. This site sets no cookies of its own.</li>
       <li>
         Cloudflare delivers the site. It processes your IP address to do that and to block attacks (
         <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">
@@ -30,6 +26,59 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
         ).
       </li>
     </ul>
+    <h2>Page views (Umami)</h2>
+    <p>
+      Umami counts page views and page load times. It runs on our own server. For each page view it
+      records:
+    </p>
+    <ul>
+      <li>the page address and title, and the address of the site that sent you</li>
+      <li>your browser, operating system, device type, screen size and language</li>
+      <li>your country, region and city, which Umami finds from your IP address</li>
+      <li>how fast the page loads (TTFB, FCP, LCP, CLS and INP)</li>
+    </ul>
+    <p>
+      Umami uses no cookies and does not store your IP address. It does not record your screen or
+      where you click. It groups page views into visits with a code made from your IP address and
+      your browser. That code is pseudonymous, not anonymous, so the law treats it as personal data.
+    </p>
+    <p>
+      Legal basis: our legitimate interest in knowing which pages people read and whether the site
+      is fast (GDPR Art. 6(1)(f)). We keep the records until we delete them. There is no automatic
+      deletion yet.
+    </p>
+    <p>
+      You can object at any time. This button stops Umami for this browser. The choice is stored in
+      this browser only.
+    </p>
+    <p class="optout">
+      <button id="optout" type="button" hidden>
+        Stop counting my visits
+      </button>
+      <span role="status"></span>
+    </p>
+    <h2 id="contact-form">Contact form</h2>
+    <p>
+      The <a href="/contact/">contact form</a> sends your e-mail address, the subject, the link and
+      your message to Formspark (Trampoline Software SRL, Belgium). Formspark stores them in Ireland
+      and Germany and e-mails them to us (
+      <a href="https://formspark.io/legal/privacy-policy/" rel="noopener">
+        Formspark privacy policy
+      </a>
+      ).
+    </p>
+    <p>
+      Cloudflare Turnstile checks that a person, not a bot, sends the form. To do that, it processes
+      your IP address and data about your browser (
+      <a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener">
+        Turnstile privacy addendum
+      </a>
+      ).
+    </p>
+    <p>
+      We use a message only to answer it and to act on it. Legal basis: our legitimate interest in
+      answering the messages people send (GDPR Art. 6(1)(f)). We keep messages until we delete them.
+    </p>
     <h2>Ads</h2>
     <p>
       Google AdSense shows the ads on this site. Google and its partners use cookies, similar
@@ -75,8 +124,11 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
     </p>
     <p>
       <small>
-        Last updated: <time datetime="2026-11-15">15 November 2026</time>.
+        Last updated: <time datetime="2026-11-17">17 November 2026</time>.
       </small>
     </p>
   </article>
+  <script>
+    import '../scripts/optout.js';
+  </script>
 </Base>
