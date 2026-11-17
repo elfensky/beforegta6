@@ -1,0 +1,3308 @@
+{
+  "date": "2026-11-17",
+  "scope": "Noted items except the 14 milestone notes; missing images plus requested replacements.",
+  "images": [
+    {
+      "id": "chip-shortage",
+      "file": "assets/chip-shortage.png",
+      "width": 1280,
+      "height": 451,
+      "type": "image/png",
+      "bytes": 116092,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/US_Domestic_Auto_Production_%28since_1993%2C_FRED%29.png/1280px-US_Domestic_Auto_Production_%28since_1993%2C_FRED%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:US_Domestic_Auto_Production_(since_1993,_FRED).png",
+        "image_license": "Public domain (FRED (U.S. Bureau of Economic Analysis))",
+        "image_alt": "FRED line chart of US domestic auto production from 1993 to 2025, with a sharp dip in 2020"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:US Domestic Auto Production (since 1993, FRED).png",
+        "license_url": null,
+        "commons_description": "U.S. Domestic Auto Production, since 1993 till 2025.\nSource: FRED, U.S. B.E.A.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Andrei suggested recasting this as \"we got covid before GTA 6\"; a COVID image is a follow-up only if the editorial pass accepts that rewrite."
+    },
+    {
+      "id": "trump-impeached",
+      "file": "assets/trump-impeached.jpg",
+      "width": 1280,
+      "height": 719,
+      "type": "image/jpeg",
+      "bytes": 234208,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg/1280px-House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg",
+        "image_license": "Public domain (United States House of Representatives)",
+        "image_alt": "The US House of Representatives chamber during the vote on the articles of impeachment, 18 December 2019"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:House of Representatives Votes to Adopt the Articles of Impeachment Against Donald Trump.jpg",
+        "license_url": null,
+        "commons_description": "On December 18, 2019, United States House of Representatives votes to adopt the articles of impeachment, accusing Donald Trump of abuse of power and obstruction of Congress.",
+        "restrictions": "personality",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "apple-trillion",
+      "file": "assets/apple-trillion.jpg",
+      "width": 1280,
+      "height": 855,
+      "type": "image/jpeg",
+      "bytes": 539387,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Aerial_view_of_Apple_Park_dllu.jpg/1280px-Aerial_view_of_Apple_Park_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Apple_Park_dllu.jpg",
+        "image_license": "CC BY-SA 4.0 (Daniel L. Lu (user:dllu))",
+        "image_alt": "Aerial view of Apple Park, the ring-shaped Apple headquarters in Cupertino"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Aerial view of Apple Park dllu.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Aerial view of Apple Park, the corporate headquarters of Apple Inc., located in Cupertino, California. The roof is covered in solar panels with an output of 17 MWp, making it one of the biggest solar ",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "black-hole-milky-way",
+      "file": "assets/black-hole-milky-way.jpg",
+      "width": 1280,
+      "height": 1280,
+      "type": "image/jpeg",
+      "bytes": 57811,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Sag_A%2A.jpg/1280px-Sag_A%2A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Sag_A*.jpg",
+        "image_license": "CC BY 4.0 (EHT Collaboration)",
+        "image_alt": "The Event Horizon Telescope image of Sagittarius A*, an orange ring around a dark centre"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Sag A*.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Sagittarius A* Imaged by the Event Horizon Telescope",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "blessings-same-sex-couples",
+      "file": "assets/blessings-same-sex-couples.png",
+      "width": 1280,
+      "height": 1707,
+      "type": "image/png",
+      "bytes": 2594019,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pope_Francis_2014_%28cropped%29.png/1280px-Pope_Francis_2014_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Pope_Francis_2014_(cropped).png",
+        "image_license": "CC BY-SA 2.0 (Jeffrey Bruno from New York City, United States)",
+        "image_alt": "Pope Francis in white, smiling"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Pope Francis 2014 (cropped).png",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "commons_description": "ROME,VATICAN 27 APRIL: \"Images taken from what will go down in history as one of the largest and most important days in current history. The Canonization of Blessed Pope John XXIII and Blessed Pope Jo",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Portrait of Pope Francis (2014); no photo of a blessing."
+    },
+    {
+      "id": "change4-far-side-landing",
+      "file": "assets/change4-far-side-landing.jpg",
+      "width": 1280,
+      "height": 720,
+      "type": "image/jpeg",
+      "bytes": 186023,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Yutu-2_leaving_Chang_e-4-iau1901a.jpg/1280px-Yutu-2_leaving_Chang_e-4-iau1901a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Yutu-2_leaving_Chang_e-4-iau1901a.jpg",
+        "image_license": "CC BY 4.0 (CNSA)",
+        "image_alt": "The Yutu-2 rover driving away from the Chang'e 4 lander on the far side of the Moon"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Yutu-2 leaving Chang e-4-iau1901a.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "\"Yutu -2\" Rover leaving the Chang'e-4 Lander.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "crispr-cure-approved",
+      "file": "assets/crispr-cure-approved.jpg",
+      "width": 1280,
+      "height": 853,
+      "type": "image/jpeg",
+      "bytes": 333982,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Sickle_Cell_Anemia_%285610746554%29.jpg/1280px-Sickle_Cell_Anemia_%285610746554%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Sickle_Cell_Anemia_(5610746554).jpg",
+        "image_license": "CC BY 2.0 (Ed Uthman from Houston, TX, USA)",
+        "image_alt": "Microscope view of a blood smear with sickle-shaped red blood cells"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Sickle Cell Anemia (5610746554).jpg",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "commons_description": "Peripheral blood smear\n\nPathological and histological images courtesy of Ed Uthman at flickr.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "eu-roaming-free",
+      "file": "assets/eu-roaming-free.jpg",
+      "width": 1280,
+      "height": 853,
+      "type": "image/jpeg",
+      "bytes": 286338,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Free_roaming_in_the_European_Union_-_P051179-923299.jpg/1280px-Free_roaming_in_the_European_Union_-_P051179-923299.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Free_roaming_in_the_European_Union_-_P051179-923299.jpg",
+        "image_license": "CC BY 4.0 (European Commission)",
+        "image_alt": "A phone on an open map shows \"Free roaming\" with EU flags"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Free roaming in the European Union - P051179-923299.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Illustration - The end of roaming charges",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "eu-usb-c-iphone",
+      "file": "assets/eu-usb-c-iphone.jpg",
+      "width": 1280,
+      "height": 854,
+      "type": "image/jpeg",
+      "bytes": 201220,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/USB-C_plug%2C_focus_stacked.jpg/1280px-USB-C_plug%2C_focus_stacked.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:USB-C_plug,_focus_stacked.jpg",
+        "image_license": "CC BY-SA 4.0 (Tomato86)",
+        "image_alt": "Close-up of a USB-C plug"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:USB-C plug, focus stacked.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "A macro photo of a USB-C plug, focus stacked using Hugin, nona and enfuse from 70 individual exposures",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "falcon9-booster-landing",
+      "file": "assets/falcon9-booster-landing.jpg",
+      "width": 1280,
+      "height": 853,
+      "type": "image/jpeg",
+      "bytes": 152866,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/ORBCOMM-2_First-Stage_Landing_%2823271687254%29.jpg/1280px-ORBCOMM-2_First-Stage_Landing_%2823271687254%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:ORBCOMM-2_First-Stage_Landing_(23271687254).jpg",
+        "image_license": "CC0 (SpaceX)",
+        "image_alt": "A Falcon 9 first stage lands upright on its landing pad at night, December 2015"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:ORBCOMM-2 First-Stage Landing (23271687254).jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons_description": "ORBCOMM-2 First-Stage Landing",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "ftx-collapse",
+      "file": "assets/ftx-collapse.png",
+      "width": 1080,
+      "height": 1439,
+      "type": "image/png",
+      "bytes": 1770120,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sam_Bankman-Fried_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Sam_Bankman-Fried_(cropped).png",
+        "image_license": "CC BY 3.0 (Cointelegraph)",
+        "image_alt": "Sam Bankman-Fried during an interview at the Bitcoin 2021 conference"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Sam Bankman-Fried (cropped).png",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "commons_description": "Sam Bankman-Fried in an interview during the Bitcoin 2021 conference",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "gulf-of-america",
+      "file": "assets/gulf-of-america.jpg",
+      "width": 1050,
+      "height": 810,
+      "type": "image/jpeg",
+      "bytes": 88643,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/U.S._Geological_Survey_map_of_the_Gulf_of_America%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:U.S._Geological_Survey_map_of_the_Gulf_of_America,_2025.jpg",
+        "image_license": "Public domain (U.S. Department of the Interior)",
+        "image_alt": "US Geological Survey map labelled \"Gulf of America\""
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:U.S. Geological Survey map of the Gulf of America, 2025.jpg",
+        "license_url": null,
+        "commons_description": "Image and description are United States of America state propaganda.  \nIt's official! Congratulations @POTUS on the Gulf of America ! @Interior has implemented your instruction from the Executive Orde",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Commons description calls the image US government messaging; the map itself is the official USGS map."
+    },
+    {
+      "id": "harris-first-woman-vp",
+      "file": "assets/harris-first-woman-vp.jpg",
+      "width": 1280,
+      "height": 1708,
+      "type": "image/jpeg",
+      "bytes": 391752,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Kamala_Harris_Vice_Presidential_Portrait_%28cropped%29.jpg/1280px-Kamala_Harris_Vice_Presidential_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Kamala_Harris_Vice_Presidential_Portrait_(cropped).jpg",
+        "image_license": "Public domain (Lawrence Jackson)",
+        "image_alt": "Official portrait of Vice President Kamala Harris"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Kamala Harris Vice Presidential Portrait (cropped).jpg",
+        "license_url": null,
+        "commons_description": "Kamala Harris",
+        "restrictions": "personality",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "heartbleed",
+      "file": "assets/heartbleed.png",
+      "width": 1280,
+      "height": 1531,
+      "type": "image/png",
+      "bytes": 59501,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Heartbleed.svg/1280px-Heartbleed.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Heartbleed.svg",
+        "image_license": "CC0 (Leena Kurjenniska / Codenomicon 2014)",
+        "image_alt": "The Heartbleed logo: a red heart dripping blood"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Heartbleed.svg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons_description": "The logo of the heartbleed bug",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "hiv-twice-a-year-jab",
+      "file": "assets/hiv-twice-a-year-jab.jpg",
+      "width": 1280,
+      "height": 890,
+      "type": "image/jpeg",
+      "bytes": 360246,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/HIV_H9_T-cell_II.jpg/1280px-HIV_H9_T-cell_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:HIV_H9_T-cell_II.jpg",
+        "image_license": "Public domain (National Institutes of Health (NIH))",
+        "image_alt": "Electron micrograph of HIV particles, in yellow, on an infected T cell"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:HIV H9 T-cell II.jpg",
+        "license_url": null,
+        "commons_description": "Title: \tHIV-infected H9 T-cell\nDescription: \tScanning electron micrograph of HIV particles infecting a human T cell\nCategories: \tResearch in NIH Labs and Clinics\nType: \tColor, Photo\nSource: \tNational ",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "india-general-strike",
+      "file": "assets/india-general-strike.jpg",
+      "width": 1280,
+      "height": 1496,
+      "type": "image/jpeg",
+      "bytes": 577042,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg/1280px-2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg",
+        "image_license": "CC BY-SA 4.0 (Randeep Maddoke; randeepphotoartist@gmail.com)",
+        "image_alt": "Aerial view of a farmers' march to Delhi filling a highway, 2020"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:2020 Indian farmers' protest - March to Delhi.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "March to Delhi , taken from above",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "ingenuity-mars-flight",
+      "file": "assets/ingenuity-mars-flight.jpg",
+      "width": 990,
+      "height": 729,
+      "type": "image/jpeg",
+      "bytes": 702426,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ingenuity_helicopter%2C_cropped_from_Perseverance_selfie_%28PIA24542%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Ingenuity_helicopter,_cropped_from_Perseverance_selfie_(PIA24542).jpg",
+        "image_license": "Public domain (NASA/JPL-Caltech/MSSS)",
+        "image_alt": "The Ingenuity helicopter standing on the surface of Mars, photographed by Perseverance"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Ingenuity helicopter, cropped from Perseverance selfie (PIA24542).jpg",
+        "license_url": null,
+        "commons_description": "NASA's Perseverance Mars rover took a selfie with the Ingenuity helicopter, seen here about 13 feet (3.9 meters) from the rover in this image taken April 6, 2021, the 46th Martian day, or sol, of the ",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "internet-explorer-retired",
+      "file": "assets/internet-explorer-retired.png",
+      "width": 1280,
+      "height": 1258,
+      "type": "image/png",
+      "bytes": 26597,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_Explorer_10%2B11_logo.svg/1280px-Internet_Explorer_10%2B11_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Internet_Explorer_10%2B11_logo.svg",
+        "image_license": "Public domain (Microsoft)",
+        "image_alt": "The blue Internet Explorer \"e\" logo"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Internet Explorer 10+11 logo.svg",
+        "license_url": null,
+        "commons_description": "The Internet Explorer 10 logo",
+        "restrictions": "trademarked",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "lettuce-outlasts-truss",
+      "file": "assets/lettuce-outlasts-truss.jpg",
+      "width": 1280,
+      "height": 1086,
+      "type": "image/jpeg",
+      "bytes": 182282,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Prime_Minister_Liz_Truss_announces_her_resignation_%28cropped%29.jpg/1280px-Prime_Minister_Liz_Truss_announces_her_resignation_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Liz_Truss_announces_her_resignation_(cropped).jpg",
+        "image_license": "OGL 3 (Prime Minister's Office)",
+        "image_alt": "Liz Truss at a lectern outside 10 Downing Street on 20 October 2022"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Prime Minister Liz Truss announces her resignation (cropped).jpg",
+        "license_url": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3",
+        "commons_description": "Prime Minister Liz Truss's statement in Downing Street: 20 October 2022\nPrime Minister Liz Truss gave a statement in Downing Street.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "mexico-first-woman-president",
+      "file": "assets/mexico-first-woman-president.jpg",
+      "width": 1280,
+      "height": 853,
+      "type": "image/jpeg",
+      "bytes": 185318,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Claudia_Sheinbaum_discurso_de_la_victoria.jpg/1280px-Claudia_Sheinbaum_discurso_de_la_victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_discurso_de_la_victoria.jpg",
+        "image_license": "CC BY 4.0 (EneasMx)",
+        "image_alt": "Claudia Sheinbaum raises her fist at a lectern during her victory speech, 2 June 2024"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Claudia Sheinbaum discurso de la victoria.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Claudia Sheinbaum, virtual presidenta electa de México, durante su discurso de victoria el 2 de junio, 2024",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "microsoft-activision",
+      "file": "assets/microsoft-activision.jpg",
+      "width": 1280,
+      "height": 1067,
+      "type": "image/jpeg",
+      "bytes": 362866,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Activisionheadquarters.jpg/1280px-Activisionheadquarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Activisionheadquarters.jpg",
+        "image_license": "CC BY-SA 3.0 (w:User:Coolcaesar)",
+        "image_alt": "Activision headquarters building in Santa Monica"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Activisionheadquarters.jpg",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "commons_description": "Activision headquarters in Santa Monica, California",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "negative-oil-price",
+      "file": "assets/negative-oil-price.png",
+      "width": 1209,
+      "height": 604,
+      "type": "image/png",
+      "bytes": 21462,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/WTI_price_2019-2020.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:WTI_price_2019-2020.png",
+        "image_license": "CC BY-SA 4.0 (Renerpho)",
+        "image_alt": "Line chart of the WTI crude oil price, falling below zero in April 2020"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:WTI price 2019-2020.png",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Daily spot prices of WTI crude oil per barrel between 1 January 2019 and 15 June 2020 as traded in the New York Mercantile Exchange",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "netflix-password-sharing",
+      "file": "assets/netflix-password-sharing.png",
+      "width": 1280,
+      "height": 2323,
+      "type": "image/png",
+      "bytes": 94135,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Netflix_2016_N_logo.svg/1280px-Netflix_2016_N_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Netflix_2016_N_logo.svg",
+        "image_license": "Public domain (Netflix)",
+        "image_alt": "The red Netflix \"N\" logo"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Netflix 2016 N logo.svg",
+        "license_url": null,
+        "commons_description": "Netflix 2016 N logo",
+        "restrictions": "trademarked",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "nvidia-record-drop",
+      "file": "assets/nvidia-record-drop.jpg",
+      "width": 1280,
+      "height": 960,
+      "type": "image/jpeg",
+      "bytes": 341170,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Nvidiaheadquarters.jpg/1280px-Nvidiaheadquarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Nvidiaheadquarters.jpg",
+        "image_license": "CC BY-SA 3.0 (Coolcaesar at English Wikipedia)",
+        "image_alt": "Nvidia headquarters building in Santa Clara"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Nvidiaheadquarters.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "commons_description": "Nvidia headquarters on San Tomas Expressway in Santa Clara.\nPhotographed on April 19, 2008 by user Coolcaesar.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "oumuamua",
+      "file": "assets/oumuamua.jpg",
+      "width": 1280,
+      "height": 932,
+      "type": "image/jpeg",
+      "bytes": 80853,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg/1280px-Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg",
+        "image_license": "CC BY 4.0 (ESA/Hubble, NASA, ESO, M. Kornmesser)",
+        "image_alt": "Artist's impression of the elongated interstellar object 'Oumuamua"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Artist’s impression of the interstellar asteroid `Oumuamua.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "This artist’s impression shows the first interstellar object discovered in the Solar System, `Oumuamua. Observations made with ESO’s Very Large Telescope, the NASA/ESA Hubble Space Telescope, and othe",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "ozone-layer-recovery",
+      "file": "assets/ozone-layer-recovery.png",
+      "width": 716,
+      "height": 716,
+      "type": "image/png",
+      "bytes": 420993,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/NASA_and_NOAA_Announce_Ozone_Hole_is_a_Double_Record_Breaker.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:NASA_and_NOAA_Announce_Ozone_Hole_is_a_Double_Record_Breaker.png",
+        "image_license": "Public domain (NASA)",
+        "image_alt": "NASA false-colour map of the ozone hole over Antarctica"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:NASA and NOAA Announce Ozone Hole is a Double Record Breaker.png",
+        "license_url": null,
+        "commons_description": "From September 21-30, 2006 the average area of the ozone hole was the largest ever observed, at 10.6 million square miles (27.5 million square kilometres). This image, from September 24, the Antarctic",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "philae-comet-landing",
+      "file": "assets/philae-comet-landing.jpg",
+      "width": 1280,
+      "height": 1018,
+      "type": "image/jpeg",
+      "bytes": 239276,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Comet_67P_on_19_September_2014_NavCam_mosaic.jpg/1280px-Comet_67P_on_19_September_2014_NavCam_mosaic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Comet_67P_on_19_September_2014_NavCam_mosaic.jpg",
+        "image_license": "CC BY-SA 3.0 igo (ESA/Rosetta/NAVCAM, CC BY-SA IGO 3.0)",
+        "image_alt": "Rosetta navigation-camera mosaic of comet 67P, September 2014"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Comet 67P on 19 September 2014 NavCam mosaic.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+        "commons_description": "Mosaic of four images taken by Rosetta's navigation camera (NAVCAM) on 19 September 2014 at 28.6 km (17.8 mi) from the centre of comet 67P/Churyumov–Gerasimenko. The images used for this mosaic were t",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "ram-shortage",
+      "file": "assets/ram-shortage.png",
+      "width": 1280,
+      "height": 687,
+      "type": "image/png",
+      "bytes": 104875,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png/1280px-Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png",
+        "image_license": "Public domain (Rei)",
+        "image_alt": "Line chart of DDR5 RAM kit prices, rising steeply at the end of 2025"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Average price of DDR5-5200 2x16 GB RAM kits.png",
+        "license_url": null,
+        "commons_description": "Average price of DDR5-5200 2x16 GB RAM kits. \"RAMmageddon\" or \"RAMpocalypse\"",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "The Commons chart says its prices are approximate, \"based on PCPartPicker trends\"; it is not an official data series."
+    },
+    {
+      "id": "spacex-ipo",
+      "file": "assets/spacex-ipo.jpg",
+      "width": 1280,
+      "height": 1920,
+      "type": "image/jpeg",
+      "bytes": 729892,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Nasdaq_Tower_May_2026.jpg/1280px-Nasdaq_Tower_May_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Nasdaq_Tower_May_2026.jpg",
+        "image_license": "CC BY 4.0 (Nielsoncaetanosalmeron)",
+        "image_alt": "The Nasdaq Tower in Times Square, May 2026"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Nasdaq Tower May 2026.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Exterior of the Nasdaq Tower during the network upfronts in May 2026.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Generic Nasdaq Tower photo (May 2026); the screen shows another company, not SpaceX."
+    },
+    {
+      "id": "svb-collapse",
+      "file": "assets/svb-collapse.jpg",
+      "width": 1280,
+      "height": 960,
+      "type": "image/jpeg",
+      "bytes": 320074,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/3003_West_Tasman_Drive_entrance_2%2C_Santa_Clara%2C_California.jpg/1280px-3003_West_Tasman_Drive_entrance_2%2C_Santa_Clara%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:3003_West_Tasman_Drive_entrance_2,_Santa_Clara,_California.jpg",
+        "image_license": "CC BY-SA 4.0 (Minh Nguyen)",
+        "image_alt": "Silicon Valley Bank headquarters in Santa Clara"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:3003 West Tasman Drive entrance 2, Santa Clara, California.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "The headquarters of Silicon Valley Bank at 3003 West Tasman Drive, Santa Clara, California.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "tariffs-struck-down",
+      "file": "assets/tariffs-struck-down.jpg",
+      "width": 1280,
+      "height": 1024,
+      "type": "image/jpeg",
+      "bytes": 250102,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Supreme_Court_Front_Dusk.jpg/1280px-Supreme_Court_Front_Dusk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Supreme_Court_Front_Dusk.jpg",
+        "image_license": "Public domain (Noclip at en.wikipedia)",
+        "image_alt": "The US Supreme Court building at dusk"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Supreme Court Front Dusk.jpg",
+        "license_url": null,
+        "commons_description": "",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "trump-in-north-korea",
+      "file": "assets/trump-in-north-korea.jpg",
+      "width": 1280,
+      "height": 853,
+      "type": "image/jpeg",
+      "bytes": 199328,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/President_Trump_Meets_with_Chairman_Kim_Jong_Un_%2848164813552%29.jpg/1280px-President_Trump_Meets_with_Chairman_Kim_Jong_Un_%2848164813552%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:President_Trump_Meets_with_Chairman_Kim_Jong_Un_(48164813552).jpg",
+        "image_license": "Public domain (The White House from Washington, DC)",
+        "image_alt": "Donald Trump, Kim Jong Un and Moon Jae-in together at the Korean Demilitarized Zone, 30 June 2019"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:President Trump Meets with Chairman Kim Jong Un (48164813552).jpg",
+        "license_url": null,
+        "commons_description": "President Donald J. Trump, Chairman of the Workers’ Party of Korea Kim Jong Un, and Republic of South Korea President Moon Jae-in talk together Sunday, June 30, 2019, outside Freedom House at the Kore",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "vw-dieselgate",
+      "file": "assets/vw-dieselgate.jpg",
+      "width": 1280,
+      "height": 737,
+      "type": "image/jpeg",
+      "bytes": 204747,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG/1280px-VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG",
+        "image_license": "CC BY-SA 3.0 (Mariordo Mario Roberto Duran Ortiz)",
+        "image_alt": "A Volkswagen Golf TDI \"Clean Diesel\" at the 2010 Washington Auto Show"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:VW Golf TDI Clean Diesel WAS 2010 8983.JPG",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "commons_description": "Lateral view VW Golf TDI clean diesel at the 2010 Washington Auto Show",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "youtube-hides-dislikes",
+      "file": "assets/youtube-hides-dislikes.png",
+      "width": 1280,
+      "height": 277,
+      "type": "image/png",
+      "bytes": 19868,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/YouTube_2024.svg/1280px-YouTube_2024.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:YouTube_2024.svg",
+        "image_license": "Public domain (Google, Inc.)",
+        "image_alt": "The YouTube logo"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:YouTube 2024.svg",
+        "license_url": null,
+        "commons_description": "YouTube logo introduced in June 2024, using a custom font based on YouTube New typeface. It is similar to the 2017 logo except that the font is thinner and the play button symbol uses a more pinky sha",
+        "restrictions": "trademarked",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "cloned-monkeys",
+      "file": "assets/cloned-monkeys.jpg",
+      "width": 1280,
+      "height": 1146,
+      "type": "image/jpeg",
+      "bytes": 362500,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Long-tailed_macaque_%28Macaca_fascicularis%29_Labuk_Bay.jpg/1280px-Long-tailed_macaque_%28Macaca_fascicularis%29_Labuk_Bay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Long-tailed_macaque_(Macaca_fascicularis)_Labuk_Bay.jpg",
+        "image_license": "CC BY-SA 4.0 (Charles J. Sharp)",
+        "image_alt": "A long-tailed macaque eating"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Long-tailed macaque (Macaca fascicularis) Labuk Bay.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Long-tailed macaque (Macaca fascicularis),  Labuk Bay, Sabah, Borneo, Malaysia",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "first-millennial-saint",
+      "file": "assets/first-millennial-saint.jpg",
+      "width": 1280,
+      "height": 2062,
+      "type": "image/jpeg",
+      "bytes": 578546,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Covent_Garden%2C_Corpus_Christi_Catholic_Church%2C_Carlo_Acutis_memorial.jpg/1280px-Covent_Garden%2C_Corpus_Christi_Catholic_Church%2C_Carlo_Acutis_memorial.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Covent_Garden,_Corpus_Christi_Catholic_Church,_Carlo_Acutis_memorial.jpg",
+        "image_license": "CC BY-SA 4.0 (AndyScott)",
+        "image_alt": "Shrine image of Carlo Acutis holding a monstrance, at Corpus Christi Church, Covent Garden"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Covent Garden, Corpus Christi Catholic Church, Carlo Acutis memorial.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Covent Garden, Corpus Christi Catholic Church, Blessed Carlo Acutis shrine",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "file": "assets/ai-overviews-glue-pizza.jpg",
+      "width": 1125,
+      "height": 1445,
+      "type": "image/jpeg",
+      "bytes": 674336,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/AI_Overviews_result_for_%22How_many_rocks_shall_i_eat%22%2C_May_23%2C_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:AI_Overviews_result_for_%22How_many_rocks_shall_i_eat%22,_May_23,_2024.jpg",
+        "image_license": "Public domain (Kris Kashtanova)",
+        "image_alt": "Google AI Overview answer saying people should eat at least one small rock per day"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:AI Overviews result for \"How many rocks shall i eat\", May 23, 2024.jpg",
+        "license_url": null,
+        "commons_description": "AI Overviews result for \"How many rocks shall i eat\", May 23, 2024",
+        "restrictions": "ai",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Subject mismatch kept on purpose: no free glue-on-pizza screenshot exists on Commons. This screenshot is the \"eat rocks\" answer from the same AI Overviews failure week (23 May 2024). Use it only if the blurb or alt mentions rocks; otherwise keep the item without an image."
+    },
+    {
+      "id": "australia-teen-social-ban",
+      "file": "assets/australia-teen-social-ban.jpg",
+      "width": 970,
+      "height": 1281,
+      "type": "image/jpeg",
+      "bytes": 1121861,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Anika_Wells_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Anika_Wells_2023.jpg",
+        "image_license": "CC BY 4.0 (Department of Foreign Affairs and Trade (DFAT)/Sarah Hodges)",
+        "image_alt": "Australian Communications Minister Anika Wells, portrait"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Anika Wells 2023.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "On Thursday 16th February, Pat Conroy, Minister for International Development and the Pacific, and Anika Wells, Minister for Aged Care met with PNG Treasurer Ian Ling-Stuckey at Parliament House",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Portrait of the responsible minister, not of the ban itself."
+    },
+    {
+      "id": "beatles-now-and-then",
+      "file": "assets/beatles-now-and-then.jpg",
+      "width": 1280,
+      "height": 1024,
+      "type": "image/jpeg",
+      "bytes": 242535,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/The_Beatles%2C_Kennedy_Airport%2C_February_1964.jpg/1280px-The_Beatles%2C_Kennedy_Airport%2C_February_1964.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:The_Beatles,_Kennedy_Airport,_February_1964.jpg",
+        "image_license": "Public domain (United Press International)",
+        "image_alt": "The Beatles waving to fans at Kennedy Airport, 1964"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:The Beatles, Kennedy Airport, February 1964.jpg",
+        "license_url": null,
+        "commons_description": "Photograph of The Beatles",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "brazil-blocks-x",
+      "file": "assets/brazil-blocks-x.png",
+      "width": 1280,
+      "height": 1546,
+      "type": "image/png",
+      "bytes": 2541683,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Elon_Musk_Brazil_2022.png/1280px-Elon_Musk_Brazil_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Elon_Musk_Brazil_2022.png",
+        "image_license": "CC BY 2.0 (Ministério Das Comunicações)",
+        "image_alt": "Elon Musk, head and shoulders, in Brazil in 2022"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Elon Musk Brazil 2022.png",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "commons_description": "Iniciativa contribuirá com meta do MCom de conectar 100% das escolas da região até o fim do ano.\nFoto: ZACK/MCOM",
+        "restrictions": "personality",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "change6-far-side-samples",
+      "file": "assets/change6-far-side-samples.jpg",
+      "width": 1280,
+      "height": 2778,
+      "type": "image/jpeg",
+      "bytes": 394943,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg/1280px-Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg",
+        "image_license": "CC BY-SA 4.0 (BugWarp)",
+        "image_alt": "Chang'e 6 lunar far-side samples on display at the 2024 International Astronautical Congress"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Chang'e 6 lunar samples at IAC 2024 01.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Lunar samples collected by the Chang'e 6 spacecraft exhibited at the 2024 International Astronautical Congress celebrated in Milan, Italy.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "driverless-robotaxis",
+      "file": "assets/driverless-robotaxis.jpg",
+      "width": 1280,
+      "height": 960,
+      "type": "image/jpeg",
+      "bytes": 202545,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg/1280px-Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg",
+        "image_license": "CC BY 4.0 (Dllu)",
+        "image_alt": "A driverless Waymo Jaguar I-Pace in San Francisco"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Waymo Jaguar I-Pace in San Francisco 2023 dllu.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "A Waymo-operated Jaguar I-Pace in San Francisco. The vehicle is operating autonomously without any person in the driver's seat.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "el-salvador-bitcoin",
+      "file": "assets/el-salvador-bitcoin.jpg",
+      "width": 1280,
+      "height": 2276,
+      "type": "image/jpeg",
+      "bytes": 398369,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Cajero_Bitcoin_Athena_El_Salvador.jpg/1280px-Cajero_Bitcoin_Athena_El_Salvador.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Cajero_Bitcoin_Athena_El_Salvador.jpg",
+        "image_license": "CC BY-SA 4.0 (Karlalhdz)",
+        "image_alt": "An orange Athena Bitcoin ATM in El Salvador"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Cajero Bitcoin Athena El Salvador.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Los cajeros son marca Athena Bitcoin. En El Salvador solo se ubica un cajero y se encuentra como parte de la propuesta de intercambio de criptomonedas por dólares estadounisense cobrando una comisión ",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "flash-player-end",
+      "file": "assets/flash-player-end.png",
+      "width": 1280,
+      "height": 1247,
+      "type": "image/png",
+      "bytes": 10239,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Adobe_Flash_Player_32.svg/1280px-Adobe_Flash_Player_32.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Adobe_Flash_Player_32.svg",
+        "image_license": "Public domain (Adobe)",
+        "image_alt": "The Adobe Flash Player logo, a white \"f\" on dark red"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Adobe Flash Player 32.svg",
+        "license_url": null,
+        "commons_description": "Icon of Adobe Flash Player.",
+        "restrictions": "trademarked",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "gaga-copacabana",
+      "file": "assets/gaga-copacabana.jpg",
+      "width": 1280,
+      "height": 2276,
+      "type": "image/jpeg",
+      "bytes": 386023,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_%282025%29.jpg/1280px-P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_(2025).jpg",
+        "image_license": "CC BY-SA 4.0 (CHr0m4tiko0)",
+        "image_alt": "Crowds gathering on Copacabana beach hours before the Lady Gaga concert, 3 May 2025"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Público congregándose en la playa de Copacabana antes del concierto de Lady Gaga (2025).jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Fotografía tomada horas antes del concierto de Lady Gaga en la playa de Copacabana, Río de Janeiro, el 3 de mayo de 2025. La imagen muestra a los asistentes llegando y acomodándose en la playa para el",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "galaxy-note-7-recall",
+      "file": "assets/galaxy-note-7-recall.jpg",
+      "width": 1280,
+      "height": 2275,
+      "type": "image/jpeg",
+      "bytes": 498943,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Samsung_Galaxy_Note_7_Air_New_Zealand.jpg/1280px-Samsung_Galaxy_Note_7_Air_New_Zealand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Note_7_Air_New_Zealand.jpg",
+        "image_license": "CC BY-SA 4.0 (Haha169)",
+        "image_alt": "Air New Zealand check-in sign warning that Samsung Galaxy Note 7 phones are banned on board"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Samsung Galaxy Note 7 Air New Zealand.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "A sign at the Air New Zealand check-in counter in Shanghai's Pudong International Airport warning passengers not to bring Samsung's Galaxy Note 7 phone onto any flight due to problems with that phone'",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "gangnam-style-broke-youtube",
+      "file": "assets/gangnam-style-broke-youtube.jpg",
+      "width": 1280,
+      "height": 872,
+      "type": "image/jpeg",
+      "bytes": 171433,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg/1280px-Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg",
+        "image_license": "CC BY 2.0 (AngryJulieMonday)",
+        "image_alt": "Psy performing Gangnam Style on stage at Jingle Ball 2012"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Psy does Gangnam Style at KIIS FM Jingle Ball 2012.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "commons_description": "Psy does Gangnam Style at KIIS FM Jingle Ball 2012",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Same image as gangnam-style-counter; the parent keeps one if the items merge."
+    },
+    {
+      "id": "gangnam-style-counter",
+      "file": "assets/gangnam-style-counter.jpg",
+      "width": 1280,
+      "height": 872,
+      "type": "image/jpeg",
+      "bytes": 171433,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg/1280px-Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg",
+        "image_license": "CC BY 2.0 (AngryJulieMonday)",
+        "image_alt": "Psy performing Gangnam Style on stage at Jingle Ball 2012"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Psy does Gangnam Style at KIIS FM Jingle Ball 2012.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "commons_description": "Psy does Gangnam Style at KIIS FM Jingle Ball 2012",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Same image as gangnam-style-broke-youtube; the parent keeps one if the items merge."
+    },
+    {
+      "id": "homo-naledi",
+      "file": "assets/homo-naledi.jpg",
+      "width": 1280,
+      "height": 941,
+      "type": "image/jpeg",
+      "bytes": 150240,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Homo_naledi_paratype_DH3.jpg/1280px-Homo_naledi_paratype_DH3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Homo_naledi_paratype_DH3.jpg",
+        "image_license": "CC BY 4.0 (Lee Roger Berger research team)",
+        "image_alt": "Fossil skull pieces of Homo naledi on a black background"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Homo naledi paratype DH3.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Homo naledi bones. Paratype DH3. (A) Frontal view. (B) Left lateral view, with calvaria in articulation with the mandible (U.W. 101-361). (C) Basal view. Mandible in (D) medial view; (E) occlusal view",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "file": "assets/ireland-marriage-referendum.jpg",
+      "width": 1280,
+      "height": 720,
+      "type": "image/jpeg",
+      "bytes": 103047,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg/1280px-Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg",
+        "image_license": "CC BY-SA 4.0 (Taibhseoir)",
+        "image_alt": "Two badges from Ireland's 2015 marriage referendum: \"Yes Equality\" and \"Tá Comhionannas\""
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Election badges promoting a \"yes\" vote from Ireland's Marriage Equality referendum in 2015.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Election badges, in both English and Irish, promoting a \"yes\" vote from Ireland's Marriage Equality referendum in 2015.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "k2-18b-life-hint",
+      "file": "assets/k2-18b-life-hint.jpg",
+      "width": 1280,
+      "height": 720,
+      "type": "image/jpeg",
+      "bytes": 147749,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Exoplanet_K2-18_b_%28Illustration%29.jpg/1280px-Exoplanet_K2-18_b_%28Illustration%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Exoplanet_K2-18_b_(Illustration).jpg",
+        "image_license": "Public domain (Illustration: NASA, ESA, CSA, Joseph Olmsted (STScI)\n\nScience: Nikku Madhusudhan (IoA))",
+        "image_alt": "Illustration of exoplanet K2-18 b next to its red dwarf star"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Exoplanet K2-18 b (Illustration).jpg",
+        "license_url": null,
+        "commons_description": "This illustration shows what exoplanet K2-18 b could look like based on science data. K2-18 b, an exoplanet 8.6 times as massive as Earth, orbits the cool dwarf star K2-18 in the habitable zone and li",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "last-penny",
+      "file": "assets/last-penny.png",
+      "width": 1280,
+      "height": 1280,
+      "type": "image/png",
+      "bytes": 2776853,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/US_One_Cent_Obv.png/1280px-US_One_Cent_Obv.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:US_One_Cent_Obv.png",
+        "image_license": "Public domain (United States Mint)",
+        "image_alt": "The front of a US one-cent coin with Abraham Lincoln"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:US One Cent Obv.png",
+        "license_url": null,
+        "commons_description": "United States One Cent Obverse",
+        "restrictions": "currency",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "turkish-shooter",
+      "file": "assets/turkish-shooter.jpg",
+      "width": 1280,
+      "height": 1667,
+      "type": "image/jpeg",
+      "bytes": 318606,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Yusuf_Dike%C3%A7_in_Yerevan_Airport_%28cropped%29.jpg/1280px-Yusuf_Dike%C3%A7_in_Yerevan_Airport_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Yusuf_Dike%C3%A7_in_Yerevan_Airport_(cropped).jpg",
+        "image_license": "CC BY 4.0 (07)",
+        "image_alt": "Yusuf Dikeç, the Turkish Olympic shooter, in glasses"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Yusuf Dikeç in Yerevan Airport (cropped).jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Yusuf Dikeç in Zvartnots Airport before 2026 European 10 m Events Championships",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Photo is from 2026 (European 10 m Championships trip), not from the 2024 Olympics."
+    },
+    {
+      "id": "trump-memecoin",
+      "file": "assets/trump-memecoin.png",
+      "width": 1280,
+      "height": 720,
+      "type": "image/png",
+      "bytes": 100931,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/20250120_Market_value_of_Trump_meme_coin.svg/1280px-20250120_Market_value_of_Trump_meme_coin.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:20250120_Market_value_of_Trump_meme_coin.svg",
+        "image_license": "CC BY-SA 4.0 (RCraig09)",
+        "image_alt": "Chart of the Official Trump meme coin price, peaking in January 2025 and then falling"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:20250120 Market value of Trump meme coin.svg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Chart of market value of \"Official Trump\" meme coin, over time\nData source: OFFICIAL TRUMP Historical Data. Investing.com (2026). Archived from the original on 21 May 2026. Retrieved on 20 May 2026.\nO",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": null
+    },
+    {
+      "id": "aliens",
+      "file": "assets/aliens.png",
+      "width": 1280,
+      "height": 1025,
+      "type": "image/png",
+      "bytes": 1122396,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png/1280px-David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png",
+        "image_license": "Public domain (U.S. House Subcommittee on National Security, the Border, and Foreign Affairs (screenshot from government website video broadcast))",
+        "image_alt": "David Grusch testifying before a US House subcommittee on 26 July 2023, behind a \"Mr. Grusch\" name card"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:David Grusch giving testimony on 26 July 2023 before the US House Subcommittee on National Security the Border and Foreign Affairs.png",
+        "license_url": null,
+        "commons_description": "David Grusch giving testimony on 26 July 2023 before the U.S. House Subcommittee on National Security, the Border, and Foreign Affairs. A hearing on \"Unidentified Anomalous Phenomena: Implications on ",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged",
+      "note": "Faithful to the card: the Grusch hearing. A more \"alien\" alternative is in alternates/ (an illustration, labelled as such)."
+    },
+    {
+      "id": "blue-texas",
+      "file": "assets/blue-texas.png",
+      "width": 1280,
+      "height": 792,
+      "type": "image/png",
+      "bytes": 143023,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/2026_United_States_Senate_elections_results_map.svg/1280px-2026_United_States_Senate_elections_results_map.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:2026_United_States_Senate_elections_results_map.svg",
+        "image_license": "CC BY 4.0 (Coolxsearcher1414)",
+        "image_alt": "Map of the 2026 US Senate election results, with Texas in dark blue"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:2026 United States Senate elections results map.svg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Map of the results of the 2026 United States Senate elections",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged",
+      "note": "Real 2026 results map (Wikipedia/Commons). Other states are also coloured, which matches the note (\"some other states in red\")."
+    },
+    {
+      "id": "new-pope",
+      "file": "assets/new-pope.jpg",
+      "width": 1016,
+      "height": 1192,
+      "type": "image/jpeg",
+      "bytes": 863815,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Pope_Leo_XIV_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_2.jpg",
+        "image_license": "CC BY-SA 4.0 (Edgar Beltrán / The Pillar)",
+        "image_alt": "Pope Leo XIV waving from the loggia of St Peter's Basilica after his election"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Pope Leo XIV 2.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons_description": "Pope Leo XIV on the loggia after his election",
+        "restrictions": "personality",
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged",
+      "note": "Leo XIV on the loggia after his election, 8 May 2025."
+    },
+    {
+      "id": "hulkenberg-podium",
+      "file": "assets/hulkenberg-podium.jpg",
+      "width": 1280,
+      "height": 853,
+      "type": "image/jpeg",
+      "bytes": 175053,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg/1280px-Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg",
+        "image_license": "CC BY 4.0 (Eustace Bagge)",
+        "image_alt": "Nico Hülkenberg driving his green Sauber C45 at Monza, 2025"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Nico Hülkenberg 2025 Italian Grand Prix qualifying.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "commons_description": "Nico Hülkenberg alla guida della sua Sauber C45 durante le qualifiche del Gran Premio d'Italia 2025",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged",
+      "note": "No free photo of the 2025 British GP podium exists on Commons. This shows Hülkenberg in the 2025 Sauber at Monza."
+    },
+    {
+      "id": "charles-coronation",
+      "file": "assets/charles-coronation.jpg",
+      "width": 1280,
+      "height": 1716,
+      "type": "image/jpeg",
+      "bytes": 226162,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg/1280px-Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg",
+        "image_license": "CC BY 2.0 (Number 10)",
+        "image_alt": "Queen Elizabeth II in green at Buckingham Palace during the Platinum Pageant, June 2022"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Queen Elizabeth II at the Platinum Jubilee - Platinum Pageant.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "commons_description": "05/06/2022. London, United Kingdom. Queen Elizabeth II Platinum Jubilee 2022 - Platinum Pageant outside Buckingham Palace . Picture by Andrew Parsons / No 10 Downing Street",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged",
+      "note": "For the approved Queen Elizabeth II death replacement (Andrei, 2026-11-17). One of her last public appearances, three months before her death on 8 September 2022."
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "file": "assets/bitcoin-round-trip.png",
+      "width": 1280,
+      "height": 720,
+      "type": "image/png",
+      "bytes": 119544,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Bitcoin_price_usd_logarithmic.svg/1280px-Bitcoin_price_usd_logarithmic.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Bitcoin_price_usd_logarithmic.svg",
+        "image_license": "CC0 (FrankAndProust)",
+        "image_alt": "Logarithmic chart of the Bitcoin price from 2010 to 2026"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Bitcoin price usd logarithmic.svg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons_description": "Bitcoin price in USD, logarithmic scale.",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Replaces the earlier proposal, whose chart ended in December 2024 and missed the $126,000 peak. Log scale; the October 2025 peak and the fall are visible but small."
+    },
+    {
+      "id": "aws-outage-2025",
+      "file": "assets/aws-outage-2025.png",
+      "width": 1280,
+      "height": 854,
+      "type": "image/png",
+      "bytes": 61959,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Amazon_Web_Services_2025.svg/1280px-Amazon_Web_Services_2025.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_2025.svg",
+        "image_license": "Public domain (Amazon.com, Inc. and Koto)",
+        "image_alt": "The Amazon Web Services logo"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Amazon Web Services 2025.svg",
+        "license_url": null,
+        "commons_description": "Logo of Amazon Web Services from 2025.",
+        "restrictions": "trademarked",
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Logo only; no free photo of the outage exists. Transparent PNG with dark \"aws\" text: check contrast on the card background."
+    },
+    {
+      "id": "katy-perry-space",
+      "file": "assets/katy-perry-space.jpg",
+      "width": 960,
+      "height": 915,
+      "type": "image/jpeg",
+      "bytes": 615506,
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Katy_Perry_in_Budapest%2C_Hungary_at_MVM_Dome_for_the_Lifetimes_Tour_%28October_27%2C_2025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Katy_Perry_in_Budapest,_Hungary_at_MVM_Dome_for_the_Lifetimes_Tour_(October_27,_2025).jpg",
+        "image_license": "CC0 (Misterwiki16)",
+        "image_alt": "Katy Perry singing on stage in Budapest during the Lifetimes Tour, October 2025"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Katy Perry in Budapest, Hungary at MVM Dome for the Lifetimes Tour (October 27, 2025).jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons_description": "Katy Perry Budapest",
+        "restrictions": null,
+        "checked": "2026-11-17"
+      },
+      "resolution": "missing image staged",
+      "note": "Replaces the earlier proposal, which showed crewmate Aisha Bowe, not Katy Perry. No free photo of Katy Perry on the NS-31 flight exists on Commons. CC0 own-work upload by Misterwiki16: plausible concert phone photo, checked by eye (MED-08)."
+    },
+    {
+      "id": "flying-cars",
+      "file": "assets/flying-cars.jpg",
+      "width": 2560,
+      "height": 1440,
+      "type": "image/jpeg",
+      "bytes": 255123,
+      "fields": {
+        "image_url": "https://cdn.mos.cms.futurecdn.net/iJ5E8TDoQby6iKnKGnVTEf-2560-80.jpg",
+        "image_page": "https://www.space.com/technology/spacex-thrusters-just-made-a-tesla-roadster-fly-and-elon-musks-car-is-still-out-there-in-space",
+        "image_license": "© Tesla; no licence documented",
+        "image_alt": "The new Tesla Roadster in the air above a Cybertruck at its reveal on 15 October 2026, trailing thruster vapour"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "Tesla",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "Space.com article; on-page credit \"(Image credit: Tesla)\"; og:image:alt \"launches itself over other vehicles during an unveiling event on Oct. 15, 2026\"",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6951",
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "note": "Actual reveal-event photo of the hop over other vehicles. A frame of the kickflip itself (Tesla stream, ~10:56 per hwbusters) needs a video frame; none was extracted."
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "file": "assets/real-oppressor-mk2.jpg",
+      "width": 2400,
+      "height": 1350,
+      "type": "image/jpeg",
+      "bytes": 666206,
+      "fields": {
+        "image_url": "https://newatlas-brightspot.s3.ap-southeast-2.amazonaws.com/a7/9c/b39c5ce840799bac005f1bc0221a/volonaut-airbike-flight-0.jpg",
+        "image_page": "https://newatlas.com/aircraft/volonaut-airbike-full-video/",
+        "image_license": "© Volonaut; no licence documented",
+        "image_alt": "A rider in black flying the Volonaut Airbike low over trees"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "Volonaut",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "New Atlas gallery, captioned \"A cropped shot of the Volonaut Airbike in flight\", credited to Volonaut",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6947",
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "note": "Real Airbike photo. The requested side-by-side composite with the Oppressor was not made (no image-generation or editing tool in this session); the Rockstar image is in alternates/."
+    },
+    {
+      "id": "concord",
+      "file": "assets/concord.jpg",
+      "width": 1920,
+      "height": 1080,
+      "type": "image/jpeg",
+      "bytes": 253850,
+      "fields": {
+        "image_url": "https://blog.playstation.com/tachyon/2024/05/b06a8cc47aebcaeaff8cf93d58435221e8b1b616.jpg",
+        "image_page": "https://blog.playstation.com/2024/05/30/concord-gameplay-revealed-launching-august-23-2024-on-ps5-and-pc/",
+        "image_license": "© Sony Interactive Entertainment / Firewalk Studios; no licence documented",
+        "image_alt": "Concord key art: several Freegunner characters beside the Concord logo"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "Sony Interactive Entertainment / Firewalk Studios",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "PlayStation Blog og:image of the official launch-date post (Sony's own site)",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6952",
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "note": "Official game artwork, as requested. Not Rockstar material."
+    },
+    {
+      "id": "ash-ketchum",
+      "file": "assets/ash-ketchum.jpg",
+      "width": 578,
+      "height": 327,
+      "type": "image/jpeg",
+      "bytes": 92509,
+      "fields": {
+        "image_url": "https://mcdn.pokemon.com/image/upload/c_limit,w_1439/f_jpg/q_auto:best/v1/live/static-assets/content-assets/cms2/img/watch-pokemon-tv/_tiles/season25/netflix/04/season25-on-netflix-169.png",
+        "image_page": "https://www.pokemon.com/us/news/pokemon-ultimate-journeys-the-series-and-pokemon-horizons-the-series-news",
+        "image_license": "© The Pokémon Company; no licence documented",
+        "image_alt": "Official Pokémon tile: Ash with Pikachu on his head waves goodbye beside Brock and Misty"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "The Pokémon Company",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "pokemon.com news post of 20 July 2023 on the end of the series; only image on the page",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6950",
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "note": "Ending-era official artwork from the final arc (Brock and Misty return). No adult-Ash imagery used: an adult Ash is not canon. Small source (578x327, Netflix logo at the right)."
+    },
+    {
+      "id": "rdr-on-phones",
+      "file": "assets/rdr-on-phones.jpg",
+      "width": 2000,
+      "height": 1125,
+      "type": "image/jpeg",
+      "bytes": 155129,
+      "fields": {
+        "image_url": "https://cdn.mos.cms.futurecdn.net/BAQAUYrBwhdyaN6MAixzkn-2000-80.jpg",
+        "image_page": "https://www.gamesradar.com/hardware/gaming-controllers/i-treated-myself-to-the-red-dead-redemption-mobile-port-but-theres-one-thing-i-shouldve-picked-up-too",
+        "image_license": "© Future plc (photo); Rockstar Games (game image); no licence documented",
+        "image_alt": "Red Dead Redemption running on an Android phone, with a PlayStation controller behind it"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "Future plc (photo); Rockstar Games (game image)",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "GamesRadar article by Tom Bedford, 28 December 2025; on-page credit \"(Image credit: Future)\"; og:image:alt \"Red Dead Redemption playing on an Android phone\"",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6953",
+        "checked": "2026-11-17"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "note": "Rockstar material allowed here (Andrei, 2026-11-17). The photo itself belongs to Future plc, not Rockstar: that exception does not cover it."
+    }
+  ],
+  "alternates": [
+    {
+      "id": "aliens",
+      "file": "assets/alternates/aliens--tictac-illustration.jpg",
+      "width": 1280,
+      "height": 1002,
+      "type": "image/jpeg",
+      "bytes": 196522,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/USS_Nimitz_2004_tic_tac_UFO.jpg/1280px-USS_Nimitz_2004_tic_tac_UFO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:USS_Nimitz_2004_tic_tac_UFO.jpg",
+        "image_license": "CC BY-SA 4.0 (JMK)",
+        "image_alt": "Illustration (not a photograph) of the 2004 Nimitz \"Tic Tac\" UFO hovering over the sea, with an F/A-18 above"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:USS Nimitz 2004 tic tac UFO.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "checked": "2026-11-17"
+      },
+      "note": "More \"aliens\" in feel. An illustration: label it as one."
+    },
+    {
+      "id": "aliens",
+      "file": "assets/alternates/aliens--hearing-panel.png",
+      "width": 1280,
+      "height": 602,
+      "type": "image/png",
+      "bytes": 941219,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/US_congressional_hearing_on_UAPs_on_26_July_2023_with_Grusch_Graves_and_Fravor.png/1280px-US_congressional_hearing_on_UAPs_on_26_July_2023_with_Grusch_Graves_and_Fravor.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:US_congressional_hearing_on_UAPs_on_26_July_2023_with_Grusch_Graves_and_Fravor.png",
+        "image_license": "Public domain (U.S. House Committee On Oversight and Accountability)",
+        "image_alt": "Ryan Graves, David Grusch and David Fravor at the House UAP hearing, 26 July 2023"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:US congressional hearing on UAPs on 26 July 2023 with Grusch Graves and Fravor.png",
+        "license_url": null,
+        "checked": "2026-11-17"
+      },
+      "note": "Wider hearing shot."
+    },
+    {
+      "id": "new-pope",
+      "file": "assets/alternates/new-pope--media-audience.png",
+      "width": 1280,
+      "height": 853,
+      "type": "image/png",
+      "bytes": 1985004,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Pope_Leo_XIV_1.png/1280px-Pope_Leo_XIV_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_1.png",
+        "image_license": "CC BY-SA 4.0 (⁠Edgar Beltrán, The Pillar)",
+        "image_alt": "Pope Leo XIV seated, smiling, at a media audience on 12 May 2025"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Pope Leo XIV 1.png",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "checked": "2026-11-17"
+      },
+      "note": "Landscape option."
+    },
+    {
+      "id": "hulkenberg-podium",
+      "file": "assets/alternates/hulkenberg-podium--austria-2025.jpg",
+      "width": 1280,
+      "height": 720,
+      "type": "image/jpeg",
+      "bytes": 239830,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/FIA_F1_Austria_2025_Nr._27_H%C3%BClkenberg.jpg/1280px-FIA_F1_Austria_2025_Nr._27_H%C3%BClkenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2025_Nr._27_H%C3%BClkenberg.jpg",
+        "image_license": "CC BY-SA 4.0 (Lukas Raich)",
+        "image_alt": "Hülkenberg's Sauber at the 2025 Austrian Grand Prix"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:FIA F1 Austria 2025 Nr. 27 Hülkenberg.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "checked": "2026-11-17"
+      },
+      "note": "CC BY-SA option."
+    },
+    {
+      "id": "charles-coronation",
+      "file": "assets/alternates/charles-coronation--queen-2015.jpg",
+      "width": 1280,
+      "height": 1690,
+      "type": "image/jpeg",
+      "bytes": 515900,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Queen_Elizabeth_II_in_March_2015.jpg/1280px-Queen_Elizabeth_II_in_March_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_in_March_2015.jpg",
+        "image_license": "OGL 3 (Original: Joel Rouse/ Ministry of DefenceDerivative: nagualdesign)",
+        "image_alt": "Queen Elizabeth II in pink, smiling, March 2015"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Queen Elizabeth II in March 2015.jpg",
+        "license_url": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3",
+        "checked": "2026-11-17"
+      },
+      "note": "OGL option."
+    },
+    {
+      "id": "katy-perry-space",
+      "file": "assets/alternates/katy-perry-space--aisha-bowe-ns31.jpg",
+      "width": 1280,
+      "height": 1920,
+      "type": "image/jpeg",
+      "bytes": 355347,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Aisha_Bowe_Blue_Origin_NS-31_Mission.jpg/1280px-Aisha_Bowe_Blue_Origin_NS-31_Mission.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Aisha_Bowe_Blue_Origin_NS-31_Mission.jpg",
+        "image_license": "CC BY-SA 4.0 (Aisha Bowe)",
+        "image_alt": "Aisha Bowe in her Blue Origin flight suit, NS-31 crew portrait"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Aisha Bowe Blue Origin NS-31 Mission.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "checked": "2026-11-17"
+      },
+      "note": "Earlier proposal: a crewmate on the same flight, not Katy Perry."
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "file": "assets/alternates/bitcoin-round-trip--to-2024.webp",
+      "width": 1280,
+      "height": 436,
+      "type": "image/webp",
+      "bytes": 26672,
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Bitcoin_Price.webp/1280px-Bitcoin_Price.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Bitcoin_Price.webp",
+        "image_license": "CC0 (Wikideas1)",
+        "image_alt": "Bitcoin price chart from 2014 to December 2024"
+      },
+      "source": {
+        "kind": "wikimedia-commons",
+        "title": "File:Bitcoin Price.webp",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "checked": "2026-11-17"
+      },
+      "note": "Earlier proposal; ends before the 2025 peak."
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "file": "assets/alternates/real-oppressor-mk2--rockstar-oppressor.jpg",
+      "width": 1920,
+      "height": 1080,
+      "type": "image/jpeg",
+      "bytes": 944106,
+      "fields": {
+        "image_url": "https://media.rockstargames.com/rockstargames-newsite/uploads/e857f689b8e0aa7e973506f90dbabd50cb75d0f3.jpg",
+        "image_page": "https://www.rockstargames.com/newswire/article/25o2411817a975/The-Terrorbyte-and-Oppressor-Mk-II",
+        "image_license": "© Rockstar Games; no licence documented",
+        "image_alt": "A rider on the Oppressor Mk II flying low over water in GTA Online"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "Rockstar Games",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "Hosted on media.rockstargames.com; listed in GTABase's copy of the Newswire post \"The Terrorbyte and Oppressor Mk II\" (the Rockstar page renders by script and could not be read directly)",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6948",
+        "checked": "2026-11-17",
+        "gtabase_archive": "https://linkding.lav.ren/bookmarks?details=6954"
+      },
+      "note": "Rockstar material allowed for this item only (Andrei, 2026-11-17). Second half of the requested comparison."
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "file": "assets/alternates/real-oppressor-mk2--volonaut-wide.jpg",
+      "width": 2508,
+      "height": 1672,
+      "type": "image/jpeg",
+      "bytes": 1146619,
+      "fields": {
+        "image_url": "https://newatlas-brightspot.s3.ap-southeast-2.amazonaws.com/86/6b/50671b6b4fbb929abe8deeb1570f/volonaut-airbike-flight-1.jpg",
+        "image_page": "https://newatlas.com/aircraft/volonaut-airbike-full-video/",
+        "image_license": "© Volonaut; no licence documented",
+        "image_alt": "The Volonaut Airbike hovering about 4.5 m above a dry riverbed in the mountains"
+      },
+      "source": {
+        "kind": "web",
+        "owner": "Volonaut",
+        "license": "none documented: all rights reserved by the owner; no licence or permission found",
+        "found_via": "New Atlas gallery, credited to Volonaut",
+        "archive": "https://linkding.lav.ren/bookmarks?details=6947",
+        "checked": "2026-11-17"
+      },
+      "note": "Wider landscape shot."
+    }
+  ],
+  "blocked": [
+    {
+      "id": "john-cena-heel-turn",
+      "request": "Screenshot of the Cena Instagram post",
+      "reason": "The post is the official GTA 6 key art with no caption (press coverage, March 2025). That is Rockstar material, and the 2026-11-17 exception covers only real-oppressor-mk2 and rdr-on-phones.",
+      "best_alternative": "Keep the current Commons photo (John Cena 2012, public domain). Editorial note: the blurb says Cena \"used this exact line\" on Instagram; coverage says the post had no caption.",
+      "evidence": [
+        "https://www.gamepressure.com/newsroom/gamers-waiting-for-gta-6-went-into-a-speculative-frenzy-john-cena/z37a65",
+        "https://80.lv/articles/john-cena-cryptically-posts-gta-6-image-without-explanation"
+      ]
+    },
+    {
+      "id": "gary-grand-theft-auto",
+      "request": "Picture of Gary driving the car",
+      "reason": "No episode or official frame with Gary driving was found; the Reddit source post refuses automated reads, so the clip could not be identified or checked. A frame cannot be invented.",
+      "best_alternative": "Keep the current Tumblr screenshot from the source post. Needed: the episode name or the clip file, then one frame from it.",
+      "evidence": ["https://www.reddit.com/r/BikiniBottomTwitter/comments/1d4wg1h/"]
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "request": "One combined side-by-side comparison picture",
+      "reason": "No image-generation or image-editing tool is available in this session; Python editing is not a permitted substitute.",
+      "best_alternative": "Both halves are staged: real-oppressor-mk2.jpg (Volonaut) and alternates/real-oppressor-mk2--rockstar-oppressor.jpg. Show both, or compose them with the image tool later.",
+      "evidence": []
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "request": "Missing image (glue on pizza)",
+      "reason": "No freely licensed screenshot of the glue-on-pizza answer was found on Commons.",
+      "best_alternative": "Staged the \"eat rocks\" AI Overviews screenshot from the same week (public domain on Commons). Use it only with an alt or blurb that mentions rocks.",
+      "evidence": [
+        "https://commons.wikimedia.org/wiki/File:AI_Overviews_result_for_%22How_many_rocks_shall_i_eat%22,_May_23,_2024.jpg"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "aliens",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/aliens.png"]
+    },
+    {
+      "id": "blue-texas",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/blue-texas.png"]
+    },
+    {
+      "id": "flying-cars",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/flying-cars.jpg"]
+    },
+    {
+      "id": "john-cena-heel-turn",
+      "status": "blocked",
+      "summary": "see blocked",
+      "evidence": []
+    },
+    {
+      "id": "new-pope",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/new-pope.jpg"]
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "status": "staged-partial",
+      "summary": "image staged; part of the request blocked, see blocked",
+      "evidence": ["assets/real-oppressor-mk2.jpg"]
+    },
+    {
+      "id": "hulkenberg-podium",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/hulkenberg-podium.jpg"]
+    },
+    {
+      "id": "concord",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/concord.jpg"]
+    },
+    {
+      "id": "gary-grand-theft-auto",
+      "status": "blocked",
+      "summary": "see blocked",
+      "evidence": []
+    },
+    {
+      "id": "pvz-ai-movie",
+      "status": "no-image-change",
+      "summary": "title note only",
+      "evidence": []
+    },
+    {
+      "id": "ash-ketchum",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/ash-ketchum.jpg"]
+    },
+    {
+      "id": "steam-machine",
+      "status": "no-image-change",
+      "summary": "title note only; a \"Linux gaming\" image is a follow-up only if the editorial rewrite is accepted",
+      "evidence": []
+    },
+    {
+      "id": "rdr-on-phones",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/rdr-on-phones.jpg"]
+    },
+    {
+      "id": "matpat-returns",
+      "status": "no-image-change",
+      "summary": "title note only",
+      "evidence": []
+    },
+    {
+      "id": "chatgpt-launch",
+      "status": "no-image-change",
+      "summary": "merge note (\"talking computers\"); existing image stays until the editorial merge chooses",
+      "evidence": []
+    },
+    {
+      "id": "chandrayaan3-south-pole",
+      "status": "no-image-change",
+      "summary": "title note only",
+      "evidence": []
+    },
+    {
+      "id": "eclipse-2024-north-america",
+      "status": "no-image-change",
+      "summary": "title note only",
+      "evidence": []
+    },
+    {
+      "id": "charles-coronation",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/charles-coronation.jpg"]
+    },
+    {
+      "id": "us-inflation-peak",
+      "status": "no-image-change",
+      "summary": "content rewrite (total inflation); existing chart image may need a new chart after the editorial pass",
+      "evidence": []
+    },
+    {
+      "id": "musk-buys-twitter",
+      "status": "no-image-change",
+      "summary": "merge note; parent picks one existing image",
+      "evidence": []
+    },
+    {
+      "id": "starliner-astronauts-stuck",
+      "status": "no-image-change",
+      "summary": "title note only",
+      "evidence": []
+    },
+    {
+      "id": "twitter-becomes-x",
+      "status": "no-image-change",
+      "summary": "merge note; parent picks one existing image",
+      "evidence": []
+    },
+    {
+      "id": "aws-outage-2025",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/aws-outage-2025.png"]
+    },
+    {
+      "id": "chip-shortage",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/chip-shortage.png"]
+    },
+    {
+      "id": "cloudflare-outage-2025",
+      "status": "no-image-change",
+      "summary": "already live with a local image",
+      "evidence": []
+    },
+    {
+      "id": "trump-impeached",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/trump-impeached.jpg"]
+    },
+    {
+      "id": "uk-leaves-eu",
+      "status": "no-image-change",
+      "summary": "duplicate check only",
+      "evidence": []
+    },
+    {
+      "id": "katy-perry-space",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/katy-perry-space.jpg"]
+    },
+    {
+      "id": "apple-trillion",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/apple-trillion.jpg"]
+    },
+    {
+      "id": "black-hole-milky-way",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/black-hole-milky-way.jpg"]
+    },
+    {
+      "id": "blessings-same-sex-couples",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/blessings-same-sex-couples.png"]
+    },
+    {
+      "id": "change4-far-side-landing",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/change4-far-side-landing.jpg"]
+    },
+    {
+      "id": "crispr-cure-approved",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/crispr-cure-approved.jpg"]
+    },
+    {
+      "id": "eu-roaming-free",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/eu-roaming-free.jpg"]
+    },
+    {
+      "id": "eu-usb-c-iphone",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/eu-usb-c-iphone.jpg"]
+    },
+    {
+      "id": "falcon9-booster-landing",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/falcon9-booster-landing.jpg"]
+    },
+    {
+      "id": "ftx-collapse",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/ftx-collapse.png"]
+    },
+    {
+      "id": "gulf-of-america",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/gulf-of-america.jpg"]
+    },
+    {
+      "id": "harris-first-woman-vp",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/harris-first-woman-vp.jpg"]
+    },
+    {
+      "id": "heartbleed",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/heartbleed.png"]
+    },
+    {
+      "id": "hiv-twice-a-year-jab",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/hiv-twice-a-year-jab.jpg"]
+    },
+    {
+      "id": "india-general-strike",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/india-general-strike.jpg"]
+    },
+    {
+      "id": "ingenuity-mars-flight",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/ingenuity-mars-flight.jpg"]
+    },
+    {
+      "id": "internet-explorer-retired",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/internet-explorer-retired.png"]
+    },
+    {
+      "id": "lettuce-outlasts-truss",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/lettuce-outlasts-truss.jpg"]
+    },
+    {
+      "id": "mexico-first-woman-president",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/mexico-first-woman-president.jpg"]
+    },
+    {
+      "id": "microsoft-activision",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/microsoft-activision.jpg"]
+    },
+    {
+      "id": "negative-oil-price",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/negative-oil-price.png"]
+    },
+    {
+      "id": "netflix-password-sharing",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/netflix-password-sharing.png"]
+    },
+    {
+      "id": "nvidia-record-drop",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/nvidia-record-drop.jpg"]
+    },
+    {
+      "id": "oumuamua",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/oumuamua.jpg"]
+    },
+    {
+      "id": "ozone-layer-recovery",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/ozone-layer-recovery.png"]
+    },
+    {
+      "id": "philae-comet-landing",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/philae-comet-landing.jpg"]
+    },
+    {
+      "id": "ram-shortage",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/ram-shortage.png"]
+    },
+    {
+      "id": "spacex-ipo",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/spacex-ipo.jpg"]
+    },
+    {
+      "id": "svb-collapse",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/svb-collapse.jpg"]
+    },
+    {
+      "id": "tariffs-struck-down",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/tariffs-struck-down.jpg"]
+    },
+    {
+      "id": "trump-in-north-korea",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/trump-in-north-korea.jpg"]
+    },
+    {
+      "id": "vw-dieselgate",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/vw-dieselgate.jpg"]
+    },
+    {
+      "id": "youtube-hides-dislikes",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/youtube-hides-dislikes.png"]
+    },
+    {
+      "id": "cloned-monkeys",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/cloned-monkeys.jpg"]
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/bitcoin-round-trip.png"]
+    },
+    {
+      "id": "first-millennial-saint",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/first-millennial-saint.jpg"]
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "status": "staged-partial",
+      "summary": "image staged; part of the request blocked, see blocked",
+      "evidence": ["assets/ai-overviews-glue-pizza.jpg"]
+    },
+    {
+      "id": "australia-teen-social-ban",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/australia-teen-social-ban.jpg"]
+    },
+    {
+      "id": "beatles-now-and-then",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/beatles-now-and-then.jpg"]
+    },
+    {
+      "id": "brazil-blocks-x",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/brazil-blocks-x.png"]
+    },
+    {
+      "id": "change6-far-side-samples",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/change6-far-side-samples.jpg"]
+    },
+    {
+      "id": "driverless-robotaxis",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/driverless-robotaxis.jpg"]
+    },
+    {
+      "id": "el-salvador-bitcoin",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/el-salvador-bitcoin.jpg"]
+    },
+    {
+      "id": "flash-player-end",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/flash-player-end.png"]
+    },
+    {
+      "id": "gaga-copacabana",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/gaga-copacabana.jpg"]
+    },
+    {
+      "id": "galaxy-note-7-recall",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/galaxy-note-7-recall.jpg"]
+    },
+    {
+      "id": "gangnam-style-broke-youtube",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/gangnam-style-broke-youtube.jpg"]
+    },
+    {
+      "id": "gangnam-style-counter",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/gangnam-style-counter.jpg"]
+    },
+    {
+      "id": "homo-naledi",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/homo-naledi.jpg"]
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/ireland-marriage-referendum.jpg"]
+    },
+    {
+      "id": "k2-18b-life-hint",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/k2-18b-life-hint.jpg"]
+    },
+    {
+      "id": "last-penny",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/last-penny.png"]
+    },
+    {
+      "id": "turkish-shooter",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/turkish-shooter.jpg"]
+    },
+    {
+      "id": "trump-memecoin",
+      "status": "staged",
+      "summary": "image staged; see updates",
+      "evidence": ["assets/trump-memecoin.png"]
+    }
+  ],
+  "milestone_notes_skipped": [
+    "gta5-235-million",
+    "gta5-free-on-epic",
+    "gta6-award",
+    "gta6-delays",
+    "gta5-billion-in-3-days",
+    "gta6-trailer",
+    "miami-heat-vice-city",
+    "gta-trilogy-definitive",
+    "gta5-ps3-x360",
+    "gta5-ps5-xbox-series",
+    "gta5-enhanced-pc",
+    "gta5-pc",
+    "gta5-ps4-xbox-one",
+    "gta-online-standalone"
+  ],
+  "updates": [
+    {
+      "id": "chip-shortage",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/US_Domestic_Auto_Production_%28since_1993%2C_FRED%29.png/1280px-US_Domestic_Auto_Production_%28since_1993%2C_FRED%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:US_Domestic_Auto_Production_(since_1993,_FRED).png",
+        "image_license": "Public domain (FRED (U.S. Bureau of Economic Analysis))",
+        "image_alt": "FRED line chart of US domestic auto production from 1993 to 2025, with a sharp dip in 2020"
+      },
+      "resolution": "missing image staged",
+      "reason": "Andrei suggested recasting this as \"we got covid before GTA 6\"; a COVID image is a follow-up only if the editorial pass accepts that rewrite.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:US_Domestic_Auto_Production_(since_1993,_FRED).png"
+      ],
+      "local_file": "assets/chip-shortage.png"
+    },
+    {
+      "id": "trump-impeached",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg/1280px-House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg",
+        "image_license": "Public domain (United States House of Representatives)",
+        "image_alt": "The US House of Representatives chamber during the vote on the articles of impeachment, 18 December 2019"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:House_of_Representatives_Votes_to_Adopt_the_Articles_of_Impeachment_Against_Donald_Trump.jpg"
+      ],
+      "local_file": "assets/trump-impeached.jpg"
+    },
+    {
+      "id": "apple-trillion",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Aerial_view_of_Apple_Park_dllu.jpg/1280px-Aerial_view_of_Apple_Park_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Apple_Park_dllu.jpg",
+        "image_license": "CC BY-SA 4.0 (Daniel L. Lu (user:dllu))",
+        "image_alt": "Aerial view of Apple Park, the ring-shaped Apple headquarters in Cupertino"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Aerial_view_of_Apple_Park_dllu.jpg"],
+      "local_file": "assets/apple-trillion.jpg"
+    },
+    {
+      "id": "black-hole-milky-way",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Sag_A%2A.jpg/1280px-Sag_A%2A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Sag_A*.jpg",
+        "image_license": "CC BY 4.0 (EHT Collaboration)",
+        "image_alt": "The Event Horizon Telescope image of Sagittarius A*, an orange ring around a dark centre"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Sag_A*.jpg"],
+      "local_file": "assets/black-hole-milky-way.jpg"
+    },
+    {
+      "id": "blessings-same-sex-couples",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pope_Francis_2014_%28cropped%29.png/1280px-Pope_Francis_2014_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Pope_Francis_2014_(cropped).png",
+        "image_license": "CC BY-SA 2.0 (Jeffrey Bruno from New York City, United States)",
+        "image_alt": "Pope Francis in white, smiling"
+      },
+      "resolution": "missing image staged",
+      "reason": "Portrait of Pope Francis (2014); no photo of a blessing.",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Pope_Francis_2014_(cropped).png"],
+      "local_file": "assets/blessings-same-sex-couples.png"
+    },
+    {
+      "id": "change4-far-side-landing",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Yutu-2_leaving_Chang_e-4-iau1901a.jpg/1280px-Yutu-2_leaving_Chang_e-4-iau1901a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Yutu-2_leaving_Chang_e-4-iau1901a.jpg",
+        "image_license": "CC BY 4.0 (CNSA)",
+        "image_alt": "The Yutu-2 rover driving away from the Chang'e 4 lander on the far side of the Moon"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Yutu-2_leaving_Chang_e-4-iau1901a.jpg"],
+      "local_file": "assets/change4-far-side-landing.jpg"
+    },
+    {
+      "id": "crispr-cure-approved",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Sickle_Cell_Anemia_%285610746554%29.jpg/1280px-Sickle_Cell_Anemia_%285610746554%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Sickle_Cell_Anemia_(5610746554).jpg",
+        "image_license": "CC BY 2.0 (Ed Uthman from Houston, TX, USA)",
+        "image_alt": "Microscope view of a blood smear with sickle-shaped red blood cells"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Sickle_Cell_Anemia_(5610746554).jpg"],
+      "local_file": "assets/crispr-cure-approved.jpg"
+    },
+    {
+      "id": "eu-roaming-free",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Free_roaming_in_the_European_Union_-_P051179-923299.jpg/1280px-Free_roaming_in_the_European_Union_-_P051179-923299.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Free_roaming_in_the_European_Union_-_P051179-923299.jpg",
+        "image_license": "CC BY 4.0 (European Commission)",
+        "image_alt": "A phone on an open map shows \"Free roaming\" with EU flags"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Free_roaming_in_the_European_Union_-_P051179-923299.jpg"
+      ],
+      "local_file": "assets/eu-roaming-free.jpg"
+    },
+    {
+      "id": "eu-usb-c-iphone",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/USB-C_plug%2C_focus_stacked.jpg/1280px-USB-C_plug%2C_focus_stacked.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:USB-C_plug,_focus_stacked.jpg",
+        "image_license": "CC BY-SA 4.0 (Tomato86)",
+        "image_alt": "Close-up of a USB-C plug"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:USB-C_plug,_focus_stacked.jpg"],
+      "local_file": "assets/eu-usb-c-iphone.jpg"
+    },
+    {
+      "id": "falcon9-booster-landing",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/ORBCOMM-2_First-Stage_Landing_%2823271687254%29.jpg/1280px-ORBCOMM-2_First-Stage_Landing_%2823271687254%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:ORBCOMM-2_First-Stage_Landing_(23271687254).jpg",
+        "image_license": "CC0 (SpaceX)",
+        "image_alt": "A Falcon 9 first stage lands upright on its landing pad at night, December 2015"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:ORBCOMM-2_First-Stage_Landing_(23271687254).jpg"
+      ],
+      "local_file": "assets/falcon9-booster-landing.jpg"
+    },
+    {
+      "id": "ftx-collapse",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sam_Bankman-Fried_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Sam_Bankman-Fried_(cropped).png",
+        "image_license": "CC BY 3.0 (Cointelegraph)",
+        "image_alt": "Sam Bankman-Fried during an interview at the Bitcoin 2021 conference"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Sam_Bankman-Fried_(cropped).png"],
+      "local_file": "assets/ftx-collapse.png"
+    },
+    {
+      "id": "gulf-of-america",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/U.S._Geological_Survey_map_of_the_Gulf_of_America%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:U.S._Geological_Survey_map_of_the_Gulf_of_America,_2025.jpg",
+        "image_license": "Public domain (U.S. Department of the Interior)",
+        "image_alt": "US Geological Survey map labelled \"Gulf of America\""
+      },
+      "resolution": "missing image staged",
+      "reason": "Commons description calls the image US government messaging; the map itself is the official USGS map.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:U.S._Geological_Survey_map_of_the_Gulf_of_America,_2025.jpg"
+      ],
+      "local_file": "assets/gulf-of-america.jpg"
+    },
+    {
+      "id": "harris-first-woman-vp",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Kamala_Harris_Vice_Presidential_Portrait_%28cropped%29.jpg/1280px-Kamala_Harris_Vice_Presidential_Portrait_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Kamala_Harris_Vice_Presidential_Portrait_(cropped).jpg",
+        "image_license": "Public domain (Lawrence Jackson)",
+        "image_alt": "Official portrait of Vice President Kamala Harris"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Kamala_Harris_Vice_Presidential_Portrait_(cropped).jpg"
+      ],
+      "local_file": "assets/harris-first-woman-vp.jpg"
+    },
+    {
+      "id": "heartbleed",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Heartbleed.svg/1280px-Heartbleed.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Heartbleed.svg",
+        "image_license": "CC0 (Leena Kurjenniska / Codenomicon 2014)",
+        "image_alt": "The Heartbleed logo: a red heart dripping blood"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Heartbleed.svg"],
+      "local_file": "assets/heartbleed.png"
+    },
+    {
+      "id": "hiv-twice-a-year-jab",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/HIV_H9_T-cell_II.jpg/1280px-HIV_H9_T-cell_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:HIV_H9_T-cell_II.jpg",
+        "image_license": "Public domain (National Institutes of Health (NIH))",
+        "image_alt": "Electron micrograph of HIV particles, in yellow, on an infected T cell"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:HIV_H9_T-cell_II.jpg"],
+      "local_file": "assets/hiv-twice-a-year-jab.jpg"
+    },
+    {
+      "id": "india-general-strike",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg/1280px-2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg",
+        "image_license": "CC BY-SA 4.0 (Randeep Maddoke; randeepphotoartist@gmail.com)",
+        "image_alt": "Aerial view of a farmers' march to Delhi filling a highway, 2020"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:2020_Indian_farmers%27_protest_-_March_to_Delhi.jpg"
+      ],
+      "local_file": "assets/india-general-strike.jpg"
+    },
+    {
+      "id": "ingenuity-mars-flight",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Ingenuity_helicopter%2C_cropped_from_Perseverance_selfie_%28PIA24542%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Ingenuity_helicopter,_cropped_from_Perseverance_selfie_(PIA24542).jpg",
+        "image_license": "Public domain (NASA/JPL-Caltech/MSSS)",
+        "image_alt": "The Ingenuity helicopter standing on the surface of Mars, photographed by Perseverance"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Ingenuity_helicopter,_cropped_from_Perseverance_selfie_(PIA24542).jpg"
+      ],
+      "local_file": "assets/ingenuity-mars-flight.jpg"
+    },
+    {
+      "id": "internet-explorer-retired",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_Explorer_10%2B11_logo.svg/1280px-Internet_Explorer_10%2B11_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Internet_Explorer_10%2B11_logo.svg",
+        "image_license": "Public domain (Microsoft)",
+        "image_alt": "The blue Internet Explorer \"e\" logo"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Internet_Explorer_10%2B11_logo.svg"],
+      "local_file": "assets/internet-explorer-retired.png"
+    },
+    {
+      "id": "lettuce-outlasts-truss",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Prime_Minister_Liz_Truss_announces_her_resignation_%28cropped%29.jpg/1280px-Prime_Minister_Liz_Truss_announces_her_resignation_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Liz_Truss_announces_her_resignation_(cropped).jpg",
+        "image_license": "OGL 3 (Prime Minister's Office)",
+        "image_alt": "Liz Truss at a lectern outside 10 Downing Street on 20 October 2022"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Prime_Minister_Liz_Truss_announces_her_resignation_(cropped).jpg"
+      ],
+      "local_file": "assets/lettuce-outlasts-truss.jpg"
+    },
+    {
+      "id": "mexico-first-woman-president",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Claudia_Sheinbaum_discurso_de_la_victoria.jpg/1280px-Claudia_Sheinbaum_discurso_de_la_victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_discurso_de_la_victoria.jpg",
+        "image_license": "CC BY 4.0 (EneasMx)",
+        "image_alt": "Claudia Sheinbaum raises her fist at a lectern during her victory speech, 2 June 2024"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Claudia_Sheinbaum_discurso_de_la_victoria.jpg"
+      ],
+      "local_file": "assets/mexico-first-woman-president.jpg"
+    },
+    {
+      "id": "microsoft-activision",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Activisionheadquarters.jpg/1280px-Activisionheadquarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Activisionheadquarters.jpg",
+        "image_license": "CC BY-SA 3.0 (w:User:Coolcaesar)",
+        "image_alt": "Activision headquarters building in Santa Monica"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Activisionheadquarters.jpg"],
+      "local_file": "assets/microsoft-activision.jpg"
+    },
+    {
+      "id": "negative-oil-price",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/WTI_price_2019-2020.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:WTI_price_2019-2020.png",
+        "image_license": "CC BY-SA 4.0 (Renerpho)",
+        "image_alt": "Line chart of the WTI crude oil price, falling below zero in April 2020"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:WTI_price_2019-2020.png"],
+      "local_file": "assets/negative-oil-price.png"
+    },
+    {
+      "id": "netflix-password-sharing",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Netflix_2016_N_logo.svg/1280px-Netflix_2016_N_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Netflix_2016_N_logo.svg",
+        "image_license": "Public domain (Netflix)",
+        "image_alt": "The red Netflix \"N\" logo"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Netflix_2016_N_logo.svg"],
+      "local_file": "assets/netflix-password-sharing.png"
+    },
+    {
+      "id": "nvidia-record-drop",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Nvidiaheadquarters.jpg/1280px-Nvidiaheadquarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Nvidiaheadquarters.jpg",
+        "image_license": "CC BY-SA 3.0 (Coolcaesar at English Wikipedia)",
+        "image_alt": "Nvidia headquarters building in Santa Clara"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Nvidiaheadquarters.jpg"],
+      "local_file": "assets/nvidia-record-drop.jpg"
+    },
+    {
+      "id": "oumuamua",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg/1280px-Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg",
+        "image_license": "CC BY 4.0 (ESA/Hubble, NASA, ESO, M. Kornmesser)",
+        "image_alt": "Artist's impression of the elongated interstellar object 'Oumuamua"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Artist%E2%80%99s_impression_of_the_interstellar_asteroid_%60Oumuamua.jpg"
+      ],
+      "local_file": "assets/oumuamua.jpg"
+    },
+    {
+      "id": "ozone-layer-recovery",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/NASA_and_NOAA_Announce_Ozone_Hole_is_a_Double_Record_Breaker.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:NASA_and_NOAA_Announce_Ozone_Hole_is_a_Double_Record_Breaker.png",
+        "image_license": "Public domain (NASA)",
+        "image_alt": "NASA false-colour map of the ozone hole over Antarctica"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:NASA_and_NOAA_Announce_Ozone_Hole_is_a_Double_Record_Breaker.png"
+      ],
+      "local_file": "assets/ozone-layer-recovery.png"
+    },
+    {
+      "id": "philae-comet-landing",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Comet_67P_on_19_September_2014_NavCam_mosaic.jpg/1280px-Comet_67P_on_19_September_2014_NavCam_mosaic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Comet_67P_on_19_September_2014_NavCam_mosaic.jpg",
+        "image_license": "CC BY-SA 3.0 igo (ESA/Rosetta/NAVCAM, CC BY-SA IGO 3.0)",
+        "image_alt": "Rosetta navigation-camera mosaic of comet 67P, September 2014"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Comet_67P_on_19_September_2014_NavCam_mosaic.jpg"
+      ],
+      "local_file": "assets/philae-comet-landing.jpg"
+    },
+    {
+      "id": "ram-shortage",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png/1280px-Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png",
+        "image_license": "Public domain (Rei)",
+        "image_alt": "Line chart of DDR5 RAM kit prices, rising steeply at the end of 2025"
+      },
+      "resolution": "missing image staged",
+      "reason": "The Commons chart says its prices are approximate, \"based on PCPartPicker trends\"; it is not an official data series.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Average_price_of_DDR5-5200_2x16_GB_RAM_kits.png"
+      ],
+      "local_file": "assets/ram-shortage.png"
+    },
+    {
+      "id": "spacex-ipo",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Nasdaq_Tower_May_2026.jpg/1280px-Nasdaq_Tower_May_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Nasdaq_Tower_May_2026.jpg",
+        "image_license": "CC BY 4.0 (Nielsoncaetanosalmeron)",
+        "image_alt": "The Nasdaq Tower in Times Square, May 2026"
+      },
+      "resolution": "missing image staged",
+      "reason": "Generic Nasdaq Tower photo (May 2026); the screen shows another company, not SpaceX.",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Nasdaq_Tower_May_2026.jpg"],
+      "local_file": "assets/spacex-ipo.jpg"
+    },
+    {
+      "id": "svb-collapse",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/3003_West_Tasman_Drive_entrance_2%2C_Santa_Clara%2C_California.jpg/1280px-3003_West_Tasman_Drive_entrance_2%2C_Santa_Clara%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:3003_West_Tasman_Drive_entrance_2,_Santa_Clara,_California.jpg",
+        "image_license": "CC BY-SA 4.0 (Minh Nguyen)",
+        "image_alt": "Silicon Valley Bank headquarters in Santa Clara"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:3003_West_Tasman_Drive_entrance_2,_Santa_Clara,_California.jpg"
+      ],
+      "local_file": "assets/svb-collapse.jpg"
+    },
+    {
+      "id": "tariffs-struck-down",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Supreme_Court_Front_Dusk.jpg/1280px-Supreme_Court_Front_Dusk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Supreme_Court_Front_Dusk.jpg",
+        "image_license": "Public domain (Noclip at en.wikipedia)",
+        "image_alt": "The US Supreme Court building at dusk"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Supreme_Court_Front_Dusk.jpg"],
+      "local_file": "assets/tariffs-struck-down.jpg"
+    },
+    {
+      "id": "trump-in-north-korea",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/President_Trump_Meets_with_Chairman_Kim_Jong_Un_%2848164813552%29.jpg/1280px-President_Trump_Meets_with_Chairman_Kim_Jong_Un_%2848164813552%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:President_Trump_Meets_with_Chairman_Kim_Jong_Un_(48164813552).jpg",
+        "image_license": "Public domain (The White House from Washington, DC)",
+        "image_alt": "Donald Trump, Kim Jong Un and Moon Jae-in together at the Korean Demilitarized Zone, 30 June 2019"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:President_Trump_Meets_with_Chairman_Kim_Jong_Un_(48164813552).jpg"
+      ],
+      "local_file": "assets/trump-in-north-korea.jpg"
+    },
+    {
+      "id": "vw-dieselgate",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG/1280px-VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG",
+        "image_license": "CC BY-SA 3.0 (Mariordo Mario Roberto Duran Ortiz)",
+        "image_alt": "A Volkswagen Golf TDI \"Clean Diesel\" at the 2010 Washington Auto Show"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:VW_Golf_TDI_Clean_Diesel_WAS_2010_8983.JPG"
+      ],
+      "local_file": "assets/vw-dieselgate.jpg"
+    },
+    {
+      "id": "youtube-hides-dislikes",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/YouTube_2024.svg/1280px-YouTube_2024.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:YouTube_2024.svg",
+        "image_license": "Public domain (Google, Inc.)",
+        "image_alt": "The YouTube logo"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:YouTube_2024.svg"],
+      "local_file": "assets/youtube-hides-dislikes.png"
+    },
+    {
+      "id": "cloned-monkeys",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Long-tailed_macaque_%28Macaca_fascicularis%29_Labuk_Bay.jpg/1280px-Long-tailed_macaque_%28Macaca_fascicularis%29_Labuk_Bay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Long-tailed_macaque_(Macaca_fascicularis)_Labuk_Bay.jpg",
+        "image_license": "CC BY-SA 4.0 (Charles J. Sharp)",
+        "image_alt": "A long-tailed macaque eating"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Long-tailed_macaque_(Macaca_fascicularis)_Labuk_Bay.jpg"
+      ],
+      "local_file": "assets/cloned-monkeys.jpg"
+    },
+    {
+      "id": "first-millennial-saint",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Covent_Garden%2C_Corpus_Christi_Catholic_Church%2C_Carlo_Acutis_memorial.jpg/1280px-Covent_Garden%2C_Corpus_Christi_Catholic_Church%2C_Carlo_Acutis_memorial.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Covent_Garden,_Corpus_Christi_Catholic_Church,_Carlo_Acutis_memorial.jpg",
+        "image_license": "CC BY-SA 4.0 (AndyScott)",
+        "image_alt": "Shrine image of Carlo Acutis holding a monstrance, at Corpus Christi Church, Covent Garden"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Covent_Garden,_Corpus_Christi_Catholic_Church,_Carlo_Acutis_memorial.jpg"
+      ],
+      "local_file": "assets/first-millennial-saint.jpg"
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/AI_Overviews_result_for_%22How_many_rocks_shall_i_eat%22%2C_May_23%2C_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:AI_Overviews_result_for_%22How_many_rocks_shall_i_eat%22,_May_23,_2024.jpg",
+        "image_license": "Public domain (Kris Kashtanova)",
+        "image_alt": "Google AI Overview answer saying people should eat at least one small rock per day"
+      },
+      "resolution": "missing image staged",
+      "reason": "Subject mismatch kept on purpose: no free glue-on-pizza screenshot exists on Commons. This screenshot is the \"eat rocks\" answer from the same AI Overviews failure week (23 May 2024). Use it only if the blurb or alt mentions rocks; otherwise keep the item without an image.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:AI_Overviews_result_for_%22How_many_rocks_shall_i_eat%22,_May_23,_2024.jpg"
+      ],
+      "local_file": "assets/ai-overviews-glue-pizza.jpg"
+    },
+    {
+      "id": "australia-teen-social-ban",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Anika_Wells_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Anika_Wells_2023.jpg",
+        "image_license": "CC BY 4.0 (Department of Foreign Affairs and Trade (DFAT)/Sarah Hodges)",
+        "image_alt": "Australian Communications Minister Anika Wells, portrait"
+      },
+      "resolution": "missing image staged",
+      "reason": "Portrait of the responsible minister, not of the ban itself.",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Anika_Wells_2023.jpg"],
+      "local_file": "assets/australia-teen-social-ban.jpg"
+    },
+    {
+      "id": "beatles-now-and-then",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/The_Beatles%2C_Kennedy_Airport%2C_February_1964.jpg/1280px-The_Beatles%2C_Kennedy_Airport%2C_February_1964.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:The_Beatles,_Kennedy_Airport,_February_1964.jpg",
+        "image_license": "Public domain (United Press International)",
+        "image_alt": "The Beatles waving to fans at Kennedy Airport, 1964"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:The_Beatles,_Kennedy_Airport,_February_1964.jpg"
+      ],
+      "local_file": "assets/beatles-now-and-then.jpg"
+    },
+    {
+      "id": "brazil-blocks-x",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Elon_Musk_Brazil_2022.png/1280px-Elon_Musk_Brazil_2022.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Elon_Musk_Brazil_2022.png",
+        "image_license": "CC BY 2.0 (Ministério Das Comunicações)",
+        "image_alt": "Elon Musk, head and shoulders, in Brazil in 2022"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Elon_Musk_Brazil_2022.png"],
+      "local_file": "assets/brazil-blocks-x.png"
+    },
+    {
+      "id": "change6-far-side-samples",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg/1280px-Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg",
+        "image_license": "CC BY-SA 4.0 (BugWarp)",
+        "image_alt": "Chang'e 6 lunar far-side samples on display at the 2024 International Astronautical Congress"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Chang%27e_6_lunar_samples_at_IAC_2024_01.jpg"
+      ],
+      "local_file": "assets/change6-far-side-samples.jpg"
+    },
+    {
+      "id": "driverless-robotaxis",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg/1280px-Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg",
+        "image_license": "CC BY 4.0 (Dllu)",
+        "image_alt": "A driverless Waymo Jaguar I-Pace in San Francisco"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Waymo_Jaguar_I-Pace_in_San_Francisco_2023_dllu.jpg"
+      ],
+      "local_file": "assets/driverless-robotaxis.jpg"
+    },
+    {
+      "id": "el-salvador-bitcoin",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Cajero_Bitcoin_Athena_El_Salvador.jpg/1280px-Cajero_Bitcoin_Athena_El_Salvador.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Cajero_Bitcoin_Athena_El_Salvador.jpg",
+        "image_license": "CC BY-SA 4.0 (Karlalhdz)",
+        "image_alt": "An orange Athena Bitcoin ATM in El Salvador"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Cajero_Bitcoin_Athena_El_Salvador.jpg"],
+      "local_file": "assets/el-salvador-bitcoin.jpg"
+    },
+    {
+      "id": "flash-player-end",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Adobe_Flash_Player_32.svg/1280px-Adobe_Flash_Player_32.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Adobe_Flash_Player_32.svg",
+        "image_license": "Public domain (Adobe)",
+        "image_alt": "The Adobe Flash Player logo, a white \"f\" on dark red"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Adobe_Flash_Player_32.svg"],
+      "local_file": "assets/flash-player-end.png"
+    },
+    {
+      "id": "gaga-copacabana",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_%282025%29.jpg/1280px-P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_(2025).jpg",
+        "image_license": "CC BY-SA 4.0 (CHr0m4tiko0)",
+        "image_alt": "Crowds gathering on Copacabana beach hours before the Lady Gaga concert, 3 May 2025"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:P%C3%BAblico_congreg%C3%A1ndose_en_la_playa_de_Copacabana_antes_del_concierto_de_Lady_Gaga_(2025).jpg"
+      ],
+      "local_file": "assets/gaga-copacabana.jpg"
+    },
+    {
+      "id": "galaxy-note-7-recall",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Samsung_Galaxy_Note_7_Air_New_Zealand.jpg/1280px-Samsung_Galaxy_Note_7_Air_New_Zealand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Note_7_Air_New_Zealand.jpg",
+        "image_license": "CC BY-SA 4.0 (Haha169)",
+        "image_alt": "Air New Zealand check-in sign warning that Samsung Galaxy Note 7 phones are banned on board"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Note_7_Air_New_Zealand.jpg"
+      ],
+      "local_file": "assets/galaxy-note-7-recall.jpg"
+    },
+    {
+      "id": "gangnam-style-broke-youtube",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg/1280px-Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg",
+        "image_license": "CC BY 2.0 (AngryJulieMonday)",
+        "image_alt": "Psy performing Gangnam Style on stage at Jingle Ball 2012"
+      },
+      "resolution": "missing image staged",
+      "reason": "Same image as gangnam-style-counter; the parent keeps one if the items merge.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg"
+      ],
+      "local_file": "assets/gangnam-style-broke-youtube.jpg"
+    },
+    {
+      "id": "gangnam-style-counter",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg/1280px-Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg",
+        "image_license": "CC BY 2.0 (AngryJulieMonday)",
+        "image_alt": "Psy performing Gangnam Style on stage at Jingle Ball 2012"
+      },
+      "resolution": "missing image staged",
+      "reason": "Same image as gangnam-style-broke-youtube; the parent keeps one if the items merge.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Psy_does_Gangnam_Style_at_KIIS_FM_Jingle_Ball_2012.jpg"
+      ],
+      "local_file": "assets/gangnam-style-counter.jpg"
+    },
+    {
+      "id": "homo-naledi",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Homo_naledi_paratype_DH3.jpg/1280px-Homo_naledi_paratype_DH3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Homo_naledi_paratype_DH3.jpg",
+        "image_license": "CC BY 4.0 (Lee Roger Berger research team)",
+        "image_alt": "Fossil skull pieces of Homo naledi on a black background"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Homo_naledi_paratype_DH3.jpg"],
+      "local_file": "assets/homo-naledi.jpg"
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg/1280px-Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg",
+        "image_license": "CC BY-SA 4.0 (Taibhseoir)",
+        "image_alt": "Two badges from Ireland's 2015 marriage referendum: \"Yes Equality\" and \"Tá Comhionannas\""
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Election_badges_promoting_a_%22yes%22_vote_from_Ireland%27s_Marriage_Equality_referendum_in_2015.jpg"
+      ],
+      "local_file": "assets/ireland-marriage-referendum.jpg"
+    },
+    {
+      "id": "k2-18b-life-hint",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Exoplanet_K2-18_b_%28Illustration%29.jpg/1280px-Exoplanet_K2-18_b_%28Illustration%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Exoplanet_K2-18_b_(Illustration).jpg",
+        "image_license": "Public domain (Illustration: NASA, ESA, CSA, Joseph Olmsted (STScI)\n\nScience: Nikku Madhusudhan (IoA))",
+        "image_alt": "Illustration of exoplanet K2-18 b next to its red dwarf star"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Exoplanet_K2-18_b_(Illustration).jpg"],
+      "local_file": "assets/k2-18b-life-hint.jpg"
+    },
+    {
+      "id": "last-penny",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/US_One_Cent_Obv.png/1280px-US_One_Cent_Obv.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:US_One_Cent_Obv.png",
+        "image_license": "Public domain (United States Mint)",
+        "image_alt": "The front of a US one-cent coin with Abraham Lincoln"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": ["https://commons.wikimedia.org/wiki/File:US_One_Cent_Obv.png"],
+      "local_file": "assets/last-penny.png"
+    },
+    {
+      "id": "turkish-shooter",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Yusuf_Dike%C3%A7_in_Yerevan_Airport_%28cropped%29.jpg/1280px-Yusuf_Dike%C3%A7_in_Yerevan_Airport_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Yusuf_Dike%C3%A7_in_Yerevan_Airport_(cropped).jpg",
+        "image_license": "CC BY 4.0 (07)",
+        "image_alt": "Yusuf Dikeç, the Turkish Olympic shooter, in glasses"
+      },
+      "resolution": "missing image staged",
+      "reason": "Photo is from 2026 (European 10 m Championships trip), not from the 2024 Olympics.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Yusuf_Dike%C3%A7_in_Yerevan_Airport_(cropped).jpg"
+      ],
+      "local_file": "assets/turkish-shooter.jpg"
+    },
+    {
+      "id": "trump-memecoin",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/20250120_Market_value_of_Trump_meme_coin.svg/1280px-20250120_Market_value_of_Trump_meme_coin.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:20250120_Market_value_of_Trump_meme_coin.svg",
+        "image_license": "CC BY-SA 4.0 (RCraig09)",
+        "image_alt": "Chart of the Official Trump meme coin price, peaking in January 2025 and then falling"
+      },
+      "resolution": "missing image staged",
+      "reason": "image added for a noted item",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:20250120_Market_value_of_Trump_meme_coin.svg"
+      ],
+      "local_file": "assets/trump-memecoin.png"
+    },
+    {
+      "id": "aliens",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png/1280px-David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png",
+        "image_license": "Public domain (U.S. House Subcommittee on National Security, the Border, and Foreign Affairs (screenshot from government website video broadcast))",
+        "image_alt": "David Grusch testifying before a US House subcommittee on 26 July 2023, behind a \"Mr. Grusch\" name card"
+      },
+      "resolution": "replacement staged",
+      "reason": "Faithful to the card: the Grusch hearing. A more \"alien\" alternative is in alternates/ (an illustration, labelled as such).",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:David_Grusch_giving_testimony_on_26_July_2023_before_the_US_House_Subcommittee_on_National_Security_the_Border_and_Foreign_Affairs.png"
+      ],
+      "local_file": "assets/aliens.png"
+    },
+    {
+      "id": "blue-texas",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/2026_United_States_Senate_elections_results_map.svg/1280px-2026_United_States_Senate_elections_results_map.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:2026_United_States_Senate_elections_results_map.svg",
+        "image_license": "CC BY 4.0 (Coolxsearcher1414)",
+        "image_alt": "Map of the 2026 US Senate election results, with Texas in dark blue"
+      },
+      "resolution": "replacement staged",
+      "reason": "Real 2026 results map (Wikipedia/Commons). Other states are also coloured, which matches the note (\"some other states in red\").",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:2026_United_States_Senate_elections_results_map.svg"
+      ],
+      "local_file": "assets/blue-texas.png"
+    },
+    {
+      "id": "new-pope",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Pope_Leo_XIV_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_2.jpg",
+        "image_license": "CC BY-SA 4.0 (Edgar Beltrán / The Pillar)",
+        "image_alt": "Pope Leo XIV waving from the loggia of St Peter's Basilica after his election"
+      },
+      "resolution": "replacement staged",
+      "reason": "Leo XIV on the loggia after his election, 8 May 2025.",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_2.jpg"],
+      "local_file": "assets/new-pope.jpg"
+    },
+    {
+      "id": "hulkenberg-podium",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg/1280px-Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg",
+        "image_license": "CC BY 4.0 (Eustace Bagge)",
+        "image_alt": "Nico Hülkenberg driving his green Sauber C45 at Monza, 2025"
+      },
+      "resolution": "replacement staged",
+      "reason": "No free photo of the 2025 British GP podium exists on Commons. This shows Hülkenberg in the 2025 Sauber at Monza.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Nico_H%C3%BClkenberg_2025_Italian_Grand_Prix_qualifying.jpg"
+      ],
+      "local_file": "assets/hulkenberg-podium.jpg"
+    },
+    {
+      "id": "charles-coronation",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg/1280px-Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg",
+        "image_license": "CC BY 2.0 (Number 10)",
+        "image_alt": "Queen Elizabeth II in green at Buckingham Palace during the Platinum Pageant, June 2022"
+      },
+      "resolution": "replacement staged",
+      "reason": "For the approved Queen Elizabeth II death replacement (Andrei, 2026-11-17). One of her last public appearances, three months before her death on 8 September 2022.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_at_the_Platinum_Jubilee_-_Platinum_Pageant.jpg"
+      ],
+      "local_file": "assets/charles-coronation.jpg"
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Bitcoin_price_usd_logarithmic.svg/1280px-Bitcoin_price_usd_logarithmic.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Bitcoin_price_usd_logarithmic.svg",
+        "image_license": "CC0 (FrankAndProust)",
+        "image_alt": "Logarithmic chart of the Bitcoin price from 2010 to 2026"
+      },
+      "resolution": "missing image staged",
+      "reason": "Replaces the earlier proposal, whose chart ended in December 2024 and missed the $126,000 peak. Log scale; the October 2025 peak and the fall are visible but small.",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Bitcoin_price_usd_logarithmic.svg"],
+      "local_file": "assets/bitcoin-round-trip.png"
+    },
+    {
+      "id": "aws-outage-2025",
+      "fields": {
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Amazon_Web_Services_2025.svg/1280px-Amazon_Web_Services_2025.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_2025.svg",
+        "image_license": "Public domain (Amazon.com, Inc. and Koto)",
+        "image_alt": "The Amazon Web Services logo"
+      },
+      "resolution": "missing image staged",
+      "reason": "Logo only; no free photo of the outage exists. Transparent PNG with dark \"aws\" text: check contrast on the card background.",
+      "sources": ["https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_2025.svg"],
+      "local_file": "assets/aws-outage-2025.png"
+    },
+    {
+      "id": "katy-perry-space",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Katy_Perry_in_Budapest%2C_Hungary_at_MVM_Dome_for_the_Lifetimes_Tour_%28October_27%2C_2025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Katy_Perry_in_Budapest,_Hungary_at_MVM_Dome_for_the_Lifetimes_Tour_(October_27,_2025).jpg",
+        "image_license": "CC0 (Misterwiki16)",
+        "image_alt": "Katy Perry singing on stage in Budapest during the Lifetimes Tour, October 2025"
+      },
+      "resolution": "missing image staged",
+      "reason": "Replaces the earlier proposal, which showed crewmate Aisha Bowe, not Katy Perry. No free photo of Katy Perry on the NS-31 flight exists on Commons. CC0 own-work upload by Misterwiki16: plausible concert phone photo, checked by eye (MED-08).",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Katy_Perry_in_Budapest,_Hungary_at_MVM_Dome_for_the_Lifetimes_Tour_(October_27,_2025).jpg"
+      ],
+      "local_file": "assets/katy-perry-space.jpg"
+    },
+    {
+      "id": "flying-cars",
+      "fields": {
+        "image_url": "https://cdn.mos.cms.futurecdn.net/iJ5E8TDoQby6iKnKGnVTEf-2560-80.jpg",
+        "image_page": "https://www.space.com/technology/spacex-thrusters-just-made-a-tesla-roadster-fly-and-elon-musks-car-is-still-out-there-in-space",
+        "image_license": "© Tesla; no licence documented",
+        "image_alt": "The new Tesla Roadster in the air above a Cybertruck at its reveal on 15 October 2026, trailing thruster vapour"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "reason": "Actual reveal-event photo of the hop over other vehicles. A frame of the kickflip itself (Tesla stream, ~10:56 per hwbusters) needs a video frame; none was extracted.",
+      "sources": [
+        "https://www.space.com/technology/spacex-thrusters-just-made-a-tesla-roadster-fly-and-elon-musks-car-is-still-out-there-in-space",
+        "https://linkding.lav.ren/bookmarks?details=6951"
+      ],
+      "local_file": "assets/flying-cars.jpg"
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "fields": {
+        "image_url": "https://newatlas-brightspot.s3.ap-southeast-2.amazonaws.com/a7/9c/b39c5ce840799bac005f1bc0221a/volonaut-airbike-flight-0.jpg",
+        "image_page": "https://newatlas.com/aircraft/volonaut-airbike-full-video/",
+        "image_license": "© Volonaut; no licence documented",
+        "image_alt": "A rider in black flying the Volonaut Airbike low over trees"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "reason": "Real Airbike photo. The requested side-by-side composite with the Oppressor was not made (no image-generation or editing tool in this session); the Rockstar image is in alternates/.",
+      "sources": [
+        "https://newatlas.com/aircraft/volonaut-airbike-full-video/",
+        "https://linkding.lav.ren/bookmarks?details=6947"
+      ],
+      "local_file": "assets/real-oppressor-mk2.jpg"
+    },
+    {
+      "id": "concord",
+      "fields": {
+        "image_url": "https://blog.playstation.com/tachyon/2024/05/b06a8cc47aebcaeaff8cf93d58435221e8b1b616.jpg",
+        "image_page": "https://blog.playstation.com/2024/05/30/concord-gameplay-revealed-launching-august-23-2024-on-ps5-and-pc/",
+        "image_license": "© Sony Interactive Entertainment / Firewalk Studios; no licence documented",
+        "image_alt": "Concord key art: several Freegunner characters beside the Concord logo"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "reason": "Official game artwork, as requested. Not Rockstar material.",
+      "sources": [
+        "https://blog.playstation.com/2024/05/30/concord-gameplay-revealed-launching-august-23-2024-on-ps5-and-pc/",
+        "https://linkding.lav.ren/bookmarks?details=6952"
+      ],
+      "local_file": "assets/concord.jpg"
+    },
+    {
+      "id": "ash-ketchum",
+      "fields": {
+        "image_url": "https://mcdn.pokemon.com/image/upload/c_limit,w_1439/f_jpg/q_auto:best/v1/live/static-assets/content-assets/cms2/img/watch-pokemon-tv/_tiles/season25/netflix/04/season25-on-netflix-169.png",
+        "image_page": "https://www.pokemon.com/us/news/pokemon-ultimate-journeys-the-series-and-pokemon-horizons-the-series-news",
+        "image_license": "© The Pokémon Company; no licence documented",
+        "image_alt": "Official Pokémon tile: Ash with Pikachu on his head waves goodbye beside Brock and Misty"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "reason": "Ending-era official artwork from the final arc (Brock and Misty return). No adult-Ash imagery used: an adult Ash is not canon. Small source (578x327, Netflix logo at the right).",
+      "sources": [
+        "https://www.pokemon.com/us/news/pokemon-ultimate-journeys-the-series-and-pokemon-horizons-the-series-news",
+        "https://linkding.lav.ren/bookmarks?details=6950"
+      ],
+      "local_file": "assets/ash-ketchum.jpg"
+    },
+    {
+      "id": "rdr-on-phones",
+      "fields": {
+        "image_url": "https://cdn.mos.cms.futurecdn.net/BAQAUYrBwhdyaN6MAixzkn-2000-80.jpg",
+        "image_page": "https://www.gamesradar.com/hardware/gaming-controllers/i-treated-myself-to-the-red-dead-redemption-mobile-port-but-theres-one-thing-i-shouldve-picked-up-too",
+        "image_license": "© Future plc (photo); Rockstar Games (game image); no licence documented",
+        "image_alt": "Red Dead Redemption running on an Android phone, with a PlayStation controller behind it"
+      },
+      "resolution": "replacement staged (non-free; parent decides)",
+      "reason": "Rockstar material allowed here (Andrei, 2026-11-17). The photo itself belongs to Future plc, not Rockstar: that exception does not cover it.",
+      "sources": [
+        "https://www.gamesradar.com/hardware/gaming-controllers/i-treated-myself-to-the-red-dead-redemption-mobile-port-but-theres-one-thing-i-shouldve-picked-up-too",
+        "https://linkding.lav.ren/bookmarks?details=6953"
+      ],
+      "local_file": "assets/rdr-on-phones.jpg"
+    }
+  ],
+  "additions": []
+}

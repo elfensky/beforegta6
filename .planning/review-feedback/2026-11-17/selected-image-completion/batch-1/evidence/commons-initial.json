@@ -1,0 +1,1574 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "File:Apache_Log4j_Logo.svg",
+        "to": "File:Apache Log4j Logo.svg"
+      },
+      {
+        "from": "File:MrBeast_2022_01.jpg",
+        "to": "File:MrBeast 2022 01.jpg"
+      },
+      {
+        "from": "File:Europ\u00e4ische_Zentralbank_Frankfurt.jpg",
+        "to": "File:Europ\u00e4ische Zentralbank Frankfurt.jpg"
+      },
+      {
+        "from": "File:Day_of_Action_to_Save_Net_Neutrality_01.jpg",
+        "to": "File:Day of Action to Save Net Neutrality 01.jpg"
+      },
+      {
+        "from": "File:Elon_Musk_and_the_Neuralink_Future.jpg",
+        "to": "File:Elon Musk and the Neuralink Future.jpg"
+      },
+      {
+        "from": "File:Eso1733q_Artist\u2019s_impression_of_merging_neutron_stars.jpg",
+        "to": "File:Eso1733q Artist\u2019s impression of merging neutron stars.jpg"
+      },
+      {
+        "from": "File:Pig_(Sus_scrofa_domesticus)_-_FrogHollow_Farm_Sanctuary_2019-10-26_(02).jpg",
+        "to": "File:Pig (Sus scrofa domesticus) - FrogHollow Farm Sanctuary 2019-10-26 (02).jpg"
+      },
+      {
+        "from": "File:Flag_of_Saudi_Arabia.svg",
+        "to": "File:Flag of Saudi Arabia.svg"
+      },
+      {
+        "from": "File:Flag_of_Scotland.svg",
+        "to": "File:Flag of Scotland.svg"
+      },
+      {
+        "from": "File:Skype_Logo.png",
+        "to": "File:Skype Logo.png"
+      },
+      {
+        "from": "File:Vine_logo.svg",
+        "to": "File:Vine logo.svg"
+      },
+      {
+        "from": "File:Windows_XP_sighted_'in_the_wild'_on_a_cash_point,_3_August_2018.jpg",
+        "to": "File:Windows XP sighted 'in the wild' on a cash point, 3 August 2018.jpg"
+      },
+      {
+        "from": "File:Woolly_mammoths_by_Knight.jpg",
+        "to": "File:Woolly mammoths by Knight.jpg"
+      },
+      {
+        "from": "File:Zealandia_topography.jpg",
+        "to": "File:Zealandia topography.jpg"
+      }
+    ],
+    "pages": {
+      "151213431": {
+        "pageid": 151213431,
+        "ns": 6,
+        "title": "File:Apache Log4j Logo.svg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 3433,
+            "width": 512,
+            "height": 212,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Apache_Log4j_Logo.svg/1280px-Apache_Log4j_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 530,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Apache_Log4j_Logo.svg/3840px-Apache_Log4j_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Apache_Log4j_Logo.svg/1280px-Apache_Log4j_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 530,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Apache_Log4j_Logo.svg/3840px-Apache_Log4j_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Apache_Log4j_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Apache_Log4j_Logo.svg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/151213431",
+            "sha1": "88a165b63cd2aac435c26fa5eaf01d859617ca7d",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-08-06 01:03:40",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Apache Log4j Logo",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Apache License|Self-published work|Valid SVG created with Adobe Illustrator|Red and white logos with transparent background|Black and red logos with transparent background|Black, red, white logos|SVG black logos|Apache Log4j logos",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Apache Foundation Log4J Logo",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-08-05",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Jim_McKeeth\" title=\"User:Jim McKeeth\">Jim McKeeth</a> based on <a href=\"https://en.wikipedia.org/wiki/Apache_Software_Foundation\" class=\"extiw\" title=\"w:Apache Software Foundation\">Apache Software Foundation</a>'s official logo.",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/svg+xml"
+          }
+        ]
+      },
+      "65235223": {
+        "pageid": 65235223,
+        "ns": 6,
+        "title": "File:Day of Action to Save Net Neutrality 01.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 115679,
+            "width": 1615,
+            "height": 719,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Day_of_Action_to_Save_Net_Neutrality_01.jpg/1280px-Day_of_Action_to_Save_Net_Neutrality_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 570,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/8/81/Day_of_Action_to_Save_Net_Neutrality_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Day_of_Action_to_Save_Net_Neutrality_01.jpg/1280px-Day_of_Action_to_Save_Net_Neutrality_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 570,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/81/Day_of_Action_to_Save_Net_Neutrality_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Day_of_Action_to_Save_Net_Neutrality_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Day_of_Action_to_Save_Net_Neutrality_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/65235223",
+            "sha1": "577d18389102d4ba4e35167691717ec187a99f08",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2018-01-04 00:40:57",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Day of Action to Save Net Neutrality 01",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "PD shape|PD text|Day of Action to Save Net Neutrality|PD-shape missing SDC copyright status|PD-text missing SDC copyright status",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Fight for the Future net neutrality",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2017",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.battleforthenet.com/july12/\">https://www.battleforthenet.com/july12/</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Fight for the Future",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "93666208": {
+        "pageid": 93666208,
+        "ns": 6,
+        "title": "File:Elon Musk and the Neuralink Future.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 1140577,
+            "width": 3780,
+            "height": 2460,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/1280px-Elon_Musk_and_the_Neuralink_Future.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 833,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg/1280px-Elon_Musk_and_the_Neuralink_Future.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 833,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Elon_Musk_and_the_Neuralink_Future.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Elon_Musk_and_the_Neuralink_Future.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/93666208",
+            "sha1": "b34bf0b39d8d1e4982c9e58fb0fd9a30ce3ac1d9",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2020-08-30 01:30:14",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Elon Musk and the Neuralink Future",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Neuralink|Photographs by Steve Jurvetson|Flickr images reviewed by FlickreviewR 2|Elon Musk in 2020|Neuralink Robot",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "At the start of the live update event today:  video\n<p>It felt like a scene from a sci-fi movie when we entered.. surrounded by brain robots, and the sounds of neural-jacked pigs rustling behind the curtains...\n</p><p>C|Net: \"Elon Musk shows Neuralink brain implant working in a pig.  A wireless link from the Neuralink computing device showed the pig's brain activity as it snuffled around a pen on stage Friday night.  The demonstration shows the technology to be significantly closer to delivering on Musk's radical ambitions than during a 2019 product debut, when Neuralink only showed photos of a rat with a Neuralink connected via a USB-C port. The FDA granted approval for \"breakthrough device\" testing.\n\"It's like a Fitbit in your skull with tiny wires,\" Musk said of the device.\nIt communicates with brain cells with 1,024 thin electrodes that penetrate the outer layer of the brain. Then there's a Bluetooth link to an outside computing device, though the company is looking at other radio technology it can use to dramatically increase the number of data links.  \nNeuralink has a medical focus to start, like helping people deal with brain and spinal cord injuries or congenital defects. The technology could, for example, help paraplegics who've lost the ability to move or sense because of spinal cord injury, and the first human uses will aim to improve conditions like paraplegia or tetraplegia.\n\"If you can sense what people want to do with their limbs, you can do a second implant where the spinal injury occurred and create a neural shunt,\" Musk said. \"I'm confident in the long term it'll be possible to restore somebody's full body motion.\"\n\"The future is going to be weird,\" Musk said, discussing sci-fi uses of Neuralink. \"In the future you will be able to save and replay memories,\" he said. \"You could basically store your memories as a backup and restore the memories. You could potentially download them into a new body or into a robot body.\"\nMusk also discussed seeing in infrared, ultraviolet or X-ray using digital camera data. \"Over time we could give somebody super vision,\" Musk said.\"\n</p>\nFull disclosure: Future Ventures is an investor",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2020-08-28 16:10:28",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/jurvetson/50280652497/\">https://www.flickr.com/photos/jurvetson/50280652497/</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Steve Jurvetson",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution 2.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/2.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-2.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "63436653": {
+        "pageid": 63436653,
+        "ns": 6,
+        "title": "File:Eso1733q Artist\u2019s impression of merging neutron stars.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 360739,
+            "width": 3840,
+            "height": 2160,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg/1280px-Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 720,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/6/68/Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg/1280px-Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 720,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/68/Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Eso1733q_Artist%E2%80%99s_impression_of_merging_neutron_stars.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/63436653",
+            "sha1": "37d9f6345c23762be4867d1ca01ee250cb736931",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2017-10-18 00:10:08",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Eso1733q Artist\u2019s impression of merging neutron stars",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Gravitational waves|ESO files by L. Cal\u00e7ada|ESO files by M. Kornmesser|Artist's impressions of binary neutron stars",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "This artist\u2019s impression shows two tiny but very dense <a href=\"https://en.wikipedia.org/wiki/neutron_star\" class=\"extiw\" title=\"w:neutron star\">neutron stars</a> at the point at which they merge and explode as a <a href=\"https://en.wikipedia.org/wiki/kilonova\" class=\"extiw\" title=\"w:kilonova\">kilonova</a>. Such a very rare event is expected to produce both <a href=\"https://en.wikipedia.org/wiki/gravitational_wave\" class=\"extiw\" title=\"w:gravitational wave\">gravitational waves</a> and a short <a href=\"https://en.wikipedia.org/wiki/gamma-ray_burst\" class=\"extiw\" title=\"w:gamma-ray burst\">gamma-ray burst</a>, both of which were observed on 17 August 2017 by LIGO\u2013Virgo and Fermi/INTEGRAL respectively. Subsequent detailed observations with many ESO telescopes confirmed that this object, seen in the galaxy <a href=\"https://en.wikipedia.org/wiki/NGC_4993\" class=\"extiw\" title=\"w:NGC 4993\">NGC 4993</a> about 130 million light-years from the Earth, is indeed a kilonova. Such objects are the main source of very heavy chemical elements, such as gold and platinum, in the Universe.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2017-10-16 16:00:00",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.eso.org/public/images/eso1733q/\">https://www.eso.org/public/images/eso1733q/</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "ESO/L. Cal\u00e7ada/M. Kornmesser",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Unless specifically noted, the images and videos distributed from the public ESO web site, along with the texts of press releases, announcements, pictures of the week, blog posts and captions, are licensed under a Creative Commons Attribution 4.0 International License, and may on a non-exclusive basis be reproduced without fee provided the credit is clear and visible.",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Attribution": {
+                "value": "ESO/L. Cal\u00e7ada/M. Kornmesser",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "119351512": {
+        "pageid": 119351512,
+        "ns": 6,
+        "title": "File:Europ\u00e4ische Zentralbank Frankfurt.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 25351107,
+            "width": 6844,
+            "height": 5276,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg/1280px-Europ%C3%A4ische_Zentralbank_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 987,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg/3840px-Europ%C3%A4ische_Zentralbank_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg/1280px-Europ%C3%A4ische_Zentralbank_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 987,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg/3840px-Europ%C3%A4ische_Zentralbank_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Europ%C3%A4ische_Zentralbank_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Europ%C3%A4ische_Zentralbank_Frankfurt.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/119351512",
+            "sha1": "2bf6a8f510b3d2e65eb08ac95d10b688a3628aac",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2022-06-16 12:16:44",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Europ\u00e4ische Zentralbank Frankfurt",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Taken with Sony ILCE-7RM3|Taken with Sony FE 24-70mm F2.8 GM|Self-published work|Featured pictures on Commons by Der Wolf im Wald|Pictures by Der Wolf im Wald|Summer in Hesse|Featured pictures of Frankfurt am Main|2019 in Frankfurt am Main|2019 photographs of Frankfurt am Main|Trees in Frankfurt am Main|Hesse photographs taken on 2019-07-10|Clouds and blue sky in Hesse|Featured pictures by Der Wolf im Wald|Skytower (ECB)|Street lights in Frankfurt am Main|Empty parking lots|Pictures of Frankfurt by Der Wolf im Wald",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "quality|featured|valued",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "50.110181",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "8.700069",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "<a href=\"https://en.wikipedia.org/wiki/European_Central_Bank\" class=\"extiw\" title=\"en:European Central Bank\">European Central Bank</a> at <a href=\"https://en.wikipedia.org/wiki/Frankfurt_am_Main\" class=\"extiw\" title=\"en:Frankfurt am Main\">Frankfurt</a>, <a href=\"https://en.wikipedia.org/wiki/Germany\" class=\"extiw\" title=\"en:Germany\">Germany</a>",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2019-07-10",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<b><a href=\"//commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald\" title=\"User:Der Wolf im Wald\">Thomas Wolf</a></b>, <small><a rel=\"nofollow\" class=\"external text\" href=\"http://www.foto-tw.de\">www.foto-tw.de</a></small>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<div style=\"clear:both; border: 2px solid #bababa; margin: 0.2em -0.2em 0.2em 0.2em; padding: 0.2em 0.9em 0.2em 1em; background-color: #fefefe;\">\n<table cellspacing=\"0\" cellpadding=\"0\" style=\"background:transparent;\">\n<tbody><tr>\n<td valign=\"top\" width=\"90%\">\n<p><span style=\"font-size:95%\">Dieses Foto wurde von Thomas Wolf angefertigt und hier unter der <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/3.0/de/\">Creative-Commons-Lizenz \u201eNamensnennung - Weitergabe unter gleichen Bedingungen 3.0 Deutschland\u201c <small>(CC BY-SA 3.0 DE)</small></a> bereitgestellt. Es kann gem\u00e4\u00df der Lizenz weiterverwendet werden, solange der Urheber in folgender Form kenntlich gemacht wird. Dabei ist auch die Lizenz (mit Link auf die <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/3.0/de/deed.de\">Zusammenfassung</a> oder den <a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/3.0/de/legalcode\">Volltext</a>) zu benennen:</span>\n</p><p><span style=\"font-size:105%\">\u00a0<b>\u00a9 Thomas Wolf, <span class=\"plainlinks noprint\"><a rel=\"nofollow\" class=\"external text\" href=\"http://www.foto-tw.de\">www.foto-tw.de</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://creativecommons.org/licenses/by-sa/3.0/de/deed.de\">CC\u00a0BY-SA\u00a03.0 DE</a>)</span></b></span>\n</p><p><span style=\"font-size:95%\">Diese Angaben k\u00f6nnen z.B. direkt am Bild oder in einem gesonderten Bildquellenverzeichnis gemacht werden, m\u00fcssen in jedem Fall aber eindeutig zuordbar und leicht aufzufinden sein. Angaben als Mouseover reichen nicht aus. Pauschale Bildquellenangaben wie \u201eWikipedia\u201c werden der Lizenz ebenfalls nicht gerecht. Das Bild genie\u00dft urheberrechtlichen Schutz und ist nicht gemeinfrei! Jegliche Verwendungen des Bildes ohne den geforderten Urheber- bzw. Lizenzvermerk sind unzul\u00e4ssig und verletzen damit das Urheberrecht! Das gilt nat\u00fcrlich nicht, falls der Urheber auf anderem Wege ein Nutzungsrecht erteilt hat, wie er es z.B. \u00fcber seine Fotoagentur kostenpflichtig anbietet (Lizenzen ohne Pflicht der Namensnennung). Sollte dieses Werk im Printbereich genutzt werden, freut sich der Urheber \u00fcber die Zusendung eines Belegexemplars.</span><br>\n</p><p><span style=\"font-size:95%\"><b>Lizenzierungsanfragen &amp; Kontakt: <a href=\"//commons.wikimedia.org/wiki/Special:EmailUser/Der_Wolf_im_Wald\" title=\"Special:EmailUser/Der Wolf im Wald\">E-Mail an den Fotografen</a> oder <a rel=\"nofollow\" class=\"external text\" href=\"http://www.foto-tw.de/kontakt.html\">Kontakt \u00fcber seine Website</a></b></span>\n</p>\n</td>\n<td valign=\"center\" width=\"8%\">\n<div class=\"center\">\n<figure class=\"noresize\" typeof=\"mw:File\"><a href=\"http://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald\" class=\"plainlinks\" title=\"http://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/HSSection_sign.svg/120px-HSSection_sign.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"75\" height=\"75\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/HSSection_sign.svg/250px-HSSection_sign.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"156\" data-file-height=\"156\"></a><figcaption></figcaption></figure>\n</div>\n</td></tr></tbody></table>\n</div>\n<div style=\"margin:.5em auto 1em;text-align:center;\" class=\"plainlinks\"><a rel=\"nofollow\" class=\"external text\" href=\"https://lizenzhinweisgenerator.de/?url=https://commons.wikimedia.org/wiki/File:Europ%C3%A4ische_Zentralbank_Frankfurt.jpg\"><span class=\"mw-ui-button mw-ui-progressive\">Urhebervermerk &amp; Lizenzhinweis erzeugen lassen\u00a0\u00bb</span></a></div>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0 de",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0 de",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Attribution": {
+                "value": "Thomas Wolf, <a rel=\"nofollow\" class=\"external text\" href=\"http://www.foto-tw.de\">www.foto-tw.de</a>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0-de",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "27000408": {
+        "pageid": 27000408,
+        "ns": 6,
+        "title": "File:Flag of Saudi Arabia.svg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 28593,
+            "width": 900,
+            "height": 600,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1280px-Flag_of_Saudi_Arabia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 853,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/3840px-Flag_of_Saudi_Arabia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1280px-Flag_of_Saudi_Arabia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 853,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/3840px-Flag_of_Saudi_Arabia.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia.svg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/27000408",
+            "sha1": "6dd7dc77fe79e821a28d8322afce4c1b68f2e6bb",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-03-23 23:54:45",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Flag of Saudi Arabia",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "PD ineligible|PD-Saudi Arabia|With insignia|Images with extracted images|PD US no notice|SVG flags of Saudi Arabia - aspect ratio of 3:2|SVG national flag of Saudi Arabia|Valid SVG created with Other tools:Flags|Flags with shahada",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "<a href=\"https://en.wikipedia.org/wiki/Flag_of_Saudi_Arabia\" class=\"extiw\" title=\"w:Flag of Saudi Arabia\">Flag of Saudi Arabia</a> (obverse)",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "<b>15 March 1973</b> (current version)",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<p><a rel=\"nofollow\" class=\"external text\" href=\"https://saudiflag.sa/\">Saudi Flag Website</a>, <a rel=\"nofollow\" class=\"external text\" href=\"https://cms.saudiflag.sa/uploads/flag_cb4beab1dd.jpg\">Image of the Flag</a>, <a rel=\"nofollow\" class=\"external text\" href=\"https://cms.saudiflag.sa/uploads/aldlyl_alirshady_lastkhdam_elm_almmlkt_alerbyt_alsewdyt_a5a8cb404e.pdf\">Flag Guideline (Arabic)</a>, <a rel=\"nofollow\" class=\"external text\" href=\"https://cms.saudiflag.sa/uploads/Saudi_flag_ENGLISH_2023_617441c5ce.pdf\">Flag Guideline (English)</a>\n</p>\n<hr>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a class=\"external text\" href=\"https://en.wikipedia.org/wiki/Consultative_Assembly_of_Saudi_Arabia\">The Shura Council</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<i>This work is in the <b><a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a></b> in the United States because it was <a href=\"//commons.wikimedia.org/wiki/Commons:Publication\" title=\"Commons:Publication\">published</a> in the United States between 1931 and 1977, inclusive, <b>without a <a href=\"https://en.wikipedia.org/wiki/Copyright_notice\" class=\"extiw\" title=\"w:Copyright notice\">copyright notice</a></b>. For further explanation, see <a href=\"//commons.wikimedia.org/wiki/Commons:Hirtle_chart\" title=\"Commons:Hirtle chart\">Commons:Hirtle chart</a> as well as a <a href=\"//commons.wikimedia.org/wiki/Commons:Public_art_and_copyrights_in_the_US\" title=\"Commons:Public art and copyrights in the US\">detailed definition</a> of \"publication\" for public art. <div class=\"navigation-not-searchable\">Note that it may still be copyrighted in jurisdictions that do not apply the <a href=\"https://en.wikipedia.org/wiki/rule_of_the_shorter_term\" class=\"extiw\" title=\"w:rule of the shorter term\">rule of the shorter term</a> for US works (depending on the date of the author's death), such as Canada (50 <a href=\"https://en.wikipedia.org/wiki/List_of_Latin_phrases_(P)#Post_mortem_auctoris\" class=\"extiw\" title=\"w:List of Latin phrases (P)\">p.m.a.</a>), Mainland China (50 p.m.a., not Hong Kong or Macao), Germany (70 p.m.a.), Mexico (100 p.m.a.), Switzerland (70 p.m.a.), and other countries with individual treaties.</div></i>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "insignia|noresize",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/svg+xml"
+          }
+        ]
+      },
+      "388244": {
+        "pageid": 388244,
+        "ns": 6,
+        "title": "File:Flag of Scotland.svg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 221,
+            "width": 1000,
+            "height": 600,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/1280px-Flag_of_Scotland.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 768,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/3840px-Flag_of_Scotland.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/1280px-Flag_of_Scotland.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 768,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/3840px-Flag_of_Scotland.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Scotland.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Scotland.svg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/388244",
+            "sha1": "c1cbff0b38aab01c2b93e1f2ccea8e70ed27722b",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2022-08-22 02:17:08",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Flag of Scotland",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "With insignia|Files with derivative versions|SVG flags with an aspect ratio of 5:3|National flag of Scotland|SVG flags of Scotland|Valid SVG created with Text Editor:Flags|PD flag|Flags with crosses and saltires",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "<a href=\"https://en.wikipedia.org/wiki/Flag_of_Scotland\" class=\"extiw\" title=\"w:Flag of Scotland\">Flag of</a> <a href=\"https://en.wikipedia.org/wiki/Scotland\" class=\"extiw\" title=\"w:Scotland\">Scotland</a>. Ratio 3:5. The blue used is \"royal\" blue (Pantone 300), following the Scottish Parliament's recommendation of 2003. See also the <i>traditional</i> colours rangingfrom <a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Scotland_(1542%E2%80%932003,_sky_blue).svg\" title=\"File:Flag of Scotland (1542\u20132003, sky blue).svg\">Flag of Scotland (1542\u20132003, sky blue).svg</a>:\u00a0<span class=\"mw-image-border\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Scotland_(1542%E2%80%932003,_sky_blue).svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Scotland_%281542%E2%80%932003%2C_sky_blue%29.svg/40px-Flag_of_Scotland_%281542%E2%80%932003%2C_sky_blue%29.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Scotland_%281542%E2%80%932003%2C_sky_blue%29.svg/60px-Flag_of_Scotland_%281542%E2%80%932003%2C_sky_blue%29.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1000\" data-file-height=\"600\"></a></span> to <a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Scotland_(1542%E2%80%932003,_navy_blue).svg\" title=\"File:Flag of Scotland (1542\u20132003, navy blue).svg\">Flag of Scotland (1542\u20132003, navy blue).svg</a>:\u00a0<span class=\"mw-image-border\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Flag_of_Scotland_(1542%E2%80%932003,_navy_blue).svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Flag_of_Scotland_%281542%E2%80%932003%2C_navy_blue%29.svg/40px-Flag_of_Scotland_%281542%E2%80%932003%2C_navy_blue%29.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"14\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Flag_of_Scotland_%281542%E2%80%932003%2C_navy_blue%29.svg/60px-Flag_of_Scotland_%281542%E2%80%932003%2C_navy_blue%29.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1000\" data-file-height=\"600\"></a></span>.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "16<sup>th</sup> century<div style=\"display: none;\">date QS:P,+1550-00-00T00:00:00Z/7</div> (adopted by the Government of Scotland in 2003)",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://kbolino.freeshell.org/svg/scotland.svg\">http://kbolino.freeshell.org/svg/scotland.svg</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "none known",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "insignia",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/svg+xml"
+          }
+        ]
+      },
+      "132606659": {
+        "pageid": 132606659,
+        "ns": 6,
+        "title": "File:MrBeast 2022 01.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 175729,
+            "width": 1920,
+            "height": 1080,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/MrBeast_2022_01.jpg/1280px-MrBeast_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 720,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/0/0a/MrBeast_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/MrBeast_2022_01.jpg/1280px-MrBeast_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 720,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/0/0a/MrBeast_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/MrBeast_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:MrBeast_2022_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/132606659",
+            "sha1": "5f49f8073e6dd41c0b6bddf57d36223e6f280972",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-06-02 18:21:10",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "MrBeast 2022 01",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Media from YouTube|License review needed|YouTube review needed|De minimis without reason|MrBeast in 2022",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "YouTuber MrBeast in April 2022",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2022-04-15",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://youtube.com/watch?v=W2afl71B7t8\">YouTube</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Fidias",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/3.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "92317922": {
+        "pageid": 92317922,
+        "ns": 6,
+        "title": "File:Pig (Sus scrofa domesticus) - FrogHollow Farm Sanctuary 2019-10-26 (02).jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 9472654,
+            "width": 3912,
+            "height": 2608,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg/1280px-Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 853,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg/3840px-Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg/1280px-Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 853,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg/3840px-Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Pig_%28Sus_scrofa_domesticus%29_-_FrogHollow_Farm_Sanctuary_2019-10-26_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Pig_(Sus_scrofa_domesticus)_-_FrogHollow_Farm_Sanctuary_2019-10-26_(02).jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/92317922",
+            "sha1": "bb0ea020548e5428b67287a706c3546992a5d3a6",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2020-07-16 21:52:35",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Pig (Sus scrofa domesticus) - FrogHollow Farm Sanctuary 2019-10-26 (02)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Sus scrofa domesticus|Uploaded with pattypan|Self-published work|Photographs by Ryan Hodnett|Photographs by Ryan Hodnett (2019)|Photographs by Ryan Hodnett (Blandford-Blenheim)|Photographs by Ryan Hodnett (Nikon D3200)|Photographs by Ryan Hodnett (Sigma 17-70mm F2.8-4.5 DC Macro)|FrogHollow Farm Sanctuary",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pig (<i>Sus scrofa domesticus</i>) at FrogHollow Farm Sanctuary in Blandford-Blenheim, Ontario, Canada.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2019-10-26 10:49",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Ryan_Hodnett\" title=\"User:Ryan Hodnett\">Ryan Hodnett</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "19971992": {
+        "pageid": 19971992,
+        "ns": 6,
+        "title": "File:Skype Logo.png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 104835,
+            "width": 772,
+            "height": 341,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Skype_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "thumbwidth": 1280,
+            "thumbheight": 565,
+            "thumbattribs": {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Skype_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 565
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Skype_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Skype_Logo.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/19971992",
+            "sha1": "712280d6c48168a043d1508de822e6fbaed04ed2",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2012-06-20 18:28:08",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Skype Logo",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Text logos|PD textlogo|Skype logos",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Skype Logo",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2012-06-21",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.skype.com/\">http://www.skype.com/</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Skype",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/png"
+          }
+        ]
+      },
+      "46209368": {
+        "pageid": 46209368,
+        "ns": 6,
+        "title": "File:Vine logo.svg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 2395,
+            "width": 202,
+            "height": 208,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vine_logo.svg/1280px-Vine_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 1318,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vine_logo.svg/3840px-Vine_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vine_logo.svg/1280px-Vine_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1318,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Vine_logo.svg/3840px-Vine_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Vine_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vine_logo.svg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/46209368",
+            "sha1": "8dba49853d1ef85ab3b1a308150dfcca8685883d",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2016-01-08 02:02:19",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Vine logo",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "With trademark|PD textlogo|SVG text logos|Logos of Vine (service)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Das offizielle Vine Logo",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2013-08-29",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://itunes.apple.com/us/app/vine/id592447445?mt=8\">https://itunes.apple.com/us/app/vine/id592447445?mt=8</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Vine Labs, Inc.",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "trademarked",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/svg+xml"
+          }
+        ]
+      },
+      "71307698": {
+        "pageid": 71307698,
+        "ns": 6,
+        "title": "File:Windows XP sighted 'in the wild' on a cash point, 3 August 2018.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 811623,
+            "width": 3264,
+            "height": 2448,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg/1280px-Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 960,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/5/57/Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg/1280px-Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 960,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/57/Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point%2C_3_August_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Windows_XP_sighted_%27in_the_wild%27_on_a_cash_point,_3_August_2018.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/71307698",
+            "sha1": "77460e40af1e4787237f249c2704cc95f0c9f5d0",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2018-08-03 14:07:46",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Windows XP sighted 'in the wild' on a cash point, 3 August 2018",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Operating systems|Glitch in digital electronics|Self-published work|Slough in the 21st century|Automatic teller machines in England|Computers running Microsoft Windows XP",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Although Microsoft Windows XP has been out of support by Microsoft for over four years as of August 2018, it still sees usage on systems such as cash points and point-of-sale systems. I was on a driving lesson when I stopped at a local Tesco Express in Slough to withdraw some money. I found this cash point getting into a spot of bother, revealing that it was still running XP in the process while being forced to shut down.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2018-08-03",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:BrayLockBoy\" title=\"User:BrayLockBoy\">BrayLockBoy</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "165816534": {
+        "pageid": 165816534,
+        "ns": 6,
+        "title": "File:Woolly mammoths by Knight.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 1495807,
+            "width": 2000,
+            "height": 700,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Woolly_mammoths_by_Knight.jpg/1280px-Woolly_mammoths_by_Knight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 448,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/3/37/Woolly_mammoths_by_Knight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Woolly_mammoths_by_Knight.jpg/1280px-Woolly_mammoths_by_Knight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 448,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/37/Woolly_mammoths_by_Knight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Woolly_mammoths_by_Knight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Woolly_mammoths_by_Knight.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/165816534",
+            "sha1": "d714e2a118f5f70a4cb4cae1a7c0c1066cecf226",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2025-05-22 19:15:26",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Woolly mammoths by Knight",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Charles R. Knight|PD US expired|PD-US missing SDC copyright status|Coelodonta antiquitatis life restorations|Mammuthus primigenius life restorations",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Woolly Mammoths and Rhinoceros Cenozoic. Early Man saw mammals known to us as fossils. Europe in Late Pleistocene time, 100,000 years ago. Charles Knight painting or mural. Painting.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "ca 1929<a rel=\"nofollow\" class=\"external autonumber\" href=\"https://mm.fieldmuseum.org/4c31df50-3e73-4f4c-8e41-cd2edcf3eb84\">[1]</a>",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://mm.fieldmuseum.org/bd850db6-9190-4628-be33-b7a500dd7338\">https://mm.fieldmuseum.org/bd850db6-9190-4628-be33-b7a500dd7338</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Charles R. Knight",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "1779323": {
+        "pageid": 1779323,
+        "ns": 6,
+        "title": "File:Zealandia topography.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 1407089,
+            "width": 1391,
+            "height": 1617,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Zealandia_topography.jpg/1280px-Zealandia_topography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 1488,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Zealandia_topography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Zealandia_topography.jpg/1280px-Zealandia_topography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1488,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Zealandia_topography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Zealandia_topography.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Zealandia_topography.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/1779323",
+            "sha1": "0234d0b6e38686086b6160f4bc5a9368deb773e3",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2017-03-28 13:24:09",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Zealandia topography",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Zealandia (continent)|PD US NOAA|Geological maps of New Zealand|Bathymetric maps of the Pacific Ocean",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Topographical map of the <a href=\"https://en.wikipedia.org/wiki/Zealandia_(continent)\" class=\"extiw\" title=\"w:Zealandia (continent)\">Zealandia</a> continent.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "Ultimate source: <a rel=\"nofollow\" class=\"external text\" href=\"http://www.ngdc.noaa.gov/mgg/image/2minrelief.html\">ETOPO2v2, a digital database of seafloor and land elevations</a>. Actually cropped from <a href=\"//commons.wikimedia.org/wiki/File:Pacific_elevation.jpg\" title=\"File:Pacific elevation.jpg\">Image:Pacific_elevation.jpg</a>.",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "World Data Center for Geophysics &amp; Marine Geology (Boulder, CO), National Geophysical Data Center, NOAA",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "NOAA, public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      }
+    }
+  }
+}

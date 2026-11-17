@@ -1,0 +1,1048 @@
+{
+  "date": "2026-11-17",
+  "owner": "editorial agent",
+  "notes": [
+    "merged_into is a new non-public field; toCard ignores it. Parent decides whether to document it.",
+    "Additions use status drop until the image agent supplies an approved image; their selection intent is launch.",
+    "Excluded entries to remove or update: queen-elizabeth-death, nvidia-huang-scandal."
+  ],
+  "updates": [
+    {
+      "id": "pvz-ai-movie",
+      "fields": {
+        "title": "We got a Plants vs. Zombies movie before GTA 6"
+      },
+      "resolution": "edit",
+      "reason": "Andrei's wording; the blurb still says the film is AI-made, so the card stays accurate.",
+      "sources": []
+    },
+    {
+      "id": "steam-machine",
+      "fields": {
+        "title": "We got the year of the Linux desktop (almost) before GTA 6",
+        "blurb": "Valve announced the Linux-based Steam Machine on 12 November 2025 and sold it from late June 2026, from $1,049. In March 2026 Linux passed 5% of Steam users for the first time."
+      },
+      "resolution": "edit",
+      "reason": "Linux framing as requested; '(almost)' keeps the joke honest: Linux peaked at 5.33% and fell back.",
+      "sources": [
+        "https://www.gamingonlinux.com/2026/04/linux-smashes-past-5-percent-on-the-steam-survey-for-the-first-time/",
+        "https://www.gematsu.com/2026/06/steam-machine-launches-june-30-starting-at-1049"
+      ]
+    },
+    {
+      "id": "matpat-returns",
+      "fields": {
+        "title": "We lost and regained the Game Theory guy before GTA 6",
+        "blurb": "MatPat posted 'Goodbye Internet' on 9 January 2024 and stopped hosting Game Theory on 9 March 2024. On 12 November 2026 he came back with 'Hello (again) Internet' on a new channel."
+      },
+      "resolution": "edit",
+      "reason": "Departure and return in one card. Andrei remembered 2023; the departure was 2024. He returned on a new channel, not to Game Theory.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/MatPat",
+        "https://www.dexerto.com/youtube/matpat-announces-surprise-youtube-return-with-brand-new-channel-3427943/",
+        "https://www.youtube.com/watch?v=Zlh2gD7p5xE"
+      ]
+    },
+    {
+      "id": "chatgpt-launch",
+      "fields": {
+        "title": "We got talking computers before GTA 6",
+        "blurb": "OpenAI released ChatGPT on 30 November 2022; it reached 100 million users in two months. China's DeepSeek topped the US App Store in January 2025, and GPT-5 followed in August 2025."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Canonical for chatbot cards. Distinct incidents stay separate: glue pizza, the PvZ movie, Will Smith spaghetti, Ghibli filter, Altman firing, Italy ban, EU AI Act. AlphaGo and AlphaFold stay separate: games and proteins, not talking computers.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/ChatGPT",
+        "https://en.wikipedia.org/wiki/DeepSeek_(AI)",
+        "https://en.wikipedia.org/wiki/GPT-5"
+      ]
+    },
+    {
+      "id": "gpt-5",
+      "fields": {
+        "status": "drop",
+        "merged_into": "chatgpt-launch",
+        "archive_reason": "merged into chatgpt-launch (review 2026-11-17): talking-computers consolidation; GPT-5 is in the canonical blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "talking-computers consolidation; GPT-5 is in the canonical blurb",
+      "sources": []
+    },
+    {
+      "id": "deepseek-tops-app-store",
+      "fields": {
+        "status": "drop",
+        "merged_into": "chatgpt-launch",
+        "archive_reason": "merged into chatgpt-launch (review 2026-11-17): talking-computers consolidation; DeepSeek is in the canonical blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "talking-computers consolidation; DeepSeek is in the canonical blurb",
+      "sources": []
+    },
+    {
+      "id": "chandrayaan3-south-pole",
+      "fields": {
+        "title": "We got India on the Moon before GTA 6"
+      },
+      "resolution": "edit",
+      "reason": "Andrei's wording; blurb keeps the south-pole detail.",
+      "sources": []
+    },
+    {
+      "id": "eclipse-2024-north-america",
+      "fields": {
+        "title": "We got a total solar eclipse before GTA 6"
+      },
+      "resolution": "edit",
+      "reason": "Andrei's wording; blurb still names the countries.",
+      "sources": []
+    },
+    {
+      "id": "charles-coronation",
+      "fields": {
+        "status": "drop",
+        "merged_into": "queen-elizabeth-death",
+        "archive_reason": "merged into queen-elizabeth-death (review 2026-11-17): replaced by the Queen's death card (Andrei's exception, AGENTS.md 2026-11-17); the coronation is in its blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "replaced by the Queen's death card (Andrei's exception, AGENTS.md 2026-11-17); the coronation is in its blurb",
+      "sources": []
+    },
+    {
+      "id": "us-inflation-peak",
+      "fields": {
+        "title": "We got US prices up 44% since GTA 5 before GTA 6",
+        "blurb": "US consumer prices (CPI-U) rose 44.1% from September 2013, when GTA 5 came out, to October 2026, the latest month published. The yearly rate peaked at 9.1% in June 2022.",
+        "event_date": "2026-11-10",
+        "timeline_date": "2026-11-10",
+        "fact_url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm",
+        "source_url": "https://data.bls.gov/timeseries/CUUR0000SA0",
+        "source_platform": "other"
+      },
+      "resolution": "edit",
+      "reason": "Cumulative inflation from GTA 5 to the latest data: 337.511/234.149 - 1 = 44.1%. GTA 6 is not out, so the period ends at October 2026, the last published month. November 2026 CPI comes on 10 December 2026; recompute then if wanted.",
+      "sources": [
+        "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?startyear=2025&endyear=2026",
+        "https://api.bls.gov/publicAPI/v2/timeseries/data/CUUR0000SA0?startyear=2013&endyear=2026",
+        "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
+      ]
+    },
+    {
+      "id": "musk-buys-twitter",
+      "fields": {
+        "title": "We got Elon Musk buying Twitter and renaming it X before GTA 6",
+        "blurb": "Elon Musk completed his $44 billion purchase of Twitter on 27 October 2022 and tweeted 'the bird is freed'. On 22 July 2023 he announced that Twitter would become X."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Purchase and rename in one card, as asked on both notes.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk",
+        "https://en.wikipedia.org/wiki/X_(social_network)"
+      ]
+    },
+    {
+      "id": "twitter-becomes-x",
+      "fields": {
+        "status": "drop",
+        "merged_into": "musk-buys-twitter",
+        "archive_reason": "merged into musk-buys-twitter (review 2026-11-17): same story; the rename is in the canonical title and blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "same story; the rename is in the canonical title and blurb",
+      "sources": []
+    },
+    {
+      "id": "starliner-astronauts-stuck",
+      "fields": {
+        "title": "We got Boeing's Starliner failing before GTA 6",
+        "blurb": "Boeing's Starliner flew two astronauts to the ISS on 5 June 2024 for eight days. Thruster faults sent it home empty; the crew got back on 18 March 2025. NASA rated it a Type A mishap."
+      },
+      "resolution": "edit",
+      "reason": "'Failing' is supported: NASA classified the flight a Type A mishap (report released 19 February 2026).",
+      "sources": [
+        "https://spaceflightnow.com/2026/02/19/independent-report-sharply-criticizes-nasa-management-boeing-for-troubled-starliner-flight/",
+        "https://en.wikipedia.org/wiki/Boeing_Crew_Flight_Test"
+      ]
+    },
+    {
+      "id": "chip-shortage",
+      "fields": {
+        "blurb": "From 2020 to 2023 a worldwide chip shortage, partly caused by the COVID-19 pandemic, hit more than 169 industries and raised prices of cars, graphics cards and game consoles."
+      },
+      "resolution": "edit",
+      "reason": "Names COVID as a cause without a COVID card: covid-pandemic is excluded under the death rule, and Andrei's exception covers only the Queen.",
+      "sources": ["https://en.wikipedia.org/wiki/2020%E2%80%932023_global_chip_shortage"]
+    },
+    {
+      "id": "brexit-referendum",
+      "fields": {
+        "blurb": "On 23 June 2016 the United Kingdom voted to leave the European Union, 51.9% to 48.1%. It actually left at 23:00 GMT on 31 January 2020, three and a half years later."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Andrei: 'there already is a brexit one'. One Brexit card with both dates.",
+      "sources": ["https://en.wikipedia.org/wiki/Brexit"]
+    },
+    {
+      "id": "uk-leaves-eu",
+      "fields": {
+        "status": "drop",
+        "merged_into": "brexit-referendum",
+        "archive_reason": "merged into brexit-referendum (review 2026-11-17): duplicate Brexit card; the leaving date is in the canonical blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "duplicate Brexit card; the leaving date is in the canonical blurb",
+      "sources": []
+    },
+    {
+      "id": "nvidia-5-trillion",
+      "fields": {
+        "blurb": "Apple became the first US company worth $1 trillion on 2 August 2018. On 29 October 2025 Nvidia became the first company worth $5 trillion, on demand for AI chips."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Answers Andrei's question: the $5 trillion card exists (live). Apple's $1 trillion moves into it.",
+      "sources": [
+        "https://www.semafor.com/article/10/29/2025/nvidia-hits-5-trillion-valuation",
+        "https://thenextweb.com/news/apple-becomes-first-company-to-reach-1-trillion-market-value"
+      ]
+    },
+    {
+      "id": "apple-trillion",
+      "fields": {
+        "status": "drop",
+        "merged_into": "nvidia-5-trillion",
+        "archive_reason": "merged into nvidia-5-trillion (review 2026-11-17): one market-value card; Apple's $1 trillion is in the canonical blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "one market-value card; Apple's $1 trillion is in the canonical blurb",
+      "sources": []
+    },
+    {
+      "id": "hiv-twice-a-year-jab",
+      "fields": {
+        "title": "We got a twice-a-year shot that nearly blocks HIV before GTA 6",
+        "blurb": "On 18 June 2025 the US FDA approved lenacapavir (Yeztugo), an injection every six months to prevent HIV. In two large trials, 99.9% of people who got it stayed HIV-negative."
+      },
+      "resolution": "edit",
+      "reason": "Not a vaccine: Gilead calls it injectable PrEP, a capsid inhibitor. 'Nearly blocks' matches >=99.9%.",
+      "sources": [
+        "https://www.gilead.com/news/news-details/2025/yeztugo-lenacapavir-is-now-the-first-and-only-fda-approved-hiv-prevention-option-offering-6-months-of-protection"
+      ]
+    },
+    {
+      "id": "trump-kim-summit",
+      "fields": {
+        "blurb": "Donald Trump and Kim Jong Un shook hands in Singapore on 12 June 2018, the first US–North Korea summit. On 30 June 2019 Trump became the first sitting US president in North Korea."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Handshake and DMZ visit in one card, as asked.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2018_North_Korea%E2%80%93United_States_Singapore_summit",
+        "https://en.wikipedia.org/wiki/2019_Koreas%E2%80%93United_States_DMZ_Summit"
+      ]
+    },
+    {
+      "id": "trump-in-north-korea",
+      "fields": {
+        "status": "drop",
+        "merged_into": "trump-kim-summit",
+        "archive_reason": "merged into trump-kim-summit (review 2026-11-17): same leaders; the DMZ visit is in the canonical blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "same leaders; the DMZ visit is in the canonical blurb",
+      "sources": []
+    },
+    {
+      "id": "bitcoin-100k",
+      "fields": {
+        "title": "We got Bitcoin at $100,000, then $126,000, then $63,000 before GTA 6",
+        "blurb": "Bitcoin passed $100,000 for the first time on 4 December 2024 and hit a record of about $126,000 on 6 October 2025. In February 2026 it fell below $63,000.",
+        "source_url": "https://x.com/okx/status/1986797490658852964",
+        "source_platform": "x",
+        "source_engagement": "316 likes, 67,231 views (OKX: 'we really got $99K BTC before GTA 6')"
+      },
+      "resolution": "merge-canonical",
+      "reason": "One Bitcoin cycle card. The OKX 'before GTA 6' post from bitcoin-round-trip becomes the source.",
+      "sources": [
+        "https://www.pbs.org/newshour/world/whats-next-for-bitcoin-as-it-surpasses-100000-in-post-election-rally",
+        "https://fintechnews.sg/126079/crypto/bitcoin-crash-2026-analysis-strategy-kevin-warsh/",
+        "https://www.theblock.co/post/390961/bitcoin-dips-below-63000"
+      ]
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "fields": {
+        "status": "drop",
+        "merged_into": "bitcoin-100k",
+        "archive_reason": "merged into bitcoin-100k (review 2026-11-17): one Bitcoin cycle card; the peak and fall are in the canonical"
+      },
+      "resolution": "merged-archive",
+      "reason": "one Bitcoin cycle card; the peak and fall are in the canonical",
+      "sources": []
+    },
+    {
+      "id": "change4-far-side-landing",
+      "fields": {
+        "title": "We got China on the far side of the Moon before GTA 6",
+        "blurb": "China's Chang'e 4 made the first soft landing on the Moon's far side on 3 January 2019. On 25 June 2024 Chang'e 6 brought 1,935 grams of far-side soil back to Earth, the first ever."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Both far-side missions in one card; the older landing keeps the date.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chang%27e_4",
+        "https://en.wikipedia.org/wiki/Chang%27e_6"
+      ]
+    },
+    {
+      "id": "change6-far-side-samples",
+      "fields": {
+        "status": "drop",
+        "merged_into": "change4-far-side-landing",
+        "archive_reason": "merged into change4-far-side-landing (review 2026-11-17): same far-side story; the samples are in the canonical"
+      },
+      "resolution": "merged-archive",
+      "reason": "same far-side story; the samples are in the canonical",
+      "sources": []
+    },
+    {
+      "id": "driverless-robotaxis",
+      "fields": {
+        "blurb": "On 8 October 2020, Waymo opened fully driverless rides, with nobody at the wheel, to riders in Phoenix."
+      },
+      "resolution": "edit",
+      "reason": "Tesla moves to its own addition, tesla-cybercab, as asked.",
+      "sources": ["https://waymo.com/blog/2020/10/waymo-is-opening-its-fully-driverless/"]
+    },
+    {
+      "id": "galaxy-note-7-recall",
+      "fields": {
+        "title": "We got a Samsung phone banned from flying before GTA 6",
+        "blurb": "Samsung stopped selling the Galaxy Note 7 in October 2016 because some batteries caught fire. From 15 October 2016 the US banned it from all flights to, from and within the country.",
+        "event_date": "2016-10-14",
+        "timeline_date": "2016-10-14",
+        "fact_url": "https://www.transportation.gov/briefing-room/dot-bans-all-samsung-galaxy-note7-phones-airplanes"
+      },
+      "resolution": "edit",
+      "reason": "Andrei's headline, singular: only one model was banned. Date moves to the DOT order (14 October 2016).",
+      "sources": [
+        "https://www.transportation.gov/briefing-room/dot-bans-all-samsung-galaxy-note7-phones-airplanes",
+        "https://www.pbs.org/newshour/politics/samsung-galaxy-note-7-phones-banned-from-airliners-over-fire-hazard"
+      ]
+    },
+    {
+      "id": "gangnam-style-broke-youtube",
+      "fields": {
+        "title": "We got the first YouTube video with 2 billion views before GTA 6",
+        "blurb": "Gangnam Style became the first YouTube video to pass two billion views at the end of May 2014. In December YouTube moved to a 64-bit view counter because the video neared 2,147,483,647 views.",
+        "event_date": "2014-05-31",
+        "timeline_date": "2014-05-31"
+      },
+      "resolution": "merge-canonical",
+      "reason": "Andrei's '2 billion' title; the counter story stays in the blurb. Crossing was late 30 May EDT (31 May UTC).",
+      "sources": [
+        "https://www.rappler.com/entertainment/music/59336-psy-gangnam-style-youtube-record",
+        "https://en.wikipedia.org/wiki/Gangnam_Style"
+      ]
+    },
+    {
+      "id": "gangnam-style-counter",
+      "fields": {
+        "status": "drop",
+        "merged_into": "gangnam-style-broke-youtube",
+        "archive_reason": "merged into gangnam-style-broke-youtube (review 2026-11-17): duplicate Gangnam Style card"
+      },
+      "resolution": "merged-archive",
+      "reason": "duplicate Gangnam Style card",
+      "sources": []
+    },
+    {
+      "id": "us-same-sex-marriage",
+      "fields": {
+        "blurb": "On 26 June 2015 the US Supreme Court ruled 5–4 in Obergefell v. Hodges that same-sex couples may marry in every state. A month earlier, Ireland became the first country to approve it by popular vote."
+      },
+      "resolution": "merge-canonical",
+      "reason": "Andrei: 'there is already an item about this'. The live card absorbs Ireland.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Obergefell_v._Hodges",
+        "https://en.wikipedia.org/wiki/Thirty-fourth_Amendment_of_the_Constitution_of_Ireland"
+      ]
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "fields": {
+        "status": "drop",
+        "merged_into": "us-same-sex-marriage",
+        "archive_reason": "merged into us-same-sex-marriage (review 2026-11-17): same-sex marriage card already live; Ireland is in its blurb"
+      },
+      "resolution": "merged-archive",
+      "reason": "same-sex marriage card already live; Ireland is in its blurb",
+      "sources": []
+    },
+    {
+      "id": "turkish-shooter",
+      "fields": {
+        "title": "We got an Olympic silver with one hand in a pocket before GTA 6"
+      },
+      "resolution": "edit",
+      "reason": "No word that suggests violence; the blurb names Yusuf Dikeç and the sport.",
+      "sources": []
+    },
+    {
+      "id": "trump-memecoin",
+      "fields": {
+        "title": "We got a president's meme coin losing 96% before GTA 6",
+        "blurb": "Donald Trump launched the $Trump meme coin on 17 January 2025; Trump-owned companies hold 80% of the coins. By March 2026 it was about 96% below its January 2025 peak."
+      },
+      "resolution": "edit",
+      "reason": "'Scamming' states a legal finding that no court has made. The loss is fact and carries the critical point.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/$Trump",
+        "https://cointelegraph.com/news/donald-trump-memecoin-holders-annual-dinner-price-low"
+      ]
+    }
+  ],
+  "additions": [
+    {
+      "id": "queen-elizabeth-death",
+      "status": "drop",
+      "tags": ["politics", "world-event"],
+      "title": "The Queen died before GTA 6",
+      "blurb": "Queen Elizabeth II died at Balmoral on 8 September 2022, aged 96, after 70 years on the throne. Her son was crowned Charles III on 6 May 2023.",
+      "kind": "real-event",
+      "event_date": "2022-09-08",
+      "post_date": null,
+      "timeline_date": "2022-09-08",
+      "fact_url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Elizabeth_II",
+      "verified": true,
+      "source_url": "https://www.denofgeek.com/tv/20-wild-things-we-actually-got-before-gta-6/",
+      "source_platform": "other",
+      "source_engagement": null,
+      "image_url": null,
+      "image_note": "image agent to supply; not the coronation image",
+      "nsfw": false,
+      "impact_score": 9,
+      "meme_score": 2,
+      "archive_reason": "pending image (review 2026-11-17); death-card exception approved by Andrei 2026-11-17"
+    },
+    {
+      "id": "nvidia-ceo-probe",
+      "status": "drop",
+      "tags": ["economy", "tech"],
+      "title": "We got Nvidia's boss investigated by his own board before GTA 6",
+      "blurb": "On 8 November 2026 Nvidia's board opened an inquiry into reports that CEO Jensen Huang was a foreign spy target. He admitted infidelity; the board saw no breach. Shares fell over 4% the next morning.",
+      "kind": "real-event",
+      "event_date": "2026-11-08",
+      "post_date": null,
+      "timeline_date": "2026-11-08",
+      "fact_url": "https://www.aljazeera.com/economy/2026/11/9/nvidia-shares-slump-amid-investigation-into-ceo-jensen-huang",
+      "verified": true,
+      "source_url": "https://www.aljazeera.com/economy/2026/11/9/nvidia-shares-slump-amid-investigation-into-ceo-jensen-huang",
+      "source_platform": "other",
+      "source_engagement": null,
+      "image_url": null,
+      "image_note": "image agent to supply; no photo of the other person in the reports",
+      "nsfw": false,
+      "impact_score": 5,
+      "meme_score": 2,
+      "archive_reason": "pending image and a final fact check after Huang's House briefing on 18 November 2026 (review 2026-11-17)"
+    },
+    {
+      "id": "tesla-cybercab",
+      "status": "drop",
+      "tags": ["tech"],
+      "title": "We got a Tesla designed with no steering wheel before GTA 6",
+      "blurb": "Tesla unveiled the Cybercab, a robotaxi designed without a steering wheel or pedals, on 10 October 2024. Tesla said production began at Giga Texas on 22 April 2026.",
+      "kind": "real-event",
+      "event_date": "2026-04-22",
+      "post_date": null,
+      "timeline_date": "2026-04-22",
+      "fact_url": "https://driveteslacanada.ca/news/tesla-cybercab-production-begins-but-unsupervised-fsd-remains-limited/",
+      "verified": true,
+      "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-production-begins-but-unsupervised-fsd-remains-limited/",
+      "source_platform": "other",
+      "source_engagement": null,
+      "image_url": null,
+      "image_note": "image agent to supply",
+      "nsfw": false,
+      "impact_score": 4,
+      "meme_score": 2,
+      "archive_reason": "pending image (review 2026-11-17)"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "gta5-235-million",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-free-on-epic",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta6-award",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta6-delays",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-billion-in-3-days",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta6-trailer",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "miami-heat-vice-city",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta-trilogy-definitive",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-ps3-x360",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-ps5-xbox-series",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-enhanced-pc",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-pc",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta5-ps4-xbox-one",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "gta-online-standalone",
+      "status": "delegated-to-milestone-agent",
+      "summary": "Note asks for the milestone card type; the milestone agent owns representation. No editorial field change.",
+      "evidence": []
+    },
+    {
+      "id": "aliens",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace with an 'aliens' meme or a screenshot of the Grusch hearing quote. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "blue-texas",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace with a US map with Texas in blue. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "flying-cars",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace the SkyDrive photo with the Tesla Roadster prototype in flight (matches the blurb). Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "john-cena-heel-turn",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace with the Cena Instagram post screenshot. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "new-pope",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace the tweet screenshot with a photo of Pope Leo XIV. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "status": "delegated-to-image-agent",
+      "summary": "Side-by-side Volonaut Airbike and Oppressor Mk II (Rockstar image allowed, AGENTS.md 2026-11-17). Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "hulkenberg-podium",
+      "status": "delegated-to-image-agent",
+      "summary": "Image of Hulkenberg and/or his F1 car; selection depends on that image. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "concord",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace the 'closed' sign with Concord game art or a screenshot. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "gary-grand-theft-auto",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace the uninspected thumbnail with a frame of Gary driving the car. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "ash-ketchum",
+      "status": "delegated-to-image-agent",
+      "summary": "Replace with adult Ash or 'end of an era' Pokemon artwork. Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "rdr-on-phones",
+      "status": "delegated-to-image-agent",
+      "summary": "Screenshot of Red Dead Redemption running on a phone (Rockstar image allowed, AGENTS.md 2026-11-17). Text unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "katy-perry-space",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "trump-impeached",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Existing archive_reason ('a third Trump legal card') is superseded by Andrei's yes.",
+      "evidence": []
+    },
+    {
+      "id": "black-hole-milky-way",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Related live card black-hole-image (M87, 2019); kept separate because Andrei chose both.",
+      "evidence": []
+    },
+    {
+      "id": "blessings-same-sex-couples",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "crispr-cure-approved",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "eu-roaming-free",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "eu-usb-c-iphone",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "falcon9-booster-landing",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "ftx-collapse",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "gulf-of-america",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "harris-first-woman-vp",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "heartbleed",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "india-general-strike",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "ingenuity-mars-flight",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "internet-explorer-retired",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "lettuce-outlasts-truss",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "mexico-first-woman-president",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "microsoft-activision",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "negative-oil-price",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "netflix-password-sharing",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "oumuamua",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Recorded choice was 'no', but the note says yes; the note is the intent.",
+      "evidence": []
+    },
+    {
+      "id": "ozone-layer-recovery",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "philae-comet-landing",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "ram-shortage",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Distinct from chip-shortage (2025 AI memory demand vs 2020-2023 chips).",
+      "evidence": []
+    },
+    {
+      "id": "spacex-ipo",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Recorded choice was 'no', but the note says yes; the note is the intent. Same day and cause as live musk-trillionaire (12 June 2026); kept separate because Andrei chose both.",
+      "evidence": []
+    },
+    {
+      "id": "svb-collapse",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "tariffs-struck-down",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Recorded choice was 'no', but the note says yes; the note is the intent. Pairs with live liberation-day-tariffs; distinct event.",
+      "evidence": []
+    },
+    {
+      "id": "vw-dieselgate",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "youtube-hides-dislikes",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "cloned-monkeys",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "first-millennial-saint",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Kept distinct from the talking-computers merge: a separate funny incident.",
+      "evidence": []
+    },
+    {
+      "id": "australia-teen-social-ban",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "beatles-now-and-then",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "brazil-blocks-x",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Distinct from the Musk/Twitter merge (a court block, not the purchase).",
+      "evidence": []
+    },
+    {
+      "id": "el-salvador-bitcoin",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "flash-player-end",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "gaga-copacabana",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Recorded choice was 'no', but the note says yes; the note is the intent.",
+      "evidence": []
+    },
+    {
+      "id": "homo-naledi",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "k2-18b-life-hint",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file. Recorded choice was 'no', but the note says yes; the note is the intent.",
+      "evidence": []
+    },
+    {
+      "id": "last-penny",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: image_url present; image agent fetches and approves the local file.",
+      "evidence": []
+    },
+    {
+      "id": "aws-outage-2025",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image work: no image yet; image agent must find one (delegated-to-image-agent).",
+      "evidence": []
+    },
+    {
+      "id": "cloudflare-outage-2025",
+      "status": "kept",
+      "summary": "Already live; note 'outages funny' is approval. No change.",
+      "evidence": []
+    },
+    {
+      "id": "pvz-ai-movie",
+      "status": "edited",
+      "summary": "Title changed to Andrei's wording; blurb keeps 'AI-made'.",
+      "evidence": ["fields.title"]
+    },
+    {
+      "id": "steam-machine",
+      "status": "edited",
+      "summary": "Linux framing; blurb adds the June 2026 launch and the 5% Steam record.",
+      "evidence": ["fields.title", "fields.blurb"]
+    },
+    {
+      "id": "matpat-returns",
+      "status": "edited",
+      "summary": "Lost-and-regained title; dates verified (2024 departure, not 2023).",
+      "evidence": ["fields.title", "fields.blurb"]
+    },
+    {
+      "id": "chatgpt-launch",
+      "status": "merged",
+      "summary": "Canonical 'talking computers'; gpt-5 and deepseek-tops-app-store merged in.",
+      "evidence": [
+        "fields.title",
+        "fields.blurb",
+        "gpt-5.merged_into",
+        "deepseek-tops-app-store.merged_into"
+      ]
+    },
+    {
+      "id": "chandrayaan3-south-pole",
+      "status": "edited",
+      "summary": "Title reworded.",
+      "evidence": ["fields.title"]
+    },
+    {
+      "id": "eclipse-2024-north-america",
+      "status": "edited",
+      "summary": "Title shortened.",
+      "evidence": ["fields.title"]
+    },
+    {
+      "id": "charles-coronation",
+      "status": "merged",
+      "summary": "Replaced by addition queen-elizabeth-death (status drop until image approval; selection intent launch). Parent must remove 'queen-elizabeth-death' from the excluded list. The earlier '@kirawontmiss 255K likes' figure has no URL and was not verified, so source_engagement is null and the source is the Den of Geek list.",
+      "evidence": ["additions.queen-elizabeth-death", "charles-coronation.merged_into"]
+    },
+    {
+      "id": "us-inflation-peak",
+      "status": "edited",
+      "summary": "Cumulative CPI-U Sep 2013 to Oct 2026: +44.1%; 9.1% peak kept in the blurb.",
+      "evidence": ["fields.title", "fields.blurb", "fields.event_date", "fields.fact_url"]
+    },
+    {
+      "id": "musk-buys-twitter",
+      "status": "merged",
+      "summary": "Canonical; twitter-becomes-x merged in.",
+      "evidence": ["fields.title", "fields.blurb"]
+    },
+    {
+      "id": "twitter-becomes-x",
+      "status": "merged",
+      "summary": "Archived into musk-buys-twitter (was still live).",
+      "evidence": ["twitter-becomes-x.merged_into"]
+    },
+    {
+      "id": "starliner-astronauts-stuck",
+      "status": "edited",
+      "summary": "Failure headline backed by NASA's Type A mishap finding.",
+      "evidence": ["fields.title", "fields.blurb"]
+    },
+    {
+      "id": "chip-shortage",
+      "status": "blocked",
+      "summary": "Selection intent: launch (image_url present; image agent to approve). Blurb now names COVID. A 'We got COVID before GTA 6' card is NOT prepared: it needs Andrei's exception to the death rule (covid-pandemic is excluded for deaths). Missing: that decision only.",
+      "evidence": ["fields.blurb"]
+    },
+    {
+      "id": "uk-leaves-eu",
+      "status": "merged",
+      "summary": "Archived into brexit-referendum (was live).",
+      "evidence": ["uk-leaves-eu.merged_into"]
+    },
+    {
+      "id": "apple-trillion",
+      "status": "merged",
+      "summary": "Andrei said yes; kept as a fact in live nvidia-5-trillion instead of a second market-value card.",
+      "evidence": ["apple-trillion.merged_into", "nvidia-5-trillion.fields.blurb"]
+    },
+    {
+      "id": "hiv-twice-a-year-jab",
+      "status": "edited",
+      "summary": "Stronger headline without the word vaccine. Selection intent: launch (inferred: no recorded choice; the note asks only for a better headline). Image agent to approve the existing image_url.",
+      "evidence": ["fields.title", "fields.blurb"]
+    },
+    {
+      "id": "nvidia-record-drop",
+      "status": "selected-pending-image",
+      "summary": "Selection intent: launch. Image agent to approve the existing image_url. Huang request answered by addition nvidia-ceo-probe: only confirmed facts (board probe, Huang's own admission, board finding, >4% fall). The spy allegation is stated as a report; the other person is not named; no 'collapse' (fall was single-digit percent). Parent must remove or update excluded 'nvidia-huang-scandal'.",
+      "evidence": ["additions.nvidia-ceo-probe"]
+    },
+    {
+      "id": "trump-in-north-korea",
+      "status": "merged",
+      "summary": "Archived into live trump-kim-summit.",
+      "evidence": ["trump-in-north-korea.merged_into"]
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "status": "merged",
+      "summary": "Archived into live bitcoin-100k, which takes its OKX meme source.",
+      "evidence": ["bitcoin-round-trip.merged_into", "bitcoin-100k.fields"]
+    },
+    {
+      "id": "change4-far-side-landing",
+      "status": "merged",
+      "summary": "Canonical; selection intent: launch (image agent to approve existing image_url).",
+      "evidence": ["fields.title", "fields.blurb"]
+    },
+    {
+      "id": "change6-far-side-samples",
+      "status": "merged",
+      "summary": "Archived into change4-far-side-landing.",
+      "evidence": ["change6-far-side-samples.merged_into"]
+    },
+    {
+      "id": "driverless-robotaxis",
+      "status": "edited",
+      "summary": "Selection intent: launch (image agent to approve existing image_url). Tesla sentence removed; addition tesla-cybercab. 'Designed' is deliberate: reports say early units may have had steering wheels.",
+      "evidence": ["fields.blurb", "additions.tesla-cybercab"]
+    },
+    {
+      "id": "galaxy-note-7-recall",
+      "status": "edited",
+      "summary": "Selection intent: launch (image agent to approve existing image_url).",
+      "evidence": ["fields.title", "fields.blurb", "fields.event_date"]
+    },
+    {
+      "id": "gangnam-style-broke-youtube",
+      "status": "merged",
+      "summary": "Canonical. Selection intent: launch (inferred: no recorded choice; note gives a better title). Image agent to approve existing image_url.",
+      "evidence": ["fields.title", "fields.blurb", "fields.event_date"]
+    },
+    {
+      "id": "gangnam-style-counter",
+      "status": "merged",
+      "summary": "Archived into gangnam-style-broke-youtube.",
+      "evidence": ["gangnam-style-counter.merged_into"]
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "status": "merged",
+      "summary": "Archived into live us-same-sex-marriage.",
+      "evidence": ["ireland-marriage-referendum.merged_into"]
+    },
+    {
+      "id": "turkish-shooter",
+      "status": "edited",
+      "summary": "Selection intent: launch (image agent to approve existing image_url).",
+      "evidence": ["fields.title"]
+    },
+    {
+      "id": "trump-memecoin",
+      "status": "edited",
+      "summary": "Selection intent: launch (image agent to approve existing image_url). Critical, factual headline.",
+      "evidence": ["fields.title", "fields.blurb"]
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 ---
-title: "We got ChatGPT before GTA 6"
-blurb: "OpenAI released ChatGPT on 30 November 2022. It gained one million users in five days and 100 million in two months."
+title: "We got talking computers before GTA 6"
+blurb: "OpenAI released ChatGPT on 30 November 2022; it reached 100 million users in two months. China's DeepSeek topped the US App Store in January 2025, and GPT-5 followed in August 2025."
 kind: "real-event"
 date: "2022-11-30"
 source: {"url":"https://www.denofgeek.com/tv/20-wild-things-we-actually-got-before-gta-6/","platform":"other"}
-imageAlt: "We got ChatGPT before GTA 6"
+imageAlt: "We got talking computers before GTA 6"
 nsfw: false
 status: "launch"
 eventDate: "2022-11-30"

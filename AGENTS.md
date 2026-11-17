@@ -52,6 +52,10 @@ Deployment branches remain writable by CI. Never add the source-branch PR requir
   - Cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate stay out.
   - NSFW cards may be crude, never sexually explicit (AdSense).
 - **No Rockstar material:** no GTA logo, fonts or key art.
+  - Specific exceptions (Andrei, 2026-11-17): Rockstar images may illustrate the Oppressor comparison (`real-oppressor-mk2`) and Red Dead running on phones (`rdr-on-phones`).
+- **Death-card exception** (Andrei, 2026-11-17): Queen Elizabeth II's death may replace the coronation card. The other death exclusions remain in force.
+- **Pandemic-card exception** (Andrei, 2026-11-17): one COVID card may cover the pandemic and chip shortage. Other pandemic exclusions remain in force.
+- **Specific media exceptions** (Andrei, 2026-11-17): use the staged Tesla Roadster, Volonaut Airbike, Concord artwork, Pokémon farewell artwork, and GamesRadar Red Dead phone photograph despite missing documented reuse licences. Record their actual copyright status; this project exception grants no third-party rights. Cena retains his portrait; his GTA key-art post is not an exception.
 
 ## Architecture invariants
 

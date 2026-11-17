@@ -1,0 +1,293 @@
+{
+  "updates": [
+    {
+      "id": "gta5-235-million",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V passes 235 million copies sold"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": [
+        "https://insider-gaming.com/gta-5-sales-reach-235-million-copies-since-launch/ (Take-Two Q2 FY2027 report; read 2026-11-17, archived https://linkding.lav.ren/bookmarks?details=5998)"
+      ]
+    },
+    {
+      "id": "gta5-free-on-epic",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V goes free on the Epic Games Store"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://www.pcgamer.com/grand-theft-auto-5-giveaway-broke-the-epic-games-store"]
+    },
+    {
+      "id": "gta6-award",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA 6 wins Most Anticipated Game"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/The_Game_Awards_2024"]
+    },
+    {
+      "id": "gta6-delays",
+      "fields": {
+        "presentation": "milestone",
+        "title": "Rockstar delays GTA 6 twice"
+      },
+      "resolution": "merged-into-existing-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type; merged: same date (2025-11-06) as the hand-written 'Second delay' milestone; that entry keeps its text and links to /gta6-delays/. 'First delay' (2025-05-02) stays separate.. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"]
+    },
+    {
+      "id": "gta5-billion-in-3-days",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V makes $1 billion in three days"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"]
+    },
+    {
+      "id": "gta6-trailer",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA 6 Trailer 1 comes out"
+      },
+      "resolution": "merged-into-existing-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type; merged: same date (2023-12-05) as the hand-written 'Trailer 1' milestone; that entry keeps its text and links to /gta6-trailer/.. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI"]
+    },
+    {
+      "id": "miami-heat-vice-city",
+      "fields": {
+        "presentation": "milestone",
+        "title": "The Miami Heat become Vice City for one night"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": [
+        "https://www.pushsquare.com/news/2026/10/gta-6-rebrands-miami-basketball-team-to-vice-city-for-one-night-only (announcement 2026-10-02, game 2026-11-18, with Rockstar; read 2026-11-17, archived https://linkding.lav.ren/bookmarks?details=6062)"
+      ]
+    },
+    {
+      "id": "gta-trilogy-definitive",
+      "fields": {
+        "presentation": "milestone",
+        "title": "The GTA Trilogy Definitive Edition comes out"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_The_Trilogy_%E2%80%93_The_Definitive_Edition"
+      ]
+    },
+    {
+      "id": "gta5-ps3-x360",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V comes out on PS3 and Xbox 360"
+      },
+      "resolution": "merged-into-existing-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type; merged: same date (2013-09-17) as the hand-written 'GTA V comes out' start milestone; that entry keeps its text and links to /gta5-ps3-x360/.. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"]
+    },
+    {
+      "id": "gta5-ps5-xbox-series",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V comes out on PS5 and Xbox Series X/S"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"]
+    },
+    {
+      "id": "gta5-enhanced-pc",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V Enhanced comes out on PC"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"]
+    },
+    {
+      "id": "gta5-pc",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V comes out on PC"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"]
+    },
+    {
+      "id": "gta5-ps4-xbox-one",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA V comes out on PS4 and Xbox One"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_V"]
+    },
+    {
+      "id": "gta-online-standalone",
+      "fields": {
+        "presentation": "milestone",
+        "title": "GTA Online becomes a standalone game"
+      },
+      "resolution": "rendered-as-milestone",
+      "reason": "review_notes ask for official GTA stats/marketing in the milestone type. Title drops the 'We got … before GTA 6' frame. Dates, blurb, sources, image, review_notes and review_decision unchanged.",
+      "sources": ["https://en.wikipedia.org/wiki/Grand_Theft_Auto_Online"]
+    }
+  ],
+  "additions": [],
+  "outcomes": [
+    {
+      "id": "gta5-235-million",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-235-million/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-free-on-epic",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-free-on-epic/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta6-award",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta6-award/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta6-delays",
+      "status": "implemented-pending-integration",
+      "summary": "merged: same date (2025-11-06) as the hand-written 'Second delay' milestone; that entry keeps its text and links to /gta6-delays/. 'First delay' (2025-05-02) stays separate.",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-billion-in-3-days",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-billion-in-3-days/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta6-trailer",
+      "status": "implemented-pending-integration",
+      "summary": "merged: same date (2023-12-05) as the hand-written 'Trailer 1' milestone; that entry keeps its text and links to /gta6-trailer/.",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "miami-heat-vice-city",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /miami-heat-vice-city/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta-trilogy-definitive",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta-trilogy-definitive/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-ps3-x360",
+      "status": "implemented-pending-integration",
+      "summary": "merged: same date (2013-09-17) as the hand-written 'GTA V comes out' start milestone; that entry keeps its text and links to /gta5-ps3-x360/.",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-ps5-xbox-series",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-ps5-xbox-series/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-enhanced-pc",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-enhanced-pc/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-pc",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-pc/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta5-ps4-xbox-one",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta5-ps4-xbox-one/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    },
+    {
+      "id": "gta-online-standalone",
+      "status": "implemented-pending-integration",
+      "summary": "new milestone on its own date, title links to /gta-online-standalone/",
+      "evidence": [
+        "scripts/lib/candidate.js toCard: presentation",
+        "src/lib/cards.js withMilestoneCards",
+        "src/__tests__/cards.test.js"
+      ]
+    }
+  ]
+}
