@@ -1,6 +1,8 @@
 # Community-specific Reddit posts
 
 Rules checked on 17 November 2026. This pack contains distinct drafts and explicit publication limits.
+The [current rule check](2026-11-17-reddit-rules-research.md) distinguishes r/GTAVI from r/GTA6 and identifies eligible showcase routes.
+The older linkding rule copies contain Reddit block pages. Use the dated rule extract linked from that check as the saved evidence.
 Andrei will publish manually. The assistant prepares drafts and assets only.
 No new post from this pack has been submitted. Manual submission does not override a community's AI or promotion ban.
 The original release and social-post record remains in `2026-11-17-posts.md`.
@@ -11,6 +13,7 @@ The original release and social-post record remains in `2026-11-17-posts.md`.
 | Community | Format and angle | Publication limit |
 | --- | --- | --- |
 | r/GTA | Text discussion comparing the PC-release wait with the gap between GTA VI trailers | Community discussion only. No site link, site name, or promotional comment. |
+| r/GTAVI | No promotional draft supplied | A separate community. Rule 6 requires moderator approval for promotion. No approval is recorded. |
 | r/GTAmemes | Original two-panel meme about a temporary game lasting thirteen years | PNG prepared and inspected. No website promotion is included or assumed permitted. |
 | r/GTA6 | Human-authored retrospective focused on GTA VI's official milestones | No AI-generated submission. Site promotion requires explicit moderator approval; none exists. |
 | r/memes | An original meme authored and made by Andrei | No AI-generated meme or supplied submission copy. No links, site name, or promotional watermark. |
