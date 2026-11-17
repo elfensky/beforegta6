@@ -23,6 +23,7 @@ const current = (on) => (on ? /** @type {const} */ ('page') : undefined);
   title="Everything we got before GTA 6 · beforegta6.wtf"
   description={`${cards.length} things that happened while the world waited for GTA 6.`}
   path="/"
+  items={cards.map((entry) => ({ id: entry.card.id, title: entry.card.data.title }))}
 >
   <h1 class="page-title" data-launch-title>
     Everything we got before GTA 6
