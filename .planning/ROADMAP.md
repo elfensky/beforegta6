@@ -15,8 +15,8 @@ Andrei confirmed these three goals and their order on 2026-11-17. This order tak
 | Order | Goal | State and completion condition |
 |---|---|---|
 | 1 | Create the local Tinder-like Yes/No tool and sort the items. | **Done.** The tool and manual sort are complete. Choices and notes are saved. |
-| 2 | Update staging and production with the completed selection. | **Next.** All 46 image selections are complete. Release the verified selection to staging and production. Both environments must show the reviewed content. |
-| 3 | Create and publish social-media posts promoting the website. | **Immediately after production is updated and verified.** Complete actual posting as soon as possible; drafts alone do not finish this goal. |
+| 2 | Update staging and production with the completed selection. | **Done.** All 46 images are complete. PRs #29 and #30 are merged. Both environments match all 206 selected pages, 192 card rows, and 18 milestones. |
+| 3 | Create and publish social-media posts promoting the website. | **Open.** The r/gaming post was submitted immediately after verification, then removed for insufficient community participation. Never repost there. r/SideProject is excluded; other publication routes remain pending. |
 
 The remaining image work is in [Finish selected images, release, and prepare promotion](t3-thread://v2/f4c33bd2-f973-45a5-884e-44ab0aedef3d/mcp:launch:eae5b6b0cbce70b768e41fa5f560fd2175f4704879b5437c3a3d89009ea3a91d).
 The thread's original title says "prepare promotion"; Andrei's clarified goal includes creating and publishing posts after production verification.

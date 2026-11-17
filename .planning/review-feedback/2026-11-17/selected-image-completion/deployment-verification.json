@@ -1,0 +1,93 @@
+{
+  "integrationPR": "https://github.com/elfensky/beforegta6/pull/29",
+  "production": {
+    "productionCommit": "c1498ec37ba1ad3b6815ac2199def387559cbdec",
+    "productionBuild": "https://github.com/elfensky/beforegta6/actions/runs/44110473225",
+    "productionPin": "b81df96",
+    "productionAudit": {
+      "checkedAt": "2026-11-17T15:10:22.318Z",
+      "origin": "https://beforegta6.wtf",
+      "selectedPages": 206,
+      "imageHashes": 206,
+      "excludedPages": 181,
+      "pageAndImageFailures": []
+    },
+    "productionRootCheck": [
+      {
+        "age": null,
+        "cache": "HIT",
+        "cards": 192,
+        "launch": "GTA 6: 19 November 2026",
+        "milestones": 18,
+        "status": 200
+      },
+      {
+        "age": "1",
+        "cache": "HIT",
+        "cards": 192,
+        "launch": "GTA 6: 19 November 2026",
+        "milestones": 18,
+        "status": 200
+      }
+    ],
+    "productionFinalRoot": {
+      "age": "26",
+      "cache": "HIT",
+      "checkedAt": "2026-11-17T15:13:50.638Z",
+      "extra": [],
+      "milestones": 18,
+      "missing": [],
+      "rows": 192
+    }
+  },
+  "releasePR": "https://github.com/elfensky/beforegta6/pull/30",
+  "stagingCommit": "0d52d63c66bfec57cb0c9bf5be18dfffad0bf6d4",
+  "stagingBuild": "https://github.com/elfensky/beforegta6/actions/runs/44108686666",
+  "stagingAudit": {
+    "checkedAt": "2026-11-17T15:01:09.539Z",
+    "excludedPages": 181,
+    "failures": [
+      {
+        "expected": "52b6e7ef5a7448b256000f0881e5329b472c0b2d9756dde58787db54bb0295e0",
+        "hash": "9f3ae45fc90c4a344a9169f9c0a068aba0e4eb4ac92d9d31c1b52702b4092a06",
+        "id": "dire-wolves",
+        "imageStatus": 200
+      },
+      {
+        "expected": "004348679530363eb9d3f433c4edc74a4a8ce85ee085aff045e2c38e80e70633",
+        "hash": "a5eeefc3d85786b6c22250014e33d1bf2aac197fce18e4627ab9b4afc8efd925",
+        "id": "chandrayaan3-south-pole",
+        "imageStatus": 200
+      }
+    ],
+    "imageHashes": 206,
+    "milestones": 18,
+    "origin": "https://staging.beforegta6.wtf",
+    "rows": 192,
+    "selectedPages": 206
+  },
+  "jpegChecks": [
+    {
+      "dimensionsMatch": true,
+      "id": "dire-wolves",
+      "maxDifference": 0,
+      "meanDifference": 0,
+      "sampledColorChannels": 183
+    },
+    {
+      "dimensionsMatch": true,
+      "id": "chandrayaan3-south-pole",
+      "maxDifference": 0,
+      "meanDifference": 0,
+      "sampledColorChannels": 183
+    }
+  ],
+  "jpegDisposition": "Two generated JPEGs differ from the macOS build bytes. Dimensions and 183 sampled color channels match exactly for each. Both deployed card images were visually inspected. Original asset choices are unchanged.",
+  "stagingMobile": {
+    "width": 320,
+    "scrollWidth": 320,
+    "cards": 192,
+    "milestones": 18,
+    "googleScripts": 0
+  }
+}
