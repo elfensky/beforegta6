@@ -8,6 +8,22 @@ Each carries its completion date and evidence. Phases 6 to 8 cover promotion, ca
 
 This repo owns this plan. Phase structure follows Andrei's own frame (2026-11-15). `.planning/config.json` sets granularity `standard` and sequential phase IDs.
 
+## Current execution order
+
+Andrei confirmed these three goals and their order on 2026-11-17. This order takes priority over the original calendar below.
+
+| Order | Goal | State and completion condition |
+|---|---|---|
+| 1 | Create the local Tinder-like Yes/No tool and sort the items. | **Done.** The tool and manual sort are complete. Choices and notes are saved. |
+| 2 | Update staging and production with the completed selection. | **Next.** All 46 image selections are complete. Release the verified selection to staging and production. Both environments must show the reviewed content. |
+| 3 | Create and publish social-media posts promoting the website. | **Immediately after production is updated and verified.** Complete actual posting as soon as possible; drafts alone do not finish this goal. |
+
+The remaining image work is in [Finish selected images, release, and prepare promotion](t3-thread://v2/f4c33bd2-f973-45a5-884e-44ab0aedef3d/mcp:launch:eae5b6b0cbce70b768e41fa5f560fd2175f4704879b5437c3a3d89009ea3a91d).
+The thread's original title says "prepare promotion"; Andrei's clarified goal includes creating and publishing posts after production verification.
+Release evidence belongs with CONT-06 in `.planning/REQUIREMENTS.md`. Posting scope and stop rules remain in `docs/PROMOTION.md`.
+
+**eli14:** Finish sorting the album, put the finished album on the website, then invite people to see it immediately.
+
 ## Milestones
 
 - 🚧 **v1.0 Launch-week site** - Phases 1-8 (in progress; GTA 6 launches 2026-11-19)
@@ -101,26 +117,28 @@ Andrei confirmed AdSense remains in review. Approval and dashboard settings rema
 
 ### Phase 6: Launch-week promotion
 **Goal**: Launch-week visitors reach a site that is ready, and the week's result is on record.
-**Depends on**: Phase 5 (the card set comes from Phase 2)
-**Requirements**: PROMO-01, PROMO-02, PROMO-03, PROMO-04, PROMO-05, CONT-05, ADS-03
+**Depends on**: Phase 5; actual posting also depends on the reviewed selection reaching production (CONT-06).
+**Requirements**: PROMO-01, PROMO-02, PROMO-03, PROMO-04, PROMO-05, CONT-05, CONT-06, ADS-03
 **Success Criteria** (what must be TRUE):
   1. The Cloudflare Cache Rule `HTML at the edge` is applied before the first link post, and the second request to `/` shows `cf-cache-status: HIT`.
   2. Production card pages carry the share button. After the launch moment on 2026-11-19 the title reads "We got all of this before GTA 6." and the line "And we got GTA 6 before The Winds of Winter." shows under it.
-  3. The posts in `docs/PROMOTION.md` go out from 2026-11-15 to 2026-11-22, and each stop rule holds: a Reddit link post with no Umami referrer visit after 1 hour means no other Reddit link post that day.
+  3. Social posts are created and published as soon as possible after the reviewed selection is verified in production. The channel limits and stop rules in `docs/PROMOTION.md` still apply. Drafts alone do not complete promotion.
   4. The card `gta5-farewell-drive` is live on 2026-11-18.
   5. On 2026-11-22 Andrei reads Umami referrers per channel, and the AdSense approval state is written down (approved, pending or refused). Phase 6 can close with ADS-03 still open: Google's approval is external.
 **Plans**: TBD
 **Status**: In progress since 2026-11-15. Production serves the share assets and post-launch code, verified 2026-11-16.
 The HTML cache is active. Two production requests returned `cf-cache-status: HIT`.
-The posting schedule remains human work. The dated card release, launch-day check, and result reading remain pending.
+The reviewed selection must reach staging and production before the social promotion starts.
+Create and publish the posts immediately after production verification, subject to the channel limits and stop rules.
+The dated card release, launch-day check, and result reading remain pending.
 
 ### Phase 7: Candidate review
 **Goal**: Andrei sorts the finds in `research/candidates.json` into launch and drop by swipe or key, and the site follows.
 **Depends on**: Phase 2 (the candidates file and `npm run cards`). It can run alongside Phase 6, because Phase 6 is mostly human work.
-**Requirements**: REV-01, REV-02, REV-03
+**Requirements**: REV-01, REV-02, REV-03, REV-04, REV-05, REV-06
 **Success Criteria** (what must be TRUE):
   1. A local page shows one candidate at a time from `research/candidates.json`, with a yes and a no answer by swipe or keys.
-  2. Yes writes `status: "launch"` and no writes `status: "drop"` to the JSON. No other field changes.
+  2. Yes records the selection and sets `launch` after image approval. A pending Yes stays `drop`; No cancels it. Each decision records the choice and timestamp.
   3. After `npm run cards` the card files match the JSON, and the content guard test passes.
   4. The page never ships: no file from it appears in `dist/`.
 **Plans**: TBD
@@ -128,8 +146,15 @@ The posting schedule remains human work. The dated card release, launch-day chec
 **Status**: Complete (#19), 2026-11-16. Independently reviewed and delivered through PR #26 and release PR #27.
 **Evidence**: `.planning/verification/2026-11-16-completion.md`: 72 unit tests, six review browser tests, and 63 public-site browser tests pass.
 **Implementation plan**: `docs/superpowers/plans/2026-11-16-candidate-review.md`.
-The tool protects held candidates and requires a local image before launch.
+The tool protects held candidates and requires a loaded local image before launch. A failed image still permits a pending Yes.
 An explicit fetch action prepares a local preview when an image URL exists.
+Local addition, 2026-11-17: editorial notes save to `review_notes` without changing candidate selections.
+Notes remain outside public cards. The review API and browser tests cover persistence and failed saves.
+Local navigation uses item URLs, browser resume, Next, Previous, and numbered Go controls.
+Pending notes save before navigation, including browser Back and Forward.
+Every accepted Yes or No also saves `review_decision`, including choices that leave the status unchanged.
+The UI shows the latest choice, save time, and decided count from disk. Earlier choices remain unrecorded.
+Selected items with missing or broken images show **Needs image approval** and count as decided.
 
 ### Phase 8: Protected deployments
 
@@ -153,7 +178,8 @@ Keeping these records separate lets checks protect source changes while automati
 ## Progress
 
 **Execution Order:**
-Phases 1 to 5, 7, and 8 are complete. Phase 6 awaits dates and external actions.
+Phases 1 to 5, 7, and 8 are complete. The current order is image completion, staging/production release, then immediate social posting.
+The local review tool and manual sort are complete. A completed deployment setup does not mean the new selection is already deployed.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
