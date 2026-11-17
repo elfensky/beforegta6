@@ -4,15 +4,56 @@ import ogDefault from '../assets/og-default.png';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { ADSENSE_ACCOUNT, ADSENSE_CLIENT, SITE_NAME, UMAMI_WEBSITE_ID } from '../data/site.js';
+import {
+  DEFAULT_IMAGE_ALT,
+  SOCIAL_WIDTH,
+  SOCIAL_HEIGHT,
+  SOCIAL_VERSION,
+  structuredData,
+  serializeJsonLd,
+} from '../lib/meta.js';
 import '../styles/global.css';
 
 /**
- * @type {{ title: string, description: string, path: string, ogImage?: import('astro').ImageMetadata | null }}
+ * @type {{ title: string, description: string, path: string, socialTitle?: string,
+ * ogImage?: import('astro').ImageMetadata | null, ogImageAlt?: string,
+ * items?: import('../lib/meta.js').ListedCard[], cardMetadata?: import('../lib/meta.js').CardMetadata,
+ * noindex?: boolean }}
  */
-const { title, description, path, ogImage = null } = Astro.props;
+const {
+  title,
+  description,
+  path,
+  socialTitle = title,
+  ogImage = null,
+  ogImageAlt = DEFAULT_IMAGE_ALT,
+  items,
+  cardMetadata,
+  noindex = false,
+} = Astro.props;
 const site = /** @type {URL} */ (Astro.site);
-const og = await getImage({ src: ogImage ?? ogDefault, width: 1200, format: 'jpg' });
+const og = await getImage({
+  src: ogImage ?? ogDefault,
+  width: SOCIAL_WIDTH,
+  height: SOCIAL_HEIGHT,
+  format: 'jpg',
+  socialPreview: SOCIAL_VERSION,
+});
 const canonical = new URL(path, site).href;
+const image = {
+  url: new URL(og.src, site).href,
+  width: SOCIAL_WIDTH,
+  height: SOCIAL_HEIGHT,
+  alt: ogImage ? ogImageAlt : DEFAULT_IMAGE_ALT,
+};
+const schema = structuredData({
+  title: socialTitle,
+  description,
+  path,
+  image,
+  items,
+  card: cardMetadata,
+});
 ---
 
 <!doctype html>
@@ -22,6 +63,7 @@ const canonical = new URL(path, site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -29,11 +71,22 @@ const canonical = new URL(path, site).href;
     <meta name="google-adsense-account" content={ADSENSE_ACCOUNT} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
-    <meta property="og:title" content={title} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content={socialTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL(og.src, site).href} />
+    <meta property="og:image" content={image.url} />
+    <meta property="og:image:secure_url" content={image.url} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content={image.width} />
+    <meta property="og:image:height" content={image.height} />
+    <meta property="og:image:alt" content={image.alt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={socialTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image.url} />
+    <meta name="twitter:image:alt" content={image.alt} />
+    {!noindex && <script is:inline type="application/ld+json" set:html={serializeJsonLd(schema)} />}
     {/* Cookieless page views and Web Vitals. Never add Umami's recorder.js: it is session replay and heatmaps. */}
     {/* async, not defer: a deferred tag that never loads holds back the site's own module scripts. */}
     {UMAMI_WEBSITE_ID && (

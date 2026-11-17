@@ -34,6 +34,7 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - ✓ The front page is one centred line timeline with an order link and a hover image — Phase 4
 - ✓ AdSense ownership is verified, Auto ads are wired for the apex only, Web Vitals are counted, and the HTML cache header is set — Phase 5
 - ✓ The local review tool supports persistent decision records, editorial notes, image previews, item URLs, resume, and numbered navigation while protecting held candidates — Phase 7
+- Social metadata uses full titles, fixed-size preview images, connected JSON-LD, and a generated public `llms.txt` index. The contract and verification are in `docs/METADATA.md`.
 - ✓ A failed image permits a saved Yes pending image approval; incomplete cards remain outside generated site content — Phase 7
 - ✓ Dedicated deployment branches serve both environments, and source branches require PRs and passing checks — Phase 8
 
