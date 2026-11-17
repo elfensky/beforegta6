@@ -72,7 +72,7 @@ The 2026-11-17 exceptions in `AGENTS.md` qualify these exclusions: Queen Elizabe
 ## Constraints
 
 - **Tech stack**: Astro 7 static output, plain JavaScript with JSDoc (`checkJs`, strict), Node 26 via `.node-version`. No TypeScript.
-- **Assets**: Every asset comes from the site. Exceptions: the AdSense script (Google) and self-hosted Umami at `umami.lav.ren`. System fonts only. Images go through `astro:assets`.
+- **Assets**: Every asset comes from the site. Exceptions: the AdSense script (Google), Cloudflare Turnstile on `/contact/`, and self-hosted Umami at `umami.lav.ren`. System fonts only. Images go through `astro:assets`.
 - **Analytics**: Self-hosted Umami, cookieless, no consent banner. Page views and Web Vitals only. Never load Umami's `recorder.js`.
 - **Ads and consent**: Auto ads only. The script loads on the apex only. No ads and no placeholder before approval. Google's consent tool covers the EEA, UK and Switzerland. The CSP sets no `script-src`.
 - **Content**: Andrei's picks. Politics, religion and identity are in. NSFW cards may be crude, never sexually explicit. Every card keeps a local image, credits the creator and links the source post. Rockstar material is limited to the two exceptions in `AGENTS.md`.

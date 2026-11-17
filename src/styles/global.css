@@ -518,3 +518,49 @@ main,
   font-size: var(--step-1);
   margin: 1.5rem 0 0.5rem;
 }
+
+/* The contact form: one column, visible labels above each control. */
+.contact {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1.5rem 0;
+}
+.contact label {
+  margin-top: 0.65rem;
+  font-weight: 600;
+}
+.contact :is(input, select, textarea) {
+  font: inherit;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text);
+}
+.contact .cf-turnstile {
+  margin-top: 1rem;
+}
+.contact button {
+  justify-self: start;
+  margin-top: 1rem;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--pink);
+  color: var(--bg);
+  cursor: pointer;
+}
+.contact button:hover {
+  background: var(--orange);
+}
+/* The honeypot: off screen, not display:none, which bots learn to skip. */
+.contact .trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
