@@ -15,14 +15,14 @@ Andrei confirmed these three goals and their order on 2026-11-17. This order tak
 | Order | Goal | State and completion condition |
 |---|---|---|
 | 1 | Create the local Tinder-like Yes/No tool and sort the items. | **Done.** The tool and manual sort are complete. Choices and notes are saved. |
-| 2 | Update staging and production with the completed selection. | **Next.** All 46 image selections are complete. Release the verified selection to staging and production. Both environments must show the reviewed content. |
-| 3 | Create and publish social-media posts promoting the website. | **Immediately after production is updated and verified.** Complete actual posting as soon as possible; drafts alone do not finish this goal. |
+| 2 | Update staging and production with the completed selection. | **Done.** All 46 images are complete. PRs #29 and #30 are merged. Both environments match all 206 selected pages, 192 card rows, and 18 milestones. |
+| 3 | Prepare distinct promotion drafts; Andrei publishes them manually. | **Drafts ready. Publication open.** Andrei owns every post and moderator message. The removed r/gaming post must not be repeated. r/SideProject is excluded. |
 
-The remaining image work is in [Finish selected images, release, and prepare promotion](t3-thread://v2/f4c33bd2-f973-45a5-884e-44ab0aedef3d/mcp:launch:eae5b6b0cbce70b768e41fa5f560fd2175f4704879b5437c3a3d89009ea3a91d).
-The thread's original title says "prepare promotion"; Andrei's clarified goal includes creating and publishing posts after production verification.
+The completed image and release work is in [Finish selected images, release, and prepare promotion](t3-thread://v2/f4c33bd2-f973-45a5-884e-44ab0aedef3d/mcp:launch:eae5b6b0cbce70b768e41fa5f560fd2175f4704879b5437c3a3d89009ea3a91d).
+Andrei's latest instruction replaces agent publication with draft preparation. He will publish everything himself.
 Release evidence belongs with CONT-06 in `.planning/REQUIREMENTS.md`. Posting scope and stop rules remain in `docs/PROMOTION.md`.
 
-**eli14:** Finish sorting the album, put the finished album on the website, then invite people to see it immediately.
+**eli14:** The finished album is on the website. The invitations are prepared; Andrei sends them himself.
 
 ## Milestones
 
@@ -122,14 +122,14 @@ Andrei confirmed AdSense remains in review. Approval and dashboard settings rema
 **Success Criteria** (what must be TRUE):
   1. The Cloudflare Cache Rule `HTML at the edge` is applied before the first link post, and the second request to `/` shows `cf-cache-status: HIT`.
   2. Production card pages carry the share button. After the launch moment on 2026-11-19 the title reads "We got all of this before GTA 6." and the line "And we got GTA 6 before The Winds of Winter." shows under it.
-  3. Social posts are created and published as soon as possible after the reviewed selection is verified in production. The channel limits and stop rules in `docs/PROMOTION.md` still apply. Drafts alone do not complete promotion.
+  3. Distinct posts and assets are prepared after production verification. Andrei publishes them manually under the rules in `docs/PROMOTION.md`. Draft preparation completes the assistant task; public promotion still needs post URLs.
   4. The card `gta5-farewell-drive` is live on 2026-11-18.
   5. On 2026-11-22 Andrei reads Umami referrers per channel, and the AdSense approval state is written down (approved, pending or refused). Phase 6 can close with ADS-03 still open: Google's approval is external.
 **Plans**: TBD
 **Status**: In progress since 2026-11-15. Production serves the share assets and post-launch code, verified 2026-11-16.
 The HTML cache is active. Two production requests returned `cf-cache-status: HIT`.
 The reviewed selection must reach staging and production before the social promotion starts.
-Create and publish the posts immediately after production verification, subject to the channel limits and stop rules.
+The drafts are prepared. Andrei owns publication and any moderator contact, subject to the channel limits and stop rules.
 The dated card release, launch-day check, and result reading remain pending.
 
 ### Phase 7: Candidate review
@@ -178,8 +178,8 @@ Keeping these records separate lets checks protect source changes while automati
 ## Progress
 
 **Execution Order:**
-Phases 1 to 5, 7, and 8 are complete. The current order is image completion, staging/production release, then immediate social posting.
-The local review tool and manual sort are complete. A completed deployment setup does not mean the new selection is already deployed.
+Phases 1 to 5, 7, and 8 are complete. The reviewed selection is verified on staging and production.
+Promotion drafts are prepared. Andrei publishes manually; the assistant must not send posts or moderator messages.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|

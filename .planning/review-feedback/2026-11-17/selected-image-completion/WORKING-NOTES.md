@@ -50,3 +50,34 @@
 - Those instructions support the existing note-based selections. The original No clicks remain historical records, not reconstructed votes. The existing five outcomes explicitly record selection from the note. The P2 does not require another confirmation or a reversal of the completed note pass.
 - P3 was accepted: promotion copy now states “192 cards and 18 GTA milestones” instead of “206 cards”. Counts and examples still require production verification before posting.
 - The required Nowledge history retry returned connection refused. The exact T3 source messages above supplied the missing context.
+
+## Deployment and publication working notes
+
+- PR #29 merged by rebase at 14:56:44 UTC; staging source is `0d52d63`. PR #30 merged at 15:06:13 UTC; production source is `c1498ec`. Both image builds and pins passed. Existing Arcane Git Sync records applied the pins, with two web and two tunnel replicas each.
+- Full browser fetch audits checked 206 selected pages, 206 preview images, and 181 excluded routes in each environment. Production images match staging byte-for-byte. Two staging JPEG encodings differ from the local macOS build; exact dimensions, 183 sampled colour channels per image, and visual checks match. These are the unchanged dire-wolf and Chandrayaan images.
+- The first production homepage response still had 97 cached rows. A cache-busted response had 192. The normal homepage reached 192 rows and 18 milestones by 15:13:27 UTC; two subsequent cache hits and an exact ID comparison passed. No cache purge was needed.
+- Andrei excluded r/SideProject before any post was submitted. Current r/gaming rules were read and archived. The account's karma breakdown showed positive r/gaming participation, but its numerical eligibility threshold was not published.
+- The r/gaming link was submitted at 15:16:12 UTC, then removed by AutoModerator for insufficient community participation. The public logged-out check and post JSON confirm removal. Do not delete, retry, or attempt to evade the threshold. The agreed rule prohibits posting this link there again.
+- X's current automation page prohibits website scripting and unsolicited automated replies. No X post was submitted. The ordinary 1Password CLI access timed out; the handbook identifies `with-secret OP_SERVICE_ACCOUNT_TOKEN -- op ...` as the read-only robot route.
+- The Reddit spam page was read in the browser, but its archive command returned an error page. No archive link is claimed. The r/gaming and X rule snapshots succeeded.
+- Umami at 15:18 UTC showed no referrer data. That check was less than one hour after posting, so it is not the scheduled one-hour referrer result.
+- The documented 1Password robot successfully checked Infrastructure item titles. No X, Twitter, Buffer, or social-publishing credential was found. No credential values were read or printed.
+
+## Community-specific preparation
+
+- Andrei requested unique posts for relevant gaming, GTA, and meme communities, with current rule checks. No post from the new pack has been submitted.
+- The signed-in browser supplied current rules for r/GTA, r/GTA6, r/memes, r/GTAmemes, and r/videogames. The dated snapshots are linked in `docs/promotion/2026-11-17-subreddit-posts.md`.
+- r/GTA prohibits promotion. Its draft is an independent discussion of the trailer interval and PC-release interval, without a site link or promotional comment. Community participation does not complete website promotion.
+- r/GTA6 and r/memes prohibit AI-generated content. Their sections are human-only preparation briefs, not submission copy. Moderator contact remains unapproved and no message has been sent.
+- The r/GTAmemes PNG is original AI-generated artwork without site branding, a link, or Rockstar material. Its prompt, dimensions, hash, and inspection are recorded beside the asset. No new content or media exception was introduced.
+- r/videogames permits project promotion only in its Weekly Showcase. The comment remains conditional because its AI and NSFW rules need clarification for this submission.
+- r/GamingMemes is banned and unavailable. Do not confuse it with r/GTAmemes. The unavailable community is not a publication route.
+- A recent-topic search found existing broad GTA-wait retrospectives. The r/GTA draft uses a narrower comparison; a final duplicate check remains required before submission.
+- Nowledge retrieval recovered during this continuation. The targeted thread search for beforegta6 promotion returned the prior promotion plan and the parent continuation instructions.
+
+## Manual publication handoff
+
+- Andrei answered the pending questions: he will publish everything himself and wants drafts only. The earlier agent-publication instruction is superseded. No moderator message or new social post was sent.
+- His X-access answer named Playwright. The current drafts-only task needs no posting connection, so no browser publication or credential setup was attempted.
+- The X main post now avoids a relative launch-date promise. The Reddit drafts retain their promotion and AI limits, which still apply when a person submits them.
+- PR #33 remains the documentation release. Merge the manual-publication clarification into develop before that release, so main records the current owner correctly.

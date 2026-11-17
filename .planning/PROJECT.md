@@ -39,11 +39,11 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 
 ### Active
 
-- [ ] Release the sorted selection and review feedback to staging and production. All 46 pending images are complete. Verify both environments — CONT-06.
+- [x] Release the sorted selection and review feedback to staging and production. Both environments are verified through PRs #29 and #30 — CONT-06.
 
 
 - [ ] Launch-week site changes reach production and work: the share button, the post-launch line, the edge cache rule, and the held card `gta5-farewell-drive` on 2026-11-18 — Phase 6
-- [ ] Create and publish social-media posts as soon as the updated production site is verified. Drafts alone do not complete promotion — PROMO-04.
+- [ ] Complete public social promotion — PROMO-04. Drafts are prepared; Andrei publishes manually and handles moderator contact. The assistant sends nothing. r/gaming remains closed after removal. r/SideProject is excluded. No X connection is needed for draft preparation.
 - [ ] AdSense approves the site (external, Andrei's account) — Phase 6
 
 ### Out of Scope
@@ -63,7 +63,7 @@ The 2026-11-17 exceptions in `AGENTS.md` qualify these exclusions: Queen Elizabe
 - GTA 6 launches on Thursday 2026-11-19. `docs/PROMOTION.md` cites Take-Two Q2 FY27 earnings of 9 Nov 2026 for that date. The design spec says Rockstar set the date in November 2025 and that nobody confirmed it since. Both give 2026-11-19.
 - After the launch the meme inverts. The header reads "We got all of this before GTA 6." A line under the title reads "And we got GTA 6 before The Winds of Winter."
 - Three competing sites exist: a placeholder, an empty board and an unfinished quiz (checked 2026-11-15, per `docs/PROMOTION.md`). The promotion angle is "the meme dies Thursday, here is its archive".
-- Local selection verified on 2026-11-17: 206 card pages, 192 normal timeline rows, 14 candidate milestones, and 18 rendered milestones. All 95 original notes and every recorded click remain preserved.
+- Staging and production selection verified on 2026-11-17: 206 card pages, 192 normal timeline rows, 14 candidate milestones, and 18 rendered milestones. All 95 original notes and every recorded click remain preserved.
 - State on 2026-11-15 (checked in the repo): 97 cards in `src/content/cards/`, 383 candidates in `research/candidates.json` (97 launch, 3 hold, 283 drop), 84 excluded finds.
 - Issues #19 and #24 are complete on 2026-11-16. PR #26, release PR #27, and `drunikbe/infra#79` are merged. The codebase map is in `.planning/codebase/`. Known concerns are in `.planning/codebase/CONCERNS.md`.
 - The build took three days: 2026-11-13 to 2026-11-15. The roadmap phases 1 to 5 are backdated groups of that work.
@@ -107,7 +107,8 @@ No ADR exists for this project, so no decision is ADR-locked. The rows below are
 
 | 2026-11-17 | Review feedback preserves notes and clicks, archives merged duplicates, and renders 14 GTA items as milestones. | Feedback outcomes; candidates spec | Implemented locally |
 | 2026-11-17 | Queen, COVID, two Rockstar-image uses, and five specified media replacements are exceptions. Cena keeps his portrait. | Andrei; `AGENTS.md` | Approved |
-| 2026-11-17 | Local Yes/No tool and manual sort are done. Complete images, update staging and production, then create and publish social posts immediately. | Andrei; roadmap Current execution order | Active priority |
+| 2026-11-17 | Local Yes/No tool and manual sort are done. Complete images, update staging and production, then create and publish social posts immediately. | Andrei; roadmap Current execution order | Release complete; publication owner superseded below |
+| 2026-11-17 | Andrei will publish everything himself. The assistant prepares unique drafts and assets only, with current community rules. | Andrei; latest clarification; `docs/PROMOTION.md` | In effect |
 
 </decisions>
 
@@ -125,4 +126,4 @@ After each phase:
 After the milestone: review all sections, check the Core Value, and update Context.
 
 ---
-*Last updated: 2026-11-17. The local review and manual sort are complete. Release follows image completion; actual social posting follows production verification immediately.*
+*Last updated: 2026-11-17. The reviewed selection is verified on staging and production. Drafts are prepared; Andrei owns publication.*

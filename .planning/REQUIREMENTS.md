@@ -26,7 +26,7 @@
 - [x] **CONT-03**: Every find stays in the research archive, and a world-event rule picks the highlights. Evidence: PR #8 (1e5a777 to 528ede2, 2026-11-14): research pass 3 with a 291-event archive, and 63 pass-2 cards below the rule moved to the archive.
 - [x] **CONT-04**: One `research/candidates.json` holds every find with tags and a status. `npm run cards` makes `src/content/cards/` and `src/assets/cards/` match it, and a guard test fails on a mismatch. Source: `REQ-single-candidates-file`. Evidence: 383 candidates (97 launch, 3 hold, 283 drop) and 97 card files, checked 2026-11-15; 007370d, 1e3f1e7, 77474e9, 0c89808 (PR #21 landed on `develop` by rebase on 2026-11-15; GitHub shows it CLOSED after a 502); `src/__tests__/content.test.js`.
 - [ ] **CONT-05**: The held card `gta5-farewell-drive` goes live on 2026-11-18: set `status: "launch"` in the JSON, run `npm run cards`, release to `main`. Source: design spec Content rules; `deploy/README.md`. State checked 2026-11-15: `status: "hold"`, `timeline_date: 2026-11-18`.
-- [ ] **CONT-06**: After the image follow-up completes, staging and production serve the verified, sorted selection and applied review feedback. Completion requires checking both live environments. Source: Andrei's three-goal order, 2026-11-17; `.planning/ROADMAP.md` Current execution order. This is the next delivery goal; the local review tool and manual sort are complete.
+- [x] **CONT-06**: After the image follow-up completes, staging and production serve the verified, sorted selection and applied review feedback. Completion requires checking both live environments. Source: Andrei's three-goal order, 2026-11-17; `.planning/ROADMAP.md` Current execution order. Completed 2026-11-17 through PRs #29 and #30. Both live selections and all 206 page/image pairs are verified; see `.planning/verification/2026-11-17-release.md`.
 
 ### Site
 
@@ -47,7 +47,7 @@
 - [x] **TIME-04**: The only control is the order. `/` is newest first. `/oldest/` is oldest first, names `/` as canonical and stays out of the sitemap. Source: `REQ-order-control`. Evidence: PR #9 (97be34e, 2026-11-14), PR #11; e2e "the order toggle switches between newest and oldest first".
 - [x] **TIME-05**: `/timeline/` answers 301 to `/` in production. Evidence: d11eeee; release PR #13 (2026-11-15 02:49); production pin e2fa991; `deploy/nginx.conf`.
 
-- [ ] **TIME-06**: The 14 reviewed GTA items use milestone presentation and retain their pages. Explicit candidate links suppress existing duplicates. Implemented locally, 2026-11-17; pending commit and release. Evidence: `src/lib/cards.js`, timeline tests, feedback outcomes.
+- [x] **TIME-06**: The 14 reviewed GTA items use milestone presentation and retain their pages. Explicit candidate links suppress existing duplicates. Released and verified, 2026-11-17, through PRs #29 and #30. Evidence: `src/lib/cards.js`, timeline tests, feedback outcomes.
 
 ### Ads and measurement
 
@@ -62,7 +62,7 @@
 - [x] **PROMO-01**: The Cloudflare Cache Rule `HTML at the edge` is active for the apex. Two production requests returned `cf-cache-status: HIT` and `age: 290` on 2026-11-16. Tiered Cache uses Automatic Upper Tiers. Always Online is off. Evidence: `deploy/README.md`, step 8.
 - [x] **PROMO-02**: Production card pages serve the share control and its share-sheet or clipboard script. The control stays hidden without JavaScript. Source: `REQ-card-pages` (share part). Evidence: PR #22 (1ae4c79), release PR #18, and production markup plus script verified on 2026-11-16.
 - [ ] **PROMO-03**: After the launch moment on 2026-11-19, the line "And we got GTA 6 before The Winds of Winter." shows under the title. Source: `REQ-countdown` (second part). Built in PR #22 (1ae4c79) with the e2e test "shows after the launch, with the flipped title". The live check happens on 2026-11-19.
-- [ ] **PROMO-04**: Create and publish social-media posts promoting the website as soon as CONT-06 is verified in production. Drafts alone do not complete this requirement. Use `docs/PROMOTION.md` for the agreed channels, limits, and stop rules. The production-first order replaces missed calendar slots. Source: Andrei, 2026-11-17.
+- [ ] **PROMO-04**: Prepare unique social-media drafts and assets after CONT-06 is verified in production. Andrei publishes every post himself. The assistant sends no posts, replies, or moderator messages. Draft preparation completes the assistant task; this requirement remains open until manual publication is recorded. Use `docs/PROMOTION.md` for the channels, limits, and stop rules. Source: Andrei's latest clarification, 2026-11-17.
 - [ ] **PROMO-05**: On 2026-11-22 Andrei reads Umami referrers per channel and records the result.
 
 ### Candidate review
@@ -74,7 +74,7 @@
 - [x] **REV-05**: Reviewable items have local `/<itemId>` URLs. Reload preserves the addressed item; `/` resumes the last item in the same browser. Next, Previous, and numbered Go controls preserve selections and save pending notes. Browser history follows item URLs; failed saves prevent navigation. Source: Andrei, 2026-11-17. Evidence: review API and browser tests.
 - [x] **REV-06**: Every accepted Yes or No saves the latest choice and timestamp in `review_decision`, even without a status change. Missing or broken images permit a pending Yes. The UI shows each item's decision, the decided count, and the number awaiting image approval. Visits, skips, notes, and image fetches do not mark an item decided. Decision records remain outside public cards. Source: Andrei, 2026-11-17. Evidence: review API and browser tests.
 
-- [ ] **REV-07**: Reviewed notes have recorded outcomes; merged duplicates retain their history and cannot relaunch through the review tool. Implemented locally, 2026-11-17; pending commit and release. Evidence: feedback outcomes, candidate validation, review API tests.
+- [x] **REV-07**: Reviewed notes have recorded outcomes; merged duplicates retain their history and cannot relaunch through the review tool. Released and verified, 2026-11-17, through PRs #29 and #30. Evidence: feedback outcomes, candidate validation, review API tests.
 
 ### Protected deployments
 
@@ -125,7 +125,7 @@ Each v1 requirement maps to exactly one phase.
 | TIME-03 | Phase 4 | Complete (2026-11-15) |
 | TIME-04 | Phase 4 | Complete (2026-11-15) |
 | TIME-05 | Phase 4 | Complete (2026-11-15) |
-| TIME-06 | Phase 7 | Implemented locally (2026-11-17) |
+| TIME-06 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
 | ADS-01 | Phase 5 | Complete (2026-11-15) |
 | ADS-02 | Phase 5 | Complete (2026-11-15) |
 | MEAS-02 | Phase 5 | Complete (2026-11-15) |
@@ -133,25 +133,25 @@ Each v1 requirement maps to exactly one phase.
 | PROMO-01 | Phase 6 | Complete (2026-11-16) |
 | PROMO-02 | Phase 6 | Complete (2026-11-16) |
 | PROMO-03 | Phase 6 | In progress (built; live check on 2026-11-19) |
-| PROMO-04 | Phase 6 | In progress |
+| PROMO-04 | Phase 6 | Drafts ready; Andrei owns manual publication. r/gaming remains closed. |
 | PROMO-05 | Phase 6 | Pending (2026-11-22) |
 | CONT-05 | Phase 6 | Pending (2026-11-18) |
-| CONT-06 | Phase 6 | Next after image follow-up; staging and production verification required |
+| CONT-06 | Phase 6 | Complete (2026-11-17; both environments verified) |
 | ADS-03 | Phase 6 | Pending (AdSense in review) |
 | REV-01 | Phase 7 | Complete (2026-11-16) |
 | REV-02 | Phase 7 | Complete (2026-11-16) |
 | REV-03 | Phase 7 | Complete (2026-11-16) |
-| REV-04 | Phase 7 | Implemented locally (2026-11-17) |
-| REV-05 | Phase 7 | Implemented locally (2026-11-17) |
-| REV-06 | Phase 7 | Implemented locally (2026-11-17) |
-| REV-07 | Phase 7 | Implemented locally (2026-11-17) |
+| REV-04 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
+| REV-05 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
+| REV-06 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
+| REV-07 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
 | DEPLOY-01 | Phase 8 | Complete (2026-11-16) |
 
 **Coverage:**
 - v1 requirements: 40 total
-- Complete: 29
-- Implemented locally: 5 (REV-04, REV-05, REV-06, REV-07, TIME-06)
-- Open: 6 (Phase 6)
+- Complete: 35
+- Implemented locally: 0
+- Open: 5 (Phase 6)
 - Mapped to phases: 40
 - Unmapped: 0
 
@@ -176,6 +176,6 @@ Every entry of `.planning/intel/requirements.md` maps to at least one requiremen
 
 ---
 *Requirements defined: 2026-11-15*
-*Last updated: 2026-11-17 with the completed review, the pending selection release (CONT-06), and immediate promotion after production verification (PROMO-04).*
+*Last updated: 2026-11-17 with verified production (CONT-06) and Andrei's drafts-only instruction for the assistant (PROMO-04).*
 
 The media exceptions in `AGENTS.md` permit five specified replacements without documented reuse licences. Their actual copyright status remains recorded.
