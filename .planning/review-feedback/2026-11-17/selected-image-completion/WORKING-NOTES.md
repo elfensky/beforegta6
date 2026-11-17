@@ -62,3 +62,15 @@
 - The Reddit spam page was read in the browser, but its archive command returned an error page. No archive link is claimed. The r/gaming and X rule snapshots succeeded.
 - Umami at 15:18 UTC showed no referrer data. That check was less than one hour after posting, so it is not the scheduled one-hour referrer result.
 - The documented 1Password robot successfully checked Infrastructure item titles. No X, Twitter, Buffer, or social-publishing credential was found. No credential values were read or printed.
+
+## Community-specific preparation
+
+- Andrei requested unique posts for relevant gaming, GTA, and meme communities, with current rule checks. No post from the new pack has been submitted.
+- The signed-in browser supplied current rules for r/GTA, r/GTA6, r/memes, r/GTAmemes, and r/videogames. The dated snapshots are linked in `docs/promotion/2026-11-17-subreddit-posts.md`.
+- r/GTA prohibits promotion. Its draft is an independent discussion of the trailer interval and PC-release interval, without a site link or promotional comment. Community participation does not complete website promotion.
+- r/GTA6 and r/memes prohibit AI-generated content. Their sections are human-only preparation briefs, not submission copy. Moderator contact remains unapproved and no message has been sent.
+- The r/GTAmemes PNG is original AI-generated artwork without site branding, a link, or Rockstar material. Its prompt, dimensions, hash, and inspection are recorded beside the asset. No new content or media exception was introduced.
+- r/videogames permits project promotion only in its Weekly Showcase. The comment remains conditional because its AI and NSFW rules need clarification for this submission.
+- r/GamingMemes is banned and unavailable. Do not confuse it with r/GTAmemes. The unavailable community is not a publication route.
+- A recent-topic search found existing broad GTA-wait retrospectives. The r/GTA draft uses a narrower comparison; a final duplicate check remains required before submission.
+- Nowledge retrieval recovered during this continuation. The targeted thread search for beforegta6 promotion returned the prior promotion plan and the parent continuation instructions.
