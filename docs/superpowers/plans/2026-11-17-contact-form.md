@@ -123,6 +123,6 @@ Expected: all pass.
 ### Task 3: Real Formspark form and Turnstile key (after Andrei's go)
 
 - [ ] Turnstile widget (Managed) for `beforegta6.wtf` and `staging.beforegta6.wtf`; site key and secret in 1Password `Infrastructure/api-turnstile-beforegta6.wtf`.
-- [ ] Formspark form through `POST /forms` (token `Infrastructure/api-formsparks`): `name: "beforegta6.wtf"`, `spamProtection: "TURNSTILE"`, `turnstileSecretKey` piped from 1Password, `customHoneypot: "gender"`, `automaticSpamFilter: true`, `emailThreading: true`, `notificationEmails` per Andrei. Allowed sites in the dashboard (the API does not document them).
+- [ ] Formspark form through `POST /forms` (token `Infrastructure/api-formsparks`): `name: "beforegta6.wtf"`, `spamProtection: "TURNSTILE"`, `turnstileSecretKey` piped from 1Password, `customHoneypot: "gender"`, `automaticSpamFilter: true`, `emailThreading: true`, `notificationEmails` per Andrei. Allowed sites in the dashboard (the API does not document them): `beforegta6.wtf` and `staging.beforegta6.wtf`, or the staging check fails.
 - [ ] Put the form ID and site key in `src/data/site.js`; run the gate; commit `feat(contact): point the form at the beforegta6 Formspark form`.
 - [ ] On staging, after deploy: one real submission arrives; one with `gender` filled does not.

@@ -38,6 +38,17 @@ test('the privacy page names the contact form recipients', async ({ page }) => {
   await expect(page.locator('#contact-form')).toHaveCount(1);
 });
 
+test('the privacy page states what the scripts really do', async ({ page }) => {
+  await page.goto('/privacy/');
+  const main = page.getByRole('main');
+  await expect(main).toContainText('and how long it was open');
+  await expect(main).toContainText('This button stops Umami from counting your visits');
+  await expect(main).toContainText('When you open the contact page, Cloudflare Turnstile');
+  await expect(main).toContainText('our legitimate interest in keeping spam out');
+  await expect(main).toContainText('Formspark also receives your IP address');
+  await expect(main).toContainText('Questions or requests: the contact form or takedown@lav.ren.');
+});
+
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 

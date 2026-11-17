@@ -45,11 +45,18 @@ for (const route of [
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
     test.setTimeout(60_000);
+    // CI must not depend on Cloudflare: the Turnstile widget never loads.
+    let turnstile = false;
+    await page.route('**/challenges.cloudflare.com/**', (r) => r.abort());
+    page.on('requestfinished', (request) => {
+      if (request.url().startsWith('https://challenges.cloudflare.com/')) turnstile = true;
+    });
     const response = await page.goto(route);
     // The 404 page also passes axe, so every other route must be a real page.
     if (route !== '/does-not-exist/') expect(response?.ok(), route).toBe(true);
     const { violations } = await new AxeBuilder({ page }).analyze();
     expect(violations.map((v) => `${v.id} (${v.nodes.length})`)).toEqual([]);
+    expect(turnstile, 'Turnstile loaded').toBe(false);
   });
 }
 
@@ -195,6 +202,9 @@ test('the footer names the operator, the contact and the privacy page', async ({
   await page.goto('/');
   const footer = page.locator('footer');
   await expect(footer).toContainText('A hobby site by Andrei Lavrenov');
+  // Astro drops a line break before a link: the words must not run into the link text.
+  await expect(footer).toContainText('Want one removed? takedown@lav.ren');
+  await expect(footer).toContainText('Contact · Privacy');
   await expect(footer.getByRole('link', { name: 'takedown@lav.ren' })).toHaveAttribute(
     'href',
     'mailto:takedown@lav.ren',

@@ -158,8 +158,8 @@ its own. Ads appear once AdSense approves the site. Andrei confirmed that review
   adds Google's script only when the host is `beforegta6.wtf`, so staging and local visits never load real ads
   (Andrei, 2026-11-15). The e2e test "the AdSense script loads on the apex only" holds both sides. Never click an ad on
   any host: a click on your own ad is invalid traffic.
-- **CSP.** `deploy/nginx.conf` sends `object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'`,
-  with no `script-src` (Andrei, 2026-11-15). AdSense loads scripts from Google hosts, and Google publishes no host
+- **CSP.** `deploy/nginx.conf` sends `object-src 'none'; base-uri 'none'; form-action 'self' https://submit-form.com
+  https://submitted.formspark.io; frame-ancestors 'none'`, with no `script-src` (Andrei, 2026-11-15). AdSense loads scripts from Google hosts, and Google publishes no host
   allowlist. Google's own policy ([AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098))
   needs a per-request nonce, and that nonce would stop the HTML edge cache (step 8). On this static site it would also
   protect little: nginx would stamp the nonce into every `<script` tag, an injected one too.
@@ -176,3 +176,19 @@ In the AdSense dashboard (Andrei):
 
 After each release, check the browser console on `beforegta6.wtf` for CSP violations, with the ad requests blocked
 (never click an ad). Only the apex loads Google's script, so staging cannot show a violation that the ads cause.
+
+## Contact form
+
+`/contact/` posts to Formspark, with a Cloudflare Turnstile check and a honeypot field `gender` (vault
+`knowledge/web-programming/formspark.md`). `src/data/site.js` holds the public form ID and Turnstile site key. The
+form-action entries in the CSP (above) let the form post, and let Formspark redirect to its error page.
+
+One-time setup (Andrei):
+
+1. Turnstile widget (Managed) for `beforegta6.wtf` and `staging.beforegta6.wtf`. Store the site key and the secret in
+   1Password `Infrastructure/api-turnstile-beforegta6.wtf`.
+2. Formspark form `beforegta6.wtf`: spam protection Turnstile with that secret, custom honeypot `gender`, automatic spam
+   filter on, and both hostnames in the allowed sites.
+3. Put the form ID and the site key in `src/data/site.js`.
+
+Check on staging after each change to the form: one real message arrives, and one with `gender` filled does not.
