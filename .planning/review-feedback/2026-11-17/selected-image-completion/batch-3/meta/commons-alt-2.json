@@ -1,0 +1,53 @@
+{
+  "floppy-g1": {
+    "title": "File:Floppy disk 2009 G1.jpg",
+    "missing": false,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Floppy_disk_2009_G1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Floppy_disk_2009_G1.jpg/1280px-Floppy_disk_2009_G1.jpg",
+    "w": 3500,
+    "h": 1700,
+    "mime": "image/jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Floppy_disk_2009_G1.jpg",
+    "license": "Public domain",
+    "artist": "George Chernilevsky",
+    "credit": "Own work",
+    "desc": "8-inch, 5,25-inch, and 3,5-inch floppy disks",
+    "date": "Taken on 7 June 2009",
+    "restrictions": "",
+    "categories": "8-inch floppy disks|5.25\" floppy disks|Self-published work|PD-self|Photographs taken on 2009-06-07|3.5\" HD (1.44 MB) floppy disks|Floppy disks with different form factors on one image"
+  },
+  "floppy-samsung": {
+    "title": "File:Samsung 3.5 inch floppy disk 20110519.jpg",
+    "missing": false,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Samsung_3.5_inch_floppy_disk_20110519.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/36/Samsung_3.5_inch_floppy_disk_20110519.jpg",
+    "w": 815,
+    "h": 839,
+    "mime": "image/jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Samsung_3.5_inch_floppy_disk_20110519.jpg",
+    "license": "CC0",
+    "artist": "Peter Astbury",
+    "credit": "Own work",
+    "desc": "A Samsung 3.5\" floppy disk",
+    "date": "2011-05-19 17:13",
+    "restrictions": "",
+    "categories": "CC-Zero|3.5\" floppy disks|Self-published work|Floppy disks with white background|Samsung storage media"
+  },
+  "floppy-verbatim": {
+    "title": "File:2023 Dyskietki Verbatim DataLifePlus.jpg",
+    "missing": false,
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/2023_Dyskietki_Verbatim_DataLifePlus.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/2023_Dyskietki_Verbatim_DataLifePlus.jpg/1280px-2023_Dyskietki_Verbatim_DataLifePlus.jpg",
+    "w": 4372,
+    "h": 3252,
+    "mime": "image/jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:2023_Dyskietki_Verbatim_DataLifePlus.jpg",
+    "license": "CC BY-SA 4.0",
+    "artist": "Jacek Halicki",
+    "credit": "Own work",
+    "desc": "Verbatim DataLifePlus floppy disks",
+    "date": "2023-07-04 11:38:18",
+    "restrictions": "",
+    "categories": "Self-published work|Featured pictures on Wikipedia, Polish|Images by Jacek Halicki|Verbatim 3,5-inch floppy disks|Wikigrant WG 2023-3"
+  }
+}

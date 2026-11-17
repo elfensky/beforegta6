@@ -1,0 +1,168 @@
+{
+  "date": "2026-11-17",
+  "owner": "additional-assets agent",
+  "notes": [
+    "All files are staged under new-assets/; nothing in research/, src/ or candidates.json was changed.",
+    "Statuses stay 'drop' with a pending archive_reason until the parent approves each image and integrates it.",
+    "The chip-shortage blurb edit in editorial.json is superseded by the merge below.",
+    "Excluded list: remove only {\"id\": \"covid-pandemic\", \"reason\": \"Global pandemic; tragedy (deaths).\"}. Keep covid-stock-crash-2020, toilet-paper-shortage, who-pandemic-agreement and tokyo-2020-held-in-2021 excluded."
+  ],
+  "updates": [
+    {
+      "id": "chip-shortage",
+      "fields": {
+        "status": "drop",
+        "merged_into": "covid-pandemic",
+        "archive_reason": "merged into covid-pandemic (review 2026-11-17): Andrei's note asked to sum this up as 'we got covid before gta6'; the COVID card names the chip shortage"
+      },
+      "resolution": "merged-archive",
+      "reason": "Andrei approved one COVID card that covers the pandemic and the chip shortage (2026-11-17). review_notes and review_decision stay unchanged.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2020%E2%80%932023_global_chip_shortage",
+        "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020"
+      ]
+    }
+  ],
+  "additions": [
+    {
+      "id": "covid-pandemic",
+      "status": "drop",
+      "tags": ["science", "economy", "world-event"],
+      "title": "We got COVID before GTA 6",
+      "blurb": "The WHO called COVID-19 a pandemic on 11 March 2020. It also helped cause a global chip shortage that made cars, consoles and graphics cards hard to buy. The WHO ended the global emergency on 5 May 2023.",
+      "kind": "real-event",
+      "event_date": "2020-03-11",
+      "post_date": null,
+      "timeline_date": "2020-03-11",
+      "fact_url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020",
+      "verified": true,
+      "source_url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing-on-covid-19---11-march-2020",
+      "source_platform": "other",
+      "source_engagement": null,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/SARS-CoV-2_%28CDC-23312%29.png/1280px-SARS-CoV-2_%28CDC-23312%29.png",
+      "image_page": "https://commons.wikimedia.org/wiki/File:SARS-CoV-2_(CDC-23312).png",
+      "image_license": "Public domain (CDC / Alissa Eckert, MS; Dan Higgins, MAM)",
+      "image_alt": "CDC illustration of the coronavirus that causes COVID-19: a grey sphere covered in red spike proteins",
+      "image_note": "CDC Public Health Image Library illustration #23312, via Wikimedia Commons; staged as new-assets/covid-pandemic.png",
+      "nsfw": false,
+      "impact": "The whole world: lockdowns, closed schools and workplaces, and a chip shortage that hit cars, consoles and graphics cards.",
+      "impact_score": 10,
+      "meme_score": 1,
+      "source_note": "WHO, 11 March 2020: 'We have therefore made the assessment that COVID-19 can be characterized as a pandemic.' WHO, 5 May 2023: COVID-19 'no longer constitutes a public health emergency of international concern (PHEIC)'. Chip-shortage link from the merged chip-shortage record (Wikipedia, secondary).",
+      "archive_reason": "pending parent image approval; selection intent launch, carried from chip-shortage (Andrei's note and Yes, 2026-11-17)"
+    }
+  ],
+  "images": [
+    {
+      "id": "covid-pandemic",
+      "local_file": "new-assets/covid-pandemic.png",
+      "width": 1280,
+      "height": 1217,
+      "type": "image/png",
+      "sha256": "78656f8dcf10fdcd55695b5b6e9a3e0ea38a1b4a0daa3c5bfb44b5c65ab988fb",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/SARS-CoV-2_%28CDC-23312%29.png/1280px-SARS-CoV-2_%28CDC-23312%29.png",
+        "image_page": "https://commons.wikimedia.org/wiki/File:SARS-CoV-2_(CDC-23312).png",
+        "image_license": "Public domain (CDC / Alissa Eckert, MS; Dan Higgins, MAM)",
+        "image_alt": "CDC illustration of the coronavirus that causes COVID-19: a grey sphere covered in red spike proteins"
+      },
+      "resolution": "new image staged",
+      "evidence": [
+        "Commons file page lists Public domain; credit CDC PHIL #23312; artists Alissa Eckert, MS; Dan Higgins, MAM",
+        "https://phil.cdc.gov/Details.aspx?pid=23312",
+        "Inspected: red-spiked grey virus sphere on white; no text, no people"
+      ]
+    },
+    {
+      "id": "tesla-cybercab",
+      "local_file": "new-assets/tesla-cybercab.jpg",
+      "width": 1280,
+      "height": 1085,
+      "type": "image/jpeg",
+      "sha256": "d3ef6adf54be5c9819a3aecf223f3b208e429b65bf93f7ed10f0c18cf485d527",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Front_of_the_Tesla_Cybercab.jpg/1280px-Front_of_the_Tesla_Cybercab.jpg",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Front_of_the_Tesla_Cybercab.jpg",
+        "image_license": "CC BY 2.0 (Steve Jurvetson)",
+        "image_alt": "Front of a gold Tesla Cybercab with both butterfly doors open, at its unveiling night in October 2024"
+      },
+      "resolution": "new image staged",
+      "evidence": [
+        "Commons: CC BY 2.0, author Steve Jurvetson (Flickr), taken 2024-10-10 at the We, Robot unveiling",
+        "Inspected: the Cybercab two-seater, not another Tesla; bystanders at the edges are unnamed event guests",
+        "Alternate, CC0: new-assets/tesla-cybercab-alt-cc0.jpg from https://commons.wikimedia.org/wiki/File:Tesla_Cybercab_001.jpg (JustAnotherCarDesigner, 2026-09-19, 1280x960, sha256 5f910ab72ebe012fe86d0190a363b8b24e6d80d8a2c1b5670a82f1742845470e); shows the 'Cybercab' door lettering in a mall display. The primary has the stronger licence trail (MED-08)"
+      ]
+    },
+    {
+      "id": "nvidia-ceo-probe",
+      "local_file": "new-assets/nvidia-ceo-probe.jpg",
+      "width": 1280,
+      "height": 1705,
+      "type": "image/jpeg",
+      "sha256": "f7a337401980d9b886f5dbfd9df2077b3a6f85a4de21178798cfd61a86e5d30c",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg/1280px-Jensen_Huang_Stanford_2026-04-30_010_%28cropped%29.jpg",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Jensen_Huang_Stanford_2026-04-30_010_(cropped).jpg",
+        "image_license": "CC BY-SA 4.0 (Anderseidesvik)",
+        "image_alt": "Jensen Huang in glasses and a black leather jacket at a Stanford fireside chat in April 2026"
+      },
+      "resolution": "new image staged",
+      "evidence": [
+        "Commons: CC BY-SA 4.0, own work by Anderseidesvik, 2026-04-30; Commons flags personality rights (no endorsement implied)",
+        "Inspected: portrait of Jensen Huang only; no other person; not linked to the allegations"
+      ]
+    },
+    {
+      "id": "us-inflation-peak",
+      "local_file": "new-assets/us-inflation-peak.png",
+      "width": 1600,
+      "height": 900,
+      "type": "image/png",
+      "sha256": "c14fda960498e1acaa5f5e57b73487ad9925e27083d0e0bed9f4c4e5f4811f92",
+      "fields": {
+        "image_url": null,
+        "image_page": "https://data.bls.gov/timeseries/CUUR0000SA0",
+        "image_license": "Original chart for beforegta6.wtf; data: US Bureau of Labor Statistics (public domain)",
+        "image_alt": "Bar chart of US CPI-U: 234.149 in September 2013, the GTA 5 release month, and 337.511 in October 2026, the latest published month, a 44.1% rise; what cost $100 then cost $144.14"
+      },
+      "resolution": "original chart generated",
+      "evidence": [
+        "Generator: new-assets/source/us-inflation-peak.py (uv run, matplotlib with bundled DejaVu font, no remote assets; asserts 44.1% and $144.14)",
+        "BLS API v2 CUUR0000SA0, checked 2026-11-17: 2013 September 234.149; 2026 October 337.511 (latest=true)",
+        "Two data points only; no monthly series and no November 2026 or GTA 6 release value"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "chip-shortage",
+      "status": "merged",
+      "summary": "Merged into the new covid-pandemic card; original notes and Yes preserved.",
+      "evidence": ["updates[chip-shortage].fields.merged_into"]
+    },
+    {
+      "id": "covid-pandemic",
+      "status": "pending-image-approval",
+      "summary": "Full candidate with WHO primary evidence and a public-domain CDC image staged; parent removes the covid-pandemic excluded entry.",
+      "evidence": ["additions[covid-pandemic]", "new-assets/covid-pandemic.png"]
+    },
+    {
+      "id": "tesla-cybercab",
+      "status": "pending-image-approval",
+      "summary": "Actual Cybercab photo staged (CC BY 2.0), CC0 alternate kept.",
+      "evidence": ["new-assets/tesla-cybercab.jpg"]
+    },
+    {
+      "id": "nvidia-ceo-probe",
+      "status": "pending-image-approval",
+      "summary": "Licensed 2026 Jensen Huang portrait staged; title and text come from integration-overrides.json.",
+      "evidence": ["new-assets/nvidia-ceo-probe.jpg"]
+    },
+    {
+      "id": "us-inflation-peak",
+      "status": "pending-image-approval",
+      "summary": "Original two-point CPI-U chart staged with its generator; replaces the FRED inflation-rate chart.",
+      "evidence": ["new-assets/us-inflation-peak.png", "new-assets/source/us-inflation-peak.py"]
+    }
+  ]
+}

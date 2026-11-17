@@ -2,9 +2,14 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 import { readdirSync, readFileSync } from 'node:fs';
 
-const launched = readdirSync('src/content/cards').filter((f) =>
-  /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
+const launched = readdirSync('src/content/cards').filter(
+  (f) =>
+    /^status: "launch"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')) &&
+    !/^presentation: "milestone"$/m.test(readFileSync(`src/content/cards/${f}`, 'utf8')),
 ).length;
+const milestoneIds = JSON.parse(readFileSync('research/candidates.json', 'utf8'))
+  .candidates.filter((c) => c.status === 'launch' && c.presentation === 'milestone')
+  .map((c) => c.id);
 
 // Any live card stands for every card page; a review can drop any one of them.
 const firstCard = readdirSync('src/content/cards')
@@ -125,6 +130,18 @@ test('the order toggle switches between newest and oldest first', async ({ page 
     'aria-current',
     'page',
   );
+});
+
+test('reviewed GTA milestones appear once and keep their individual pages', async ({ page }) => {
+  for (const route of ['/', '/oldest/']) {
+    await page.goto(route);
+    for (const id of milestoneIds) {
+      await expect(page.locator(`.milestone .t-title a[href="/${id}/"]`)).toHaveCount(1);
+      await expect(page.locator(`.entry .t-title a[href="/${id}/"]`)).toHaveCount(0);
+    }
+  }
+  await page.locator('.milestone .t-title a[href="/gta5-free-on-epic/"]').click();
+  await expect(page.locator('h1')).toHaveText('GTA V goes free on the Epic Games Store');
 });
 
 // The image of a row is hover-only on desktop: the first view of the timeline loads no card image.

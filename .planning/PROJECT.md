@@ -32,14 +32,19 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - ✓ One candidates file with tags and status drives the cards (`npm run cards`) — Phase 2
 - ✓ The site is live with card pages, a countdown, deploy pipelines, the www redirect and Umami page views — Phase 3
 - ✓ The front page is one centred line timeline with an order link and a hover image — Phase 4
-- ✓ AdSense is verified, Auto ads are wired for the apex only, Web Vitals are counted, and the HTML cache header is set — Phase 5
+- ✓ AdSense ownership is verified, Auto ads are wired for the apex only, Web Vitals are counted, and the HTML cache header is set — Phase 5
+- ✓ The local review tool supports persistent decision records, editorial notes, image previews, item URLs, resume, and numbered navigation while protecting held candidates — Phase 7
+- ✓ A failed image permits a saved Yes pending image approval; incomplete cards remain outside generated site content — Phase 7
+- ✓ Dedicated deployment branches serve both environments, and source branches require PRs and passing checks — Phase 8
 
 ### Active
 
+- [ ] Release the sorted selection and review feedback to staging and production. All 46 pending images are complete. Verify both environments — CONT-06.
+
+
 - [ ] Launch-week site changes reach production and work: the share button, the post-launch line, the edge cache rule, and the held card `gta5-farewell-drive` on 2026-11-18 — Phase 6
-- [ ] The promotion schedule of 2026-11-15 to 2026-11-22 runs, and the result is read from Umami — Phase 6
+- [ ] Create and publish social-media posts as soon as the updated production site is verified. Drafts alone do not complete promotion — PROMO-04.
 - [ ] AdSense approves the site (external, Andrei's account) — Phase 6
-- [ ] A local swipe review page sorts candidates into launch and drop (issue #19) — Phase 7
 
 ### Out of Scope
 
@@ -51,16 +56,16 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - A Show HN post, a site name inside meme images, a card-grid homepage image — the promotion council rejected them.
 - Likes and dislikes — a v2 idea, not designed (see REQUIREMENTS.md).
 
-Issue #24 is included in the completion scope by Andrei's decision on 2026-11-16.
-Deployment pins move to dedicated branches before the source branches require PRs and passing checks.
+The 2026-11-17 exceptions in `AGENTS.md` qualify these exclusions: Queen Elizabeth II's death, one COVID/chip-shortage card, and two Rockstar-image uses. Five specified media replacements have separate permission exceptions. Cena keeps his portrait.
 
 ## Context
 
 - GTA 6 launches on Thursday 2026-11-19. `docs/PROMOTION.md` cites Take-Two Q2 FY27 earnings of 9 Nov 2026 for that date. The design spec says Rockstar set the date in November 2025 and that nobody confirmed it since. Both give 2026-11-19.
 - After the launch the meme inverts. The header reads "We got all of this before GTA 6." A line under the title reads "And we got GTA 6 before The Winds of Winter."
 - Three competing sites exist: a placeholder, an empty board and an unfinished quiz (checked 2026-11-15, per `docs/PROMOTION.md`). The promotion angle is "the meme dies Thursday, here is its archive".
+- Local selection verified on 2026-11-17: 206 card pages, 192 normal timeline rows, 14 candidate milestones, and 18 rendered milestones. All 95 original notes and every recorded click remain preserved.
 - State on 2026-11-15 (checked in the repo): 97 cards in `src/content/cards/`, 383 candidates in `research/candidates.json` (97 launch, 3 hold, 283 drop), 84 excluded finds.
-- Open issues: #19 (swipe review page) and #24 (rulesets). The codebase map is in `.planning/codebase/`. Known concerns are in `.planning/codebase/CONCERNS.md`.
+- Issues #19 and #24 are complete on 2026-11-16. PR #26, release PR #27, and `drunikbe/infra#79` are merged. The codebase map is in `.planning/codebase/`. Known concerns are in `.planning/codebase/CONCERNS.md`.
 - The build took three days: 2026-11-13 to 2026-11-15. The roadmap phases 1 to 5 are backdated groups of that work.
 
 ## Constraints
@@ -69,12 +74,12 @@ Deployment pins move to dedicated branches before the source branches require PR
 - **Assets**: Every asset comes from the site. Exceptions: the AdSense script (Google) and self-hosted Umami at `umami.lav.ren`. System fonts only. Images go through `astro:assets`.
 - **Analytics**: Self-hosted Umami, cookieless, no consent banner. Page views and Web Vitals only. Never load Umami's `recorder.js`.
 - **Ads and consent**: Auto ads only. The script loads on the apex only. No ads and no placeholder before approval. Google's consent tool covers the EEA, UK and Switzerland. The CSP sets no `script-src`.
-- **Content**: Andrei's picks. Politics, religion and identity are in. NSFW cards may be crude, never sexually explicit. Every card keeps a local image, credits the creator and links the source post. No Rockstar material.
+- **Content**: Andrei's picks. Politics, religion and identity are in. NSFW cards may be crude, never sexually explicit. Every card keeps a local image, credits the creator and links the source post. Rockstar material is limited to the two exceptions in `AGENTS.md`.
 - **Performance**: The page must stay fast under a traffic spike. The HTML is cached at the edge for 5 minutes (nginx sends `CDN-Cache-Control`; the Cloudflare rule is a phase 6 item).
 - **Deploy**: The image tag in a compose file is the deploy. CI writes it. Nobody edits it by hand. Never write the GitHub skip marker in a commit message.
 - **Accessibility**: Pages pass axe, do not scroll sideways at 320 px, and read in full without JavaScript.
-- **Verification gate**: `npm run lint && npm test && npm run build && npx html-validate "dist/**/*.html"`, then `npm run test:e2e`.
-- **Process**: Every change goes in by PR with the `check` job green. Merge with `gh pr merge --rebase`. Commit as `andrei@lav.ren`.
+- **Verification gate**: `npm run lint && npm test && npm run build && npx html-validate "dist/**/*.html"`, then `npm run test:e2e` and `npm run test:review`.
+- **Process**: Every change goes in by PR with the `check` job green. Rebase integration PRs into `develop`. Merge release PRs from `develop` into `main` with a merge commit. Commit as `andrei@lav.ren`.
 
 ## Key Decisions
 
@@ -88,7 +93,7 @@ No ADR exists for this project, so no decision is ADR-locked. The rows below are
 | 2026-11-13 | The repo is personal and public: `elfensky/beforegta6`. Commits use `andrei@lav.ren`. It replaces the private `drunikbe` repo. | Design spec, Repo; `AGENTS.md` | In effect |
 | 2026-11-13 | Footer reads "A hobby site by Andrei Lavrenov, Belgium" with `takedown@lav.ren` and no address. | Design spec, Operator | In effect |
 | 2026-11-13 | The AdSense script from Google and the US-service use are documented exceptions to the no-CDN and EU-first rules. Andrei asked for AdSense. | `AGENTS.md` | In effect |
-| 2026-11-13 | Rulesets on `develop` and `main` block force-push and deletion only. GitHub refuses the Actions app as a bypass actor (HTTP 422). | `AGENTS.md`, Branches | In effect; change is issue #24 |
+| 2026-11-13 | Rulesets on `develop` and `main` block force-push and deletion only. | `AGENTS.md`, Branches | Superseded on 2026-11-16 by issue #24 |
 | 2026-11-13 | Likes and dislikes are not in the launch. They are a v2 proposal. | Design spec, Later | Deferred |
 | 2026-11-15 | One centred line timeline is the front page. It replaces the card grid, the lines view and the view toggle. The order is the only control. The 2026-11-14 timeline-only decision stays in part (static pages, link toggles). | Line timeline design | In effect |
 | 2026-11-15 | `/timeline/` answers 301 to `/`, because it was live in production. | Line timeline design | In effect |
@@ -97,6 +102,12 @@ No ADR exists for this project, so no decision is ADR-locked. The rows below are
 | 2026-11-15 | `research/candidates.json` is the one place to edit cards. `npm run cards` syncs them. The JSON wins over a hand edit. | Candidates design | In effect |
 | 2026-11-15 | The HTML is cached at the edge for 5 minutes in place of a CSP nonce. For up to 5 minutes after a release, a cached page can ask for `/_astro/` files the new build lacks. Andrei accepts this. | `deploy/README.md` step 8 | Accepted risk |
 | 2026-11-15 | Promotion option A (narrow, Reddit-led). A normal Hacker News submission, not Show HN. No short video, no Bluesky. | `docs/PROMOTION.md` | In effect |
+| 2026-11-16 | CI pins images on `deploy/staging` and `deploy/production`. Arcane reads those branches. Source branches require PRs and the GitHub Actions `check` job. | Andrei; issue #24; completion evidence | Verified live |
+| 2026-11-16 | Integration PRs use rebase merges. Releases from `develop` to `main` use merge commits. | `deploy/README.md`; source rulesets | Enforced |
+
+| 2026-11-17 | Review feedback preserves notes and clicks, archives merged duplicates, and renders 14 GTA items as milestones. | Feedback outcomes; candidates spec | Implemented locally |
+| 2026-11-17 | Queen, COVID, two Rockstar-image uses, and five specified media replacements are exceptions. Cena keeps his portrait. | Andrei; `AGENTS.md` | Approved |
+| 2026-11-17 | Local Yes/No tool and manual sort are done. Complete images, update staging and production, then create and publish social posts immediately. | Andrei; roadmap Current execution order | Active priority |
 
 </decisions>
 
@@ -114,4 +125,4 @@ After each phase:
 After the milestone: review all sections, check the Core Value, and update Context.
 
 ---
-*Last updated: 2026-11-15 after the roadmap was created from the ingested specs (mode: new-project-from-ingest)*
+*Last updated: 2026-11-17. The local review and manual sort are complete. Release follows image completion; actual social posting follows production verification immediately.*

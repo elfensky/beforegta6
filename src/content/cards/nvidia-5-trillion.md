@@ -1,6 +1,6 @@
 ---
 title: "We got a $5 trillion company before GTA 6"
-blurb: "Nvidia became the first company worth $5 trillion on 29 October 2025, about three months after it first closed above $4 trillion, on demand for AI chips."
+blurb: "Apple became the first US company worth $1 trillion on 2 August 2018. On 29 October 2025 Nvidia became the first company worth $5 trillion, on demand for AI chips."
 kind: "real-event"
 date: "2025-10-29"
 source: {"url":"https://www.semafor.com/article/10/29/2025/nvidia-hits-5-trillion-valuation","platform":"other"}

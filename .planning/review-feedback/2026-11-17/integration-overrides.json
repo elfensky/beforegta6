@@ -1,0 +1,43 @@
+{
+  "updates": [
+    {
+      "id": "bitcoin-100k",
+      "fields": {
+        "source_engagement": "316 likes, 67,231 views",
+        "source_note": "OKX post: we really got $99K BTC before GTA 6. Source retained from the merged bitcoin-round-trip record."
+      },
+      "reason": "Keep the source caption outside public engagement metrics."
+    },
+    {
+      "id": "us-inflation-peak",
+      "fields": {
+        "source_engagement": null,
+        "source_note": "BLS CPI-U, all items, US city average, not seasonally adjusted: September 2013 = 234.149; October 2026 = 337.511. Increase = 44.1437%, rounded to 44.1%. Latest published month checked 2026-11-17."
+      },
+      "reason": "The new statistical source has no social engagement figure."
+    },
+    {
+      "id": "john-cena-heel-turn",
+      "fields": {
+        "blurb": "John Cena turned heel at WWE Elimination Chamber on 1 March 2025. He then posted GTA 6 artwork on Instagram without a caption, joining the joke about his turn happening first."
+      },
+      "reason": "The post had no caption. Andrei chose to retain the existing portrait on 2026-11-17."
+    }
+  ],
+  "additionOverrides": [
+    {
+      "id": "nvidia-ceo-probe",
+      "fields": {
+        "title": "We got Nvidia's founder resigning before GTA 6",
+        "blurb": "Nvidia announced Jensen Huang's resignation as CEO and director on 12 November 2026, after opening an independent inquiry. CFO Colette Kress became interim CEO.",
+        "event_date": "2026-11-12",
+        "timeline_date": "2026-11-12",
+        "fact_url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+        "archive_reason": "Pending local image for confirmed corporate leadership change; checked against Nvidia's 12 November 2026 announcement.",
+        "source_note": "Latest primary evidence checked 2026-11-17: Nvidia's CEO-transition announcement (archive 6955) and original board statement (archive 6956). Covers the confirmed resignation, not unproven personal or espionage allegations."
+      },
+      "reason": "Replace the stale inquiry-only proposal with the confirmed resignation. Preserve uncertainty about the separate investigation."
+    }
+  ]
+}

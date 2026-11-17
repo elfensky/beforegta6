@@ -1,0 +1,1030 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "35467988": {
+        "pageid": 35467988,
+        "ns": 6,
+        "title": "File:Anti-Scottish independence campaigner - geograph.org.uk - 4159537.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 162546,
+            "width": 520,
+            "height": 640,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Anti-Scottish_independence_campaigner_-_geograph.org.uk_-_4159537.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "thumbwidth": 1280,
+            "thumbheight": 1575,
+            "thumbattribs": {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Anti-Scottish_independence_campaigner_-_geograph.org.uk_-_4159537.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1575
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Anti-Scottish_independence_campaigner_-_geograph.org.uk_-_4159537.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Anti-Scottish_independence_campaigner_-_geograph.org.uk_-_4159537.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/35467988",
+            "sha1": "14d4c426e41d5bf03afe6ab7728816d46732aada",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2014-09-18 19:02:07",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Anti-Scottish independence campaigner - geograph.org.uk - 4159537",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Taken with Fujifilm FinePix S5600|Argyle Street, Glasgow|Images from Geograph Britain and Ireland|Better Together (campaign)|Scotland photographs taken on 2014-09-06|Information field template with formatting|Images by Thomas Nugent|Jim Murphy in 2014",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "55.857575",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "-4.250550",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Jim Murphy MP is currently the Shadow Secretary of State for International Development. He is seen here standing on his Irn Bru crate amongst what appeared and sounded like a largely supportive audience of shoppers on Argyle Street. This was one of the 100 such stops being undertaken by Mr Murphy in the days leading up to the referendum on the 18th of September.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2014-09-06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "From <a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/photo/4159537\">geograph.org.uk</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/profile/4827\">Thomas Nugent</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Creative Commons Attribution Share-alike license 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Attribution": {
+                "value": "Thomas Nugent",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 2.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-2.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "164927170": {
+        "pageid": 164927170,
+        "ns": 6,
+        "title": "File:Logo of Ofcom (2004).svg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 19838,
+            "width": 704,
+            "height": 146,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_of_Ofcom_%282004%29.svg/1280px-Logo_of_Ofcom_%282004%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 265,
+            "responsiveUrls": {
+              "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_of_Ofcom_%282004%29.svg/3840px-Logo_of_Ofcom_%282004%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_of_Ofcom_%282004%29.svg/1280px-Logo_of_Ofcom_%282004%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 265,
+              "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Logo_of_Ofcom_%282004%29.svg/3840px-Logo_of_Ofcom_%282004%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_of_Ofcom_%282004%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Logo_of_Ofcom_(2004).svg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/164927170",
+            "sha1": "3f9d0827c7fb218db2283bf5e15e8570af2ae3aa",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2025-05-08 14:45:39",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Logo of Ofcom (2004)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "With trademark|PD textlogo|SVG text logos|Unknown date|Template Unknown (author)|Logos of governments and government agencies of the United Kingdom",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Logo of Ofcom (2004)",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "Unknown date",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20040604142439/http://www.ofcom.org.uk:80/consultations/current/psb/psb.pdf?a=87101\">https://web.archive.org/web/20040604142439/http://www.ofcom.org.uk:80/consultations/current/psb/psb.pdf?a=87101</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<i>This logo image consists only of simple geometric shapes or text. It <b>does not meet the <a href=\"//commons.wikimedia.org/wiki/Commons:Threshold_of_originality\" title=\"Commons:Threshold of originality\">threshold of originality</a></b> needed for copyright protection, and is therefore in the <b><a href=\"https://en.wikipedia.org/wiki/public_domain\" class=\"extiw\" title=\"w:public domain\">public domain</a></b>. Although it is free of copyright restrictions, this image may still be subject to <a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Commons:Non-copyright restrictions\">other restrictions</a>. See <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Public_domain#Fonts_and_typefaces\" class=\"extiw\" title=\"w:Wikipedia:Public domain\">WP:PD \u00a7\u00a0Fonts and typefaces</a> or <a href=\"//commons.wikimedia.org/wiki/Template_talk:PD-textlogo\" title=\"Template talk:PD-textlogo\">Template talk:PD-textlogo</a> for more information.</i>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "trademarked",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/svg+xml"
+          }
+        ]
+      },
+      "15554086": {
+        "pageid": 15554086,
+        "ns": 6,
+        "title": "File:New Saudi Arabia's traffic sign (women2drive).gif",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 82966,
+            "width": 3438,
+            "height": 3366,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif/1280px-New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 1253,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/6/6a/New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif/1280px-New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1253,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/6a/New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/New_Saudi_Arabia%27s_traffic_sign_%28women2drive%29.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:New_Saudi_Arabia%27s_traffic_sign_(women2drive).gif",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/15554086",
+            "sha1": "1ba5f736ebce81c84b60ff7b6c918129fc76d891",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2011-06-19 10:39:19",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "New Saudi Arabia's traffic sign (women2drive)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "2011\u20132012 Saudi Arabian protests|PD-author|Women2drive|Items with VRTS permission confirmed|Other images that should use vector graphics|Files with derivative versions|GIF that should be converted to SVG|Cartoons by Carlos Latuff",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "A political cartoons by Carlos Latuff about the Saudi women movement to lift the ban on their right to drive titled \"New Saudi Arabia's traffic sign\"",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2011-06-19",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://twitpic.com/5dqlk4\">http://twitpic.com/5dqlk4</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/Carlos_Latuff\" title=\"Carlos Latuff\">Carlos Latuff</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<p><span class=\"layouttemplateargs\" style=\"display:none;speak:none;\" title=\"template=PermissionTicket 1%3Dhttps%3A%2F%2Fticket.wikimedia.org%2Fotrs%2Findex.pl%3FAction%3DAgentTicketZoom%26TicketNumber%3D2009011710020348 2%3D2009011710020348\">\u00a0</span>\n</p>\n<style data-mw-deduplicate=\"TemplateStyles:r1254222110\">.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}</style><table class=\"plainlinks messagebox mbox-notice layouttemplate\" role=\"presentation\" style=\"margin:0.3em 0;width:100%;\"><tbody><tr><td class=\"mbox-image\"><span typeof=\"mw:File\"><span title=\"VRT Wikimedia\"><img alt=\"VRT Wikimedia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/120px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"75\" height=\"48\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/250px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"935\" data-file-height=\"600\"></span></span></td><td class=\"mbox-text\">This work is <a href=\"https://freedomdefined.org/Definition\" class=\"extiw\" title=\"freedomdefined:Definition\">free</a> and may be used by anyone for any purpose. If you wish to <b><a href=\"//commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia\" title=\"Commons:Reusing content outside Wikimedia\">use this content</a></b>, you do not need to request permission as long as you follow any licensing requirements mentioned on this page.\n<p>The Wikimedia Foundation has received an e-mail confirming that the copyright holder has approved publication under the terms mentioned on this page. This correspondence has been <strong style=\"color: var(--color-content-added, darkgreen);\">reviewed</strong> by a <a href=\"//commons.wikimedia.org/wiki/Template:PermissionTicket/Users\" title=\"Template:PermissionTicket/Users\">Volunteer Response Team (VRT) member</a> and stored in our <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team\" title=\"Commons:Volunteer Response Team\">permission archive</a>. The correspondence is available to trusted volunteers as <b><a href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2009011710020348\" class=\"extiw\" title=\"ticket:2009011710020348\">ticket #2009011710020348</a></b>.\n</p><p><small>If you have questions about the archived correspondence, please use the <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team/Noticeboard\" title=\"Commons:Volunteer Response Team/Noticeboard\">VRT noticeboard</a>.</small>\n<small>Ticket link: <a class=\"external free\" href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2009011710020348\">https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2009011710020348</a></small>\n<br><small>Find other files from the same ticket:</small> <span typeof=\"mw:File\"><a href=\"https://wcqs-beta.wmflabs.org/#%23defaultView%3AImageGrid%09%0ASELECT%20%3Fimage%20%20%20%7B%0A%20%20%3Ffile%20wdt%3AP6305%20%222009011710020348%22%20.%0A%20%20%3Ffile%20schema%3Aurl%20%3Fimage.%0A%7D%20%0A\" title=\"SDC query (SPARQL)\" rel=\"nofollow\"><img alt=\"SDC query (SPARQL)\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/20px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"15\" height=\"20\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/40px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"688\"></a></span>\n</p>\n<span id=\"field-otrs\" title=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2009011710020348\"></span></td></tr></tbody></table>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/gif"
+          }
+        ]
+      },
+      "139965431": {
+        "pageid": 139965431,
+        "ns": 6,
+        "title": "File:Online Safety Act 2023 (UKPGA 2023-50 kp).pdf",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 1597418,
+            "width": 1239,
+            "height": 1754,
+            "pagecount": 303,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Online_Safety_Act_2023_%28UKPGA_2023-50_kp%29.pdf/page1-960px-Online_Safety_Act_2023_%28UKPGA_2023-50_kp%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 1812,
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Online_Safety_Act_2023_%28UKPGA_2023-50_kp%29.pdf/page1-960px-Online_Safety_Act_2023_%28UKPGA_2023-50_kp%29.pdf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1812
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Online_Safety_Act_2023_%28UKPGA_2023-50_kp%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Online_Safety_Act_2023_(UKPGA_2023-50_kp).pdf",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/139965431",
+            "sha1": "95a6d4c48489f054cbdd40ab77e7f47e4a59d055",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-11-02 00:32:09",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Online Safety Act 2023 (UKPGA 2023-50 kp)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "OGL v3.0|License review needed|United Kingdom Public General Acts 2023",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Online Safety Act 2023",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-10-26",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.legislation.gov.uk/ukpga/2023/50/pdfs/ukpga_20230050_en.pdf\">https://www.legislation.gov.uk/ukpga/2023/50/pdfs/ukpga_20230050_en.pdf</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Parliament of the United Kingdom",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "OGL 3",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Open Government License 3",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              }
+            },
+            "mime": "application/pdf"
+          }
+        ]
+      },
+      "35467894": {
+        "pageid": 35467894,
+        "ns": 6,
+        "title": "File:Referendum campaigning, Peebles High Street - geograph.org.uk - 4167289.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 211387,
+            "width": 1024,
+            "height": 682,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Referendum_campaigning%2C_Peebles_High_Street_-_geograph.org.uk_-_4167289.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "thumbwidth": 1280,
+            "thumbheight": 853,
+            "thumbattribs": {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Referendum_campaigning%2C_Peebles_High_Street_-_geograph.org.uk_-_4167289.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 853
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Referendum_campaigning%2C_Peebles_High_Street_-_geograph.org.uk_-_4167289.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Referendum_campaigning,_Peebles_High_Street_-_geograph.org.uk_-_4167289.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/35467894",
+            "sha1": "628f4feced1707ffb69e63d85eca4e2279ff4fb0",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2014-09-18 18:56:56",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Referendum campaigning, Peebles High Street - geograph.org.uk - 4167289",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "People of Peebles|Images from Geograph Britain and Ireland|High Street, Peebles|Yes Scotland|Information field template with formatting|Images by Jim Barton|September 2014 in Scotland|United Kingdom photographs taken on 2014-09-13",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "55.651812",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "-3.189118",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Referendum campaigning, Peebles High Street",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2014-09-13",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "From <a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/photo/4167289\">geograph.org.uk</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/profile/26362\">Jim Barton</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Creative Commons Attribution Share-alike license 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Attribution": {
+                "value": "Jim Barton",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 2.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-2.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "61881075": {
+        "pageid": 61881075,
+        "ns": 6,
+        "title": "File:Riverside House, Bankside 01.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 1145238,
+            "width": 2926,
+            "height": 2475,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Riverside_House%2C_Bankside_01.jpg/1280px-Riverside_House%2C_Bankside_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 1083,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Riverside_House%2C_Bankside_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Riverside_House%2C_Bankside_01.jpg/1280px-Riverside_House%2C_Bankside_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1083,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Riverside_House%2C_Bankside_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Riverside_House%2C_Bankside_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Riverside_House,_Bankside_01.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/61881075",
+            "sha1": "3e74e7aaeac1f580b3a97c163b3c05486b1678a4",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2017-08-23 09:55:51",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Riverside House, Bankside 01",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Flickr images reviewed by FlickreviewR|Electronic communication regulatory agencies|Riverside House, Bankside",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Riverside House, Bankside, London. Home of OFCOM offices.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2010-07-27",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/brighton/4837960798\">https://www.flickr.com/photos/brighton/4837960798</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Jim Linwood",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution 2.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/2.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-2.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "35466780": {
+        "pageid": 35466780,
+        "ns": 6,
+        "title": "File:Scottish IndyRef 2014 12.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 8066075,
+            "width": 2768,
+            "height": 2076,
+            "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Scottish_IndyRef_2014_12.jpg/1280px-Scottish_IndyRef_2014_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "thumbwidth": 1280,
+            "thumbheight": 960,
+            "responsiveUrls": {
+              "2": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Scottish_IndyRef_2014_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+            },
+            "thumbattribs": {
+              "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Scottish_IndyRef_2014_12.jpg/1280px-Scottish_IndyRef_2014_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 960,
+              "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Scottish_IndyRef_2014_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Scottish_IndyRef_2014_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Scottish_IndyRef_2014_12.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/35466780",
+            "sha1": "17025008d44b00cd2eaccf207b1d9cc4990be76a",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2014-09-18 18:07:37",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Scottish IndyRef 2014 12",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Taken with Canon EOS 400D|2014 Scottish independence referendum|Better Together (campaign)|Yes Scotland|Self-published work|Images by Brian McNeil|Images from Wiki Loves Monuments 2014|Images from Wiki Loves Monuments 2014 in the United Kingdom|Listed buildings in Scotland with known IDs|Historic Scotland listings with known IDs|Images from Wiki Loves Monuments 2014 in Scotland|United Kingdom photographs taken on 2014-09-18|Images from Wiki Loves Monuments missing SDC location of creation|Files with coordinates missing SDC location of creation (55\u00b0 N, 4\u00b0 W)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "55.977980",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "-3.180430",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "This image was uploaded as part of <a href=\"//commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2014\" title=\"Commons:Wiki Loves Monuments 2014\">Wiki Loves Monuments 2014</a>.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2014-09-18 14:10:50",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Brian_McNeil\" title=\"User:Brian McNeil\">Brian McNeil</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      },
+      "16108615": {
+        "pageid": 16108615,
+        "ns": 6,
+        "title": "File:WOMEN2DRIVE logo.png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 121771,
+            "width": 886,
+            "height": 886,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b4/WOMEN2DRIVE_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "thumbwidth": 1280,
+            "thumbheight": 1280,
+            "thumbattribs": {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/b/b4/WOMEN2DRIVE_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 1280
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/WOMEN2DRIVE_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:WOMEN2DRIVE_logo.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/16108615",
+            "sha1": "7e4f7fc8184773b636eb88c57e815e48a259d8d2",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2011-08-15 10:20:00",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "WOMEN2DRIVE logo",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Women2drive|Unidentified logos|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "The Loho Support Women to drive movement.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2011-08-15",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Women2drive&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Women2drive (page does not exist)\">Women2drive</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/png"
+          }
+        ]
+      },
+      "35467549": {
+        "pageid": 35467549,
+        "ns": 6,
+        "title": "File:Yes Scotland 2014 - geograph.org.uk - 4135401.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 191857,
+            "width": 640,
+            "height": 457,
+            "thumburl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Yes_Scotland_2014_-_geograph.org.uk_-_4135401.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "thumbwidth": 1280,
+            "thumbheight": 914,
+            "thumbattribs": {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Yes_Scotland_2014_-_geograph.org.uk_-_4135401.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "decoding": "async",
+              "loading": "lazy",
+              "width": 1280,
+              "height": 914
+            },
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Yes_Scotland_2014_-_geograph.org.uk_-_4135401.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Yes_Scotland_2014_-_geograph.org.uk_-_4135401.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/35467549",
+            "sha1": "9fbef55ef487bb1f5eb75dfbbe4af78a10a70e66",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2014-09-18 18:44:58",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Yes Scotland 2014 - geograph.org.uk - 4135401",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Taken with HTC One Mini|Portree|Images from Geograph Britain and Ireland|Yes Scotland|Information field template with formatting|Images by John Allan|United Kingdom photographs taken on 2014-08-18|August 2014 in Highland (council area)",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "GPSLatitude": {
+                "value": "57.412848",
+                "source": "commons-desc-page"
+              },
+              "GPSLongitude": {
+                "value": "-6.193124",
+                "source": "commons-desc-page"
+              },
+              "GPSMapDatum": {
+                "value": "WGS-84",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Yes Scotland 2014",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2014-08-18",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "From <a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/photo/4135401\">geograph.org.uk</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.geograph.org.uk/profile/3863\">John Allan</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Creative Commons Attribution Share-alike license 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Attribution": {
+                "value": "John Allan",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 2.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 2.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-2.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "image/jpeg"
+          }
+        ]
+      }
+    }
+  }
+}

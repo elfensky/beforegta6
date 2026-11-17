@@ -24,7 +24,12 @@ const shown = (d) =>
       {left === 0 && ` ${entry.year}`}
     </time>
     <p class="t-title">
-      <span aria-hidden="true">◆</span> {entry.milestone.title}
+      <span aria-hidden="true">◆</span>{' '}
+      {entry.milestone.href ? (
+        <a href={entry.milestone.href}>{entry.milestone.title}</a>
+      ) : (
+        entry.milestone.title
+      )}
     </p>
     <p>
       {entry.milestone.blurb}{' '}

@@ -1,6 +1,6 @@
 ---
 title: "We got Brexit before GTA 6"
-blurb: "On 23 June 2016 the United Kingdom voted to leave the European Union, 51.9% to 48.1%, on a turnout of 72.2%."
+blurb: "On 23 June 2016 the United Kingdom voted to leave the European Union, 51.9% to 48.1%. It actually left at 23:00 GMT on 31 January 2020, three and a half years later."
 kind: "real-event"
 date: "2016-06-23"
 source: {"url":"https://en.wikipedia.org/wiki/2016_United_Kingdom_European_Union_membership_referendum","platform":"other"}

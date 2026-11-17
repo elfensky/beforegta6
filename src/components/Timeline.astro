@@ -2,13 +2,14 @@
 import { getCollection } from 'astro:content';
 import { milestones } from '../data/milestones.js';
 import Base from '../layouts/Base.astro';
-import { timelineEntries } from '../lib/cards.js';
+import { timelineEntries, withMilestoneCards } from '../lib/cards.js';
 import TimelineItem from './TimelineItem.astro';
 
 /** @typedef {'oldest' | 'newest'} Order */
 /** @type {{ order: Order }} */
 const { order } = Astro.props;
-const entries = timelineEntries(await getCollection('cards'), milestones, order);
+const line = withMilestoneCards(await getCollection('cards'), milestones);
+const entries = timelineEntries(line.cards, line.milestones, order);
 const cards = entries.filter((e) => e.kind === 'card');
 // The entries are in date order, so each year is one run and keeps its place.
 const years = [...Map.groupBy(entries, (e) => e.year)];

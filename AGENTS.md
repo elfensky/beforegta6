@@ -32,8 +32,8 @@ This file holds only what is true of this repo. A personal project (Andrei, 2026
 CI writes image pins to `deploy/staging` and `deploy/production`; Arcane reads those branches.
 Merge feature PRs with `gh pr merge --rebase`, then `git push origin --delete <branch>`.
 Release PRs from `develop` to `main` use `gh pr merge --merge`.
-Both source branches require PRs and the `check` status after the issue #24 migration.
-The migration order and live verification are recorded in `deploy/README.md`.
+Both source branches require PRs and the `check` status. Issue #24 was completed on 2026-11-16.
+The migration procedure is in `deploy/README.md`; live evidence is in `.planning/verification/2026-11-16-completion.md`.
 Deployment branches remain writable by CI. Never add the source-branch PR requirement to them.
 
 ## This repo's own rules
@@ -52,6 +52,10 @@ Deployment branches remain writable by CI. Never add the source-branch PR requir
   - Cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate stay out.
   - NSFW cards may be crude, never sexually explicit (AdSense).
 - **No Rockstar material:** no GTA logo, fonts or key art.
+  - Specific exceptions (Andrei, 2026-11-17): Rockstar images may illustrate the Oppressor comparison (`real-oppressor-mk2`) and Red Dead running on phones (`rdr-on-phones`).
+- **Death-card exception** (Andrei, 2026-11-17): Queen Elizabeth II's death may replace the coronation card. The other death exclusions remain in force.
+- **Pandemic-card exception** (Andrei, 2026-11-17): one COVID card may cover the pandemic and chip shortage. Other pandemic exclusions remain in force.
+- **Specific media exceptions** (Andrei, 2026-11-17): use the staged Tesla Roadster, Volonaut Airbike, Concord artwork, Pokémon farewell artwork, and GamesRadar Red Dead phone photograph despite missing documented reuse licences. Record their actual copyright status; this project exception grants no third-party rights. Cena retains his portrait; his GTA key-art post is not an exception.
 
 ## Architecture invariants
 

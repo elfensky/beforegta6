@@ -4,7 +4,7 @@ import { reviewFixture } from '../src/__tests__/review-fixture.js';
 
 const { root } = await reviewFixture();
 const server = createReviewServer({ root });
-server.listen(4322, '127.0.0.1');
+server.listen(Number(process.env.REVIEW_TEST_PORT ?? 4322), '127.0.0.1');
 for (const signal of ['SIGTERM', 'SIGINT']) {
   process.on(signal, () => {
     server.close(async () => {

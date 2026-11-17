@@ -5,6 +5,17 @@
 - Window: Sunday 2026-11-15 to Sunday 2026-11-22. GTA 6 launches on Thursday 2026-11-19 (Take-Two Q2 FY27 earnings, 9 Nov 2026).
 - Budget: 1 to 2 hours a day, finished before 23:00 CET.
 
+## Start condition and urgency — confirmed 2026-11-17
+
+The local Yes/No tool and manual sort are complete.
+Finish the remaining image work, then update and verify staging and production with the reviewed selection.
+**Create and publish social-media posts immediately after production verification, as soon as possible.** Drafts alone do not complete this goal.
+
+This production-first order supersedes missed dates in the original schedule below.
+Refresh draft counts, dates, examples, and card links against the deployed site before posting.
+Keep the agreed channel limits and stop rules. Recheck current platform and community rules before each post.
+Record each published post's URL, channel, and time so completion can be verified.
+
 ## The idea in one line
 
 The meme stops working on Thursday. beforegta6.wtf is its archive, and the only finished one: the three competing
@@ -17,11 +28,11 @@ sites are a placeholder, an empty board and an unfinished quiz (checked 2026-11-
 2. **Check the Reddit account.** Open its profile while logged out. If the profile or a recent post is invisible, the
    account is shadowbanned: stop and use the press and X channels only. r/gaming allows self-promotion in at most 10 %
    of an account's submissions.
-3. **Release the site changes** (§ Site changes) to production, so the card pages carry the share button.
+3. **Release the completed selection** to staging and production after the image follow-up. Verify both environments and the production card links before posting.
 
-## Schedule (CET)
+## Original schedule (CET)
 
-Order of value.
+Order of value. The production-first start condition above takes priority over missed dates; no post is recorded as published without evidence.
 
 | When | Where | What |
 |---|---|---|

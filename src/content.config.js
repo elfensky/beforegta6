@@ -10,6 +10,8 @@ const cards = defineCollection({
       title: z.string(),
       blurb: z.string(),
       kind: z.enum(['real-event', 'joke']),
+      // A milestone card keeps its page and image, but the timeline shows it in the milestone style.
+      presentation: z.enum(['card', 'milestone']).default('card'),
       date: z.coerce.date(),
       eventDate: z.coerce.date().optional(),
       source: z.object({ url: z.url(), platform: z.string(), engagement: z.string().optional() }),

@@ -1,0 +1,133 @@
+{
+  "integrated_at": "2026-11-17T13:55:44.924Z",
+  "note_count": 95,
+  "updated_images": [
+    "ai-overviews-glue-pizza",
+    "aliens",
+    "ash-ketchum",
+    "australia-teen-social-ban",
+    "aws-outage-2025",
+    "beatles-now-and-then",
+    "bitcoin-100k",
+    "black-hole-milky-way",
+    "blessings-same-sex-couples",
+    "blue-texas",
+    "brazil-blocks-x",
+    "change4-far-side-landing",
+    "cloned-monkeys",
+    "concord",
+    "covid-pandemic",
+    "crispr-cure-approved",
+    "driverless-robotaxis",
+    "el-salvador-bitcoin",
+    "eu-roaming-free",
+    "eu-usb-c-iphone",
+    "falcon9-booster-landing",
+    "first-millennial-saint",
+    "flash-player-end",
+    "flying-cars",
+    "ftx-collapse",
+    "gaga-copacabana",
+    "galaxy-note-7-recall",
+    "gangnam-style-broke-youtube",
+    "gulf-of-america",
+    "harris-first-woman-vp",
+    "heartbleed",
+    "hiv-twice-a-year-jab",
+    "homo-naledi",
+    "hulkenberg-podium",
+    "india-general-strike",
+    "ingenuity-mars-flight",
+    "internet-explorer-retired",
+    "k2-18b-life-hint",
+    "katy-perry-space",
+    "last-penny",
+    "lettuce-outlasts-truss",
+    "mexico-first-woman-president",
+    "microsoft-activision",
+    "negative-oil-price",
+    "netflix-password-sharing",
+    "new-pope",
+    "nvidia-ceo-probe",
+    "nvidia-record-drop",
+    "oumuamua",
+    "ozone-layer-recovery",
+    "philae-comet-landing",
+    "queen-elizabeth-death",
+    "ram-shortage",
+    "rdr-on-phones",
+    "real-oppressor-mk2",
+    "spacex-ipo",
+    "svb-collapse",
+    "tariffs-struck-down",
+    "tesla-cybercab",
+    "trump-impeached",
+    "trump-memecoin",
+    "turkish-shooter",
+    "us-inflation-peak",
+    "vw-dieselgate",
+    "youtube-hides-dislikes"
+  ],
+  "additions": ["queen-elizabeth-death", "nvidia-ceo-probe", "tesla-cybercab", "covid-pandemic"],
+  "merges": [
+    {
+      "id": "gpt-5",
+      "into": "chatgpt-launch"
+    },
+    {
+      "id": "charles-coronation",
+      "into": "queen-elizabeth-death"
+    },
+    {
+      "id": "twitter-becomes-x",
+      "into": "musk-buys-twitter"
+    },
+    {
+      "id": "chip-shortage",
+      "into": "covid-pandemic"
+    },
+    {
+      "id": "deepseek-tops-app-store",
+      "into": "chatgpt-launch"
+    },
+    {
+      "id": "uk-leaves-eu",
+      "into": "brexit-referendum"
+    },
+    {
+      "id": "apple-trillion",
+      "into": "nvidia-5-trillion"
+    },
+    {
+      "id": "trump-in-north-korea",
+      "into": "trump-kim-summit"
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "into": "bitcoin-100k"
+    },
+    {
+      "id": "change6-far-side-samples",
+      "into": "change4-far-side-landing"
+    },
+    {
+      "id": "gangnam-style-counter",
+      "into": "gangnam-style-broke-youtube"
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "into": "us-same-sex-marriage"
+    }
+  ],
+  "pending_images": [],
+  "launch": 160,
+  "milestones": 14,
+  "final_image_count": 65,
+  "note_outcome_counts": {
+    "implemented": 69,
+    "retained-by-request": 1,
+    "milestone": 14,
+    "image-unavailable": 1,
+    "merged": 10
+  }
+}

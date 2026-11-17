@@ -2,6 +2,7 @@
 export const milestones = [
   {
     date: '2013-09-17',
+    candidateId: 'gta5-ps3-x360',
     title: 'GTA V comes out',
     blurb: 'The wait starts here.',
     factUrl: 'https://en.wikipedia.org/wiki/Grand_Theft_Auto_V',
@@ -14,6 +15,7 @@ export const milestones = [
   },
   {
     date: '2023-12-05',
+    candidateId: 'gta6-trailer',
     title: 'Trailer 1',
     blurb: 'It leaked a day before its release date.',
     factUrl: 'https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI',
@@ -33,6 +35,7 @@ export const milestones = [
   },
   {
     date: '2025-11-06',
+    candidateId: 'gta6-delays',
     title: 'Second delay',
     blurb: 'From 26 May to 19 November 2026.',
     factUrl:
