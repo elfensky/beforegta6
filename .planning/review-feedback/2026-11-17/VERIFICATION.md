@@ -8,7 +8,7 @@ All 95 original notes have outcomes in `outcomes.json`. Every original note and 
 - Cena retains his portrait, as requested. His blurb now describes the captionless post accurately.
 - Gary retains his existing image. The requested driving frame does not exist; the episode places the car theft off screen.
 
-The local collection has 206 selected entries: 192 normal timeline rows and 14 milestone entries.
+The deployed collection has 206 selected entries: 192 normal timeline rows and 14 milestone entries.
 Four additions are selected: Queen Elizabeth II, COVID, the confirmed Nvidia resignation, and Tesla Cybercab.
 111 images are installed or replaced, with local files and provenance.
 The 46 additional saved Yes selections have inspected images, author credits, source pages, and archive links.
@@ -31,8 +31,9 @@ The timeline shows 18 milestones after its three existing duplicate entries are 
 
 All 46 additional Yes selections are complete. No unmerged Yes remains pending.
 Their original ID list remains in `remaining-image-selections.json`.
-The feedback changes are local and uncommitted. Staging and production have not changed.
-Actual social publication follows production verification immediately, under `docs/PROMOTION.md`.
-Prepared posts are in `docs/promotion/2026-11-17-posts.md`.
+The feedback changes are committed and released through PRs #29 and #30.
+Staging and production match the reviewed selection. Evidence is in `../../verification/2026-11-17-release.md`.
+The r/gaming post was submitted and removed by AutoModerator. The agreed stop rule prohibits reposting there.
+Promotion remains open. Post records and remaining drafts are in `docs/promotion/2026-11-17-posts.md`.
 
-**eli14:** The album has its corrected captions and pictures. Gary's requested picture was never filmed. The updated album is local; publication remains separate.
+**eli14:** The album has its corrected captions and pictures on both websites. Gary's requested picture was never filmed. Promotion remains separate.

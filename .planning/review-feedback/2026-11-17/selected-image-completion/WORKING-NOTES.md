@@ -50,3 +50,15 @@
 - Those instructions support the existing note-based selections. The original No clicks remain historical records, not reconstructed votes. The existing five outcomes explicitly record selection from the note. The P2 does not require another confirmation or a reversal of the completed note pass.
 - P3 was accepted: promotion copy now states “192 cards and 18 GTA milestones” instead of “206 cards”. Counts and examples still require production verification before posting.
 - The required Nowledge history retry returned connection refused. The exact T3 source messages above supplied the missing context.
+
+## Deployment and publication working notes
+
+- PR #29 merged by rebase at 14:56:44 UTC; staging source is `0d52d63`. PR #30 merged at 15:06:13 UTC; production source is `c1498ec`. Both image builds and pins passed. Existing Arcane Git Sync records applied the pins, with two web and two tunnel replicas each.
+- Full browser fetch audits checked 206 selected pages, 206 preview images, and 181 excluded routes in each environment. Production images match staging byte-for-byte. Two staging JPEG encodings differ from the local macOS build; exact dimensions, 183 sampled colour channels per image, and visual checks match. These are the unchanged dire-wolf and Chandrayaan images.
+- The first production homepage response still had 97 cached rows. A cache-busted response had 192. The normal homepage reached 192 rows and 18 milestones by 15:13:27 UTC; two subsequent cache hits and an exact ID comparison passed. No cache purge was needed.
+- Andrei excluded r/SideProject before any post was submitted. Current r/gaming rules were read and archived. The account's karma breakdown showed positive r/gaming participation, but its numerical eligibility threshold was not published.
+- The r/gaming link was submitted at 15:16:12 UTC, then removed by AutoModerator for insufficient community participation. The public logged-out check and post JSON confirm removal. Do not delete, retry, or attempt to evade the threshold. The agreed rule prohibits posting this link there again.
+- X's current automation page prohibits website scripting and unsolicited automated replies. No X post was submitted. The ordinary 1Password CLI access timed out; the handbook identifies `with-secret OP_SERVICE_ACCOUNT_TOKEN -- op ...` as the read-only robot route.
+- The Reddit spam page was read in the browser, but its archive command returned an error page. No archive link is claimed. The r/gaming and X rule snapshots succeeded.
+- Umami at 15:18 UTC showed no referrer data. That check was less than one hour after posting, so it is not the scheduled one-hour referrer result.
+- The documented 1Password robot successfully checked Infrastructure item titles. No X, Twitter, Buffer, or social-publishing credential was found. No credential values were read or printed.

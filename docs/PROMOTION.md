@@ -16,6 +16,10 @@ Refresh draft counts, dates, examples, and card links against the deployed site 
 Keep the agreed channel limits and stop rules. Recheck current platform and community rules before each post.
 Record each published post's URL, channel, and time so completion can be verified.
 
+Andrei excluded r/SideProject on 2026-11-17. Prioritize relevant gaming communities, starting with r/gaming.
+GTA and meme communities remain subject to the existing exclusions and their current rules.
+The original r/SideProject schedule and draft below are historical and must not be published.
+
 ## The idea in one line
 
 The meme stops working on Thursday. beforegta6.wtf is its archive, and the only finished one: the three competing
@@ -61,6 +65,8 @@ Showcase thread. r/InternetIsBeautiful bans "aggregates" and "collections", whic
 
 ## Stop rules
 
+- **r/gaming is closed for this project.** AutoModerator removed [the 17 November post](https://www.reddit.com/r/gaming/comments/1xyn10b/) for insufficient community participation. The no-repost rule below applies permanently.
+- **X requires an approved API route.** Its current automation rules prohibit website scripting and unsolicited automated replies. The reply drafts below are not authorization to ignore those rules.
 - A link post that shows 0 visits from its referrer in Umami 1 hour after posting is removed or filtered. Make no other
   Reddit link post that day.
 - A mod removal in r/gaming: never post the link there again.
