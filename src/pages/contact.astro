@@ -26,7 +26,14 @@ import {
         <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
       </p>
     </noscript>
-    <form class="contact" method="post" action={`https://submit-form.com/${FORMSPARK_FORM_ID}`}>
+    {/* WebMCP (website standard GEO-08): an agent fills the form, and the visitor clicks Send. Never toolautosubmit. */}
+    <form
+      class="contact"
+      method="post"
+      action={`https://submit-form.com/${FORMSPARK_FORM_ID}`}
+      toolname="send_message"
+      tooldescription="Send a message to beforegta6.wtf: suggest a card, report a wrong date or link, ask for a takedown, or make a privacy request. The visitor checks the form and clicks Send."
+    >
       {/* src/scripts/contact.js points this at the current origin, so staging returns to staging. */}
       <input type="hidden" name="_redirect" value={`${SITE_URL}/contact/sent/`} />
       {/* Without it, Formspark copies every field into the redirect URL: browser history, logs and Umami. */}
@@ -41,14 +48,27 @@ import {
       <label for="contact-email">Your email address</label>
       <input id="contact-email" name="email" type="email" autocomplete="email" required />
       <label for="contact-link">Link to the card or post (optional)</label>
-      <input id="contact-link" name="link" type="url" />
+      <input
+        id="contact-link"
+        name="link"
+        type="url"
+        toolparamdescription="Optional. The address of the card on beforegta6.wtf, or of the post or article the message is about."
+      />
       <label for="contact-message">Message</label>
       <textarea id="contact-message" name="message" rows="6" required></textarea>
       {/* Honeypot: Formspark holds back a message with this field filled. Off screen and out of the tab order, so
-         only a bot fills it. Not display:none, which bots learn to skip. */}
+         only a bot fills it. Not display:none, which bots learn to skip. readonly keeps it out of the WebMCP tool, so an
+         agent cannot fill it for a visitor (Chrome lists every other named field, aria-hidden or not). */}
       <div class="trap" aria-hidden="true">
         <label for="contact-gender">Gender</label>
-        <input id="contact-gender" name="gender" type="text" tabindex="-1" autocomplete="off" />
+        <input
+          id="contact-gender"
+          name="gender"
+          type="text"
+          tabindex="-1"
+          autocomplete="off"
+          readonly
+        />
       </div>
       <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark"></div>
       <button type="submit">Send</button>

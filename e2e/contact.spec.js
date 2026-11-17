@@ -41,6 +41,17 @@ test('the honeypot is out of reach', async ({ page }) => {
   await expect(page.getByRole('textbox', { name: 'Gender' })).toHaveCount(0);
 });
 
+// Website standard GEO-08: the form is a declarative WebMCP tool, and the visitor still clicks Send.
+test('the form is a WebMCP tool that the visitor still sends', async ({ page }) => {
+  await page.goto('/contact/');
+  const form = page.locator('form');
+  await expect(form).toHaveAttribute('toolname', 'send_message');
+  await expect(form).toHaveAttribute('tooldescription', /takedown/);
+  await expect(form).not.toHaveAttribute('toolautosubmit');
+  // readonly keeps the honeypot out of the tool's parameters, so an agent cannot fill it by mistake.
+  await expect(page.locator('input[name="gender"]')).toHaveAttribute('readonly');
+});
+
 test('a send without the bot check keeps the visitor on the page and gives the address', async ({
   page,
 }) => {

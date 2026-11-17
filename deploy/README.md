@@ -192,3 +192,14 @@ One-time setup (Andrei):
 3. Put the form ID and the site key in `src/data/site.js`.
 
 Check on staging after each change to the form: one real message arrives, and one with `gender` filled does not.
+The honeypot is `readonly`, so a test sets its value by script.
+
+The form is a declarative WebMCP tool, `send_message` (website standard GEO-08). An agent fills it, and the visitor
+clicks Send: never add `toolautosubmit`. Chrome lists every named field as a tool parameter, `aria-hidden` or not.
+It leaves out only `type="hidden"` and `readonly` fields (Chrome 158, 2026-11-17), so the honeypot is `readonly`.
+An agent that filled it would get the visitor's message held as spam. `e2e/webmcp.spec.js` reads the schema in
+Chromium with `--enable-features=WebMCP`. Visitors' Chrome sees the tool only with an origin-trial token, and the site
+ships none. GEO-10 does not apply: the form posts to Formspark, and ARD v0.91 names no type for WebMCP tools.
+Sources: [WebMCP declarative API](https://developer.chrome.com/docs/ai/webmcp/declarative-api) ·
+[🔖 2026-11-17](https://linkding.lav.ren/bookmarks?details=2422), [ARD v0.91](https://github.com/ards-project/ard-spec/blob/main/spec/ard.md) ·
+[🔖 2026-11-17](https://linkding.lav.ren/bookmarks?details=2436).
