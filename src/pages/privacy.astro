@@ -11,8 +11,8 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
   <article class="prose">
     <h1 class="page-title">Privacy</h1>
     <p>
-      beforegta6.wtf is a hobby site by {OPERATOR}, Belgium. Questions or requests: the
-      <a href="/contact/">contact form</a> or
+      beforegta6.wtf is a hobby site by {OPERATOR}, Belgium. Questions or requests: the{' '}
+      <a href="/contact/">contact form</a> or{' '}
       <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
     </p>
     <h2>What this site collects</h2>
@@ -35,7 +35,7 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
       <li>the page address and title, and the address of the site that sent you</li>
       <li>your browser, operating system, device type, screen size and language</li>
       <li>your country, region and city, which Umami finds from your IP address</li>
-      <li>how fast the page loads (TTFB, FCP, LCP, CLS and INP)</li>
+      <li>how fast the page loads (TTFB, FCP, LCP, CLS and INP), and how long it was open</li>
     </ul>
     <p>
       Umami uses no cookies and does not store your IP address. It does not record your screen or
@@ -48,8 +48,8 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
       deletion yet.
     </p>
     <p>
-      You can object at any time. This button stops Umami for this browser. The choice is stored in
-      this browser only.
+      You can object at any time. This button stops Umami from counting your visits in this browser.
+      The choice is stored in this browser only.
     </p>
     <p class="optout">
       <button id="optout" type="button" hidden>
@@ -61,15 +61,17 @@ import { OPERATOR, TAKEDOWN_EMAIL } from '../data/site.js';
     <p>
       The <a href="/contact/">contact form</a> sends your e-mail address, the subject, the link and
       your message to Formspark (Trampoline Software SRL, Belgium). Formspark stores them in Ireland
-      and Germany and e-mails them to us (
+      and Germany and e-mails them to us. Formspark also receives your IP address and data about
+      your browser when you send the form (
       <a href="https://formspark.io/legal/privacy-policy/" rel="noopener">
         Formspark privacy policy
       </a>
       ).
     </p>
     <p>
-      Cloudflare Turnstile checks that a person, not a bot, sends the form. To do that, it processes
-      your IP address and data about your browser (
+      When you open the contact page, Cloudflare Turnstile checks that you are a person, not a bot.
+      To do that, it processes your IP address and data about your browser. Legal basis: our
+      legitimate interest in keeping spam out (GDPR Art. 6(1)(f)) (
       <a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener">
         Turnstile privacy addendum
       </a>

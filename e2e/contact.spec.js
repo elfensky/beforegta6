@@ -41,13 +41,39 @@ test('the honeypot is out of reach', async ({ page }) => {
   await expect(page.getByRole('textbox', { name: 'Gender' })).toHaveCount(0);
 });
 
+test('a send without the bot check keeps the visitor on the page and gives the address', async ({
+  page,
+}) => {
+  await page.goto('/contact/');
+  await page.getByLabel('Subject').selectOption('Takedown request');
+  await page.getByLabel('Your email address').fill('visitor@example.test');
+  await page.getByLabel('Message').fill('Please remove my meme.');
+  await page.getByRole('button', { name: 'Send' }).click();
+  await expect(page).toHaveURL('/contact/');
+  const alert = page.getByRole('alert');
+  await expect(alert).toBeFocused();
+  await expect(alert.getByRole('link', { name: 'takedown@lav.ren' })).toBeVisible();
+  await expect(page.getByLabel('Message')).toHaveValue('Please remove my meme.');
+  await expect(alert).toContainText('and write to takedown@lav.ren.');
+});
+
+test('the words before each link keep their space', async ({ page }) => {
+  await page.goto('/contact/');
+  await expect(page.getByRole('main')).toContainText('checks that a person sends it. See Privacy.');
+});
+
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
 
-  test('the page still gives the takedown address', async ({ page }) => {
+  test('the page still gives the takedown address', async ({ page, request }) => {
     await page.goto('/contact/');
     await expect(
-      page.getByRole('main').getByRole('link', { name: 'takedown@lav.ren' }),
+      page.getByRole('main').getByRole('link', { name: 'takedown@lav.ren' }).first(),
     ).toHaveAttribute('href', 'mailto:takedown@lav.ren');
+    // Playwright does not render <noscript> with JavaScript off, so check the HTML the server sends.
+    const html = await (await request.get('/contact/')).text();
+    expect(html).toContain(
+      '<noscript><p>The form needs JavaScript for its bot check. Without it, write to <a href="mailto:takedown@lav.ren">',
+    );
   });
 });

@@ -20,6 +20,12 @@ import {
       Suggest a card, report a wrong date or link, or ask us to remove something. You can also write
       to <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
     </p>
+    <noscript>
+      <p>
+        The form needs JavaScript for its bot check. Without it, write to{' '}
+        <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
+      </p>
+    </noscript>
     <form class="contact" method="post" action={`https://submit-form.com/${FORMSPARK_FORM_ID}`}>
       {/* src/scripts/contact.js points this at the current origin, so staging returns to staging. */}
       <input type="hidden" name="_redirect" value={`${SITE_URL}/contact/sent/`} />
@@ -47,14 +53,19 @@ import {
       <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark"></div>
       <button type="submit">Send</button>
     </form>
+    {/* src/scripts/contact.js shows this when the bot check did not load, so the message is not lost. */}
+    <p id="contact-alert" role="alert" tabindex="-1" hidden>
+      The bot check did not load, so the form cannot send your message. Copy it, and write to{' '}
+      <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
+    </p>
     <p>
       <small>
-        Formspark delivers the message, and Cloudflare Turnstile checks that a person sends it. See
+        Formspark delivers the message, and Cloudflare Turnstile checks that a person sends it. See{' '}
         <a href="/privacy/#contact-form">Privacy</a>.
       </small>
     </p>
   </article>
-  {/* The one script from outside the site: Turnstile cannot be self-hosted (AGENTS.md exceptions). */}
+  {/* The one page-specific script from outside the site: Turnstile cannot be self-hosted (AGENTS.md exceptions). */}
   <script
     is:inline
     src="https://challenges.cloudflare.com/turnstile/v0/api.js"
