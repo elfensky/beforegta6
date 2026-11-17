@@ -11,10 +11,11 @@ export const UMAMI_WEBSITE_ID = '8c3edd71-c06b-4836-9a7c-38aec4df3a57';
 // A personal hobby site: name and contact only, no address (Andrei, 2026-11-13).
 export const OPERATOR = 'Andrei Lavrenov';
 // The contact form posts to Formspark (vault knowledge/web-programming/formspark.md). Public values: both are in the page.
-// shortcut: empty until the beforegta6 form exists in Formspark (1Password Infrastructure/api-formsparks).
-export const FORMSPARK_FORM_ID = '';
-// shortcut: Cloudflare's always-pass test key until the widget exists (1Password Infrastructure/api-turnstile-beforegta6.wtf).
-export const TURNSTILE_SITE_KEY = '1x00000000000000000000AA';
+// Formspark form beforegta6.wtf: Turnstile, honeypot `gender`, allowed sites apex + staging (API token: 1Password
+// Infrastructure/api-formsparks). The Turnstile widget covers both hostnames; its secret sits in the Formspark form.
+export const FORMSPARK_FORM_ID = '5jgYkgSh4';
+// Infrastructure/api-turnstile-beforegta6.wtf, field Site Key.
+export const TURNSTILE_SITE_KEY = '0x4AAAAAAGF2dQXRFBeXk4qk';
 export const CONTACT_SUBJECTS = [
   'Suggest a card',
   'Fix a card (wrong date or link)',
