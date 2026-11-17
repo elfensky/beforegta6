@@ -43,7 +43,7 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 
 
 - [ ] Launch-week site changes reach production and work: the share button, the post-launch line, the edge cache rule, and the held card `gta5-farewell-drive` on 2026-11-18 — Phase 6
-- [ ] Complete public social promotion — PROMO-04. The r/gaming post was submitted and removed for insufficient community participation. Never repost there. r/SideProject is excluded. X needs an approved API connection.
+- [ ] Complete public social promotion — PROMO-04. Drafts are prepared; Andrei publishes manually and handles moderator contact. The assistant sends nothing. r/gaming remains closed after removal. r/SideProject is excluded. No X connection is needed for draft preparation.
 - [ ] AdSense approves the site (external, Andrei's account) — Phase 6
 
 ### Out of Scope
@@ -107,7 +107,8 @@ No ADR exists for this project, so no decision is ADR-locked. The rows below are
 
 | 2026-11-17 | Review feedback preserves notes and clicks, archives merged duplicates, and renders 14 GTA items as milestones. | Feedback outcomes; candidates spec | Implemented locally |
 | 2026-11-17 | Queen, COVID, two Rockstar-image uses, and five specified media replacements are exceptions. Cena keeps his portrait. | Andrei; `AGENTS.md` | Approved |
-| 2026-11-17 | Local Yes/No tool and manual sort are done. Complete images, update staging and production, then create and publish social posts immediately. | Andrei; roadmap Current execution order | Active priority |
+| 2026-11-17 | Local Yes/No tool and manual sort are done. Complete images, update staging and production, then create and publish social posts immediately. | Andrei; roadmap Current execution order | Release complete; publication owner superseded below |
+| 2026-11-17 | Andrei will publish everything himself. The assistant prepares unique drafts and assets only, with current community rules. | Andrei; latest clarification; `docs/PROMOTION.md` | In effect |
 
 </decisions>
 
@@ -125,4 +126,4 @@ After each phase:
 After the milestone: review all sections, check the Core Value, and update Context.
 
 ---
-*Last updated: 2026-11-17. The local review and manual sort are complete. Release follows image completion; actual social posting follows production verification immediately.*
+*Last updated: 2026-11-17. The reviewed selection is verified on staging and production. Drafts are prepared; Andrei owns publication.*

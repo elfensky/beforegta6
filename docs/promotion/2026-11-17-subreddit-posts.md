@@ -1,7 +1,8 @@
 # Community-specific Reddit posts
 
 Rules checked on 17 November 2026. This pack contains distinct drafts and explicit publication limits.
-No new post from this pack has been submitted.
+Andrei will publish manually. The assistant prepares drafts and assets only.
+No new post from this pack has been submitted. Manual submission does not override a community's AI or promotion ban.
 The original release and social-post record remains in `2026-11-17-posts.md`.
 
 ## Publication decisions
@@ -83,7 +84,7 @@ The post must contain his own observations and original wording. It must not inv
 The rules ban AI-generated content. Rewording generated copy or omitting an AI label does not establish compliance.
 Off-site links are blocked except for named destinations. beforegta6.wtf is not on that list.
 Self-promotion needs moderator approval. The site includes world events, political subjects, and some AI-assisted graphics; a permission request must disclose that scope.
-No permission request has been sent. The earlier request for Andrei's authorization remains pending.
+No permission request has been sent. Andrei owns any moderator contact; the earlier assistant authorization question is closed.
 
 Rules also exclude political discussions, leaks, repetitive FAQs, low-effort posts, and unmarked spoilers.
 The account limit is two posts per 24 hours, including removed or deleted posts.
