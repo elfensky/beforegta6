@@ -20,6 +20,10 @@ Andrei excluded r/SideProject on 2026-11-17. Prioritize relevant gaming communit
 GTA and meme communities remain subject to the existing exclusions and their current rules.
 The original r/SideProject schedule and draft below are historical and must not be published.
 
+Distinct community drafts and current rule checks are in `promotion/2026-11-17-subreddit-posts.md`.
+r/GTA permits relevant discussion but bans promotion. r/GTA6 and r/memes prohibit AI-generated content; generated copy is not supplied for submission there.
+The prepared r/GTAmemes image contains no site branding or link. r/videogames remains conditional on its Weekly Showcase and content rules.
+
 ## The idea in one line
 
 The meme stops working on Thursday. beforegta6.wtf is its archive, and the only finished one: the three competing
