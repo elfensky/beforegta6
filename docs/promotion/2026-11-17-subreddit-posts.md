@@ -4,6 +4,7 @@ Rules checked on 17 November 2026. This pack contains distinct drafts and explic
 Andrei will publish manually. The assistant prepares drafts and assets only.
 No new post from this pack has been submitted. Manual submission does not override a community's AI or promotion ban.
 The original release and social-post record remains in `2026-11-17-posts.md`.
+[Moderator permission requests](2026-11-17-moderator-messages.md) are prepared separately for Andrei to send manually.
 
 ## Publication decisions
 
