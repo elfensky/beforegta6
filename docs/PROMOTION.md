@@ -31,6 +31,7 @@ The original r/SideProject schedule and draft below are historical and must not 
 Distinct community drafts and current rule checks are in `promotion/2026-11-17-subreddit-posts.md`.
 r/GTA permits relevant discussion but bans promotion. r/GTA6 and r/memes prohibit AI-generated content; generated copy is not supplied for submission there.
 The prepared r/GTAmemes image contains no site branding or link. r/videogames remains conditional on its Weekly Showcase and content rules.
+Separate permission requests are in `promotion/2026-11-17-moderator-messages.md`. Andrei sends them manually; none has been sent or approved.
 
 ## The idea in one line
 
