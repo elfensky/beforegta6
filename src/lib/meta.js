@@ -23,6 +23,8 @@ export function pageTitle(title) {
 }
 export const SOCIAL_WIDTH = 1200;
 export const SOCIAL_HEIGHT = 630;
+// Raise this value whenever the preview transform changes, so cached files get a new hash.
+export const SOCIAL_VERSION = 'v1';
 export const DEFAULT_IMAGE_ALT = 'beforegta6.wtf — Everything we got before GTA 6';
 
 /** @typedef {{ id: string, title: string }} ListedCard */
