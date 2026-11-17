@@ -46,6 +46,8 @@ test('the privacy page states what the scripts really do', async ({ page }) => {
   await expect(main).toContainText('When you open the contact page, Cloudflare Turnstile');
   await expect(main).toContainText('our legitimate interest in keeping spam out');
   await expect(main).toContainText('Formspark also receives your IP address');
+  await expect(main).toContainText('We delete the records after 13 months.');
+  await expect(main).toContainText('We delete messages 12 months after our last reply.');
   await expect(main).toContainText('Questions or requests: the contact form or takedown@lav.ren.');
 });
 
