@@ -19,6 +19,7 @@ export async function GET() {
     '',
     `- [Timeline](${SITE_URL}/): All selected entries, newest first.`,
     `- [Privacy](${SITE_URL}/privacy/): Operator, analytics, advertising, and contact information.`,
+    `- [Contact](${SITE_URL}/contact/): Suggest a card, report a wrong card, or ask for a takedown.`,
     '',
     '## Entries',
     '',

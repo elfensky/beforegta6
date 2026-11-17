@@ -12,7 +12,7 @@ const site = 'https://beforegta6.wtf';
 
 test.use({ javaScriptEnabled: false });
 
-for (const route of ['/', '/oldest/', `/${safe.id}/`, '/privacy/']) {
+for (const route of ['/', '/oldest/', `/${safe.id}/`, '/privacy/', '/contact/']) {
   test(`crawler HTML has complete social metadata and connected structured data on ${route}`, async ({
     page,
     request,
@@ -94,7 +94,12 @@ test('the machine-readable index matches canonical pages and omits research and 
     .map((match) => match[1])
     .sort();
   expect(urls).toEqual(
-    [`${site}/`, `${site}/privacy/`, ...selected.map((card) => `${site}/${card.id}/`)].sort(),
+    [
+      `${site}/`,
+      `${site}/privacy/`,
+      `${site}/contact/`,
+      ...selected.map((card) => `${site}/${card.id}/`),
+    ].sort(),
   );
   const sitemapIndex = await (await request.get('/sitemap-index.xml')).text();
   const sitemapPath = new URL(sitemapIndex.match(/<loc>(.*?)<\/loc>/)[1]).pathname;
@@ -112,4 +117,10 @@ test('404 pages stay out of structured search data', async ({ page }) => {
   expect(response.status()).toBe(404);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex');
   await expect(page.locator('script[type="application/ld+json"]')).toHaveCount(0);
+});
+
+test('the sent page is noindex', async ({ page }) => {
+  const response = await page.goto('/contact/sent/');
+  expect(response?.ok()).toBe(true);
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex');
 });

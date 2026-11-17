@@ -296,3 +296,12 @@ test.each(['services: {}\n', `${compose(oldPin)}${compose(oldPin)}`])(
     expect(git(f.remote, 'show-ref')).toBe(before);
   },
 );
+
+test('the CSP lets forms post to Formspark and its error page', () => {
+  const csp = readFileSync('deploy/nginx.conf', 'utf8').match(
+    /Content-Security-Policy "([^"]+)"/,
+  )?.[1];
+  expect(csp).toContain(
+    "form-action 'self' https://submit-form.com https://submitted.formspark.io;",
+  );
+});

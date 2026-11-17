@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import {
+  CONTACT_SUBJECTS,
+  FORMSPARK_FORM_ID,
+  SITE_URL,
+  TAKEDOWN_EMAIL,
+  TURNSTILE_SITE_KEY,
+} from '../data/site.js';
+---
+
+<Base
+  title="Contact · beforegta6.wtf"
+  description="Suggest a card, report a wrong card, or ask for a takedown."
+  path="/contact/"
+>
+  <article class="prose">
+    <h1 class="page-title">Contact</h1>
+    <p>
+      Suggest a card, report a wrong date or link, or ask us to remove something. You can also write
+      to <a href={`mailto:${TAKEDOWN_EMAIL}`}>{TAKEDOWN_EMAIL}</a>.
+    </p>
+    <form class="contact" method="post" action={`https://submit-form.com/${FORMSPARK_FORM_ID}`}>
+      {/* src/scripts/contact.js points this at the current origin, so staging returns to staging. */}
+      <input type="hidden" name="_redirect" value={`${SITE_URL}/contact/sent/`} />
+      {/* Without it, Formspark copies every field into the redirect URL: browser history, logs and Umami. */}
+      <input type="hidden" name="_append" value="false" />
+      <label for="contact-subject">Subject</label>
+      <select id="contact-subject" name="subject" required>
+        <option value="">Choose a subject</option>
+        {CONTACT_SUBJECTS.map((subject) => (
+          <option>{subject}</option>
+        ))}
+      </select>
+      <label for="contact-email">Your email address</label>
+      <input id="contact-email" name="email" type="email" autocomplete="email" required />
+      <label for="contact-link">Link to the card or post (optional)</label>
+      <input id="contact-link" name="link" type="url" />
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="message" rows="6" required></textarea>
+      {/* Honeypot: Formspark holds back a message with this field filled. Off screen and out of the tab order, so
+         only a bot fills it. Not display:none, which bots learn to skip. */}
+      <div class="trap" aria-hidden="true">
+        <label for="contact-gender">Gender</label>
+        <input id="contact-gender" name="gender" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="dark"></div>
+      <button type="submit">Send</button>
+    </form>
+    <p>
+      <small>
+        Formspark delivers the message, and Cloudflare Turnstile checks that a person sends it. See
+        <a href="/privacy/#contact-form">Privacy</a>.
+      </small>
+    </p>
+  </article>
+  {/* The one script from outside the site: Turnstile cannot be self-hosted (AGENTS.md exceptions). */}
+  <script
+    is:inline
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+  ></script>
+  <script>
+    import '../scripts/contact.js';
+  </script>
+</Base>

@@ -36,6 +36,7 @@
 - [x] **SITE-04**: A push to `develop` deploys staging, and a push to `main` deploys production. The site runs as an nginx image on Docker Swarm with its own Cloudflare Tunnel per stack, and CI pins the image. Evidence: a465b6c, PR #1, PR #6; `.github/workflows/build.yml`; `deploy/README.md`.
 - [x] **SITE-05**: `www.beforegta6.wtf` redirects to the bare domain with a 301. Evidence: PR #7 (1142054, 2026-11-14); `deploy/README.md` step 6.
 - [x] **SITE-06**: The footer names the operator and the takedown contact, and a privacy page exists. Evidence: 83a67c9; e2e "the footer names the operator, the contact and the privacy page".
+- [ ] **SITE-07**: A contact page sends messages through Formspark, with Turnstile and a honeypot. The takedown e-mail stays on the site. Evidence: `e2e/contact.spec.js`.
 - [x] **A11Y-01**: Pages pass axe, do not scroll sideways at 320 px, have a skip link and read in full without JavaScript. Evidence: f8ec84b; `e2e/site.spec.js` (axe, 320 px, skip link and no-JS tests).
 - [x] **MEAS-01**: Umami counts page views on the apex only, with no cookies and no consent banner. Evidence: PR #7 (1142054); `data-domains` in `src/layouts/Base.astro`.
 
