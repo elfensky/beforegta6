@@ -33,13 +33,17 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - ✓ The site is live with card pages, a countdown, deploy pipelines, the www redirect and Umami page views — Phase 3
 - ✓ The front page is one centred line timeline with an order link and a hover image — Phase 4
 - ✓ AdSense ownership is verified, Auto ads are wired for the apex only, Web Vitals are counted, and the HTML cache header is set — Phase 5
-- ✓ The local review tool supports candidate decisions and image previews while protecting held candidates — Phase 7
+- ✓ The local review tool supports persistent decision records, editorial notes, image previews, item URLs, resume, and numbered navigation while protecting held candidates — Phase 7
+- ✓ A failed image permits a saved Yes pending image approval; incomplete cards remain outside generated site content — Phase 7
 - ✓ Dedicated deployment branches serve both environments, and source branches require PRs and passing checks — Phase 8
 
 ### Active
 
+- [ ] Release the sorted selection and review feedback to staging and production. All 46 pending images are complete. Verify both environments — CONT-06.
+
+
 - [ ] Launch-week site changes reach production and work: the share button, the post-launch line, the edge cache rule, and the held card `gta5-farewell-drive` on 2026-11-18 — Phase 6
-- [ ] The promotion schedule of 2026-11-15 to 2026-11-22 runs, and the result is read from Umami — Phase 6
+- [ ] Create and publish social-media posts as soon as the updated production site is verified. Drafts alone do not complete promotion — PROMO-04.
 - [ ] AdSense approves the site (external, Andrei's account) — Phase 6
 
 ### Out of Scope
@@ -52,11 +56,14 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - A Show HN post, a site name inside meme images, a card-grid homepage image — the promotion council rejected them.
 - Likes and dislikes — a v2 idea, not designed (see REQUIREMENTS.md).
 
+The 2026-11-17 exceptions in `AGENTS.md` qualify these exclusions: Queen Elizabeth II's death, one COVID/chip-shortage card, and two Rockstar-image uses. Five specified media replacements have separate permission exceptions. Cena keeps his portrait.
+
 ## Context
 
 - GTA 6 launches on Thursday 2026-11-19. `docs/PROMOTION.md` cites Take-Two Q2 FY27 earnings of 9 Nov 2026 for that date. The design spec says Rockstar set the date in November 2025 and that nobody confirmed it since. Both give 2026-11-19.
 - After the launch the meme inverts. The header reads "We got all of this before GTA 6." A line under the title reads "And we got GTA 6 before The Winds of Winter."
 - Three competing sites exist: a placeholder, an empty board and an unfinished quiz (checked 2026-11-15, per `docs/PROMOTION.md`). The promotion angle is "the meme dies Thursday, here is its archive".
+- Local selection verified on 2026-11-17: 206 card pages, 192 normal timeline rows, 14 candidate milestones, and 18 rendered milestones. All 95 original notes and every recorded click remain preserved.
 - State on 2026-11-15 (checked in the repo): 97 cards in `src/content/cards/`, 383 candidates in `research/candidates.json` (97 launch, 3 hold, 283 drop), 84 excluded finds.
 - Issues #19 and #24 are complete on 2026-11-16. PR #26, release PR #27, and `drunikbe/infra#79` are merged. The codebase map is in `.planning/codebase/`. Known concerns are in `.planning/codebase/CONCERNS.md`.
 - The build took three days: 2026-11-13 to 2026-11-15. The roadmap phases 1 to 5 are backdated groups of that work.
@@ -67,7 +74,7 @@ Full list with IDs and evidence: `.planning/REQUIREMENTS.md`.
 - **Assets**: Every asset comes from the site. Exceptions: the AdSense script (Google) and self-hosted Umami at `umami.lav.ren`. System fonts only. Images go through `astro:assets`.
 - **Analytics**: Self-hosted Umami, cookieless, no consent banner. Page views and Web Vitals only. Never load Umami's `recorder.js`.
 - **Ads and consent**: Auto ads only. The script loads on the apex only. No ads and no placeholder before approval. Google's consent tool covers the EEA, UK and Switzerland. The CSP sets no `script-src`.
-- **Content**: Andrei's picks. Politics, religion and identity are in. NSFW cards may be crude, never sexually explicit. Every card keeps a local image, credits the creator and links the source post. No Rockstar material.
+- **Content**: Andrei's picks. Politics, religion and identity are in. NSFW cards may be crude, never sexually explicit. Every card keeps a local image, credits the creator and links the source post. Rockstar material is limited to the two exceptions in `AGENTS.md`.
 - **Performance**: The page must stay fast under a traffic spike. The HTML is cached at the edge for 5 minutes (nginx sends `CDN-Cache-Control`; the Cloudflare rule is a phase 6 item).
 - **Deploy**: The image tag in a compose file is the deploy. CI writes it. Nobody edits it by hand. Never write the GitHub skip marker in a commit message.
 - **Accessibility**: Pages pass axe, do not scroll sideways at 320 px, and read in full without JavaScript.
@@ -98,6 +105,10 @@ No ADR exists for this project, so no decision is ADR-locked. The rows below are
 | 2026-11-16 | CI pins images on `deploy/staging` and `deploy/production`. Arcane reads those branches. Source branches require PRs and the GitHub Actions `check` job. | Andrei; issue #24; completion evidence | Verified live |
 | 2026-11-16 | Integration PRs use rebase merges. Releases from `develop` to `main` use merge commits. | `deploy/README.md`; source rulesets | Enforced |
 
+| 2026-11-17 | Review feedback preserves notes and clicks, archives merged duplicates, and renders 14 GTA items as milestones. | Feedback outcomes; candidates spec | Implemented locally |
+| 2026-11-17 | Queen, COVID, two Rockstar-image uses, and five specified media replacements are exceptions. Cena keeps his portrait. | Andrei; `AGENTS.md` | Approved |
+| 2026-11-17 | Local Yes/No tool and manual sort are done. Complete images, update staging and production, then create and publish social posts immediately. | Andrei; roadmap Current execution order | Active priority |
+
 </decisions>
 
 ## Evolution
@@ -114,4 +125,4 @@ After each phase:
 After the milestone: review all sections, check the Core Value, and update Context.
 
 ---
-*Last updated: 2026-11-16. Candidate review and protected deployments are complete.*
+*Last updated: 2026-11-17. The local review and manual sort are complete. Release follows image completion; actual social posting follows production verification immediately.*
