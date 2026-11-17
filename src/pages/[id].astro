@@ -24,9 +24,15 @@ const { card, newer, older } = Astro.props;
 
 <Base
   title={pageTitle(card.data.title)}
+  socialTitle={card.data.title}
   description={card.data.blurb}
   path={`/${card.id}/`}
   ogImage={ogImageOf(card)}
+  ogImageAlt={card.data.imageAlt}
+  cardMetadata={{
+    citations: [card.data.source.url, ...(card.data.factUrl ? [card.data.factUrl] : [])],
+    nsfw: card.data.nsfw,
+  }}
 >
   <Card card={card} headingLevel={1} eager large />
   <p class="share" data-share hidden>

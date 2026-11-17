@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const PORT = 4321;
+const PORT = Number(process.env.SITE_TEST_PORT ?? 4321);
 
 // Runs against the built site (npm run build first). Astro's --ignore-lock keeps the preview
 // in the foreground, so Playwright owns its process even inside an agent session.
