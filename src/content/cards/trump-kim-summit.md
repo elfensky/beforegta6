@@ -1,6 +1,6 @@
 ---
 title: "We got Trump and Kim Jong Un shaking hands before GTA 6"
-blurb: "Donald Trump and Kim Jong Un met in Singapore on 12 June 2018, the first meeting ever between leaders of the United States and North Korea."
+blurb: "Donald Trump and Kim Jong Un shook hands in Singapore on 12 June 2018, the first US–North Korea summit. On 30 June 2019 Trump became the first sitting US president in North Korea."
 kind: "real-event"
 date: "2018-06-12"
 source: {"url":"https://en.wikipedia.org/wiki/2018_North_Korea%E2%80%93United_States_Singapore_summit","platform":"other"}

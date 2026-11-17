@@ -1,0 +1,786 @@
+{
+  "date": "2026-11-17",
+  "counts": {
+    "implemented": 69,
+    "retained-by-request": 1,
+    "milestone": 14,
+    "image-unavailable": 1,
+    "merged": 10
+  },
+  "notes_preserved": true,
+  "decisions_preserved": true,
+  "outcomes": [
+    {
+      "id": "aliens",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#aliens", "src/content/cards/aliens.md"]
+    },
+    {
+      "id": "blue-texas",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#blue-texas", "src/content/cards/blue-texas.md"]
+    },
+    {
+      "id": "flying-cars",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#flying-cars", "src/content/cards/flying-cars.md"]
+    },
+    {
+      "id": "john-cena-heel-turn",
+      "status": "retained-by-request",
+      "summary": "Portrait retained by Andrei; captionless Instagram post described accurately.",
+      "evidence": [
+        "research/candidates.json#john-cena-heel-turn",
+        "src/content/cards/john-cena-heel-turn.md"
+      ]
+    },
+    {
+      "id": "new-pope",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#new-pope", "src/content/cards/new-pope.md"]
+    },
+    {
+      "id": "real-oppressor-mk2",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": [
+        "research/candidates.json#real-oppressor-mk2",
+        "src/content/cards/real-oppressor-mk2.md"
+      ]
+    },
+    {
+      "id": "gta5-235-million",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta5-235-million",
+        "src/content/cards/gta5-235-million.md"
+      ]
+    },
+    {
+      "id": "gta5-free-on-epic",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta5-free-on-epic",
+        "src/content/cards/gta5-free-on-epic.md"
+      ]
+    },
+    {
+      "id": "gta6-award",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": ["research/candidates.json#gta6-award", "src/content/cards/gta6-award.md"]
+    },
+    {
+      "id": "gta6-delays",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": ["research/candidates.json#gta6-delays", "src/content/cards/gta6-delays.md"]
+    },
+    {
+      "id": "hulkenberg-podium",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": [
+        "research/candidates.json#hulkenberg-podium",
+        "src/content/cards/hulkenberg-podium.md"
+      ]
+    },
+    {
+      "id": "concord",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#concord", "src/content/cards/concord.md"]
+    },
+    {
+      "id": "gary-grand-theft-auto",
+      "status": "image-unavailable",
+      "summary": "Driving happens off screen. No driving frame exists. Existing image retained; blurb corrected.",
+      "evidence": [
+        "research/candidates.json#gary-grand-theft-auto",
+        "final-image-sources.md",
+        "src/content/cards/gary-grand-theft-auto.md"
+      ]
+    },
+    {
+      "id": "gta5-billion-in-3-days",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta5-billion-in-3-days",
+        "src/content/cards/gta5-billion-in-3-days.md"
+      ]
+    },
+    {
+      "id": "gta6-trailer",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": ["research/candidates.json#gta6-trailer", "src/content/cards/gta6-trailer.md"]
+    },
+    {
+      "id": "miami-heat-vice-city",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#miami-heat-vice-city",
+        "src/content/cards/miami-heat-vice-city.md"
+      ]
+    },
+    {
+      "id": "pvz-ai-movie",
+      "status": "implemented",
+      "summary": "Updated title.",
+      "evidence": ["research/candidates.json#pvz-ai-movie", "src/content/cards/pvz-ai-movie.md"]
+    },
+    {
+      "id": "ash-ketchum",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#ash-ketchum", "src/content/cards/ash-ketchum.md"]
+    },
+    {
+      "id": "gta-trilogy-definitive",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta-trilogy-definitive",
+        "src/content/cards/gta-trilogy-definitive.md"
+      ]
+    },
+    {
+      "id": "gta5-ps3-x360",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": ["research/candidates.json#gta5-ps3-x360", "src/content/cards/gta5-ps3-x360.md"]
+    },
+    {
+      "id": "gta5-ps5-xbox-series",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta5-ps5-xbox-series",
+        "src/content/cards/gta5-ps5-xbox-series.md"
+      ]
+    },
+    {
+      "id": "steam-machine",
+      "status": "implemented",
+      "summary": "Updated title, blurb.",
+      "evidence": ["research/candidates.json#steam-machine", "src/content/cards/steam-machine.md"]
+    },
+    {
+      "id": "gta5-enhanced-pc",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta5-enhanced-pc",
+        "src/content/cards/gta5-enhanced-pc.md"
+      ]
+    },
+    {
+      "id": "gta5-pc",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": ["research/candidates.json#gta5-pc", "src/content/cards/gta5-pc.md"]
+    },
+    {
+      "id": "gta5-ps4-xbox-one",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta5-ps4-xbox-one",
+        "src/content/cards/gta5-ps4-xbox-one.md"
+      ]
+    },
+    {
+      "id": "rdr-on-phones",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance.",
+      "evidence": ["research/candidates.json#rdr-on-phones", "src/content/cards/rdr-on-phones.md"]
+    },
+    {
+      "id": "gta-online-standalone",
+      "status": "milestone",
+      "summary": "Displayed as a timeline milestone; individual page retained.",
+      "evidence": [
+        "research/candidates.json#gta-online-standalone",
+        "src/content/cards/gta-online-standalone.md"
+      ]
+    },
+    {
+      "id": "matpat-returns",
+      "status": "implemented",
+      "summary": "Updated title, blurb.",
+      "evidence": ["research/candidates.json#matpat-returns", "src/content/cards/matpat-returns.md"]
+    },
+    {
+      "id": "chatgpt-launch",
+      "status": "implemented",
+      "summary": "Updated title, blurb.",
+      "evidence": ["research/candidates.json#chatgpt-launch", "src/content/cards/chatgpt-launch.md"]
+    },
+    {
+      "id": "chandrayaan3-south-pole",
+      "status": "implemented",
+      "summary": "Updated title.",
+      "evidence": [
+        "research/candidates.json#chandrayaan3-south-pole",
+        "src/content/cards/chandrayaan3-south-pole.md"
+      ]
+    },
+    {
+      "id": "eclipse-2024-north-america",
+      "status": "implemented",
+      "summary": "Updated title.",
+      "evidence": [
+        "research/candidates.json#eclipse-2024-north-america",
+        "src/content/cards/eclipse-2024-north-america.md"
+      ]
+    },
+    {
+      "id": "charles-coronation",
+      "status": "merged",
+      "summary": "Merged into queen-elizabeth-death; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#charles-coronation",
+        "src/content/cards/queen-elizabeth-death.md"
+      ]
+    },
+    {
+      "id": "us-inflation-peak",
+      "status": "implemented",
+      "summary": "Updated title, blurb, event_date, timeline_date. Reviewed local image installed with provenance.",
+      "evidence": [
+        "research/candidates.json#us-inflation-peak",
+        "src/content/cards/us-inflation-peak.md"
+      ]
+    },
+    {
+      "id": "musk-buys-twitter",
+      "status": "implemented",
+      "summary": "Updated title, blurb.",
+      "evidence": [
+        "research/candidates.json#musk-buys-twitter",
+        "src/content/cards/musk-buys-twitter.md"
+      ]
+    },
+    {
+      "id": "starliner-astronauts-stuck",
+      "status": "implemented",
+      "summary": "Updated title, blurb.",
+      "evidence": [
+        "research/candidates.json#starliner-astronauts-stuck",
+        "src/content/cards/starliner-astronauts-stuck.md"
+      ]
+    },
+    {
+      "id": "twitter-becomes-x",
+      "status": "merged",
+      "summary": "Merged into musk-buys-twitter; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#twitter-becomes-x",
+        "src/content/cards/musk-buys-twitter.md"
+      ]
+    },
+    {
+      "id": "aws-outage-2025",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#aws-outage-2025",
+        "src/content/cards/aws-outage-2025.md"
+      ]
+    },
+    {
+      "id": "chip-shortage",
+      "status": "merged",
+      "summary": "Merged into covid-pandemic; original notes and click retained.",
+      "evidence": ["research/candidates.json#chip-shortage", "src/content/cards/covid-pandemic.md"]
+    },
+    {
+      "id": "cloudflare-outage-2025",
+      "status": "implemented",
+      "summary": "Kept as reviewed.",
+      "evidence": [
+        "research/candidates.json#cloudflare-outage-2025",
+        "src/content/cards/cloudflare-outage-2025.md"
+      ]
+    },
+    {
+      "id": "trump-impeached",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#trump-impeached",
+        "src/content/cards/trump-impeached.md"
+      ]
+    },
+    {
+      "id": "uk-leaves-eu",
+      "status": "merged",
+      "summary": "Merged into brexit-referendum; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#uk-leaves-eu",
+        "src/content/cards/brexit-referendum.md"
+      ]
+    },
+    {
+      "id": "katy-perry-space",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#katy-perry-space",
+        "src/content/cards/katy-perry-space.md"
+      ]
+    },
+    {
+      "id": "apple-trillion",
+      "status": "merged",
+      "summary": "Merged into nvidia-5-trillion; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#apple-trillion",
+        "src/content/cards/nvidia-5-trillion.md"
+      ]
+    },
+    {
+      "id": "black-hole-milky-way",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#black-hole-milky-way",
+        "src/content/cards/black-hole-milky-way.md"
+      ]
+    },
+    {
+      "id": "blessings-same-sex-couples",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#blessings-same-sex-couples",
+        "src/content/cards/blessings-same-sex-couples.md"
+      ]
+    },
+    {
+      "id": "change4-far-side-landing",
+      "status": "implemented",
+      "summary": "Updated title, blurb. Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#change4-far-side-landing",
+        "src/content/cards/change4-far-side-landing.md"
+      ]
+    },
+    {
+      "id": "crispr-cure-approved",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#crispr-cure-approved",
+        "src/content/cards/crispr-cure-approved.md"
+      ]
+    },
+    {
+      "id": "eu-roaming-free",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#eu-roaming-free",
+        "src/content/cards/eu-roaming-free.md"
+      ]
+    },
+    {
+      "id": "eu-usb-c-iphone",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#eu-usb-c-iphone",
+        "src/content/cards/eu-usb-c-iphone.md"
+      ]
+    },
+    {
+      "id": "falcon9-booster-landing",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#falcon9-booster-landing",
+        "src/content/cards/falcon9-booster-landing.md"
+      ]
+    },
+    {
+      "id": "ftx-collapse",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#ftx-collapse", "src/content/cards/ftx-collapse.md"]
+    },
+    {
+      "id": "gulf-of-america",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#gulf-of-america",
+        "src/content/cards/gulf-of-america.md"
+      ]
+    },
+    {
+      "id": "harris-first-woman-vp",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#harris-first-woman-vp",
+        "src/content/cards/harris-first-woman-vp.md"
+      ]
+    },
+    {
+      "id": "heartbleed",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#heartbleed", "src/content/cards/heartbleed.md"]
+    },
+    {
+      "id": "hiv-twice-a-year-jab",
+      "status": "implemented",
+      "summary": "Updated title, blurb. Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#hiv-twice-a-year-jab",
+        "src/content/cards/hiv-twice-a-year-jab.md"
+      ]
+    },
+    {
+      "id": "india-general-strike",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#india-general-strike",
+        "src/content/cards/india-general-strike.md"
+      ]
+    },
+    {
+      "id": "ingenuity-mars-flight",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#ingenuity-mars-flight",
+        "src/content/cards/ingenuity-mars-flight.md"
+      ]
+    },
+    {
+      "id": "internet-explorer-retired",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#internet-explorer-retired",
+        "src/content/cards/internet-explorer-retired.md"
+      ]
+    },
+    {
+      "id": "lettuce-outlasts-truss",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#lettuce-outlasts-truss",
+        "src/content/cards/lettuce-outlasts-truss.md"
+      ]
+    },
+    {
+      "id": "mexico-first-woman-president",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#mexico-first-woman-president",
+        "src/content/cards/mexico-first-woman-president.md"
+      ]
+    },
+    {
+      "id": "microsoft-activision",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#microsoft-activision",
+        "src/content/cards/microsoft-activision.md"
+      ]
+    },
+    {
+      "id": "negative-oil-price",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#negative-oil-price",
+        "src/content/cards/negative-oil-price.md"
+      ]
+    },
+    {
+      "id": "netflix-password-sharing",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#netflix-password-sharing",
+        "src/content/cards/netflix-password-sharing.md"
+      ]
+    },
+    {
+      "id": "nvidia-record-drop",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note. Added nvidia-ceo-probe for the confirmed resignation.",
+      "evidence": [
+        "research/candidates.json#nvidia-record-drop",
+        "src/content/cards/nvidia-record-drop.md"
+      ]
+    },
+    {
+      "id": "oumuamua",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#oumuamua", "src/content/cards/oumuamua.md"]
+    },
+    {
+      "id": "ozone-layer-recovery",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#ozone-layer-recovery",
+        "src/content/cards/ozone-layer-recovery.md"
+      ]
+    },
+    {
+      "id": "philae-comet-landing",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#philae-comet-landing",
+        "src/content/cards/philae-comet-landing.md"
+      ]
+    },
+    {
+      "id": "ram-shortage",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#ram-shortage", "src/content/cards/ram-shortage.md"]
+    },
+    {
+      "id": "spacex-ipo",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#spacex-ipo", "src/content/cards/spacex-ipo.md"]
+    },
+    {
+      "id": "svb-collapse",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#svb-collapse", "src/content/cards/svb-collapse.md"]
+    },
+    {
+      "id": "tariffs-struck-down",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#tariffs-struck-down",
+        "src/content/cards/tariffs-struck-down.md"
+      ]
+    },
+    {
+      "id": "trump-in-north-korea",
+      "status": "merged",
+      "summary": "Merged into trump-kim-summit; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#trump-in-north-korea",
+        "src/content/cards/trump-kim-summit.md"
+      ]
+    },
+    {
+      "id": "vw-dieselgate",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#vw-dieselgate", "src/content/cards/vw-dieselgate.md"]
+    },
+    {
+      "id": "youtube-hides-dislikes",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#youtube-hides-dislikes",
+        "src/content/cards/youtube-hides-dislikes.md"
+      ]
+    },
+    {
+      "id": "cloned-monkeys",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#cloned-monkeys", "src/content/cards/cloned-monkeys.md"]
+    },
+    {
+      "id": "bitcoin-round-trip",
+      "status": "merged",
+      "summary": "Merged into bitcoin-100k; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#bitcoin-round-trip",
+        "src/content/cards/bitcoin-100k.md"
+      ]
+    },
+    {
+      "id": "first-millennial-saint",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#first-millennial-saint",
+        "src/content/cards/first-millennial-saint.md"
+      ]
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#ai-overviews-glue-pizza",
+        "src/content/cards/ai-overviews-glue-pizza.md"
+      ]
+    },
+    {
+      "id": "australia-teen-social-ban",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#australia-teen-social-ban",
+        "src/content/cards/australia-teen-social-ban.md"
+      ]
+    },
+    {
+      "id": "beatles-now-and-then",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#beatles-now-and-then",
+        "src/content/cards/beatles-now-and-then.md"
+      ]
+    },
+    {
+      "id": "brazil-blocks-x",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#brazil-blocks-x",
+        "src/content/cards/brazil-blocks-x.md"
+      ]
+    },
+    {
+      "id": "change6-far-side-samples",
+      "status": "merged",
+      "summary": "Merged into change4-far-side-landing; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#change6-far-side-samples",
+        "src/content/cards/change4-far-side-landing.md"
+      ]
+    },
+    {
+      "id": "driverless-robotaxis",
+      "status": "implemented",
+      "summary": "Updated blurb. Reviewed local image installed with provenance. Selected for display from the review note. Added separate tesla-cybercab card.",
+      "evidence": [
+        "research/candidates.json#driverless-robotaxis",
+        "src/content/cards/driverless-robotaxis.md"
+      ]
+    },
+    {
+      "id": "el-salvador-bitcoin",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#el-salvador-bitcoin",
+        "src/content/cards/el-salvador-bitcoin.md"
+      ]
+    },
+    {
+      "id": "flash-player-end",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#flash-player-end",
+        "src/content/cards/flash-player-end.md"
+      ]
+    },
+    {
+      "id": "gaga-copacabana",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#gaga-copacabana",
+        "src/content/cards/gaga-copacabana.md"
+      ]
+    },
+    {
+      "id": "galaxy-note-7-recall",
+      "status": "implemented",
+      "summary": "Updated title, blurb, event_date, timeline_date. Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#galaxy-note-7-recall",
+        "src/content/cards/galaxy-note-7-recall.md"
+      ]
+    },
+    {
+      "id": "gangnam-style-broke-youtube",
+      "status": "implemented",
+      "summary": "Updated title, blurb, event_date, timeline_date. Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#gangnam-style-broke-youtube",
+        "src/content/cards/gangnam-style-broke-youtube.md"
+      ]
+    },
+    {
+      "id": "gangnam-style-counter",
+      "status": "merged",
+      "summary": "Merged into gangnam-style-broke-youtube; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#gangnam-style-counter",
+        "src/content/cards/gangnam-style-broke-youtube.md"
+      ]
+    },
+    {
+      "id": "homo-naledi",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#homo-naledi", "src/content/cards/homo-naledi.md"]
+    },
+    {
+      "id": "ireland-marriage-referendum",
+      "status": "merged",
+      "summary": "Merged into us-same-sex-marriage; original notes and click retained.",
+      "evidence": [
+        "research/candidates.json#ireland-marriage-referendum",
+        "src/content/cards/us-same-sex-marriage.md"
+      ]
+    },
+    {
+      "id": "k2-18b-life-hint",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#k2-18b-life-hint",
+        "src/content/cards/k2-18b-life-hint.md"
+      ]
+    },
+    {
+      "id": "last-penny",
+      "status": "implemented",
+      "summary": "Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#last-penny", "src/content/cards/last-penny.md"]
+    },
+    {
+      "id": "turkish-shooter",
+      "status": "implemented",
+      "summary": "Updated title. Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": [
+        "research/candidates.json#turkish-shooter",
+        "src/content/cards/turkish-shooter.md"
+      ]
+    },
+    {
+      "id": "trump-memecoin",
+      "status": "implemented",
+      "summary": "Updated title, blurb. Reviewed local image installed with provenance. Selected for display from the review note.",
+      "evidence": ["research/candidates.json#trump-memecoin", "src/content/cards/trump-memecoin.md"]
+    }
+  ]
+}

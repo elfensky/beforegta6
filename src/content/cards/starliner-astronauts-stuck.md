@@ -1,10 +1,10 @@
 ---
-title: "We got astronauts stuck in space for nine months before GTA 6"
-blurb: "Butch Wilmore and Suni Williams flew Boeing's Starliner to the ISS on 5 June 2024 for eight days. Thruster problems kept them in orbit until 18 March 2025."
+title: "We got Boeing's Starliner failing before GTA 6"
+blurb: "Boeing's Starliner flew two astronauts to the ISS on 5 June 2024 for eight days. Thruster faults sent it home empty; the crew got back on 18 March 2025. NASA rated it a Type A mishap."
 kind: "real-event"
 date: "2024-06-05"
 source: {"url":"https://x.com/luh_evons/status/1827417613833793553","platform":"x","engagement":"233 likes, 24,706 views"}
-imageAlt: "We got astronauts stuck in space for nine months before GTA 6"
+imageAlt: "We got Boeing's Starliner failing before GTA 6"
 nsfw: false
 status: "launch"
 eventDate: "2024-06-05"

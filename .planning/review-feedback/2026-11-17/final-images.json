@@ -1,0 +1,129 @@
+{
+  "checked": "2026-11-17",
+  "updates": [
+    {
+      "id": "spacex-ipo",
+      "outcome": "replaced (free licence)",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/SES-10_Launch_-_world%27s_first_reflight_of_an_orbital_class_rocket_%2833361035200%29.jpg/1280px-SES-10_Launch_-_world%27s_first_reflight_of_an_orbital_class_rocket_%2833361035200%29.jpg",
+        "image_page": "https://commons.wikimedia.org/wiki/File:SES-10_Launch_-_world%27s_first_reflight_of_an_orbital_class_rocket_(33361035200).jpg",
+        "image_license": "CC0 (SpaceX)",
+        "image_alt": "A SpaceX Falcon 9 rocket lifts off from Launch Complex 39A at Kennedy Space Center, March 2017"
+      },
+      "local_file": "final-assets/spacex-ipo.jpg",
+      "reason": "Replaces the Nasdaq Tower photo that shows another company. Real SpaceX launch (SES-10, 30 March 2017, first reflight of an orbital-class booster), released by SpaceX as CC0. Inspected by eye: rocket, plume and pad, no text overlay.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:SES-10_Launch_-_world%27s_first_reflight_of_an_orbital_class_rocket_(33361035200).jpg",
+        "https://linkding.lav.ren/bookmarks?details=6972"
+      ]
+    },
+    {
+      "id": "ram-shortage",
+      "outcome": "replaced (free licence)",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/2023_Pami%C4%99ci_Corsair_Vengeance_RGB.jpg/1280px-2023_Pami%C4%99ci_Corsair_Vengeance_RGB.jpg",
+        "image_page": "https://commons.wikimedia.org/wiki/File:2023_Pami%C4%99ci_Corsair_Vengeance_RGB.jpg",
+        "image_license": "CC BY-SA 4.0 (Jacek Halicki)",
+        "image_alt": "Two white Corsair Vengeance DDR5 RAM sticks, 32 GB kit, on a white background"
+      },
+      "local_file": "final-assets/ram-shortage.jpg",
+      "reason": "Replaces the approximate price chart with a photo of actual DDR5 memory (Corsair Vengeance RGB DDR5 2x16 GB 6000 MT/s, photographed 14 March 2023). Inspected by eye: \"DDR5\" printed on both modules; the label is readable. Attribution and share-alike apply.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:2023_Pami%C4%99ci_Corsair_Vengeance_RGB.jpg",
+        "https://linkding.lav.ren/bookmarks?details=6973"
+      ]
+    },
+    {
+      "id": "ai-overviews-glue-pizza",
+      "outcome": "replaced (free licence; illustrative)",
+      "fields": {
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Margherita_pizza_on_plate.jpg/1280px-Margherita_pizza_on_plate.jpg",
+        "image_page": "https://commons.wikimedia.org/wiki/File:Margherita_pizza_on_plate.jpg",
+        "image_license": "CC BY 4.0 (Shisma)",
+        "image_alt": "Illustrative photo: two slices of margherita pizza with melted cheese and basil on a white plate"
+      },
+      "local_file": "final-assets/ai-overviews-glue-pizza.jpg",
+      "reason": "Replaces the \"eat rocks\" screenshot. An ordinary pizza photo (23 August 2020), used only as an illustration; it is not evidence of the AI Overviews answer and contains no glue. Inspected by eye: pizza on plate, no text, no people.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Margherita_pizza_on_plate.jpg",
+        "https://linkding.lav.ren/bookmarks?details=6974"
+      ]
+    },
+    {
+      "id": "flying-cars",
+      "outcome": "staged (non-free; pending exception)",
+      "fields": {
+        "image_url": "https://www.youtube.com/watch?v=qt5p-_tE8d0",
+        "image_page": "https://www.youtube.com/watch?v=qt5p-_tE8d0",
+        "image_license": "© Tesla; frame from Tesla's official YouTube stream, no licence",
+        "image_alt": "The new Tesla Roadster upside down in mid-air, thrusters firing, as it flips over a Tesla Semi and two cars at its reveal on 15 October 2026"
+      },
+      "local_file": "final-assets/flying-cars.jpg",
+      "reason": "Actual frame of the flip from Tesla's official \"Roadster Event\" stream (channel Tesla, uploaded 2026-10-16, 3840x2160), cropped to remove the HUD and scaled to 1920x1080. The on-screen altitude read 25.2 ft. Time in the stream is about 11:05-11:10 (section downloads are keyframe-approximate; hwbusters says ~10:56). No pixels altered except crop and scale.",
+      "sources": [
+        "https://www.youtube.com/watch?v=qt5p-_tE8d0",
+        "https://linkding.lav.ren/bookmarks?details=6975",
+        "https://www.youtube.com/watch?v=7p5LxFdc-Qg",
+        "https://linkding.lav.ren/bookmarks?details=6976"
+      ]
+    },
+    {
+      "id": "gary-grand-theft-auto",
+      "outcome": "staged (non-free; pending exception; Gary driving is not shown on screen)",
+      "fields": {
+        "image_url": "https://www.youtube.com/watch?v=34PJuIqgLJs",
+        "image_page": "https://spongebob.fandom.com/wiki/Plankton%27s_Old_Chum",
+        "image_license": "© Nickelodeon/Paramount; fan-uploaded broadcast frame, no licence",
+        "image_alt": "Gary the snail sliding away from SpongeBob and Plankton's chum barrel in \"Plankton's Old Chum\""
+      },
+      "local_file": "final-assets/gary-grand-theft-auto.jpg",
+      "reason": "Episode identified: \"Plankton's Old Chum\", SpongeBob SquarePants season 12 episode 24, first aired 30 November 2019. The wiki's music-cue list names the moment \"Gary goes home in a car\". In the broadcast Gary slides out of frame toward the camera; no car and no driving is on screen in the clip or in the wiki's 200-frame gallery. The staged frame shows Gary leaving, not driving. It carries a Nickelodeon logo and a \"BloxLogics\" watermark bottom left.",
+      "sources": [
+        "https://spongebob.fandom.com/wiki/Plankton%27s_Old_Chum",
+        "https://linkding.lav.ren/bookmarks?details=6967",
+        "https://spongebob.fandom.com/wiki/Plankton%27s_Old_Chum/gallery",
+        "https://linkding.lav.ren/bookmarks?details=6979",
+        "https://www.tvmaze.com/episodes/1756722/spongebob-squarepants-12x24-planktons-old-chum",
+        "https://linkding.lav.ren/bookmarks?details=6968",
+        "https://www.youtube.com/watch?v=34PJuIqgLJs",
+        "https://linkding.lav.ren/bookmarks?details=6977"
+      ]
+    },
+    {
+      "id": "john-cena-heel-turn",
+      "outcome": "staged (non-free; contains Rockstar key art; pending exception)",
+      "fields": {
+        "image_url": "https://www.instagram.com/p/DGsPKjOOB5k/",
+        "image_page": "https://www.instagram.com/p/DGsPKjOOB5k/",
+        "image_license": "© John Cena post of Rockstar Games key art; no licence",
+        "image_alt": "John Cena's Instagram post: the Grand Theft Auto VI key art, \"Coming 2025\", with no caption"
+      },
+      "local_file": "final-assets/john-cena-heel-turn.png",
+      "reason": "Screenshot of the public captioned embed of the actual post (532,539 likes on 2026-11-17). The embed shows no caption, which confirms the earlier note: the blurb's \"used this exact line\" is not supported. The image is GTA 6 key art (Rockstar material); the 2026-11-17 exception does not cover it.",
+      "sources": [
+        "https://www.instagram.com/p/DGsPKjOOB5k/",
+        "https://linkding.lav.ren/bookmarks?details=6978",
+        "https://80.lv/articles/john-cena-cryptically-posts-gta-6-image-without-explanation",
+        "https://linkding.lav.ren/bookmarks?details=6971"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "gary-grand-theft-auto",
+      "request": "A frame of Gary driving the car",
+      "status": "not possible from the broadcast: the car is off screen",
+      "needed": "Decision: keep the staged frame of Gary leaving (needs a copyright exception), keep the current Reddit image, or drop the image. The blurb \"Gary the snail drives off in a car\" should become \"goes home in a car, off screen\"."
+    },
+    {
+      "id": "flying-cars",
+      "request": "Use the frame of the Roadster flipping",
+      "status": "staged; needs a copyright exception for a Tesla stream frame"
+    },
+    {
+      "id": "john-cena-heel-turn",
+      "request": "Use a screenshot of the Instagram post",
+      "status": "staged; needs a Rockstar-material exception and a copyright exception; the blurb needs a fix because the post has no caption"
+    }
+  ]
+}
