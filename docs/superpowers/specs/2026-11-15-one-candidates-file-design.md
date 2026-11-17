@@ -53,6 +53,18 @@ shows.
   - Each pass also gets `notes`: the prose of its old Markdown file. For pass 3 this is the criterion, the score scale
     and the council promotions. The highlight rule stays there as the research bar.
 - Each candidate gets `tags`. Pass 3 `field` becomes a tag, then the `field` key goes.
+- Each candidate can have `review_notes`, an optional string for image or presentation directions (2026-11-17).
+  The local review tool edits this field. `toCard` excludes it from public card files.
+- Each candidate can have `review_decision`, the latest explicit `choice` (`yes` or `no`) and `decided_at` UTC timestamp (2026-11-17).
+  Every accepted decision updates it, even without a status change. `toCard` excludes this record from public card files.
+  A Yes with `status: "drop"` awaits image approval unless the record has `merged_into`. The review page preserves that selection without generating an incomplete public card.
+
+- `presentation: "milestone"` renders a selected item as a timeline milestone. The field is optional; absent means a normal row.
+  Its card page and local image remain available. `src/data/milestones.js` uses `candidateId` to join three existing milestones to their candidates.
+  Matching dates alone never merge events. Unrelated events on the same date remain separate.
+- `merged_into` names an unmerged canonical candidate. The original record keeps its notes, decision, and `archive_reason`.
+  A merged record must remain `drop`. It stays outside the review queue, and review writes reject it.
+  These archive fields never enter public card frontmatter.
 
 ### Hand edits go into the JSON first
 

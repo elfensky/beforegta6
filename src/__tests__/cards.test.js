@@ -1,12 +1,33 @@
 import { expect, test } from 'vitest';
-import { ogImageOf, splitTitle, timelineEntries } from '../lib/cards.js';
+import { ogImageOf, splitTitle, timelineEntries, withMilestoneCards } from '../lib/cards.js';
 
 // Mirrors a cards collection entry: the schema coerces dates to Date.
-/** @param {{ id: string, date: string, status?: string, nsfw?: boolean, title?: string }} d */
-const card = ({ id, date, status = 'launch', nsfw = false, title = id }) =>
+/**
+ * @param {{ id: string, date: string, status?: string, nsfw?: boolean, title?: string, presentation?: string,
+ *   factUrl?: string }} d
+ */
+const card = ({
+  id,
+  date,
+  status = 'launch',
+  nsfw = false,
+  title = id,
+  presentation = 'card',
+  factUrl,
+}) =>
   /** @type {any} */ ({
     id,
-    data: { title, date: new Date(date), status, nsfw, image: { src: `/${id}.jpg` } },
+    data: {
+      title,
+      blurb: `${id} blurb`,
+      date: new Date(date),
+      status,
+      nsfw,
+      presentation,
+      factUrl,
+      source: { url: `https://example.com/${id}`, platform: 'other' },
+      image: { src: `/${id}.jpg` },
+    },
   });
 
 const timelineCards = [
@@ -62,4 +83,74 @@ test('splitTitle: a title without the frame stays whole', () => {
     event: 'GTA 6 comes out',
     after: '',
   });
+});
+
+const start = {
+  date: '2013-09-17',
+  title: 'GTA V comes out',
+  blurb: 'start',
+  factUrl: 'f',
+  candidateId: 'gta5',
+};
+const end = { date: '2026-11-19', title: 'GTA 6 comes out', blurb: 'end', factUrl: 'f' };
+test('milestone cards: leave the card rows, join the milestones with a link to their page', () => {
+  const { cards, milestones } = withMilestoneCards(
+    [
+      card({ id: 'row', date: '2020-01-01' }),
+      card({
+        id: 'sales',
+        title: 'GTA V sells',
+        date: '2026-09-30',
+        presentation: 'milestone',
+        factUrl: 'https://x.test/',
+      }),
+      card({ id: 'pc', date: '2015-04-14', presentation: 'milestone' }),
+      card({ id: 'held', date: '2016-01-01', presentation: 'milestone', status: 'hold' }),
+    ],
+    [start, end],
+  );
+  expect(cards.map((c) => c.id)).toEqual(['row']);
+  expect(milestones).toContainEqual({
+    date: '2026-09-30',
+    title: 'GTA V sells',
+    blurb: 'sales blurb',
+    factUrl: 'https://x.test/',
+    href: '/sales/',
+  });
+  // No fact URL: the source is the citation.
+  expect(milestones.find((m) => m.href === '/pc/')?.factUrl).toBe('https://example.com/pc');
+  expect(milestones.some((m) => m.href === '/held/')).toBe(false);
+});
+test('milestone cards: the explicitly linked candidate merges, and the input is not changed', () => {
+  const input = [start, end];
+  const { milestones } = withMilestoneCards(
+    [card({ id: 'gta5', title: 'GTA V on PS3', date: '2013-09-17', presentation: 'milestone' })],
+    input,
+  );
+  expect(milestones).toEqual([{ ...start, href: '/gta5/' }, end]);
+  expect(input[0]).not.toHaveProperty('href');
+});
+test('milestone cards: unrelated events on a handwritten milestone date stay visible', () => {
+  const { milestones } = withMilestoneCards(
+    [card({ id: 'unrelated', date: start.date, presentation: 'milestone' })],
+    [start],
+  );
+  expect(milestones).toHaveLength(2);
+  expect(milestones[1].href).toBe('/unrelated/');
+});
+test('milestone cards: sorted on the line, the launch stays the cap at either end', () => {
+  const { cards, milestones } = withMilestoneCards(
+    [
+      card({ id: 'b', title: 'B', date: '2022-03-15', presentation: 'milestone' }),
+      card({ id: 'a', title: 'A', date: '2022-03-15', presentation: 'milestone' }),
+      card({ id: 'row', date: '2022-03-15' }),
+    ],
+    [end, start],
+  );
+  const order = (/** @type {'oldest'|'newest'} */ o) =>
+    timelineEntries(cards, milestones, o).map((e) =>
+      e.kind === 'card' ? e.card.id : e.milestone.title,
+    );
+  expect(order('oldest')).toEqual(['GTA V comes out', 'A', 'B', 'row', 'GTA 6 comes out']);
+  expect(order('newest')).toEqual(['GTA 6 comes out', 'row', 'B', 'A', 'GTA V comes out']);
 });
