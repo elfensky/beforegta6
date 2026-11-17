@@ -1,5 +1,5 @@
 /** @typedef {import('astro:content').CollectionEntry<'cards'>} Card */
-/** @typedef {{ date: string, title: string, blurb: string, factUrl: string }} Milestone */
+/** @typedef {{ date: string, title: string, blurb: string, factUrl: string, href?: string, candidateId?: string }} Milestone */
 /**
  * @typedef {{ kind: 'card', date: Date, year: number, card: Card }
  *   | { kind: 'milestone', date: Date, year: number, milestone: Milestone }} TimelineEntry
@@ -7,6 +7,36 @@
 
 /** @param {Card[]} cards */
 const launched = (cards) => cards.filter((c) => c.data.status === 'launch');
+
+/**
+ * Moves the launch cards with `presentation: 'milestone'` onto the milestone list; their pages stay, and the
+ * milestone title links to the page. An explicit candidateId joins a hand-written milestone to its candidate.
+ * The hand-written one keeps its text and gains the link; unrelated events on the same date stay separate.
+ * @param {Card[]} cards
+ * @param {Milestone[]} milestones
+ * @returns {{ cards: Card[], milestones: Milestone[] }}
+ */
+export function withMilestoneCards(cards, milestones) {
+  const line = milestones.map((m) => ({ ...m }));
+  // Only a hand-written milestone absorbs a card: two milestone cards on one day are two events.
+  const written = [...line];
+  const rest = [];
+  for (const card of launched(cards)) {
+    if (card.data.presentation !== 'milestone') {
+      rest.push(card);
+      continue;
+    }
+    const href = `/${card.id}/`;
+    const date = card.data.date.toISOString().slice(0, 10);
+    const same = written.find((m) => m.candidateId === card.id);
+    if (same) same.href ??= href;
+    else {
+      const { title, blurb, factUrl, source } = card.data;
+      line.push({ date, title, blurb, factUrl: factUrl ?? source.url, href });
+    }
+  }
+  return { cards: rest, milestones: line };
+}
 
 /**
  * Cards and GTA milestones on one axis, oldest first. On the same day a milestone comes first, then cards by title.

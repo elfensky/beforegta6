@@ -17,7 +17,7 @@ const extensions = {
   webp: 'image/webp',
   gif: 'image/gif',
 };
-/** @typedef {{ id?: string, status?: string, revision: string }} Decision */
+/** @typedef {{ id?: string, status?: string, imageReady?: boolean, notes?: string, revision: string }} Decision */
 
 /** @param {number} status @param {string} message */
 export function failure(status, message) {
@@ -90,7 +90,7 @@ async function state(root) {
     revision,
     candidates: await Promise.all(
       data.candidates
-        .filter((c) => c.status !== 'hold')
+        .filter((c) => c.status !== 'hold' && !c.merged_into)
         .map(async (c) => ({
           ...c,
           image: (await localImage(root, c.id)) ? `/image/${c.id}` : null,
@@ -125,7 +125,7 @@ async function sync(root) {
     throw Object.assign(
       failure(
         500,
-        'Decision saved. Card synchronization failed. Check the server terminal, fix the problem, then retry synchronization.',
+        'Changes saved. Card synchronization failed. Check the server terminal, fix the problem, then retry synchronization.',
       ),
       { saved: true, synced: false },
     );
@@ -133,17 +133,34 @@ async function sync(root) {
   return { ...(await state(root)), saved: true, synced: true };
 }
 
-/** @param {string} root @param {Decision} body @param {boolean} retry */
-async function change(root, body, retry) {
+/** @param {string} root @param {Decision} body @param {'decision'|'sync'|'notes'} action */
+async function change(root, body, action) {
   const { data, revision } = await read(root);
   if (body.revision !== revision)
     throw failure(409, 'The research file changed. Refresh before deciding again.');
-  if (retry) return sync(root);
+  if (action === 'sync') return sync(root);
   if (await syncError(root)) throw failure(409, 'Retry synchronization before another decision.');
   const candidate = data.candidates.find((c) => c.id === body.id);
   if (!candidate) throw failure(404, 'Candidate not found.');
   if (candidate.status === 'hold') throw failure(422, 'This candidate has a protected hold.');
-  candidate.status = body.status;
+  if (candidate.merged_into)
+    throw failure(422, `This candidate was merged into ${candidate.merged_into}.`);
+  if (action === 'notes') {
+    if (typeof body.notes !== 'string' || body.notes.length > 2000)
+      throw failure(400, 'Notes must be text with at most 2,000 characters.');
+    if (body.notes === '') delete candidate.review_notes;
+    else candidate.review_notes = body.notes;
+  } else {
+    const launch =
+      body.status === 'launch' &&
+      body.imageReady !== false &&
+      !!(await localImage(root, candidate.id));
+    candidate.status = launch ? 'launch' : 'drop';
+    candidate.review_decision = {
+      choice: body.status === 'launch' ? 'yes' : 'no',
+      decided_at: new Date().toISOString(),
+    };
+  }
   await preflight(root, data);
   const path = join(root, 'research/candidates.json');
   const temporary = `${path}.${randomUUID()}.tmp`;
@@ -171,6 +188,8 @@ async function fetchImage(root, body, downloader) {
   const candidate = data.candidates.find((c) => c.id === body.id);
   if (!candidate) throw failure(404, 'Candidate not found.');
   if (candidate.status === 'hold') throw failure(422, 'This candidate has a protected hold.');
+  if (candidate.merged_into)
+    throw failure(422, `This candidate was merged into ${candidate.merged_into}.`);
   if (await localImage(root, candidate.id)) return state(root);
   if (!candidate.image_url) throw failure(422, 'No image URL. Save a local image manually.');
   let image;
@@ -214,7 +233,9 @@ export function createStore(root, downloader = downloadImage) {
   }
   return {
     state: () => serialize(() => state(root)),
-    change: (body, retry = false) => serialize(() => change(root, body, retry)),
+    change: (body, retry = false) =>
+      serialize(() => change(root, body, retry ? 'sync' : 'decision')),
+    notes: (body) => serialize(() => change(root, body, 'notes')),
     image: (body) => serialize(() => fetchImage(root, body, downloader)),
   };
 }

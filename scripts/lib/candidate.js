@@ -6,9 +6,14 @@
  * @property {string} id
  * @property {'launch'|'hold'|'drop'} status
  * @property {string[]} [tags] subject tags first, then `world-event`
+ * @property {string} [review_notes] local editorial directions, excluded from public cards
+ * @property {string} [merged_into] canonical candidate id; this archived record cannot launch
+ * @property {string} [archive_reason] local explanation for archival, excluded from public cards
+ * @property {{ choice: 'yes'|'no', decided_at: string }} [review_decision] latest explicit choice and ISO timestamp, excluded from public cards
  * @property {string} title
  * @property {string} blurb
  * @property {'real-event'|'joke'} kind
+ * @property {'milestone'} [presentation] renders as a timeline milestone instead of a card row; absent means a card
  * @property {string|null} event_date
  * @property {string|null} post_date
  * @property {string|null} timeline_date
@@ -30,6 +35,7 @@
  * @property {string} title
  * @property {string} blurb
  * @property {'real-event'|'joke'} kind
+ * @property {'milestone'} [presentation]
  * @property {string} date
  * @property {string} [eventDate]
  * @property {{ url: string, platform: string, engagement?: string }} source
@@ -53,6 +59,10 @@ export function toCard(c) {
     if (!c[field]) throw new Error(`${c.id}: ${field} missing`);
   }
   if (!STATUSES.includes(c.status)) throw new Error(`${c.id}: status must be launch, hold or drop`);
+  if (c.merged_into && c.status !== 'drop')
+    throw new Error(`${c.id}: merged candidates must stay drop`);
+  if (c.presentation !== undefined && c.presentation !== 'milestone')
+    throw new Error(`${c.id}: presentation must be milestone or absent`);
   const date = c.timeline_date ?? c.event_date ?? c.post_date;
   if (!date) throw new Error(`${c.id}: date missing`);
 
@@ -68,6 +78,7 @@ export function toCard(c) {
     nsfw: c.nsfw === true,
     status: c.status,
   };
+  if (c.presentation) frontmatter.presentation = c.presentation;
   if (c.event_date) frontmatter.eventDate = c.event_date;
   if (c.source_engagement) frontmatter.source.engagement = c.source_engagement;
   if (c.fact_url) frontmatter.factUrl = c.fact_url;
@@ -93,11 +104,17 @@ export function checkCandidates(candidates) {
       continue;
     }
     if (c.tags !== undefined && !Array.isArray(c.tags)) errors.push(`${c.id}: tags must be a list`);
+    if (c.merged_into !== undefined) {
+      const target = candidates.find((other) => other.id === c.merged_into);
+      if (!target || target === c || target.merged_into !== undefined)
+        errors.push(`${c.id}: merged_into must name an unmerged candidate`);
+      if (c.status !== 'drop') errors.push(`${c.id}: merged candidates must stay drop`);
+    }
     for (const t of Array.isArray(c.tags) ? c.tags : [])
       if (t !== 'world-event' && !SUBJECT_TAGS.includes(t))
         errors.push(`${c.id}: unknown tag ${t}`);
     if (!STATUSES.includes(c.status)) errors.push(`${c.id}: status must be launch, hold or drop`);
-    else if (c.status === 'launch') {
+    else if (c.status === 'launch' && !c.merged_into) {
       try {
         toCard(c);
       } catch (err) {

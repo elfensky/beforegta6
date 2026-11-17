@@ -3,6 +3,7 @@ import { mkdir, readFile, rm, symlink, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { request as httpRequest } from 'node:http';
 import { createReviewServer } from '../../scripts/review/server.js';
+import { createStore } from '../../scripts/review/store.js';
 import { reviewFixture } from './review-fixture.js';
 
 const cleanups = [];
@@ -63,10 +64,28 @@ test('a cross-site navigation can open the page without exposing the API to cros
     'sec-fetch-dest': 'document',
   };
   expect((await rawFetch(origin + '/', { headers })).status).toBe(200);
+  expect((await rawFetch(origin + '/first', { headers })).status).toBe(200);
   expect((await rawFetch(origin + '/api/state', { headers })).status).toBe(403);
   expect(
     (await rawFetch(origin + '/', { headers: { ...headers, 'sec-fetch-mode': 'cors' } })).status,
   ).toBe(403);
+});
+
+test('candidate URLs serve the review shell and unavailable items return a usable 404 page', async () => {
+  const { origin, root } = await setup();
+  const before = await readFile(join(root, 'research/candidates.json'), 'utf8');
+  for (const path of ['/first', '/first/', '/second']) {
+    const response = await fetch(origin + path);
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toContain('text/html');
+    expect(await response.text()).toContain('id="candidate"');
+  }
+  for (const path of ['/missing-item', '/protected']) {
+    const response = await fetch(origin + path);
+    expect(response.status).toBe(404);
+    expect(await response.text()).toContain('id="candidate"');
+  }
+  expect(await readFile(join(root, 'research/candidates.json'), 'utf8')).toBe(before);
 });
 
 test('an explicit image fetch preserves selections and makes a preview available before launch', async () => {
@@ -132,26 +151,200 @@ test('a decision preserves all fields, runs card sync, and permits correction', 
   const saved = await response.json();
   const actual = JSON.parse(await readFile(join(root, 'research/candidates.json'), 'utf8'));
   data.candidates[0].status = 'launch';
+  expect(actual.candidates[0].review_decision).toEqual({
+    choice: 'yes',
+    decided_at: expect.any(String),
+  });
+  data.candidates[0].review_decision = actual.candidates[0].review_decision;
   expect(actual).toEqual(data);
   expect(await readFile(join(root, 'src/content/cards/first.md'), 'utf8')).toContain(
     'status: "launch"',
   );
   expect(await readFile(join(root, 'research/candidates.md'), 'utf8')).toContain('| launch |');
   expect((await decide('first', 'drop', saved.revision)).status).toBe(200);
+  expect((await createStore(root).state()).candidates[0].review_decision.choice).toBe('no');
   await expect(readFile(join(root, 'src/content/cards/first.md'))).rejects.toThrow();
   expect(await readFile(join(root, 'research/images/first.png'))).toBeInstanceOf(Buffer);
 });
 
-test('hold protection, missing local images, and invalid launch metadata preserve the file', async () => {
+test('merged archives keep their notes and decisions and cannot re-enter review', async () => {
+  const { root, data, origin, post } = await setup();
+  data.candidates[0].merged_into = 'second';
+  data.candidates[0].review_notes = 'merge this';
+  const path = join(root, 'research/candidates.json');
+  await writeFile(path, JSON.stringify(data));
+  const before = await readFile(path, 'utf8');
+  const state = await (await fetch(origin + '/api/state')).json();
+  expect(state.candidates.map((c) => c.id)).toEqual(['second']);
+  expect((await fetch(origin + '/first')).status).toBe(404);
+  for (const route of ['decision', 'notes', 'image']) {
+    const fields =
+      route === 'decision' ? { status: 'launch' } : route === 'notes' ? { notes: 'changed' } : {};
+    const response = await post(
+      { id: 'first', ...fields, revision: state.revision },
+      {},
+      '/api/' + route,
+    );
+    expect(response.status).toBe(422);
+  }
+  expect(await readFile(path, 'utf8')).toBe(before);
+});
+
+test.each(['launch', 'drop'])(
+  'a same-status %s decision persists independently of visits and notes',
+  async (status) => {
+    const { root, data, decide, origin, post } = await setup();
+    data.candidates[0].status = status;
+    data.candidates[0].review_notes = 'Keep this direction.';
+    await writeFile(join(root, 'research/candidates.json'), JSON.stringify(data));
+    const initial = await (await fetch(origin + '/api/state')).json();
+    expect(initial.candidates[0]).not.toHaveProperty('review_decision');
+    const before = Date.now();
+    const response = await decide('first', status, initial.revision);
+    expect(response.status).toBe(200);
+    const saved = await response.json();
+    const decision = saved.candidates[0].review_decision;
+    expect(decision).toEqual({
+      choice: status === 'launch' ? 'yes' : 'no',
+      decided_at: expect.any(String),
+    });
+    expect(Date.parse(decision.decided_at)).toBeGreaterThanOrEqual(before);
+    expect(Date.parse(decision.decided_at)).toBeLessThanOrEqual(Date.now());
+    data.candidates[0].review_decision = decision;
+    expect(JSON.parse(await readFile(join(root, 'research/candidates.json'), 'utf8'))).toEqual(
+      data,
+    );
+    expect((await createStore(root).state()).candidates[0].review_decision).toEqual(decision);
+    expect(
+      (
+        await post(
+          { id: 'first', notes: 'Updated direction.', revision: saved.revision },
+          {},
+          '/api/notes',
+        )
+      ).status,
+    ).toBe(200);
+    const refreshed = await (await fetch(origin + '/api/state')).json();
+    expect(refreshed.candidates[0].review_decision).toEqual(decision);
+    expect(refreshed.candidates[1]).not.toHaveProperty('review_decision');
+    const repeated = await decide('first', status, refreshed.revision);
+    expect(repeated.status).toBe(200);
+    const latest = (await repeated.json()).candidates[0];
+    expect(latest.review_decision.choice).toBe(decision.choice);
+    expect(Date.parse(latest.review_decision.decided_at)).toBeGreaterThan(
+      Date.parse(decision.decided_at),
+    );
+    expect(latest.review_notes).toBe('Updated direction.');
+    if (status === 'launch')
+      expect(await readFile(join(root, 'src/content/cards/first.md'), 'utf8')).not.toContain(
+        'review_decision',
+      );
+  },
+);
+
+test('notes survive reloads and decisions without changing other fields or published cards', async () => {
+  const { root, data, post, origin, state, decide } = await setup();
+  const notes = 'Replace the image with a wider crop.\nKeep the caption: <b>not HTML</b> 🖼️';
+  const response = await post({ id: 'first', notes, revision: state.revision }, {}, '/api/notes');
+  expect(response.status).toBe(200);
+  const saved = await response.json();
+  data.candidates[0].review_notes = notes;
+  expect(JSON.parse(await readFile(join(root, 'research/candidates.json'), 'utf8'))).toEqual(data);
+  expect((await (await fetch(origin + '/api/state')).json()).candidates[0].review_notes).toBe(
+    notes,
+  );
+  expect((await decide('first', 'launch', saved.revision)).status).toBe(200);
+  const launched = await (await fetch(origin + '/api/state')).json();
+  expect(launched.candidates[0].review_notes).toBe(notes);
+  const card = await readFile(join(root, 'src/content/cards/first.md'), 'utf8');
+  expect(card).not.toContain('review_notes');
+  expect(card).not.toContain(notes);
+  expect(
+    (await post({ id: 'first', notes: '', revision: launched.revision }, {}, '/api/notes')).status,
+  ).toBe(200);
+  expect((await (await fetch(origin + '/api/state')).json()).candidates[0]).not.toHaveProperty(
+    'review_notes',
+  );
+});
+
+test('notes can describe a missing image and reject stale, invalid, or foreign writes', async () => {
+  const { root, post, state } = await setup();
+  await rm(join(root, 'research/images/first.png'));
+  const body = { id: 'first', notes: 'Find a new image.', revision: state.revision };
+  for (const notes of [null, ['a note'], 'x'.repeat(2001)])
+    expect((await post({ ...body, notes }, {}, '/api/notes')).status).toBe(400);
+  expect((await post({ ...body, status: 'launch' }, {}, '/api/notes')).status).toBe(400);
+  for (const headers of [{ origin: 'https://evil.example' }, { 'x-review-token': '' }])
+    expect((await post(body, headers, '/api/notes')).status).toBe(403);
+  expect((await post({ ...body, id: 'protected' }, {}, '/api/notes')).status).toBe(422);
+  expect((await post(body, {}, '/api/notes')).status).toBe(200);
+  const before = await readFile(join(root, 'research/candidates.json'), 'utf8');
+  expect((await post({ ...body, notes: 'Stale edit.' }, {}, '/api/notes')).status).toBe(409);
+  expect(await readFile(join(root, 'research/candidates.json'), 'utf8')).toBe(before);
+});
+
+test('protected holds cannot be selected', async () => {
   const { root, decide } = await setup();
   const before = await readFile(join(root, 'research/candidates.json'), 'utf8');
   expect((await decide('protected', 'drop')).status).toBe(422);
   expect((await decide('protected', 'launch')).status).toBe(422);
-  await rm(join(root, 'research/images/first.png'));
-  const missing = await decide('first', 'launch');
-  expect(missing.status).toBe(422);
-  expect((await missing.json()).error).toMatch(/local image/i);
   expect(await readFile(join(root, 'research/candidates.json'), 'utf8')).toBe(before);
+});
+
+test('Yes without an image persists the choice and notes, then launches only after image approval', async () => {
+  const { root, post, state, decide } = await setup();
+  const imagePath = join(root, 'research/images/first.png');
+  const image = await readFile(imagePath);
+  await rm(imagePath);
+  const noted = await post(
+    { id: 'first', notes: 'yes, replace the image', revision: state.revision },
+    {},
+    '/api/notes',
+  );
+  const response = await decide('first', 'launch', (await noted.json()).revision);
+  expect(response.status).toBe(200);
+  const pending = await response.json();
+  expect(pending.syncError).toBeNull();
+  expect(pending.candidates[0]).toMatchObject({
+    status: 'drop',
+    review_notes: 'yes, replace the image',
+    review_decision: { choice: 'yes' },
+  });
+  expect((await createStore(root).state()).candidates[0]).toMatchObject(pending.candidates[0]);
+  await expect(readFile(join(root, 'src/content/cards/first.md'))).rejects.toThrow();
+  expect((await decide('second', 'drop', pending.revision)).status).toBe(200);
+  await writeFile(imagePath, image);
+  const ready = await createStore(root).state();
+  expect(ready.candidates[0].status).toBe('drop');
+  expect(
+    (await post({ id: 'first', status: 'launch', imageReady: true, revision: ready.revision }))
+      .status,
+  ).toBe(200);
+  expect((await createStore(root).state()).candidates[0].status).toBe('launch');
+  expect(await readFile(join(root, 'src/content/cards/first.md'), 'utf8')).toContain(
+    'status: "launch"',
+  );
+});
+
+test('a failed local preview saves Yes pending and No can cancel that choice', async () => {
+  const { root, post, state, decide } = await setup();
+  const response = await post({
+    id: 'first',
+    status: 'launch',
+    imageReady: false,
+    revision: state.revision,
+  });
+  expect(response.status).toBe(200);
+  const pending = await response.json();
+  expect(pending.candidates[0]).toMatchObject({
+    status: 'drop',
+    review_decision: { choice: 'yes' },
+  });
+  expect((await decide('first', 'drop', pending.revision)).status).toBe(200);
+  expect((await createStore(root).state()).candidates[0]).toMatchObject({
+    status: 'drop',
+    review_decision: { choice: 'no' },
+  });
 });
 
 test('invalid metadata cannot become a launch card', async () => {
@@ -182,11 +375,14 @@ test('sync failure reports the saved decision and a retry repairs generated file
   const state = await (await fetch(origin + '/api/state')).json();
   expect(state.syncError).toBeTruthy();
   expect(state.candidates[0].status).toBe('launch');
+  expect(state.candidates[0].review_decision.choice).toBe('yes');
   expect((await decide('second', 'launch', state.revision)).status).toBe(409);
   await rm(join(root, 'research/candidates.md'), { recursive: true });
   const retry = await post({ revision: state.revision }, {}, '/api/sync');
   expect(retry.status).toBe(200);
-  expect((await retry.json()).syncError).toBeNull();
+  const repaired = await retry.json();
+  expect(repaired.syncError).toBeNull();
+  expect(repaired.candidates[0].review_decision).toEqual(state.candidates[0].review_decision);
   expect(await readFile(join(root, 'research/candidates.md'), 'utf8')).toContain('| launch |');
 });
 
@@ -217,7 +413,12 @@ test('foreign origins, forged hosts, missing tokens, and malformed bodies cannot
     expect((await post(body, headers)).status).toBe(403);
   expect((await post('{')).status).toBe(400);
   expect((await post('x'.repeat(5000))).status).toBe(413);
-  for (const change of [{ status: 'hold' }, { id: '../first' }, { surprise: true }])
+  for (const change of [
+    { status: 'hold' },
+    { id: '../first' },
+    { surprise: true },
+    { imageReady: 'yes' },
+  ])
     expect((await post({ ...body, ...change })).status).toBe(400);
   expect(await readFile(join(root, 'research/candidates.json'), 'utf8')).toBe(before);
 });

@@ -13,6 +13,8 @@
         <h1>Candidate review</h1>
         <p>Local choices prepare cards. Publishing follows the normal release process.</p>
         <p id="progress" aria-live="polite">Loading candidates…</p>
+        <p id="decisions" aria-live="polite"></p>
+        <p id="pending-images" aria-live="polite" hidden></p>
       </header>
       <p id="error" role="alert" hidden></p>
       <p id="message" role="status"></p>
@@ -20,12 +22,31 @@
         <button id="refresh" type="button">Refresh</button>
         <button id="retry" type="button" hidden>Retry synchronization</button>
       </div>
+      <nav class="navigation" aria-label="Review navigation">
+        <button id="previous" type="button">Previous</button>
+        <button id="next" type="button">Next</button>
+        <form id="jump-form" class="jump" novalidate>
+          <label for="item-number">Go to item</label>
+          <input
+            id="item-number"
+            type="number"
+            min="1"
+            step="1"
+            required
+            inputmode="numeric"
+            aria-describedby="item-total"
+          />
+          <span id="item-total"></span>
+          <button id="go" type="submit">Go</button>
+        </form>
+      </nav>
       <article id="candidate" aria-labelledby="title" hidden>
         <img id="image" alt="" />
-        <p id="missing-image" hidden>No local image. Save an image before selecting Yes.</p>
+        <p id="missing-image" hidden>No local image. Yes can still save your choice.</p>
         <div class="details">
           <h2 id="title"></h2>
           <p id="blurb"></p>
+          <p id="decision"></p>
           <dl>
             <div>
               <dt>Date</dt>
@@ -42,13 +63,26 @@
           </dl>
           <nav id="sources" aria-label="Candidate sources"></nav>
           <button id="fetch" type="button" hidden>Fetch image</button>
+          <div class="notes">
+            <label for="notes">Notes</label>
+            <p id="notes-help">
+              Image or presentation directions. These notes stay off the website.
+            </p>
+            <textarea
+              id="notes"
+              rows="4"
+              maxlength="2000"
+              aria-describedby="notes-help notes-status"
+            ></textarea>
+            <button id="save-notes" type="button">Save notes</button>
+            <p id="notes-status" role="status"></p>
+          </div>
         </div>
       </article>
       <div class="actions" aria-label="Review actions">
         <button id="no" type="button" aria-keyshortcuts="ArrowLeft">No</button>
         <button id="yes" type="button" aria-keyshortcuts="ArrowRight">Yes</button>
         <button id="skip" type="button">Skip</button>
-        <button id="previous" type="button">Previous</button>
       </div>
       <p class="help">
         Yes: right arrow or swipe right. No: left arrow or swipe left. Holds stay protected.

@@ -168,3 +168,28 @@ test('checkCandidates checks the id of every candidate, live or not', () => {
     'Bad|Id: id must match /^[a-z0-9-]+$/',
   ]);
 });
+
+test('merged archives cannot publish or refer to missing or merged targets', () => {
+  const target = fixture({ id: 'canonical' });
+  expect(checkCandidates([fixture({ merged_into: 'canonical' }), target])).toContain(
+    'flying-cars: merged candidates must stay drop',
+  );
+  expect(checkCandidates([fixture({ status: 'drop', merged_into: 'missing' })])).toContain(
+    'flying-cars: merged_into must name an unmerged candidate',
+  );
+  expect(checkCandidates([fixture({ status: 'drop', merged_into: 'flying-cars' })])).toContain(
+    'flying-cars: merged_into must name an unmerged candidate',
+  );
+  expect(checkCandidates([fixture({ status: 'drop', merged_into: 'canonical' }), target])).toEqual(
+    [],
+  );
+});
+
+// A milestone is a way to show a card, not a kind of event: a card keeps no presentation key, so its file is unchanged.
+test('presentation: milestone reaches the card; absent stays absent; anything else is an error', () => {
+  expect(toCard(fixture({ presentation: 'milestone' })).frontmatter.presentation).toBe('milestone');
+  expect(toCard(fixture()).frontmatter).not.toHaveProperty('presentation');
+  expect(checkCandidates([fixture({ presentation: 'Milestone' })])).toEqual([
+    'flying-cars: presentation must be milestone or absent',
+  ]);
+});

@@ -74,6 +74,12 @@ test('the downloader validates redirects, limits bytes, and rejects non-image re
       { statusCode: status, headers, destroy() {} },
     );
   const request = async () => response(302, { location: 'http://127.0.0.1/private' });
+  await expect(
+    downloadImage('https://example.com/a', {
+      resolver,
+      request: async () => response(503, { 'content-type': 'text/html' }),
+    }),
+  ).rejects.toThrow('Image source returned HTTP 503.');
   await expect(downloadImage('https://example.com/a', { resolver, request })).rejects.toThrow(
     /public/i,
   );
@@ -82,7 +88,7 @@ test('the downloader validates redirects, limits bytes, and rejects non-image re
       resolver,
       request: async () => response(200, { 'content-type': 'text/html' }, ['bad']),
     }),
-  ).rejects.toThrow(/image/i);
+  ).rejects.toThrow('Image source returned text/html instead of a supported image.');
   await expect(
     downloadImage('https://example.com/a', {
       resolver,

@@ -107,9 +107,12 @@ export async function downloadImage(
           current = new URL(response.headers.location, target.url).href;
           continue;
         }
-        const extension = imageExtension(response.headers['content-type'] ?? null);
-        if (response.statusCode !== 200 || !extension)
-          throw new Error('The response is not a supported image.');
+        if (response.statusCode !== 200)
+          throw new Error(`Image source returned HTTP ${response.statusCode}.`);
+        const contentType = response.headers['content-type']?.split(';')[0] ?? 'no content type';
+        const extension = imageExtension(contentType);
+        if (!extension)
+          throw new Error(`Image source returned ${contentType} instead of a supported image.`);
         const limit = 10 * 1024 * 1024;
         if (Number(response.headers['content-length']) > limit)
           throw new Error('Image is too large (10 MiB maximum).');

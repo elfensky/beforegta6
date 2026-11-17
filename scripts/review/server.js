@@ -5,10 +5,15 @@ import { resolve } from 'node:path';
 import { createStore, failure, ID, localImage } from './store.js';
 
 const assets = new Map([
-  ['/', ['index.html', 'text/html; charset=utf-8']],
   ['/app.js', ['app.js', 'text/javascript; charset=utf-8']],
   ['/style.css', ['style.css', 'text/css; charset=utf-8']],
 ]);
+
+/** @param {import('node:http').ServerResponse} response @param {string} file @param {string} type @param {number} [status] */
+async function sendAsset(response, file, type, status = 200) {
+  response.writeHead(status, { 'content-type': type });
+  response.end(await readFile(new URL(file, import.meta.url)));
+}
 
 /** @param {import('node:http').IncomingMessage} request @param {string} route */
 async function bodyOf(request, route) {
@@ -16,7 +21,8 @@ async function bodyOf(request, route) {
   const chunks = [];
   for await (const chunk of request) {
     size += chunk.length;
-    if (size > 4096) throw failure(413, 'Request body too large.');
+    if (size > (route === '/api/notes' ? 16384 : 4096))
+      throw failure(413, 'Request body too large.');
     chunks.push(chunk);
   }
   let body;
@@ -30,7 +36,9 @@ async function bodyOf(request, route) {
       ? ['revision']
       : route === '/api/image'
         ? ['id', 'revision']
-        : ['id', 'status', 'revision'];
+        : route === '/api/notes'
+          ? ['id', 'notes', 'revision']
+          : ['id', 'status', 'imageReady', 'revision'];
   if (
     !body ||
     typeof body !== 'object' ||
@@ -39,9 +47,11 @@ async function bodyOf(request, route) {
     typeof body.revision !== 'string' ||
     !/^[a-f0-9]{64}$/.test(body.revision) ||
     (route !== '/api/sync' && (typeof body.id !== 'string' || !ID.test(body.id))) ||
-    (route === '/api/decision' && !['launch', 'drop'].includes(body.status))
+    (route === '/api/decision' && !['launch', 'drop'].includes(body.status)) ||
+    (body.imageReady !== undefined && typeof body.imageReady !== 'boolean') ||
+    (route === '/api/notes' && (typeof body.notes !== 'string' || body.notes.length > 2000))
   )
-    throw failure(400, 'Invalid decision.');
+    throw failure(400, 'Invalid request.');
   return body;
 }
 
@@ -69,9 +79,10 @@ export function createReviewServer({ root, downloadImage }) {
       const address = server.address();
       const host = `127.0.0.1:${typeof address === 'object' ? address.port : ''}`;
       const origin = `http://${host}`;
+      const itemRoute = /^\/([a-z0-9-]+)\/?$/.exec(request.url);
       const pageNavigation =
         request.method === 'GET' &&
-        request.url === '/' &&
+        (request.url === '/' || !!itemRoute) &&
         request.headers['sec-fetch-mode'] === 'navigate' &&
         request.headers['sec-fetch-dest'] === 'document';
       if (
@@ -83,12 +94,18 @@ export function createReviewServer({ root, downloadImage }) {
       const route = request.url;
       if (request.method === 'GET') {
         if (route === '/api/state') return json(200, { ...(await store.state()), token });
-        const asset = assets.get(route);
-        if (asset) {
-          response.setHeader('content-type', asset[1]);
-          response.end(await readFile(new URL(asset[0], import.meta.url)));
-          return;
+        if (route === '/' || itemRoute) {
+          const exists =
+            !itemRoute || (await store.state()).candidates.some((c) => c.id === itemRoute[1]);
+          return await sendAsset(
+            response,
+            'index.html',
+            'text/html; charset=utf-8',
+            exists ? 200 : 404,
+          );
         }
+        const asset = assets.get(route);
+        if (asset) return await sendAsset(response, asset[0], asset[1]);
         const match = /^\/image\/([a-z0-9-]+)(?:\?revision=[a-f0-9]{64})?$/.exec(route);
         const image = match ? await localImage(root, match[1]) : null;
         if (!image) throw failure(404, 'File not found.');
@@ -98,7 +115,7 @@ export function createReviewServer({ root, downloadImage }) {
       }
       if (
         request.method !== 'POST' ||
-        !['/api/decision', '/api/sync', '/api/image'].includes(route)
+        !['/api/decision', '/api/sync', '/api/image', '/api/notes'].includes(route)
       )
         throw failure(404, 'Route not found.');
       if (
@@ -110,7 +127,11 @@ export function createReviewServer({ root, downloadImage }) {
       const retry = route === '/api/sync';
       const body = await bodyOf(request, route);
       const result =
-        route === '/api/image' ? await store.image(body) : await store.change(body, retry);
+        route === '/api/image'
+          ? await store.image(body)
+          : route === '/api/notes'
+            ? await store.notes(body)
+            : await store.change(body, retry);
       json(200, { ...result, token });
     } catch (error) {
       json(error.status || 500, {
