@@ -16,7 +16,7 @@ Andrei confirmed these three goals and their order on 2026-11-17. This order tak
 |---|---|---|
 | 1 | Create the local Tinder-like Yes/No tool and sort the items. | **Done.** The tool and manual sort are complete. Choices and notes are saved. |
 | 2 | Update staging and production with the completed selection. | **Done.** All 46 images are complete. PRs #29 and #30 are merged. Both environments match all 206 selected pages, 192 card rows, and 18 milestones. |
-| 3 | Prepare distinct promotion drafts; Andrei publishes them manually. | **Drafts ready. Publication open.** Andrei owns every post and moderator message. The removed r/gaming post must not be repeated. r/SideProject is excluded. |
+| 3 | Prepare distinct promotion drafts; Andrei publishes them manually. | **Publication started.** The [X post](https://x.com/elfensky/status/2122730891772391740) is verified on 17 November. Further posts remain manual. The removed r/gaming post must not be repeated. r/SideProject is excluded. |
 
 The completed image and release work is in [Finish selected images, release, and prepare promotion](t3-thread://v2/f4c33bd2-f973-45a5-884e-44ab0aedef3d/mcp:launch:eae5b6b0cbce70b768e41fa5f560fd2175f4704879b5437c3a3d89009ea3a91d).
 Andrei's latest instruction replaces agent publication with draft preparation. He will publish everything himself.

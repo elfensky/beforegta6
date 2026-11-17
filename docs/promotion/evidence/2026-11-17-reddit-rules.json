@@ -1,0 +1,576 @@
+{
+  "checkedAt": "2026-11-17T17:22:29.262Z",
+  "source": "Reddit public rule and community descriptions, read through the signed-in browser without account changes",
+  "communities": [
+    {
+      "subreddit": "GTAVI",
+      "rulesUrl": "https://old.reddit.com/r/GTAVI/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/GTAVI/about/rules.json",
+      "rules": [
+        {
+          "title": "Stay On-Topic",
+          "description": "All posts and comments must relate to Grand Theft Auto VI or the GTA series. Off-topic content, such as unrelated games or real-world politics, will be removed.",
+          "scope": "all"
+        },
+        {
+          "title": "Be Respectful and Civil",
+          "description": "Treat all users with respect. No harassment, hate speech, slurs, or personal attacks. Keep discussions constructive, even when you disagree.",
+          "scope": "all"
+        },
+        {
+          "title": "No Spoilers Without Proper Tags",
+          "description": "Do not post spoilers (e.g., story details, leaks) without using the spoiler tag and a clear warning in the title. All posts with spoilers must use the “Spoiler” flair.",
+          "scope": "all"
+        },
+        {
+          "title": "Use Appropriate Flairs",
+          "description": "All posts must have a flair (e.g., Discussion, News, Question, Image) to categorize content. Unflaired posts will be filtered for review.",
+          "scope": "all"
+        },
+        {
+          "title": "No Low-Effort Posts or Comments",
+          "description": "Posts and comments should contribute meaningfully. Avoid memes, one-word replies, or repetitive content. Comments must be at least 20 characters to encourage substance.",
+          "scope": "all"
+        },
+        {
+          "title": "No Spam or Self-Promotion",
+          "description": "Do not post spam, including repetitive posts, unrelated links, or unsolicited self-promotion (e.g., YouTube channels, Twitch streams). Contact moderators for approval of promotional content.",
+          "scope": "all"
+        },
+        {
+          "title": "No Leaks or Piracy",
+          "description": "Do not share or discuss unofficial leaks, pirated content, or hacks. This includes links to leaked files or instructions for illegal activities.",
+          "scope": "all"
+        },
+        {
+          "title": "Follow Reddit’s Content Policy",
+          "description": "All content must comply with Reddit’s Content Policy. This includes no NSFW content, doxxing, or incitement of violence.",
+          "scope": "all"
+        },
+        {
+          "title": "Use Verified Accounts",
+          "description": "Users must have a verified email address to post or comment. New accounts (less than 3 days old) or those with low karma may face restrictions.",
+          "scope": "all"
+        },
+        {
+          "title": "Report Rule-Breaking Content",
+          "description": "If you see content that violates these rules, report it to the moderators. Do not engage with rule-breakers, as this can escalate conflicts.",
+          "scope": "all"
+        },
+        {
+          "title": "English Language Content Only",
+          "description": "All posts and comments must be in English to ensure accessibility and effective moderation. Non-English content will be removed, and users may be warned or banned for repeated violations. Exceptions may be allowed for brief, clearly labeled translations or cultural references with English explanations, at the moderators' discretion.",
+          "scope": "all"
+        }
+      ],
+      "about": {
+        "title": "GTAVI",
+        "description": "r/GTA6",
+        "public_description": "Since 2011, this community has been waiting, speculating, and keeping the excitement alive. Now, with the official release date set for late 2026, it's time to gear up for the final countdown!\n\nJoin us for news, leaks, discussions, theories, and pure hype as we prepare for the most anticipated GTA installment yet. Whether you're here to analyze every detail, share your excitement, or connect with fellow fans, Vice City awaits—and this is the place to be! \n\nWelcome to r/GTAVI!",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": ""
+      }
+    },
+    {
+      "subreddit": "GTA",
+      "rulesUrl": "https://old.reddit.com/r/GTA/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/GTA/about/rules.json",
+      "rules": [
+        {
+          "title": "Posts must be directly related to GTA",
+          "description": "Please ensure your post is directly related to the Grand Theft Auto series of video games. Off-topic posts and/or discussions will be removed.",
+          "scope": "link"
+        },
+        {
+          "title": "Be Civil and Respectful",
+          "description": "Be respectful of other users, do NOT insult or harass others. Racism, homophobia, transphobia, or hate speech of any kind is zero tolerance and will be met with a swift ban. Witch-hunting or targeting of specific users will also not be tolerated.",
+          "scope": "all"
+        },
+        {
+          "title": "Mod Discretion/Low-effort content",
+          "description": "Low effort content is subject to removal by Moderators based on what we judge to be suitable for the subreddit. No low-effort discussions, memes, or jokes. This rule also applies to titles; please create titles that are descriptive of the content enclosed AND include a body with your post (if it is text-based).",
+          "scope": "all"
+        },
+        {
+          "title": "Cheats/Bugs/Exploits",
+          "description": "The discussion of bugs, exploits, and cheats is allowed so long as it does not promote its use.\n\nCheater reports are permitted. However, these posts may not encourage users to harass or report the player in question.",
+          "scope": "all"
+        },
+        {
+          "title": "No promoting or advertising",
+          "description": "Promoting and advertising is strictly prohibited. Under no circumstances may a user promote a social media account, product, or service. It is irrelevant whether the content in question belongs to the user who submitted it.",
+          "scope": "all"
+        },
+        {
+          "title": "No asking for in-game money or money drops.",
+          "description": "Begging is not cool, so don't do it or else your post will be removed.",
+          "scope": "all"
+        },
+        {
+          "title": "No reposts from the last 90 days or top 50 of all time.",
+          "description": "This goes without saying. Don't repost the most popular submissions everyone has already seen. It's lazy and takes no effort whatsoever.",
+          "scope": "all"
+        },
+        {
+          "title": "The discussion of bugs, exploits, and cheats is allowed so long as it does not promote its use.",
+          "description": "The discussion of bugs, exploits, and cheats is allowed so long as it does not promote its use.",
+          "scope": "all"
+        },
+        {
+          "title": "Please refrain from spamming the sub with links to your Discord. Nobody cares.",
+          "description": "Seriously.",
+          "scope": "all"
+        },
+        {
+          "title": "NO SPAM!",
+          "description": "Spamming the sub will result in a permanent ban. No exceptions.",
+          "scope": "all"
+        },
+        {
+          "title": "No leaks!!!",
+          "description": "Posting leaks is not allowed, otherwise the subreddit banned by Reddit itself for copyright reasons. Discussing leaks without posting the leak directly is perfectly fine.",
+          "scope": "all"
+        }
+      ],
+      "about": {
+        "title": "Grand Theft Auto",
+        "description": "This reddit community is dedicated to the     **Grand Theft Auto** games. Feel free to discuss any aspect of the games you want. This is an open forum to discuss the current, as well as past games. Please use spoiler tags accordingly.\n\nWe are not associated in any way with Rockstar Games! If you need support, you can contact them here: https://support.rockstargames.com\n\n**RULES:**  \n\n1. Absolutely no selling of modded accounts is permitted. Expect a ban for breaking this rule. \n \n2. Please follow reddiquette. We will not allow behavior contrary to reddiquette\n\n3. Please be civil. Rude comments or harassing comments will be removed and may result in a ban.\n \n4. Posts must be directly related to GTA -  Please ensure your post is directly related to the Grand Theft Auto series of games.\n\n5. No asking for in-game money or moneydrops. Begging is not cool.\n\n6. No fake content!\n\n7. NO SPAM! This should go without saying but apparently I have to. Spamming the sub will result in a permanent ban.\n\n8. No reposts from the last 90 days or top 50 of all time.\n\n9. The discussion of bugs, exploits, and cheats is allowed so long as it does not promote its use.\n\n10. Please refrain from spamming the sub with links to your discord. Nobody cares.  \n\n11. Do not post leaks. Reddit does not allow this.\n\n\n\n* **Related Subs:**\n* [Grand Theft Auto 5](/r/grandtheftautov)\n* [Heist Teams](/r/HeistTeams)\n* [GTA Content](/r/gtacontent)\n* [SA-MP](/r/samp)\n* [LA Noire](/r/lanoire)\n* [Rockstar](/r/rockstar)\n* [GTA Market](/r/gtamarket)\n* [GTA Online](/r/gtaonline)\n* [Wasted GIFS](/r/wastedgifs)\n* [GTA Pedestrians](/r/GtaPedestrians/)\n\n **Post Types:**\n* [Discussion Posts](http://www.reddit.com/r/GTA/search?q=self%3Ayes&restrict_sr=on)\n* [Link Posts](http://www.reddit.com/r/GTA/search?q=self%3Ano&sort=hot&restrict_sr=on&t=all)\n* [Video Posts](http://www.reddit.com/r/GTA/search?q=site%3Ayoutube&restrict_sr=on&sort=hot&t=all)\n\n\n\n---\n\n[**GTA Wiki**](http://gta.wikia.com/Main_Page)\n\n---\n\n[r/LANoire](http://www.reddit.com/r/lanoire/) - LA Noire sub\n\n[r/GrandTheftAutoV](http://www.reddit.com/r/grandtheftautov/) - GTA V sub\n\n[r/gtacontent](/r/gtacontent) - Show off what you got\n\n[r/SAMP](http://www.reddit.com/r/samp/) - GTA San Andreas Multiplayer\n\n[r/rockstar](http://www.reddit.com/r/rockstar) - Developments from Rockstar\n\n[r/GtaOnlineCrews](/r/gtaonlinecrews) - Join a crew for GTA V!\n\n[r/gtaonline](http://www.reddit.com/r/gtaonline) - Subreddit dedicated to GTA Online!\n\n[r/WastedGIFS](/r/wastedgifs) - Subreddit dedicated to non-GTA-related gifs that end with the GTA *WASTED* effect \n\n[r/HeistTeams](/r/HeistTeams)- find teams to do your heists with! \n\n[r/GtaPedestrians](/r/GtaPedestrians/) - The various misfortunes and situations that pedestrians in GTA get involved in \n\n[](http://socialclub.rockstargames.com/crew/rddtgta \"Social Club\")",
+        "public_description": "Reddit’s premier GTA community.",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": ""
+      }
+    },
+    {
+      "subreddit": "GTA6",
+      "rulesUrl": "https://old.reddit.com/r/GTA6/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/GTA6/about/rules.json",
+      "rules": [
+        {
+          "title": "Relevance/Off-Topic/No Political Discussions",
+          "description": "All submissions and discussions should be about GTA6 or GTA6 Online only. Off-topic posts and discussions will be removed.\n\n**No political or controversial real-life persons posts/discussions are allowed at all.**\n\n**No discussions of stocks, betting, or crypto**\n\n**No questions about what console to get, what TV/monitor to get, or any other related tech questions.**",
+          "scope": "all"
+        },
+        {
+          "title": "Be Respectful",
+          "description": "Absolutely no hate-speech, racism, or homophobic/transphobic comments are allowed. This is a zero tolerance policy that will be strictly enforced and the user banned.\nIn addition, disrespectful comments to, or harassing of other users here will result in a ban from this community. This includes displaying anyone's personal or confidential information or stalking.",
+          "scope": "all"
+        },
+        {
+          "title": "Spoilers",
+          "description": "All posts containing spoilers MUST have the spoiler tag applied to it and the post title must also be spoiler free. Intentionally posting spoilers in comments will result in the user being muted or banned.",
+          "scope": "all"
+        },
+        {
+          "title": "Off-Site Links and Self Promotion",
+          "description": "All off-site links are blocked, with a few exceptions listed below:\n\n[GTA Forums](https://gtaforums.com/)\n\n[GTA Wiki](https://gta.wiki/)\n\n[GTA DB](https://gtadb.org/)\n\n[GTABase](https://www.gtabase.com/)\n\n[State of Leonida Interactive Map](https://map.stateofleonida.net/)\n\nNo self promotion is allowed unless already approved by the moderators. \n\nSpamming your Social Media, or anything else on the sub, is not allowed and will result in a ban.",
+          "scope": "all"
+        },
+        {
+          "title": "Memes, Fan Made Content, and Art",
+          "description": "Low-effort posts will be removed at the moderators discretion. This will include memes with repetitive meme templates, repetitive topics, and low-quality images. \n\nFan made content and memes will be allowed everyday, but repetitive or low-effort submissions will be removed.\n\nNo NSFW fan art is allowed.",
+          "scope": "all"
+        },
+        {
+          "title": "No AI generated, fake, or misleading content",
+          "description": "No AI generated, fake, or misleading content is allowed and will be removed at the moderators discretion.\n\nPlease click **[here](https://www.reddit.com/r/GTA6/about/rules)** for a full list of our rules.",
+          "scope": "all"
+        },
+        {
+          "title": "Frequently Asked Questions (FAQs)",
+          "description": "Questions that are repetitive or frequently asked will be removed. \n\nPlease use our **[Weekly FAQ Thread](https://www.reddit.com/r/GTA6/comments/1pvh2ju/wishlist_and_faq_thread/)**\n\nYou can also check the **[GTA Wiki](https://gta.wiki/)**\n\nOr the **[GTA Forums](https://gtaforums.com/forum/396-gta-vi/)**",
+          "scope": "all"
+        },
+        {
+          "title": "Moderator Discretion/Low-effort",
+          "description": "The moderators retain the right to remove any posts or comments we feel are not suitable for this subreddit or are determined to be low-effort or low quality.\n\nThese include but are not limited to:\n\nSubmissions only containing a link\n\nSubmissions with little to no substance in the post body\n\nTrolling\n\nShitposting",
+          "scope": "all"
+        },
+        {
+          "title": "Leaks and Leaked Footage",
+          "description": "No footage or screenshots of any leaked footage (real or fake) are allowed for copyright reasons.\n\nPosting video or pictures, links to any leaks, or information on where to find leaked footage or files will result in a ban from this subreddit. \n\nSoliciting, asking for links or information to leaked footage is prohibited as well and could lead to being banned.\n\nAny and all discussions involving story or plotline leaks will also be removed and will lead to the poster being banned. ",
+          "scope": "all"
+        },
+        {
+          "title": "NSFW content must be ingame and tagged.",
+          "description": "All NSFW content MUST be restricted to only in-game content and properly tagged as NSFW. No provocative fanart or cosplay/IRL images allowed. No \"gooning\". \n\nAny post that is sexually explicit and/or can be classed as \"hardcore\" will be removed and a ban may be issued. visible in-game Genitalia IS allowed in a non-sexual sense. \n\nEssentially, no genitalia should be visible in any otherwise \"saucy\" scenes posted, and any scenes with genitalia showing should be otherwise non-sexual. \n",
+          "scope": "all"
+        },
+        {
+          "title": "Wishlist Posts",
+          "description": "Posts about features, locations, vehicles, etc...you'd like to see in the game should be posted in our **[Wishlist Thread](https://www.reddit.com/r/GTA6/comments/1pvh2ju/wishlist_and_faq_thread/)**",
+          "scope": "all"
+        },
+        {
+          "title": "No Begging, Soliciting, or Piracy",
+          "description": "No asking for people to buy you the game, a console, or anything else. \n\nNo soliciting to sell people the game, consoles, or anything else.\n\nAbsolutely NO posts or discussions about pirating the game. **This will lead to a permanent ban from this sub.**",
+          "scope": "all"
+        }
+      ],
+      "about": {
+        "title": "Grand Theft Auto VI ",
+        "description": "###### [Explore Vice City and Beyond](https://www.rockstargames.com/VI) [Trailer 1](https://youtu.be/QdBZY2fkU-0?si=N9yo-X_I65UXyjxq) [Trailer 2](https://youtu.be/VQRLujxTm3c?si=JSPHSTEjWCM6W-1Z)\n\n[VI](/r/GTA6#vi)\n\n# Grand Theft Auto VI\n\n> **The #1 Reddit Community for the upcoming Grand Theft Auto VI.** Vice City, Leonida's neon-soaked metropolis, awaits!\n\n> *Not affiliated with Rockstar Games.*  \n\n#Posting Requirements\n\n> **A Reddit account at least 1 day old.**  \n\n> **A verified email address.**  \n\n> **At least 5 Post karma to post.** (Post and Comment karma are different)  \n\n> **You can only make 2 posts in 24 hours. Removed and deleted posts do count towards the limit.**  \n\n\n\n#GTA 6 Resources\n\n###[Partnered Discord](https://discord.gg/gta-vi)\n\n####[Appeal a Discord Ban](https://dyno.gg/form/25aa6eff)\n\n####[Official GTA 6 Website](https://www.rockstargames.com/VI)\n\n####[Rockstar Newswire](https://www.rockstargames.com/newswire)\n\n---\n\n# Subreddit Rules\n\n-\n\n#####[1.](#rule) Relevance/Off-Topic/No Political Discussions\n* All submissions and discussions should be about GTA6 or GTA6 Online only. Off-topic posts and discussions will be removed.\n* **No political or controversial real-life persons discussions or posts are allowed at all.**\n\n#####[2.](#rule) Be Respectful\n* Absolutely no hate-speech, racism, or homophobic/transphobic comments are allowed. This is a zero tolerance policy that will be strictly enforced and the user banned. In addition, disrespectful comments to, or harassing of other users here will result in a ban from this community. This includes displaying anyone's personal or confidential information or stalking. \n\n#####[3.](#rule) Spoilers\n* All posts containing spoilers MUST have the spoiler tag applied to it and the post title must also be spoiler free. Intentionally posting spoilers in comments will result in the user being muted or banned. \n\n#####[4.](#rule) Off-Site Links and Self Promotion \n* All off-site links are blocked, with a few exceptions listed below:\n    * [GTA Forums](https://gtaforums.com/)\n    * [GTA Wiki](https://gta.fandom.com/wiki/Main_Page)\n* No self promotion is allowed unless already approved by the moderators.\n* Spamming your Social Media, or anything else on the sub, is not allowed and will result in a ban.\n\n#####[5.](#rule) Memes, Fan Made Content, and Art\n* Low-effort posts will be removed at the moderators discretion. This will include memes with repetitive meme templates, repetitive topics, and low-quality images.\n* Fan made content and memes will be allowed everyday, but repetitive or low-effort submissions will be removed.\n* No NSFW fan art is allowed.\n\n#####[6.](#rule) No AI generated fake and misleading content \n* Fake \"leaks\" and misleading AI generated content will be removed, but quality AI generated fanart is encouraged. AI generated content will be removed at the moderators discretion\n\n#####[7.](#rule) Frequently Asked Questions (FAQs)\n* Questions that are repetitive or frequently asked will be removed.\n* Please use our [Weekly FAQ Thread](https://www.reddit.com/r/GTA6/comments/1kfb1u1/weekly_gta6_faq_and_wishlist_post/)\n* You can also check the [GTA Wiki](https://gta.fandom.com/wiki/Main_Page)\n* Or the [GTA Forums](https://gtaforums.com/)\n\n#####[8.](#rule) Moderator Discretion/Low-effort\n* The moderators retain the right to remove any posts or comments we feel are not suitable for this subreddit or are determined to be low-effort or low quality.\n* These include but are not limited to:\n* Submissions only containing a link\n* Submissions with little to no substance in the post body\n* Trolling\n\n#####[9.](#rule) Leaks and Leaked Footage\n* No footage or screenshots of any leaked footage (real or fake) are allowed for copyright reasons.\n* Posting video or pictures, as well as links to any leaks will result in a ban from this subreddit.\n* Soliciting or asking for links to leaked footage is prohibited as well and could lead to being banned.\n\n#####[10.](#rule) Wishlist Posts\n* Posts about features, locations, vehicles, etc...you'd like to see in the game should be posted in our [Wishlist Thread](https://www.reddit.com/r/GTA6/comments/1kfb1u1/weekly_gta6_faq_and_wishlist_post/)\n\n\n####[View full rules breakdown](https://www.reddit.com/r/GTA6/about/rules)",
+        "public_description": "The #1 Reddit Community for Grand Theft Auto VI. Vice City, Leonida's neon-soaked metropolis, awaits! Not affiliated with Rockstar Games.",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": "Read the rules before posting, seriously. Make sure your post is detailed and incites DISCUSSION. No shitposting of any kind. Posts must be in ENGLISH. No personal or confidential information, including anything related to GTA or Rockstar developers."
+      }
+    },
+    {
+      "subreddit": "GTAmemes",
+      "rulesUrl": "https://old.reddit.com/r/GTAmemes/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/GTAmemes/about/rules.json",
+      "rules": [
+        {
+          "title": "No Toxicity or Bitgotry",
+          "description": "Toxic and bigoted content will not be tolerated. This includes racism, sexism, homophobia, religious hatred, and any other identity-based bigotry. Posting such content will result in your submission being removed and may result in a ban.",
+          "scope": "all"
+        },
+        {
+          "title": "No Stolen Content",
+          "description": "All posted memes must be found or created by the OP. Posting another user's meme as your own is considered stealing and is not allowed.\n\nContent proven to be stolen will be removed and repeat offenses may lead to a ban.",
+          "scope": "all"
+        },
+        {
+          "title": "No Spam",
+          "description": "Spam is defined as any non-GTA-meme content, suspicious and/or irrelevant links, or the same post/comment being made repeatedly.\n\nSubmissions found to be spam will be removed and repeat offenses may lead to a ban.",
+          "scope": "all"
+        },
+        {
+          "title": "NSFW Memes Must be Tagged as NSFW",
+          "description": "All NSFW memes must have the NSFW tag.",
+          "scope": "all"
+        },
+        {
+          "title": "No Real Life Crime, Sexual Content, Injury, or Death",
+          "description": "Depiction of crime, sexual content, injury, or death in real-life is not allowed",
+          "scope": "all"
+        }
+      ],
+      "about": {
+        "title": "GTA Memes",
+        "description": "Welcome to GTA Memes.  Post some memes!  \n\n#The Rules  \n1.  Your post must contain a meme.  Text posting is enabled for meta posts, questions, etc.  For the most part, posts that are not memes will be removed.  \n\n2.  Only *quality* shitposting is allowed.  Low effort bullshit may be removed.  \n\n#Related Subreddits  \n/r/gtaonline  \n/r/GrandTheftAuto  \n/r/GrandTheftAutoVMemes   \n",
+        "public_description": "The ultimate subreddit for GTA memes, shitposts, and GTA VI chaos.",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": ""
+      }
+    },
+    {
+      "subreddit": "videogames",
+      "rulesUrl": "https://old.reddit.com/r/videogames/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/videogames/about/rules.json",
+      "rules": [
+        {
+          "title": "Follow Reddit’s Sitewide Rules",
+          "description": "All users must adhere to Reddit's Content Policy.\n\n\n",
+          "scope": "all"
+        },
+        {
+          "title": "Seriously Offensive Language & Harassment",
+          "description": "We maintain a **zero-tolerance** policy for toxic behavior. \n\nThis includes, but is not limited to: racism, sexism, hate speech, targeted harassment, stalking across threads/subreddits, attacking sexuality, homophobia/transphobia and personal attacks (including attacks on a user’s family or personal life). \n\nUsers violating this standard will be subject to a permanent ban at moderator discretion.",
+          "scope": "all"
+        },
+        {
+          "title": "Non-gaming Related Content",
+          "description": "All posts must be related to video games.\n\nThis includes, but is not limited to: pictures, meme templates, questions, videos, and relevant discussions.\n\nPosts not related to video games or gaming will be removed.",
+          "scope": "all"
+        },
+        {
+          "title": "Low Quality Content",
+          "description": "Posts that are low quality will be removed at the discretion of the moderation team. \n\nLow-quality posts that will be removed:\n\n1. Personal lists like: \"top games\", \"about me\", \"favorite games\"\n2. Vague questions and **game suggestions**\n3. Posts with vague titles\n4. Other repetitive posts or memes\n5. AI generated content\n6. Surveys, kickstarts, petitions, or spam\n7. Research solicitation/interviews/data mining",
+          "scope": "link"
+        },
+        {
+          "title": "Hacks, Cheats, Piracy-related Content",
+          "description": "Posts or comments that promote, request, provide, or facilitate video game piracy, cheats and hacks **are not allowed**.\n\nDiscussions about emulators and modifications to games that do not affect other players’ experiences (in the case of single player games) may be allowed.",
+          "scope": "all"
+        },
+        {
+          "title": "NSFW Content",
+          "description": "We do not allow NSFW posts, imagery, suggestions, or commentary in our subreddit. \n\nAs a SFW community subreddit, all content deemed NSFW will be automatically removed.",
+          "scope": "all"
+        },
+        {
+          "title": "Spoiler Content",
+          "description": "All video game spoilers in posts and comments must be marked as such.\n\nFormatting:\n`>!SPOILER GOES HERE!<`\n\nSpoilers are not allowed in submission titles.",
+          "scope": "all"
+        },
+        {
+          "title": "Self Promotions",
+          "description": "Self-promotion is only allowed in the Weekly Showcase megathread.\n\nSelf-promotion refers to:\n- sharing your own content (videos, streams, articles, or projects)\n- Steam links to personal creations/games\n- spamming links to other peoples' games\n\nBuying, selling, trading, or promoting products—including game keys, accounts, merchandise, or other services—is **not allowed** anywhere on the subreddit.",
+          "scope": "all"
+        },
+        {
+          "title": "Buying, Selling, or Trading",
+          "description": "Posts or comments attempting to buy, sell, trade, give away, or advertise items or services are not allowed. This includes both physical items and digital goods such as video game codes, keys, or accounts. \n\nr/videogames is a place for discussion about video games, not a marketplace.",
+          "scope": "all"
+        },
+        {
+          "title": "Non-English Content",
+          "description": "Any post you make should be written in English.\n\nYou are still welcome to comment non-English comments, but keep posts in English (use a translator if you must).",
+          "scope": "all"
+        },
+        {
+          "title": "Redirect to megathread",
+          "description": "This includes controversial posts, complaints specific to a single game, posts that are too short to generate meaningful discussion, repetitive topics with the same takeaways, and similar low-effort content. We redirect these kinds of comments to the megathread, where these topics can be more easily discussed without overpopulating the general feed with them.\n",
+          "scope": "link"
+        }
+      ],
+      "about": {
+        "title": "Video Games",
+        "description": "A subreddit for discussion of (almost) anything related to videogames! Community content, guides, discussions, news, and more.\n\nPLEASE FOLLOW ALL SUB RULES.\n\nIf you have any issues, please use the Mod Message to contact our team!\n\nNot a fan of video games? This isn't the place for you! Maybe you should try /r/BanVideoGames",
+        "public_description": "Your community for discussion of almost anything related to video games - community content, guides, news, memes, walkthroughs and many more!!.",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": ""
+      }
+    },
+    {
+      "subreddit": "webdev",
+      "rulesUrl": "https://old.reddit.com/r/webdev/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/webdev/about/rules.json",
+      "rules": [
+        {
+          "title": "No vague support questions about WYSIWYG editors or other software.",
+          "description": "No vague product support questions (like \"why is this plugin not working\" or \"how do I set up X\"). For vague product support questions, please use communities relevant to that product for best results. Specific issues that follow rule 6 are allowed.",
+          "scope": "all"
+        },
+        {
+          "title": "No memes, screenshots, and jokes",
+          "description": "Do not post memes, screenshots of bad design, or jokes. Check out /r/ProgrammerHumor/ for this type of content.",
+          "scope": "all"
+        },
+        {
+          "title": "No self-promotion",
+          "description": "Read and follow reddiquette; no excessive self-promotion. Please refer to the Reddit 9:1 rule when considering posting self promoting materials.",
+          "scope": "all"
+        },
+        {
+          "title": "No commercial promotions/solicitations",
+          "description": "We do not allow any commercial promotion or solicitation. Violations can result in a ban.",
+          "scope": "all"
+        },
+        {
+          "title": "No soliciting feedback not on Saturday",
+          "description": "Sharing your project, portfolio, or any other content that you want to either show off or request feedback on is limited to Showoff Saturday. If you post such content on any other day, it will be removed. \n\nPosts must be tagged with the correct flair. Commercial promotion still falls under rule #4 and is not allowed. Think project, not product. Focus on the technical details of your project and how it's relevant to the audience of the subreddit.",
+          "scope": "all"
+        },
+        {
+          "title": "Assistance Questions Guidelines",
+          "description": "If you are asking for assistance on a problem, you are required to provide \n\n* Context of the problem\n* Research you have completed prior to requesting assistance\n* Problem you are attempting to solve with high specificity\n\nQuestions in violation of this rule will be removed or locked.",
+          "scope": "all"
+        },
+        {
+          "title": "Career/Getting Started Questions",
+          "description": "Open-ended/general \"how do I get started in web dev\" and general Career related posts are only allowed within the pinned monthly career thread. The answer to many of these questions can also be found in the sub FAQ,  or in /r/learnprogramming/ and /r/cscareerquestions/.\n\nHighly specific career/getting started assistance questions are allowed so long as they follow the required assistance post guidelines.",
+          "scope": "all"
+        },
+        {
+          "title": "No low-effort posts/comments",
+          "description": "Low-effort posts/comments will be removed. This includes title-only posts, easily searchable questions, vague/open-ended discussion prompts, LLM generated posts or comments, and posts/comments that do not provide enough context for meaningful replies or discussion.",
+          "scope": "all"
+        }
+      ],
+      "about": {
+        "title": "webdev: reddit for web developers",
+        "description": "* Beginner question? [Try the FAQ first!](/r/webdev/wiki/faq) or the [WebDev Resources Post](/r/webdev/comments/1v7en8/webdev_resources/) then post in the **Beginner Questions** thread\n* [Help fill out the wiki](/r/webdev/wiki/index)\n\n# Posting Guidelines\n\n1. No vague product support questions (like \"why is this plugin not working\" or \"how do I set up X\"). For vague product support questions, please use communities relevant to that product for best results. Specific issues that follow rule 6 are allowed.\n\n2. Do not post memes, screenshots of bad design, or jokes. Check out /r/ProgrammerHumor/ for this type of content.\n\n3. Read and follow [reddiquette](http://www.reddit.com/wiki/reddiquette); no excessive self-promotion. Please refer to the Reddit 9:1 rule when considering posting self promoting materials.\n\n4. We do not allow any commercial promotion or solicitation. Violations can result in a ban.\n\n5. Sharing your project, portfolio, or any other content that you want to either show off or request feedback on is limited to Showoff Saturday. If you post such content on any other day, it will be removed.\n\n6. If you are asking for assistance on a problem, you are required to provide \n   * Context of the problem\n   * Research you have completed prior to requesting assistance\n   * Problem you are attempting to solve with high specificity\n\n7. General open ended career and getting started posts are only allowed in the pinned monthly getting started/careers thread. Specific assistance questions are allowed so long as they follow the required assistance post guidelines. \n\n   Questions in violation of this rule will be removed or locked.\n\n#Related Subreddits\n\n* /r/web_design\n* /r/WebDevBuddies\n* /r/devops\n* /r/javascript\n* /r/learnjavascript (any JavaScript questions)\n* /r/webhosting (web hosting questions)\n* /r/WebdevTutorials\n* /r/forhire (job offers or requests)\n* /r/freelance (discussion related to freelancing)\n* /r/programmerhumor - (post your memes here instead)\n* /r/cryptodevs\n\n#Discords\n\n* [/r/webdev (official)](https://discord.gg/H9Jkc7p)",
+        "public_description": "A community dedicated to all things web development: both front-end and back-end. For more design-related questions, try /r/web_design.",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": "* Abide by [reddiquette](http://www.reddit.com/wiki/reddiquette) and don't [self-promote](http://www.reddit.com/wiki/selfpromotion).\n\n1. Flair your posts accordingly. If your post is a question and it does not have a flair, it will be removed.\n\n2. No questions regarding WYSIWYG (drag and drop) web editors like Wix, please visit their respective communities to ask questions\n\n3. Do not post memes, screenshots of bad design, or jokes.\n\n4. Read and follow [reddiquette](http://www.reddit.com/wiki/reddiquette); no excessive [self-promotion](self-promotion) \n\n5. No commercial promotion or solicitation\n\n6. Sharing your project, portfolio, or any other content that you want to either show off or request feedback on is limited to **Showoff Saturday**. If you post such content on any other day, it will be removed."
+      }
+    },
+    {
+      "subreddit": "astrojs",
+      "rulesUrl": "https://old.reddit.com/r/astrojs/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/astrojs/about/rules.json",
+      "rules": [
+        {
+          "title": "Keep It Astro-Related",
+          "description": "Don't post general web dev resources that aren't somehow related to Astro.",
+          "scope": "all"
+        },
+        {
+          "title": "Be Kind & Courteous",
+          "description": "This community is here to help support and stay updated those building on Astro. Please be kind in how you interact with community members. Rude or inappropriate comments will be removed, and authors will be warned or banned.",
+          "scope": "all"
+        },
+        {
+          "title": "No Spamming ",
+          "description": "Sharing helpful resources is welcome, but don't spam or constantly self-promote. We'll take action on accounts that are here just to advertise themselves.",
+          "scope": "all"
+        }
+      ],
+      "about": {
+        "title": "astrojs",
+        "description": "Check the [Wiki](https://www.reddit.com/r/astrojs/wiki/index) for more information.\n\nAstro is a new kind of static site builder that delivers lightning-fast performance with a modern developer experience\n- Build your site using React, Svelte, Vue, Preact, web components, or just plain ol’ HTML + JavaScript.\n- 100% Static HTML, No JS: Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.\n- On-Demand Components: Need some JS? Astro can automatically hydrate interactive components when they become visible",
+        "public_description": "Astro is a web framework for building fast, content-driven websites. It supports React, Svelte, Vue, Tailwind, and more.\n\nAstro ranks #1 in developer satisfaction on the 2025 state of js survey. \n\nFeel free to share resources, tools, project showcases, or ask for troubleshooting help with your builds.\n\nNote: This subreddit is run by the community, not the official Astro team. Find the official subreddit at r/withastro.",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": ""
+      }
+    },
+    {
+      "subreddit": "belgium",
+      "rulesUrl": "https://old.reddit.com/r/belgium/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/belgium/about/rules.json",
+      "rules": [
+        {
+          "title": "No flaming, insults or personal attacks.",
+          "description": "Please try to bring your point across without insulting other users. You are free to disagree with their opinions as much as you want, but we draw the line at shouting matches.",
+          "scope": "all"
+        },
+        {
+          "title": "No discimination, racism, or bigotry.",
+          "description": "Racism or pejorative generalizations of humans belonging to sexual, ethnic and/or religious groups are not allowed. You are allowed to criticize religions and cultures unless it veers over into blatant xenophobia, conspiracy theory, homophobia or racism (i.e. Protocols of the Elders of Zion-esque stuff).",
+          "scope": "all"
+        },
+        {
+          "title": "Do not editorialise articles or article titles.",
+          "description": "Post the full article as a link, partial screenshots are not allowed.\n\nDo not editorialize titles unless the title itself is a clickbait title. Preferred type of change in that case is something along the lines of \"Person X\" talk about \"subject Y\". (If you want to summarize articles, feel free to do so in the comments).",
+          "scope": "all"
+        },
+        {
+          "title": "No agenda pushing.",
+          "description": "r/belgium does not want to serve as an outlet for propaganda. If we feel you are not contributing to r/belgium \"in good faith\" but solely to push an agenda, we will remove you from the community. This applies to new accounts especially.",
+          "scope": "all"
+        },
+        {
+          "title": "Do not advocate serving Belgian beer in beer glasses that weren't specifically designed for them.",
+          "description": "Do not advocate serving Belgian beers in beer glasses that weren't specifically designed for those beers. If the beer has no specific glass, the rule can't be violated, but it's probably not worth drinking anyway.",
+          "scope": "all"
+        },
+        {
+          "title": "Respect [Serious] threads.",
+          "description": "Threads with a title that start with '[serious]' are posted by users that want to have a serious discussion without jokes etc. derailing the debate. We will remove such comments.",
+          "scope": "all"
+        },
+        {
+          "title": "Do not post content prohibited by Belgian law.",
+          "description": "For liability reasons, don't ask or give advice on stuff that is illegal under Belgian law. [We also adhere the Belgian copyright laws pertaining paywalled/off-line articles.](https://www.reddit.com/r/belgium/comments/8oza5f/announcement_new_rule_pertaining_to_paywalled_or/)",
+          "scope": "all"
+        },
+        {
+          "title": "Only post content relevant to Belgium or Belgians.",
+          "description": "",
+          "scope": "link"
+        },
+        {
+          "title": "We adhere the Belgian copyright laws pertaining paywalled/off-line articles.",
+          "description": "We adhere the Belgian copyright laws pertaining paywalled/off-line articles.",
+          "scope": "link"
+        },
+        {
+          "title": "This is a family friendly subreddit, no NSFW allowed.",
+          "description": "We do not allow NSFW content on r/Belgium. This means no sexual content or advertisment, but also no gore or graphically disturbing images or videos.\n\nDiscussing NSFW subjects is allowed in text form, aslong as it does not break any other rules.",
+          "scope": "all"
+        },
+        {
+          "title": "No duplicate threads.",
+          "description": "To avoid clutter on the front page and to keep discussions centralized to one thread, we will remove duplicate threads or threads that are on the same topic. Aswell as reposts, posts that have been posted only recently.",
+          "scope": "all"
+        },
+        {
+          "title": "Personal questions belong in the FAQ thread.",
+          "description": "To avoid clutter on the front page and frustration with the regular users, we ask you to post FAQ (questions about dating, packages, housing, job, student life, ..) in the daily slowchat thread. You can find the definition of a FAQ in the wiki.",
+          "scope": "all"
+        },
+        {
+          "title": "No surveys.",
+          "description": "We admire any of your academic pursuits but don't allow surveys nonetheless,   \nto prevent the non-stop influx it would soon become.",
+          "scope": "link"
+        }
+      ],
+      "about": {
+        "title": "/r/belgium",
+        "description": "A subreddit for everything about **Belgium**!\n\n1. No flaming, insults or personal attacks.\n\n2. No racism or bigotry.\n\n3. Do not editorialise titles of articles (see wiki for further clarification).\n\n4. No agenda pushing.\n\n5.  Do not advocate serving Belgian beers in beer glasses that weren't specifically designed for those beers.\n\n6.  Respect [Serious] threads.\n\n7. Don't ask for, or give advice on or advertise stuff that is illegal under Belgian law. \n\n8. Only post content that is relevant specifically to Belgium or Belgians. Maps should specify the context/relevance for Belgium.\n\n9. [We adhere to Belgian copyright laws pertaining paywalled/off-line articles.](https://www.reddit.com/r/belgium/comments/8oza5f/announcement_new_rule_pertaining_to_paywalled_or/)\n\n10. Ask FAQ in the daily slowchat. \n\nTo find out what these rules mean **exactly**, please read more about them in the [wiki](https://www.reddit.com/r/belgium/wiki/index#wiki_rules)\n\n---------------------------------------------------------\n\n\nTourist PSA: before asking a question you might want to check out one of our guides/maps: \n\n- [Tourist in Belgium: Do's and Dont's](http://www.reddit.com/r/belgium/comments/281t53/a_tourists_guide_to_belgium_do_and_donts/)\n- [Tourist in Antwerp] (https://www.reddit.com/r/belgium/comments/5pa1la/tourist_in_belgium_antwerp/)\n- [Tourist in Bruges](http://www.reddit.com/r/belgium/comments/28jzq0/a_guide_to_bruges/) / [5 places to visit](https://www.reddit.com/r/belgium/comments/3bif1c/five_places_to_visit_in_bruges_so_you_can_act/)\n- [Tourist in Ghent](http://www.reddit.com/r/belgium/comments/28mj94/ghent_a_guide/)\n- [Tourist in Leuven](http://www.reddit.com/r/belgium/comments/2agnpe/a_visit_to_leuven/)\n- [Tourist in Oostkamp: 5 places to visit](https://www.reddit.com/r/belgium/comments/3bilon/five_places_to_visit_in_oostkamp_so_you_can_act/)\n- [Tourist in Namur] (https://www.reddit.com/r/namur/comments/67y3p2/tourist_guide_for_namur_everything_you_should/)\n- [Walking tour of Liège]\n(https://www.reddit.com/r/belgium/comments/w8p094/i_made_a_quick_itinerary_tour_on_google_maps_for/)\n\n------\n\nCheck out the [wiki](http://www.reddit.com/r/belgium/wiki/index) for more related subreddits!\n\nLooking to move to Belgium? Check out our [Belgian Survival Guide](https://www.reddit.com/r/belgium/wiki/survivalguide) for what you need to know.\n\n[List of Belgian helplines](https://docs.google.com/spreadsheets/d/109dh66vFTJ6qvOwWsAUtRNpGVBBHP9NCEFDMyb3HHwA/edit?usp=sharing)\n\n-------\n\n**Upcoming or past AMA's and events**\n\n| Date  | Time | Event |\n|:-----------|:-----|:----|\n ~~Wed 23/11/22~~ | ~~16:00 CET~~ | [Cultural exchange with /r/Morocco](https://www.reddit.com/r/belgium/comments/z2r7qq/cultural_exchange_with_rmorocco/) \n| ~~Tue 26/10/2021~~ | ~~14:00 CET~~ | [Sam Ooghe, Humo](https://www.reddit.com/r/belgium/comments/qg2rp7/im_a_former_hln_journalist_and_current_humo/) |\n| ~~Sun 02/05/2021~~ | ~~14:00 CEST~~ | [Cultural exchange with /r/de](https://www.reddit.com/r/belgium/comments/n3509l/wilkommen_cultural_exchange_with_rde/) |\n| ~~Wed 24/03/2021~~ | ~~19:00 CEST~~ | [Covid Vaccination Task Force](https://www.reddit.com/r/belgium/comments/mc3bjx/ama_covid_vaccination_task_force_start_19h00/) |\n| ~~Tue 02/02/2021~~ | ~~15:00 CEST~~ | [Tim Verheyden](https://www.reddit.com/r/belgium/comments/laqo41/ama_with_me_here_vrt_nws_journalist_tim_verheyden/) |\n|  ~~Thu 14/05/2020~~ | ~~9:00 CEST~~ | [Cultural exchange with /r/bih](https://www.reddit.com/r/belgium/comments/gjj687/cultural_exchange_with_rbih/) |\n| ~~Fri 06/12/2019~~ | ~~21:00 CEST~~ | [Cultural exchange with /r/Romania](https://www.reddit.com/r/belgium/comments/e748z1/cultural_exchange_with_rromania/) |\n| ~~Fri 22/11/2019~~ |~~12:30 CEST~~ | [Matthias Dobbelaere-Welvaert ](https://old.reddit.com/r/belgium/comments/dzzr5a/ama_privacy_matthias_dobbelaerewelvaert/)|\n| ~~Tue 20/08/2019~~ | ~~17:00 CEST~~ | [Cultural exchange with /r/Polska](https://www.reddit.com/r/belgium/comments/ct02j8/cultural_exchange_with_rpolska/) |\n| ~~Thu 06/06/2019~~ | ~~18:00 CEST~~ | [WTTAA (Alex Agnew and Andries Beckers](https://www.reddit.com/r/belgium/comments/bxfdy5/ama_wttaa_welcome_to_the_aa_alex_andries/)\n| ~~Thu 11/04/2019~~ | ~~20:00 CEST~~ | [Xander De Rycke](https://old.reddit.com/r/belgium/comments/bbzbgs/my_name_is_xander_de_rycke_this_is_ama_the/)\n| ~~Tue 06/02/2018~~ | ~~all day~~ | Cultural exchange with /r/ukraine\n| ~~Wed 09/08/2017~~ | ~~14:00 CEST~~ | Cultural exchange with /r/Austin\n| ~~Mon 31/07/2017~~ | ~~20:00 CEST~~ | [Maurits Vande Reyde (Jong VLD)](https://www.reddit.com/r/belgium/comments/6qj829/hi_there_im_maurits_president_jong_vld_looking/)\n|  ~~Wed 02/11/2016~~ | ~~all day~~ | [Cultural exchange with /r/canada](https://www.reddit.com/r/belgium/comments/5aoz8a/cultural_exchange_with_rcanada/) |\n| ~~Sat 27/08/2016~~ | ~~0:00 CEST~~ | [Cultural exchange with /r/iranian](https://www.reddit.com/r/belgium/comments/4zwqkh/welcome_to_the_iranian_exchange/) |\n| ~~Wed 24/08/2016~~ | ~~16:00 CEST~~ | [Frank De Winne](https://www.reddit.com/r/belgium/comments/4zb9zb/i_am_frank_de_winne_ama/)\n| ~~Tue 29/03/2016~~ | ~~14:00 CEST~~ | [Johan Braeckman](https://www.reddit.com/r/belgium/comments/4ceovn/i_am_johan_braeckman_ama/)\n| ~~Fri 25/03/2016~~ | ~~10:00 CET and onwards~~ | [Cultural exchange with /r/mexico](https://www.reddit.com/r/belgium/comments/4bvspt/cultural_exchange_with_rmexico/) \n| ~~Fri 18/03/2016~~ | ~~14h00 CET~~ | [Joost Vandecasteele](https://www.reddit.com/r/belgium/comments/4axd3h/i_am_joost_vandecasteele_ama/)\n| ~~Fri 11/03/2016~~ | ~~all day~~ | [Cultural exchange with /r/india](https://www.reddit.com/r/belgium/comments/49xle4/cultural_exchange_with_rindia/) \n| ~~Wed 02/03/16~~ | ~~19h00 CET~~| [Sarah Van Liefferinge](https://www.reddit.com/r/belgium/comments/48luda/hey_this_is_sarah_van_liefferinge_ama_pirate_style/) |\n| ~~Wed 03/02/16~~ | ~~20h00 CET~~ | [HotMarijke](https://www.reddit.com/r/belgium/comments/4404dt/hi_im_hotmarijke_ama/) |\n| ~~Mo 01/02/16~~ | ~~19h00 CET~~ | [Frank Camberlain](https://www.reddit.com/r/belgium/comments/43ovq7/i_am_frank_camberlain_ask_me_anything/) |\n| ~~Thu 28/01/16~~ | ~~14h00 CET~~ | [Carl Devos](https://www.reddit.com/r/belgium/comments/42zd38/ama_carl_devos/) |\n| ~~Wed 27/01/16~~ | ~~18h50 CET~~ | [Chimiel82](https://www.reddit.com/r/belgium/comments/42ynk7/second_attempt_uchimiel82_here_ama/)\n| ~~Mon 25/01/16~~ | ~~20h00 CET~~ | [Xander De Rycke](https://www.reddit.com/r/belgium/comments/42kv45/my_name_is_xander_de_rycke_ama/) |\n| ~~Wed 20/01/16~~  | ~~20h30 CET~~  | [Lieven Scheire](https://www.reddit.com/r/belgium/comments/41vxrm/my_name_is_lieven_scheire_ama/)   |\n| ~~Tue 01/12/15~~  | ~~14h00 CET~~  | [Kristof Calvo](https://www.reddit.com/r/belgium/comments/3uzr1q/hi_this_is_kristof_calvo_federal_groenecolo/)   |\n\nInterested in doing an AMA? [Contact us!](https://www.reddit.com/message/compose?to=%2Fr%2Fbelgium)",
+        "public_description": "A subreddit for everything about Belgium! This sub serves to discuss Belgian related news, topics, memes, …\n\n\nUse the FAQ thread for questions about packages, public transport, student questions, job related questions, ...\n\n\nCheck out the discord: https://discord.gg/w9jEFSdV3C",
+        "subreddit_type": "public",
+        "submission_type": "any",
+        "submit_text": "Note: Be aware that sources like De Standaard, De Tijd and De Morgen often paywall their articles. Please follow our guidelines to avoid a removal of your post\n\nhttps://old.reddit.com/r/belgium/comments/8oza5f/announcement_new_rule_pertaining_to_paywalled_or/"
+      }
+    },
+    {
+      "subreddit": "InternetIsBeautiful",
+      "rulesUrl": "https://old.reddit.com/r/InternetIsBeautiful/about/rules/",
+      "rulesApi": "https://old.reddit.com/r/InternetIsBeautiful/about/rules.json",
+      "rules": [
+        {
+          "title": "No Aggregations or Collections",
+          "description": "Websites that are aggregates for other content are not allowed.",
+          "scope": "link"
+        },
+        {
+          "title": "Not Unique",
+          "description": "The submission is not unique enough. Not unique submissions could be websites everyone on the internet already knows about, websites that do very similar things to previous submissions, websites that are very basic (e.g., a website with a timer or a website to take notes), or submissions that have been recently posted on this subreddit.",
+          "scope": "link"
+        },
+        {
+          "title": "No Webgames",
+          "description": "webgames are not allowed. This includes quizzes, puzzles, etc.",
+          "scope": "link"
+        },
+        {
+          "title": "No Articles, Videos or Images",
+          "description": "Articles, videos and static or animated images are not allowed, this includes collections (such as galleries). Blog posts, LinkedIn posts or similar are also not allowed.",
+          "scope": "link"
+        },
+        {
+          "title": "No Stores or Demos",
+          "description": "We do not allow any sites that are online stores, sites that serve only to sell a specific product, or paid services. Free demos or freemium tiered services where the full version or key functionality requires payment are also not allowed.",
+          "scope": "all"
+        },
+        {
+          "title": "No sites that require personal information",
+          "description": "Websites that require an email address, name, or any other personal information to fully experience the website are not allowed. This includes Facebook, Google, or any other account. Also included are sites that simply serve as waitlists or newsletter sign ups, and so on. Additionally, this rule also extends to websites that require a webcam in order to function.",
+          "scope": "link"
+        },
+        {
+          "title": "No Extensions or Downloads",
+          "description": "Extensions, software (mobile or desktop) or other content which requires being downloaded before being used are not allowed.",
+          "scope": "link"
+        },
+        {
+          "title": "Hug of Death (╯°□°)╯︵ ┻━┻",
+          "description": "Website is slow or unresponsive. Reddit has hugged it to death and the site needs a timeout.",
+          "scope": "link"
+        },
+        {
+          "title": "No Politics",
+          "description": "No political posts please!",
+          "scope": "all"
+        },
+        {
+          "title": "AI-Generated Content",
+          "description": "To prioritize human ingenuity and effort, submissions are not allowed if their primary content is produced by AI, or if AI is used to drive functionality (especially for tasks that do not inherently require AI).",
+          "scope": "all"
+        },
+        {
+          "title": "No accounts designed for self-promotion",
+          "description": "This sub follows the 90/10 rule for self-promotion. If almost all your recent activity on Reddit is advertising something you made, you will not be allowed to post here. 90% of your recent participation on Reddit should have nothing to do with a site you own or operate.",
+          "scope": "all"
+        },
+        {
+          "title": "No Business Tools",
+          "description": "Posts featuring tools designed for launching products, job boards, SEO optimization, or any other tool aimed at businesses are not allowed.",
+          "scope": "link"
+        },
+        {
+          "title": "Civility",
+          "description": "We enforce a standard of common decency and civility here. Personal attacks, bigotry, fighting words and otherwise shitty behavior will be removed and may result in a ban.",
+          "scope": "comment"
+        }
+      ],
+      "about": {
+        "title": "10/10 would bookmark again",
+        "description": "[**New to reddit? Click here!**](/wiki/reddit_101)  \n  \n**What to post:**\n\n* Single purpose websites.\n* Top-level domains.\n* Web Tools.\n* Minimal or beautifully designed websites.\n* Awesome websites that offer a unique service.\n\n_____\n\n**Rules:**\n\n* **Aggregators/Collections** - Websites that are aggregates for other content are not allowed. \n* **Sites That Are Not Unique** - Not unique submissions could be websites everyone on the internet already knows about, websites that do very similar things to previous submissions, websites that are very basic (e.g., a website with a timer or a website to take notes), or submissions that have been recently posted on this subreddit. \n* **Webgames** - Webgames are not allowed. This includes quizzes, puzzles, etc.\n* **Articles, Videos or Images** - Articles, videos and static or animated images are not allowed, this includes collections (such as galleries). Blog posts, LinkedIn posts or similar are also not allowed.\n* **Online Stores, Paid Services or Demos** - We do not allow any sites that are online stores, sites that serve only to sell a specific product, or paid services. Free demos or freemium tiered services where the full version or key functionality requires payment are also not allowed. \n* **Websites That Require Personal Information** - Websites that require an email address, name, or any other personal information to fully experience the website are not allowed. This includes Facebook, Google, or any other account. Also included are sites that simply serve as waitlists or newsletter sign ups, and so on. Additionally, this rule also extends to websites that require a webcam in order to function.\n* **Extensions or Downloads** - Extensions, software (mobile or desktop), or other content which requires being downloaded before being used are not allowed.\n* **Hug of Death (╯°□°)╯︵ ┻━┻** - Website is slow or unresponsive. Reddit has hugged it to death and the site needs a timeout.\n* **Politics** - Sites that serve a political agenda or otherwise induce drama. (Neutral political submissions *may* be considered).\n* **AI-Generated Content** - To prioritize human ingenuity and effort, submissions are not allowed if their primary content is produced by AI, or if AI is used to drive functionality (especially for tasks that do not inherently require AI).\n* **Accounts Designed for Self-Promotion** - This sub follows the 90/10 rule for self-promotion. If almost all your activity on Reddit is advertising something you made, you will not be allowed to post here. 90% of your participation on Reddit should have nothing to do with a site you own or operate.\n* **Business Tools** - Posts featuring tools designed for launching products, job boards, SEO optimization, or any other tool aimed at businesses are not allowed.\n* **Civility** - We enforce a standard of common decency and civility here. Personal attacks, bigotry, fighting words, and otherwise shitty behavior will be removed and may result in a ban.\n\n*Detailed explanations of our rules can be found [here](/r/InternetIsBeautiful/w/rules)*\n\n______  \n  \n**Moderator Discretion**  \n  \nBeauty is in the eye of the beholder, but we have beheld a lot! This subreddit is highly curated and the moderators frequently must use their discretion and judgement as a team when enforcing our rules.   \n\n___\n\nSomething different? Try **/r/InternetIsUgly**. If you exhibit a similar addictive lust for information as you do for internet, we highly recommend you go give **/r/dataisbeautiful** a sub too.  \n\nIf this subreddit for whatever reason fails to provide the interactivity you need, we also highly recommend a look at **/r/interactivewebsites** for a less diluted dosage of interactivity. \n\nWas your post removed from here? Found a cool site that's not particularly unique or beautiful? Head on over to **/r/InternetIsInteresting**.  \n\nMake it mobile: **/r/AndroidIsBeautiful/**\n\nWaste even more time: **/r/InternetIsUseless**\n\n____  \n  \n######[**/r/AndroidIsBeautiful**](http://www.reddit.com/r/AndroidIsBeautiful)",
+        "public_description": "",
+        "subreddit_type": "public",
+        "submission_type": "link",
+        "submit_text": "**HAVE YOU READ THE RULES? I SURE HOPE SO!**"
+      }
+    }
+  ]
+}
