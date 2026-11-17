@@ -56,6 +56,7 @@
 - [x] **ADS-02**: AdSense Auto ads: Google places the ads, the site has no ad slots of its own, the script loads on the apex only, and the site shows no ads and no placeholder before approval. Source: `REQ-adsense`, `REQ-one-ad-per-screen` (code part). Evidence: PR #17 (87fcd57), PR #20 (25eabbb), PR #23 (aa46e1f); e2e "the AdSense script loads on the apex only".
 - [ ] **ADS-03**: AdSense approves the site after launch. Andrei sets Auto ads to about one ad per screen and publishes the consent message for the EEA, UK and Switzerland. This work is external, in Andrei's AdSense account. Source: `REQ-adsense`, `REQ-one-ad-per-screen`. Status: Andrei confirmed AdSense is in review on 2026-11-16. The two settings remain unverified. Phase 6 records the state on 2026-11-22. The requirement stays open until Google approves.
 - [x] **MEAS-02**: Umami counts Web Vitals and loads async, so a stalled Umami cannot block the site. Evidence: PR #10 (218e281, a8cde0d; 2026-11-15 03:09); e2e "the countdown runs while the Umami script never answers".
+- [ ] **MEAS-03**: The privacy page states what Umami records, the legal basis and the retention, and a button stops Umami for the browser. Evidence: `e2e/privacy.spec.js`.
 - [x] **PERF-01**: nginx sends `CDN-Cache-Control: max-age=300, stale-if-error=86400` for the HTML. Evidence: ba37c03 (PR #20). The Cloudflare rule that uses it is PROMO-01.
 
 ### Launch week
@@ -147,14 +148,16 @@ Each v1 requirement maps to exactly one phase.
 | REV-06 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
 | REV-07 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
 | DEPLOY-01 | Phase 8 | Complete (2026-11-16) |
+| SITE-07 | No phase (contact-form plan, 2026-11-17) | Implemented locally |
+| MEAS-03 | No phase (contact-form plan, 2026-11-17) | Implemented locally |
 
 **Coverage:**
-- v1 requirements: 40 total
+- v1 requirements: 42 total
 - Complete: 35
-- Implemented locally: 0
+- Implemented locally: 2 (SITE-07, MEAS-03)
 - Open: 5 (Phase 6)
 - Mapped to phases: 40
-- Unmapped: 0
+- Unmapped: 2 (`docs/superpowers/plans/2026-11-17-contact-form.md`)
 
 ## Intel traceability
 
