@@ -27,3 +27,19 @@ test('an agent sees the four visitor fields and no hidden or trap field', async 
     expect(property.description).toBeTruthy();
   }
 });
+
+test('the page carries the WebMCP origin-trial token for this site and its subdomains', async ({
+  page,
+}) => {
+  await page.goto('/contact/');
+  const token = await page.locator('meta[http-equiv="origin-trial"]').getAttribute('content');
+  // A token is 1 version byte, a 64-byte signature and a 4-byte length, then its JSON payload.
+  const payload = JSON.parse(Buffer.from(token, 'base64').subarray(69).toString());
+  expect(payload).toMatchObject({
+    origin: 'https://beforegta6.wtf:443',
+    feature: 'WebMCP',
+    isSubdomain: true,
+  });
+  // Fails once the trial ends (2027-03-30): renew the token, or remove it (deploy/README.md § Contact form).
+  expect(payload.expiry * 1000).toBeGreaterThan(Date.now());
+});

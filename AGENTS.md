@@ -43,6 +43,7 @@ Deployment branches remain writable by CI. Never add the source-branch PR requir
   - AdSense is a US service. This goes against the EU-first preference.
   - Andrei asked for AdSense explicitly.
   - Cloudflare Turnstile's `api.js` loads from Cloudflare on `/contact/` only. It cannot be self-hosted (Andrei, 2026-11-17: Formspark with Turnstile is the house contact form).
+- **AI crawlers: ours, block training** (Andrei, 2026-11-18). `public/robots.txt` disallows AI training crawlers by name. Search bots and user-triggered fetchers stay allowed. Cloudflare's managed robots.txt stays off (`deploy/README.md` § AI crawlers).
 - **`.node-version` in place of `mise.toml`** (launch plan, 2026-11-13). `actions/setup-node` reads it, and mise reads it locally, so the repo keeps one pin (as in miklav.com).
 - **`research/` is data.** `research/candidates.json` is the one place to edit cards. It holds every find, and
   `status: "launch"` puts one on the site. `research/images/` keeps the image of every find that is not live.
