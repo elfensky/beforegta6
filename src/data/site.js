@@ -16,6 +16,10 @@ export const OPERATOR = 'Andrei Lavrenov';
 export const FORMSPARK_FORM_ID = '5jgYkgSh4';
 // Infrastructure/api-turnstile-beforegta6.wtf, field Site Key.
 export const TURNSTILE_SITE_KEY = '0x4AAAAAAGF2dQXRFBeXk4qk';
+// WebMCP origin-trial token (public) for beforegta6.wtf and its subdomains, so visitors' Chrome sees the form as a
+// tool. Registered in Andrei's Google account on 2026-11-18. It expires on 2027-03-30 (deploy/README.md § Contact form).
+export const WEBMCP_ORIGIN_TRIAL =
+  'AqMqD7yleKDv6UBSKRLy3fHi2BF80/+37VkXlX27FOLWmEIZvNh52UoC6HMYP3CGycAYeI+KbUc3hNqgcAqkjAkAAABheyJvcmlnaW4iOiJodHRwczovL2JlZm9yZWd0YTYud3RmOjQ0MyIsImZlYXR1cmUiOiJXZWJNQ1AiLCJleHBpcnkiOjE4MDYzNjQ4MDAsImlzU3ViZG9tYWluIjp0cnVlfQ==';
 export const CONTACT_SUBJECTS = [
   'Suggest a card',
   'Fix a card (wrong date or link)',
