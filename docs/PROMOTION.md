@@ -23,6 +23,8 @@ This production-first order supersedes missed dates in the original schedule bel
 Refresh draft counts, dates, examples, and card links against the deployed site before posting.
 Keep the agreed channel limits and stop rules. Recheck current platform and community rules before each post.
 Record each published post's URL, channel, and time so completion can be verified.
+Andrei's [first X post](https://x.com/elfensky/status/2122730891772391740) is published and verified, dated 17 November 2026 at 16:37:37 UTC.
+Further manual publication remains in progress. Current Reddit guidance is in [the rule check](promotion/2026-11-17-reddit-rules-research.md).
 
 Andrei excluded r/SideProject on 2026-11-17. Prioritize relevant gaming communities. r/gaming is closed after its moderator removal.
 GTA and meme communities remain subject to the existing exclusions and their current rules.
@@ -88,7 +90,8 @@ Showcase thread. r/InternetIsBeautiful bans "aggregates" and "collections", whic
 ## Drafts
 
 These original drafts are historical. Use the refreshed copy in `promotion/2026-11-17-posts.md` and the community-specific pack instead.
-Rewrite each draft in your own words before you post. r/webdev removes posts that read as LLM-generated.
+Community AI bans apply to prepared copy. r/webdev prohibits LLM-generated posts and comments.
+Its Showoff Saturday submission must be human-authored; rewording generated copy does not establish compliance.
 
 **1. r/SideProject**
 

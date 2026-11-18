@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.3] - 2026-11-18
+
+- Add a contact page at `/contact/`. It sends messages through Formspark, with a Cloudflare Turnstile check and a honeypot.
+- Make the contact form a declarative WebMCP tool: a browser agent can fill it, and the visitor still clicks Send.
+- Describe Umami in full on the privacy page, name the contact form's recipients, and add an opt-out button.
+- Ship the WebMCP origin-trial token, so visitors' Chrome sees the contact form as a tool until 2027-03-30.
+- Disallow AI training crawlers in `robots.txt`. Search bots and user-triggered fetchers stay allowed.
+- Redirect `/sitemap.xml` to `/sitemap-index.xml`.
+
 ## [0.0.2] - 2026-11-17
 
 - Complete Open Graph and X card metadata, including image descriptions, dimensions, and full entry titles.

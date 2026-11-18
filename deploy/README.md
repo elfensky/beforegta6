@@ -118,11 +118,40 @@ Configured and verified on 2026-11-16:
    release shows within 5 minutes, or at once after a purge of the page URL. Accepted risk (Andrei, 2026-11-15): for
    up to 5 minutes after a release, a cached old page can ask for `/_astro/` files that the new build does not have.
 
+Done on 2026-11-18:
+
+9. **HTTPS and TLS at the edge** (website standard SEC-01, SEO-04). In zone `beforegta6.wtf`, SSL/TLS → Edge
+   Certificates: Always Use HTTPS on, Minimum TLS Version 1.2. The zone covers staging too. Verified on 2026-11-18:
+   `http://beforegta6.wtf/` answers 301 to https, `http://www.beforegta6.wtf/` ends at the https apex in 2 hops, and
+   the § 0 TLS 1.0 and 1.1 probes print `(NONE)`.
+10. **Search consoles** (SEO-12). Google Search Console domain property `sc-domain:beforegta6.wtf` in Andrei's Google
+    account, verified through the domain name provider: Cloudflare Domain Connect added the
+    `google-site-verification` TXT record on the apex. Keep that record. Bing Webmaster Tools: site
+    `https://beforegta6.wtf/`, imported from Google Search Console. Both have `https://beforegta6.wtf/sitemap-index.xml`.
+    Google read it on 2026-11-18 with 0 errors.
+
 Check: four connectors per tunnel in Zero Trust (two `cloudflared` replicas per stack). Then run the post-deploy block
 of the website standard § 0 against the live host.
 
 `deploy/nginx.conf` sends `/timeline/` to `/` with a 301: the old timeline page was live in production until the line
-timeline replaced it (2026-11-15).
+timeline replaced it (2026-11-15). It also sends `/sitemap.xml` to `/sitemap-index.xml` with a 301: Astro's sitemap
+plugin writes only the index name, and tools guess `/sitemap.xml` (Andrei, 2026-11-18).
+
+## AI crawlers
+
+Policy "ours, block training" (Andrei, 2026-11-18; website standard GEO-02). Search bots and user-triggered fetchers,
+such as `ChatGPT-User` and `Claude-User`, may read the site. AI training crawlers and training tokens may not.
+
+- `public/robots.txt` allows everything, disallows the training crawlers and tokens by name, and names the sitemap. A
+  test in `src/__tests__/deploy.test.js` holds that shape.
+- Cloudflare zone `beforegta6.wtf`, AI Crawl Control → Crawlers: training crawlers stay blocked at the firewall.
+- AI Crawl Control → Signals → Bot Preference Sync (Cloudflare's managed robots.txt): **off**. When it is on, Cloudflare
+  puts its own block in front of the repo file, and that block also disallows `ChatGPT-User` and `Claude-User`.
+  Turn it off only after production serves this robots.txt: until then, Cloudflare's block is the only robots.txt rule
+  for `Google-Extended` and `Applebot-Extended`.
+
+Check after each release: the live file equals the repo file (SEO-05).
+`/usr/bin/curl -sS "https://beforegta6.wtf/robots.txt?cb=$RANDOM" | diff - public/robots.txt` prints nothing.
 
 ## Removing or holding a card
 
@@ -158,8 +187,8 @@ its own. Ads appear once AdSense approves the site. Andrei confirmed that review
   adds Google's script only when the host is `beforegta6.wtf`, so staging and local visits never load real ads
   (Andrei, 2026-11-15). The e2e test "the AdSense script loads on the apex only" holds both sides. Never click an ad on
   any host: a click on your own ad is invalid traffic.
-- **CSP.** `deploy/nginx.conf` sends `object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'`,
-  with no `script-src` (Andrei, 2026-11-15). AdSense loads scripts from Google hosts, and Google publishes no host
+- **CSP.** `deploy/nginx.conf` sends `object-src 'none'; base-uri 'none'; form-action 'self' https://submit-form.com
+  https://submitted.formspark.io; frame-ancestors 'none'`, with no `script-src` (Andrei, 2026-11-15). AdSense loads scripts from Google hosts, and Google publishes no host
   allowlist. Google's own policy ([AdSense Help: Content Security Policy](https://support.google.com/adsense/answer/16283098))
   needs a per-request nonce, and that nonce would stop the HTML edge cache (step 8). On this static site it would also
   protect little: nginx would stamp the nonce into every `<script` tag, an injected one too.
@@ -176,3 +205,34 @@ In the AdSense dashboard (Andrei):
 
 After each release, check the browser console on `beforegta6.wtf` for CSP violations, with the ad requests blocked
 (never click an ad). Only the apex loads Google's script, so staging cannot show a violation that the ads cause.
+
+## Contact form
+
+`/contact/` posts to Formspark, with a Cloudflare Turnstile check and a honeypot field `gender` (vault
+`knowledge/web-programming/formspark.md`). `src/data/site.js` holds the public form ID and Turnstile site key. The
+form-action entries in the CSP (above) let the form post, and let Formspark redirect to its error page.
+
+One-time setup (Andrei):
+
+1. Turnstile widget (Managed) for `beforegta6.wtf` and `staging.beforegta6.wtf`. Store the site key and the secret in
+   1Password `Infrastructure/api-turnstile-beforegta6.wtf`.
+2. Formspark form `beforegta6.wtf`: spam protection Turnstile with that secret, custom honeypot `gender`, automatic spam
+   filter on, and both hostnames in the allowed sites.
+3. Put the form ID and the site key in `src/data/site.js`.
+
+Check on staging after each change to the form: one real message arrives, and one with `gender` filled does not.
+The honeypot is `readonly`, so a test sets its value by script.
+
+The form is a declarative WebMCP tool, `send_message` (website standard GEO-08). An agent fills it, and the visitor
+clicks Send: never add `toolautosubmit`. Chrome lists every named field as a tool parameter, `aria-hidden` or not.
+It leaves out only `type="hidden"` and `readonly` fields (Chrome 158, 2026-11-17), so the honeypot is `readonly`.
+An agent that filled it would get the visitor's message held as spam. `e2e/webmcp.spec.js` reads the schema in
+Chromium with `--enable-features=WebMCP`. Visitors' Chrome sees the tool only with an origin-trial token.
+`WEBMCP_ORIGIN_TRIAL` in `src/data/site.js` is the token for `beforegta6.wtf` and its subdomains, so staging has it too.
+Andrei's Google account registered it on 2026-11-18 (Chrome Origin Trials, trial WebMCP, Chrome 149 to 162).
+**It expires on 2027-03-30.** Then renew it in the console, or delete the constant and its meta tag in
+`src/layouts/Base.astro` if Chrome ships WebMCP or ends the trial. After that date `e2e/webmcp.spec.js` fails on
+purpose. GEO-10 does not apply: the form posts to Formspark, and ARD v0.91 names no type for WebMCP tools.
+Sources: [WebMCP declarative API](https://developer.chrome.com/docs/ai/webmcp/declarative-api) ·
+[🔖 2026-11-17](https://linkding.lav.ren/bookmarks?details=2422), [ARD v0.91](https://github.com/ards-project/ard-spec/blob/main/spec/ard.md) ·
+[🔖 2026-11-17](https://linkding.lav.ren/bookmarks?details=2436).

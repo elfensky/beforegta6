@@ -36,6 +36,7 @@
 - [x] **SITE-04**: A push to `develop` deploys staging, and a push to `main` deploys production. The site runs as an nginx image on Docker Swarm with its own Cloudflare Tunnel per stack, and CI pins the image. Evidence: a465b6c, PR #1, PR #6; `.github/workflows/build.yml`; `deploy/README.md`.
 - [x] **SITE-05**: `www.beforegta6.wtf` redirects to the bare domain with a 301. Evidence: PR #7 (1142054, 2026-11-14); `deploy/README.md` step 6.
 - [x] **SITE-06**: The footer names the operator and the takedown contact, and a privacy page exists. Evidence: 83a67c9; e2e "the footer names the operator, the contact and the privacy page".
+- [ ] **SITE-07**: A contact page sends messages through Formspark, with Turnstile and a honeypot. The takedown e-mail stays on the site. The form is a declarative WebMCP tool, and the visitor still clicks Send (website standard GEO-08). Evidence: `e2e/contact.spec.js`, `e2e/webmcp.spec.js`.
 - [x] **A11Y-01**: Pages pass axe, do not scroll sideways at 320 px, have a skip link and read in full without JavaScript. Evidence: f8ec84b; `e2e/site.spec.js` (axe, 320 px, skip link and no-JS tests).
 - [x] **MEAS-01**: Umami counts page views on the apex only, with no cookies and no consent banner. Evidence: PR #7 (1142054); `data-domains` in `src/layouts/Base.astro`.
 
@@ -55,6 +56,7 @@
 - [x] **ADS-02**: AdSense Auto ads: Google places the ads, the site has no ad slots of its own, the script loads on the apex only, and the site shows no ads and no placeholder before approval. Source: `REQ-adsense`, `REQ-one-ad-per-screen` (code part). Evidence: PR #17 (87fcd57), PR #20 (25eabbb), PR #23 (aa46e1f); e2e "the AdSense script loads on the apex only".
 - [ ] **ADS-03**: AdSense approves the site after launch. Andrei sets Auto ads to about one ad per screen and publishes the consent message for the EEA, UK and Switzerland. This work is external, in Andrei's AdSense account. Source: `REQ-adsense`, `REQ-one-ad-per-screen`. Status: Andrei confirmed AdSense is in review on 2026-11-16. The two settings remain unverified. Phase 6 records the state on 2026-11-22. The requirement stays open until Google approves.
 - [x] **MEAS-02**: Umami counts Web Vitals and loads async, so a stalled Umami cannot block the site. Evidence: PR #10 (218e281, a8cde0d; 2026-11-15 03:09); e2e "the countdown runs while the Umami script never answers".
+- [ ] **MEAS-03**: The privacy page states what Umami records, the legal basis and the retention, and a button stops Umami for the browser. Evidence: `e2e/privacy.spec.js`.
 - [x] **PERF-01**: nginx sends `CDN-Cache-Control: max-age=300, stale-if-error=86400` for the HTML. Evidence: ba37c03 (PR #20). The Cloudflare rule that uses it is PROMO-01.
 
 ### Launch week
@@ -62,7 +64,7 @@
 - [x] **PROMO-01**: The Cloudflare Cache Rule `HTML at the edge` is active for the apex. Two production requests returned `cf-cache-status: HIT` and `age: 290` on 2026-11-16. Tiered Cache uses Automatic Upper Tiers. Always Online is off. Evidence: `deploy/README.md`, step 8.
 - [x] **PROMO-02**: Production card pages serve the share control and its share-sheet or clipboard script. The control stays hidden without JavaScript. Source: `REQ-card-pages` (share part). Evidence: PR #22 (1ae4c79), release PR #18, and production markup plus script verified on 2026-11-16.
 - [ ] **PROMO-03**: After the launch moment on 2026-11-19, the line "And we got GTA 6 before The Winds of Winter." shows under the title. Source: `REQ-countdown` (second part). Built in PR #22 (1ae4c79) with the e2e test "shows after the launch, with the flipped title". The live check happens on 2026-11-19.
-- [ ] **PROMO-04**: Prepare unique social-media drafts and assets after CONT-06 is verified in production. Andrei publishes every post himself. The assistant sends no posts, replies, or moderator messages. Draft preparation completes the assistant task; this requirement remains open until manual publication is recorded. Use `docs/PROMOTION.md` for the channels, limits, and stop rules. Source: Andrei's latest clarification, 2026-11-17.
+- [ ] **PROMO-04**: Prepare unique social-media drafts and assets after CONT-06 is verified in production. Andrei publishes every post himself. The assistant sends no posts, replies, or moderator messages. Draft preparation is complete. Manual publication started with the verified [X post](https://x.com/elfensky/status/2122730891772391740) on 17 November 2026. Further promotion remains in progress. Use `docs/PROMOTION.md` for the channels, limits, and stop rules. Source: Andrei's latest clarification, 2026-11-17.
 - [ ] **PROMO-05**: On 2026-11-22 Andrei reads Umami referrers per channel and records the result.
 
 ### Candidate review
@@ -133,7 +135,7 @@ Each v1 requirement maps to exactly one phase.
 | PROMO-01 | Phase 6 | Complete (2026-11-16) |
 | PROMO-02 | Phase 6 | Complete (2026-11-16) |
 | PROMO-03 | Phase 6 | In progress (built; live check on 2026-11-19) |
-| PROMO-04 | Phase 6 | Drafts ready; Andrei owns manual publication. r/gaming remains closed. |
+| PROMO-04 | Phase 6 | Publication started: X post verified on 2026-11-17. Andrei owns further posts. r/gaming remains closed. |
 | PROMO-05 | Phase 6 | Pending (2026-11-22) |
 | CONT-05 | Phase 6 | Pending (2026-11-18) |
 | CONT-06 | Phase 6 | Complete (2026-11-17; both environments verified) |
@@ -146,14 +148,16 @@ Each v1 requirement maps to exactly one phase.
 | REV-06 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
 | REV-07 | Phase 7 | Complete (2026-11-17; PRs #29, #30) |
 | DEPLOY-01 | Phase 8 | Complete (2026-11-16) |
+| SITE-07 | No phase (contact-form plan, 2026-11-17) | Implemented locally |
+| MEAS-03 | No phase (contact-form plan, 2026-11-17) | Implemented locally |
 
 **Coverage:**
-- v1 requirements: 40 total
+- v1 requirements: 42 total
 - Complete: 35
-- Implemented locally: 0
+- Implemented locally: 2 (SITE-07, MEAS-03)
 - Open: 5 (Phase 6)
 - Mapped to phases: 40
-- Unmapped: 0
+- Unmapped: 2 (`docs/superpowers/plans/2026-11-17-contact-form.md`)
 
 ## Intel traceability
 

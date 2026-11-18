@@ -33,13 +33,30 @@ test('the public site does not expose the local review tool or research files', 
     expect(readdirSync('dist')).not.toContain(directory);
 });
 
-for (const route of ['/', '/oldest/', `/${firstCard}/`, '/privacy/', '/does-not-exist/']) {
+for (const route of [
+  '/',
+  '/oldest/',
+  `/${firstCard}/`,
+  '/privacy/',
+  '/contact/',
+  '/contact/sent/',
+  '/does-not-exist/',
+]) {
   test(`axe finds no violations on ${route}`, async ({ page }) => {
     // axe over the full timeline takes ~11 s in Firefox alone; parallel workers can triple that.
     test.setTimeout(60_000);
-    await page.goto(route);
+    // CI must not depend on Cloudflare: the Turnstile widget never loads.
+    let turnstile = false;
+    await page.route('**/challenges.cloudflare.com/**', (r) => r.abort());
+    page.on('requestfinished', (request) => {
+      if (request.url().startsWith('https://challenges.cloudflare.com/')) turnstile = true;
+    });
+    const response = await page.goto(route);
+    // The 404 page also passes axe, so every other route must be a real page.
+    if (route !== '/does-not-exist/') expect(response?.ok(), route).toBe(true);
     const { violations } = await new AxeBuilder({ page }).analyze();
     expect(violations.map((v) => `${v.id} (${v.nodes.length})`)).toEqual([]);
+    expect(turnstile, 'Turnstile loaded').toBe(false);
   });
 }
 
@@ -185,6 +202,9 @@ test('the footer names the operator, the contact and the privacy page', async ({
   await page.goto('/');
   const footer = page.locator('footer');
   await expect(footer).toContainText('A hobby site by Andrei Lavrenov');
+  // Astro drops a line break before a link: the words must not run into the link text.
+  await expect(footer).toContainText('Want one removed? takedown@lav.ren');
+  await expect(footer).toContainText('Contact · Privacy');
   await expect(footer.getByRole('link', { name: 'takedown@lav.ren' })).toHaveAttribute(
     'href',
     'mailto:takedown@lav.ren',
@@ -192,6 +212,7 @@ test('the footer names the operator, the contact and the privacy page', async ({
   // A personal site since 2026-11-13: no company details, no home address.
   await expect(footer).not.toContainText('DRUNIK');
   await expect(footer).not.toContainText('Tirlemont');
+  await expect(footer.getByRole('link', { name: 'Contact' })).toHaveAttribute('href', '/contact/');
   await expect(footer.getByRole('link', { name: 'Privacy' })).toHaveAttribute('href', '/privacy/');
 });
 

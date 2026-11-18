@@ -296,3 +296,36 @@ test.each(['services: {}\n', `${compose(oldPin)}${compose(oldPin)}`])(
     expect(git(f.remote, 'show-ref')).toBe(before);
   },
 );
+
+test('the CSP lets forms post to Formspark and its error page', () => {
+  const csp = readFileSync('deploy/nginx.conf', 'utf8').match(
+    /Content-Security-Policy "([^"]+)"/,
+  )?.[1];
+  expect(csp).toContain(
+    "form-action 'self' https://submit-form.com https://submitted.formspark.io;",
+  );
+});
+
+// AI-crawler policy "ours, block training" (Andrei, 2026-11-18; website standard GEO-02, SEO-05).
+test('robots.txt blocks AI training crawlers only, and names the sitemap', () => {
+  const robots = readFileSync('public/robots.txt', 'utf8');
+  const groups = robots
+    .split(/\n\s*\n/)
+    .map((block) => ({
+      agents: [...block.matchAll(/^User-agent:\s*(\S+)/gim)].map((m) => m[1].toLowerCase()),
+      rules: [...block.matchAll(/^((?:dis)?allow):\s*(\S*)/gim)].map((m) => `${m[1]}: ${m[2]}`),
+    }))
+    .filter((group) => group.agents.length);
+  const rulesFor = (agent) =>
+    (
+      groups.find((group) => group.agents.includes(agent.toLowerCase())) ??
+      groups.find((group) => group.agents.includes('*'))
+    ).rules;
+  const training = ['GPTBot', 'ClaudeBot', 'Google-Extended', 'Applebot-Extended', 'CCBot'];
+  for (const agent of training) expect(rulesFor(agent), agent).toEqual(['Disallow: /']);
+  const allowed = ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot'];
+  for (const agent of [...allowed, 'ChatGPT-User', 'Claude-User', 'Perplexity-User'])
+    expect(rulesFor(agent), agent).toEqual(['Allow: /']);
+  expect(robots).toMatch(/^Sitemap: https:\/\/beforegta6\.wtf\/sitemap-index\.xml$/m);
+  expect(robots).not.toMatch(/crawl-delay/i);
+});

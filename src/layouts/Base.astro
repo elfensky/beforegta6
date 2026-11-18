@@ -3,7 +3,13 @@ import { getImage } from 'astro:assets';
 import ogDefault from '../assets/og-default.png';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { ADSENSE_ACCOUNT, ADSENSE_CLIENT, SITE_NAME, UMAMI_WEBSITE_ID } from '../data/site.js';
+import {
+  ADSENSE_ACCOUNT,
+  ADSENSE_CLIENT,
+  SITE_NAME,
+  UMAMI_WEBSITE_ID,
+  WEBMCP_ORIGIN_TRIAL,
+} from '../data/site.js';
 import {
   DEFAULT_IMAGE_ALT,
   SOCIAL_WIDTH,
@@ -61,6 +67,7 @@ const schema = structuredData({
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="origin-trial" content={WEBMCP_ORIGIN_TRIAL} />
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex" />}
