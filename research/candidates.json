@@ -12258,6 +12258,34 @@
       "impact_score": 10,
       "meme_score": 1,
       "source_note": "WHO, 11 March 2020: 'We have therefore made the assessment that COVID-19 can be characterized as a pandemic.' WHO, 5 May 2023: COVID-19 'no longer constitutes a public health emergency of international concern (PHEIC)'. Chip-shortage link from the merged chip-shortage record (Wikipedia, secondary)."
+    },
+    {
+      "id": "gta6-pc-before-gta6-pc",
+      "status": "launch",
+      "tags": [
+        "gaming",
+        "gta"
+      ],
+      "title": "We got GTA 6 on PC before GTA 6 on PC (coming soon)",
+      "blurb": "GTA 6 came out on 19 November 2026 for PS5 and Xbox Series X|S only. The same day, the leaker Cyberleek said it put an Xbox build online, without the main executable. It said fans would emulate the game within a week. Kotaku could not verify the files.",
+      "kind": "real-event",
+      "event_date": "2026-11-19",
+      "post_date": "2026-11-19",
+      "timeline_date": "2026-11-19",
+      "fact_url": "https://kotaku.com/cyberleek-is-threatening-to-unleash-chaos-again-after-tossing-an-alleged-xbox-build-of-gta-6-onto-the-internet-2000758544",
+      "verified": true,
+      "source_url": "https://kotaku.com/cyberleek-is-threatening-to-unleash-chaos-again-after-tossing-an-alleged-xbox-build-of-gta-6-onto-the-internet-2000758544",
+      "source_platform": "other",
+      "source_engagement": null,
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Xbox_Series_X_2.jpg/1280px-Xbox_Series_X_2.jpg",
+      "image_page": "https://commons.wikimedia.org/wiki/File:Xbox_Series_X_2.jpg",
+      "image_license": "CC BY-SA 4.0 (Der. Bellemer)",
+      "image_alt": "A black Xbox Series X standing upright with its controller, in front of its retail box",
+      "image_note": "Xbox Series X photo (Wikimedia Commons, CC BY-SA 4.0); no Rockstar art and no leak material. The post image (a file listing of the claimed build) is not used.",
+      "nsfw": false,
+      "impact_score": 3,
+      "meme_score": 4,
+      "source_note": "Source is Kotaku, not the Reddit post (Andrei, 2026-11-20): the post announces a pirated torrent and a meme coin, and AdSense review is open. Post: https://www.reddit.com/r/GTA6unmoderated/comments/1y0io5k/ by u/zech_meme, 19 November 2026 19:39 UTC, \"Cyberleek dropped the Xbox GTA6 build\" (5,073 upvotes, 1,396 comments on 2026-11-20). Top comment by u/marianek_ (963 points): \"Well that's the final meme stage, ‘we got gta 6 on PC before gta 6 on pc’\". Kotaku, 19 November 2026: Cyberleek holds back the executable until its meme coin reaches a $15 million market cap; Kotaku could not verify the files."
     }
   ],
   "excluded": [

@@ -26,10 +26,10 @@ Generated from `research/candidates.json` by `npm run cards`. Edit the JSON, not
 | Science | 49 | 0 | 22 | 71 |
 | Sport | 8 | 0 | 19 | 27 |
 | Culture | 11 | 0 | 20 | 31 |
-| Gaming | 7 | 0 | 8 | 15 |
+| Gaming | 8 | 0 | 8 | 16 |
 | GTA | 13 | 1 | 3 | 17 |
 | Creators | 2 | 0 | 1 | 3 |
-| Total | 206 | 3 | 178 | 387 |
+| Total | 207 | 3 | 178 | 388 |
 
 ## Politics (72)
 
@@ -418,10 +418,11 @@ Generated from `research/candidates.json` by `npm run cards`. Edit the JSON, not
 | `oscars-wrong-envelope` | We got the wrong Best Picture announced before GTA 6 | 2017-02-26 | culture |  | 5 | 1 | drop | [other](<https://en.wikipedia.org/wiki/89th_Academy_Awards>) | [fact](<https://en.wikipedia.org/wiki/89th_Academy_Awards>) |
 | `gangnam-style-counter` | We got Gangnam Style breaking YouTube's view counter before GTA 6 | 2014-12-03 | culture, internet |  | 5 | 1 | drop | [other](<https://en.wikipedia.org/wiki/Gangnam_Style_(music_video)>) | [fact](<https://en.wikipedia.org/wiki/Gangnam_Style_(music_video)>) |
 
-## Gaming (15)
+## Gaming (16)
 
 | Id | Title | Date | Tags | World event | Impact | Meme | Status | Post | Fact |
 |---|---|---|---|---|---|---|---|---|---|
+| `gta6-pc-before-gta6-pc` | We got GTA 6 on PC before GTA 6 on PC (coming soon) | 2026-11-19 | gaming, gta |  | 3 | 4 | launch | [other](<https://kotaku.com/cyberleek-is-threatening-to-unleash-chaos-again-after-tossing-an-alleged-xbox-build-of-gta-6-onto-the-internet-2000758544>) | [fact](<https://kotaku.com/cyberleek-is-threatening-to-unleash-chaos-again-after-tossing-an-alleged-xbox-build-of-gta-6-onto-the-internet-2000758544>) |
 | `minecraft-beats-itself` | We got Minecraft beating Minecraft before GTA 6 | 2026-09 | gaming |  | 1 | 5 | launch | [reddit](<https://www.reddit.com/r/interestingasfuck/comments/1wnxglj/>) | [fact](<https://pcgamer.com/games/survival-crafting/minecraft-beat-minecraft-after-2-billion-years>) |
 | `rdr-on-phones` | We got Red Dead Redemption on phones before GTA 6 | 2025-12-02 | gaming |  | 2 | 1 | launch | [reddit](<https://www.reddit.com/r/GTA/comments/1ow8aq9/>) | [fact](<https://en.wikipedia.org/wiki/Red_Dead_Redemption>) |
 | `steam-machine` | We got the year of the Linux desktop (almost) before GTA 6 | 2025-11-12 | gaming |  | 4 | 1 | launch | [x](<https://x.com/GTAVI_Countdown/status/1988720707841212740>) | [fact](<https://www.gameinformer.com/2025/11/12/valve-announces-console-like-steam-machine-steam-frame-vr-headset-and-new-steam>) |
