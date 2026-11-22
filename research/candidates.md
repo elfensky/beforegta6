@@ -27,9 +27,9 @@ Generated from `research/candidates.json` by `npm run cards`. Edit the JSON, not
 | Sport | 8 | 0 | 19 | 27 |
 | Culture | 11 | 0 | 20 | 31 |
 | Gaming | 8 | 0 | 8 | 16 |
-| GTA | 13 | 1 | 3 | 17 |
+| GTA | 21 | 1 | 3 | 25 |
 | Creators | 2 | 0 | 1 | 3 |
-| Total | 207 | 3 | 178 | 388 |
+| Total | 215 | 3 | 178 | 396 |
 
 ## Politics (72)
 
@@ -439,10 +439,18 @@ Generated from `research/candidates.json` by `npm run cards`. Edit the JSON, not
 | `gta6-in-fortnite` | We got GTA 6 in Fortnite before GTA 6 | 2024-12-08 | gaming, gta |  | 1 | 1 | drop | [x](<https://x.com/HYPEX/status/1865809592447291523>) | – |
 | `nintendo-alarm-clock` | We got the Nintendo alarm clock before GTA 6 | 2024-10-09 | gaming |  | 1 | 1 | drop | [reddit](<https://www.reddit.com/r/gaming/comments/1fzty9o/>) | [fact](<https://en.wikipedia.org/wiki/Nintendo_Sound_Clock:_Alarmo>) |
 
-## GTA (17)
+## GTA (25)
 
 | Id | Title | Date | Tags | World event | Impact | Meme | Status | Post | Fact |
 |---|---|---|---|---|---|---|---|---|---|
+| `benny-the-bull-gta6` | The Bulls' mascot plays GTA 6 through the Wizards' intros | 2026-11-20 | gta, sport |  | 1 | 4 | launch | [other](<https://bleacherreport.com/articles/25536013-watch-bulls-mascot-play-gta-6-and-ignore-wizards-players-intros-viral-video>) | [fact](<https://bleacherreport.com/articles/25536013-watch-bulls-mascot-play-gta-6-and-ignore-wizards-players-intros-viral-video>) |
+| `gta6-day-one-sales` | GTA 6 makes $3.79 billion on day one | 2026-11-19 | gta, economy, world-event | yes | 9 | 1 | launch | [other](<https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records>) | [fact](<https://www.take2games.com/ir/news/grand-theft-auto-vi-shatters-entertainment-box-office-records>) |
+| `aurora-police-six-stars` | Police warn GTA 6 players: 'we do not have a six-star system' | 2026-11-19 | gta, internet |  | 1 | 4 | launch | [other](<https://okcfox.com/news/nation-world/aurora-police-gta-vi-gaming-reminder-says-car-theft-cincinnati-robbery-assault-bring-real-penalties-while-vice-city-wanted-stars-fade-colorado-law-still-sends-rule-breakers-to-jail-quickly>) | [fact](<https://okcfox.com/news/nation-world/aurora-police-gta-vi-gaming-reminder-says-car-theft-cincinnati-robbery-assault-bring-real-penalties-while-vice-city-wanted-stars-fade-colorado-law-still-sends-rule-breakers-to-jail-quickly>) |
+| `gta6-perfect-reviews` | GTA 6 ties the best Metascore ever | 2026-11-18 | gta, gaming |  | 6 | 2 | launch | [other](<https://opencritic.com/game/15398/grand-theft-auto-vi/reviews>) | [fact](<https://www.dexerto.com/gta/gta-6-is-the-joint-best-reviewed-game-of-the-all-time-3429300/>) |
+| `gta6-comcast-traffic` | GTA 6 fills nearly a quarter of Comcast's network | 2026-11-18 | gta, internet, tech |  | 6 | 3 | launch | [other](<https://corporate.comcast.com/stories/the-biggest-day-in-internet-history>) | [fact](<https://corporate.comcast.com/stories/the-biggest-day-in-internet-history>) |
+| `barnyard-blue-before-rac7` | We got a Barnyard Blue game before Race and Chase 7 | 2026-11-18 | gta, gaming |  | 2 | 5 | launch | [other](<https://kotaku.com/grand-theft-auto-6-includes-a-joke-about-gta-7-2000755921>) | [fact](<https://kotaku.com/grand-theft-auto-6-includes-a-joke-about-gta-7-2000755921>) |
+| `dr-xbox-doctors-notes` | We got doctor's notes from DJ Khaled before GTA 6 | 2026-11-17 | gta, gaming |  | 1 | 4 | launch | [other](<https://kotaku.com/birdwatchers-catholic-schools-and-the-weather-channel-everyones-hyping-up-gta-6-release-day-2000757823>) | [fact](<https://abc30.com/post/gta-flu-xbox-dj-khaled-collaborate-offer-doctors-note-video-game-players-amid-grand-theft-auto-vi-release/20051399/>) |
+| `pocketpair-vice-city-trip` | Palworld's studio sends all its staff on a business trip to Vice City | 2026-11-12 | gta, gaming |  | 1 | 4 | launch | [other](<https://x.com/Palworld_EN/status/2120864259907452930>) | [fact](<https://www.shacknews.com/article/151343/pocketpair-gta-6-vacation>) |
 | `gta5-235-million` | GTA V passes 235 million copies sold | 2026-09-30 | gta, world-event | yes | 7 | 1 | launch | [other](<https://insider-gaming.com/gta-5-sales-reach-235-million-copies-since-launch/>) | [fact](<https://insider-gaming.com/gta-5-sales-reach-235-million-copies-since-launch/>) |
 | `gta6-delays` | Rockstar delays GTA 6 twice | 2025-11-06 | gta, world-event | yes | 7 | 9 | launch | [x](<https://x.com/DiscussingFilm/status/1918275510809083914>) | [fact](<https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI>) |
 | `gta5-enhanced-pc` | GTA V Enhanced comes out on PC | 2025-03-04 | gta |  | 4 | 1 | launch | [reddit](<https://www.reddit.com/r/rockstar/comments/1jfosmu/>) | [fact](<https://en.wikipedia.org/wiki/Grand_Theft_Auto_V>) |

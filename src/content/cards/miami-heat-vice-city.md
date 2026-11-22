@@ -1,6 +1,6 @@
 ---
 title: "The Miami Heat become Vice City for one night"
-blurb: "The Heat announced on 2 October 2026 that they will play as 'Vice City' on 18 November 2026, the night before GTA 6."
+blurb: "The Heat announced on 2 October 2026 that they would play as 'Vice City' on 18 November 2026, the night before GTA 6. They did, against the Bucks."
 kind: "real-event"
 date: "2026-10-02"
 source: {"url":"https://www.reddit.com/r/GTA/comments/1wvtj0m/","platform":"reddit","engagement":"3,665 upvotes"}
