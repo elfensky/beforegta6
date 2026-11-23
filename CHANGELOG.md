@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.0.4] - 2026-11-23
+
+- Replace the favicon with a bold VI mark in the site's pink-to-orange gradient.
+- Add browser ICO and Apple touch icons, with reproducible exports from the SVG source.
+
 ## [0.0.3] - 2026-11-18
 
 - Add a contact page at `/contact/`. It sends messages through Formspark, with a Cloudflare Turnstile check and a honeypot.
