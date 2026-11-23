@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#140a1f"/><text x="32" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="42" font-weight="800" fill="#ff4fa3">6</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="sunset" x1="8" y1="32" x2="56" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff4fa3" />
+      <stop offset="1" stop-color="#ff9a4d" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#140a1f" />
+  <path d="M8 16h10l7 23 7-23h10L30 48H20zM46 16h10v32H46z" fill="url(#sunset)" />
+</svg>
