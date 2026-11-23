@@ -44,7 +44,7 @@ export const milestones = [
   {
     date: '2026-11-19',
     title: 'GTA 6 comes out',
-    blurb: 'Scheduled. We will see.',
+    blurb: 'The wait ends here.',
     factUrl: 'https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI',
   },
 ];
