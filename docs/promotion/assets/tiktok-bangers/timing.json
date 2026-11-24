@@ -1,0 +1,161 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration": 16.7,
+  "voice": "Andrei \u2014 original recording, edited pauses, normal speed",
+  "outputDirectory": "out/andrei-paced",
+  "outputName": "beforegta6-andrei-paced-review.mp4",
+  "scenes": [
+    {
+      "id": "intro",
+      "start": 0,
+      "end": 3.1
+    },
+    {
+      "id": "car",
+      "start": 3.1,
+      "end": 6.5
+    },
+    {
+      "id": "texas",
+      "start": 6.5,
+      "end": 8.7
+    },
+    {
+      "id": "chocolate",
+      "start": 8.7,
+      "end": 12.2
+    },
+    {
+      "id": "website",
+      "start": 12.2,
+      "end": 16.7
+    }
+  ],
+  "narration": [
+    {
+      "start": 0.1,
+      "end": 2.8,
+      "text": "Things we got before GTA six.",
+      "caption": "Things we got before GTA 6.",
+      "scene": "intro"
+    },
+    {
+      "start": 3.12,
+      "end": 4.62,
+      "text": "Flying cars.",
+      "caption": "Flying cars.",
+      "scene": "car"
+    },
+    {
+      "start": 6.55,
+      "end": 7.72,
+      "text": "Blue Texas.",
+      "caption": "Blue Texas.",
+      "scene": "texas"
+    },
+    {
+      "start": 8.82,
+      "end": 11.8,
+      "text": "And somebody stealing twelve tonnes of KitKats.",
+      "caption": "And somebody stealing twelve tonnes of KitKats.",
+      "scene": "chocolate"
+    },
+    {
+      "start": 12.25,
+      "end": 16.3,
+      "text": "Find out more at before GTA six dot W T F.",
+      "caption": "Find out more at beforegta6.wtf.",
+      "scene": "website"
+    }
+  ],
+  "narrationFile": "public/andrei-narration.wav",
+  "sourceAudio": {
+    "scene": "car",
+    "duckUntil": 4.62,
+    "fadeUpDuration": 0.18,
+    "quietGain": 0.3,
+    "openGain": 1.5,
+    "fadeOutDuration": 0.2
+  },
+  "effects": [
+    {
+      "start": 0,
+      "duration": 0.1,
+      "frequency": 135,
+      "gain": 0.06,
+      "sweep": -180
+    },
+    {
+      "start": 0.57,
+      "duration": 0.055,
+      "frequency": 280,
+      "gain": 0.035,
+      "sweep": -900
+    },
+    {
+      "start": 1.03,
+      "duration": 0.055,
+      "frequency": 340,
+      "gain": 0.035,
+      "sweep": -1100
+    },
+    {
+      "start": 1.57,
+      "duration": 0.15,
+      "frequency": 120,
+      "gain": 0.08,
+      "sweep": -150
+    },
+    {
+      "start": 3.1,
+      "duration": 0.12,
+      "frequency": 120,
+      "gain": 0.1,
+      "sweep": 450
+    },
+    {
+      "start": 7.82,
+      "duration": 0.16,
+      "frequency": 523.25,
+      "gain": 0.75,
+      "sweep": 0
+    },
+    {
+      "start": 7.96,
+      "duration": 0.2,
+      "frequency": 783.99,
+      "gain": 0.58,
+      "sweep": 0
+    },
+    {
+      "start": 8.7,
+      "duration": 0.12,
+      "frequency": 110,
+      "gain": 0.12,
+      "sweep": -210
+    },
+    {
+      "start": 10.1,
+      "duration": 0.28,
+      "frequency": 120,
+      "gain": 0.065,
+      "sweep": 450
+    },
+    {
+      "start": 11.1,
+      "duration": 0.16,
+      "frequency": 85,
+      "gain": 0.16,
+      "sweep": -70
+    },
+    {
+      "start": 12.2,
+      "duration": 0.13,
+      "frequency": 440,
+      "gain": 0.06,
+      "sweep": 1200
+    }
+  ]
+}

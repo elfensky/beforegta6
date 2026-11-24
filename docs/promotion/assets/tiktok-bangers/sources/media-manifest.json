@@ -1,0 +1,55 @@
+[
+  {
+    "file": "public/blue-texas.png",
+    "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/src/assets/cards/blue-texas.png",
+    "sha256": "ae996cbdc3d49d3f4a7373fcb6462fb8e811cde44e16085e49e352ed117e555f",
+    "matches_parent": true
+  },
+  {
+    "file": "public/flying-cars.jpg",
+    "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/src/assets/cards/flying-cars.jpg",
+    "sha256": "420b257f14a5e494fb789925b6bdc42bc56d5d8e7b8a75b8a6b9028324d7aee2",
+    "matches_parent": true
+  },
+  {
+    "file": "public/kitkat-heist.jpg",
+    "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/src/assets/cards/kitkat-heist.jpg",
+    "sha256": "c8cf93b3095a763f59a7a78f766d77f2f6cb8534726e58ad6514c5294f16e9fc",
+    "matches_parent": true
+  },
+  {
+    "file": "sources/tesla-roadster-650-680.mp4",
+    "sha256": "5c5c8420b7a875c342d7b068fd2ab8a86a2d2f3b489dc1a134f6dd94dcd5e959",
+    "bytes": 6153830
+  },
+  {
+    "file": "sources/senate-map.svg",
+    "sha256": "d427e600528b2c47058d561c289ad7d1b3385cd52cf623b9146a2273f344a1c0",
+    "bytes": 39182
+  },
+  {
+    "file": "public/tesla-action.mp4",
+    "sha256": "7755db93b98f8875bd842d0021f70a6f6be8c5b0ca5b1787a156e68cf01aafe4",
+    "bytes": 2010656
+  },
+  {
+    "file": "public/website-scroll.png",
+    "sha256": "de20de8435813e315bda5422ebbec27bba89282368c0feff34ec86f65a65cef6",
+    "bytes": 2252211
+  },
+  {
+    "file": "public/card-flying-cars.png",
+    "sha256": "bfe14796e0392ceab7d77fb22bd6fe4e574345341eaacb5c563bd6b9091e5a22",
+    "bytes": 362435
+  },
+  {
+    "file": "public/card-blue-texas.png",
+    "sha256": "d874e0f42ee8f6111b78bc909ecdc4949a349da55cef66aee97b11cf66574e4a",
+    "bytes": 279389
+  },
+  {
+    "file": "public/card-kitkat-heist.png",
+    "sha256": "701f462b4f14360dd2ed44fa3874f58885b2da9c5c2f84a8b7147d596876ba5a",
+    "bytes": 323471
+  }
+]

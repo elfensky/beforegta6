@@ -1,0 +1,92 @@
+# AGENTS.md — beforegta6.wtf
+
+A personal meme site, "We got ___ before GTA 6": a timeline of cards on one centred line, newest first at `/` and oldest first at `/oldest/`. Andrei works on it. It deploys to the Pi swarm (staging) and the Hetzner swarm (production).
+
+Shared standards: the developer handbook, `~/vault/knowledge/developer/developer.md` (layout 1.1.0).
+This file holds only what is true of this repo. A personal project (Andrei, 2026-11-13: made for the meme, ads on his personal AdSense account): commits as `andrei@lav.ren`, `gh` user `elfensky`
+(identity per project: `~/vault/meta/registry.md`).
+
+## Stack
+
+| Layer | Choice | Notes |
+|---|---|---|
+| Framework | Astro 7, static output | One Markdown file per card in `src/content/cards/`, images in `src/assets/cards/` |
+| Language | Plain JavaScript + JSDoc | `jsconfig.json` checkJs + strict |
+| Runtime | Node 26 via `.node-version` | See the exceptions below |
+| Deploy | nginx image on Docker Swarm, own Cloudflare Tunnel per stack | A push to `develop` deploys staging, a push to `main` deploys production (`deploy/README.md`) |
+
+## Commands
+
+| Command | Purpose |
+|---|---|
+| `npm run dev:up` / `npm run dev:down` | Dev server on port 4321, in the background (Astro's own `--background` mode). Run it before human verification |
+| `npm run lint && npm test && npm run build && npx html-validate "dist/**/*.html"` | **Verification gate**, in CI's order. Run it before calling work done |
+| `npm run test:e2e` | Playwright: axe, reflow, skip link, no-JS checks on the built site |
+| `npm run cards` | Make the cards match `research/candidates.json`, and regenerate `research/candidates.md`. Run it after every edit to the JSON |
+| `npm run review` | Local candidate review at `http://127.0.0.1:4322/`; see `docs/REVIEW.md` |
+| `npm run test:review` | Browser tests of the review tool against temporary data |
+
+## Branches
+
+`develop` integrates and builds staging. `main` releases to production on a push.
+CI writes image pins to `deploy/staging` and `deploy/production`; Arcane reads those branches.
+Merge feature PRs with `gh pr merge --rebase`, then `git push origin --delete <branch>`.
+Release PRs from `develop` to `main` use `gh pr merge --merge`.
+Both source branches require PRs and the `check` status. Issue #24 was completed on 2026-11-16.
+The migration procedure is in `deploy/README.md`; live evidence is in `.planning/verification/2026-11-16-completion.md`.
+Deployment branches remain writable by CI. Never add the source-branch PR requirement to them.
+
+## This repo's own rules
+
+- Every moderator message, social post, or reply requires Andrei's explicit approval of its exact draft before sending; approval to prepare or seek permission is insufficient (2026-11-17).
+
+- **Documented exceptions** (Andrei, 2026-11-13):
+  - The AdSense script loads from Google's servers. This goes against the no-CDN rule.
+  - AdSense is a US service. This goes against the EU-first preference.
+  - Andrei asked for AdSense explicitly.
+- **`.node-version` in place of `mise.toml`** (launch plan, 2026-11-13). `actions/setup-node` reads it, and mise reads it locally, so the repo keeps one pin (as in miklav.com).
+- **`research/` is data.** `research/candidates.json` is the one place to edit cards. It holds every find, and
+  `status: "launch"` puts one on the site. `research/images/` keeps the image of every find that is not live.
+  Neither ships.
+- **Content rules** (Andrei, 2026-11-13):
+  - The site shows Andrei's picks (Andrei, 2026-11-15). The first picks are the cards on production on 2026-11-15.
+  - Politics, religion and identity are in.
+  - Cards about deaths, war, violence, sexual-abuse cases, harassment of private people or hate stay out.
+  - NSFW cards may be crude, never sexually explicit (AdSense).
+- **No Rockstar material:** no GTA logo, fonts or key art.
+  - Specific exceptions (Andrei, 2026-11-17): Rockstar images may illustrate the Oppressor comparison (`real-oppressor-mk2`) and Red Dead running on phones (`rdr-on-phones`).
+- **Death-card exception** (Andrei, 2026-11-17): Queen Elizabeth II's death may replace the coronation card. The other death exclusions remain in force.
+- **Pandemic-card exception** (Andrei, 2026-11-17): one COVID card may cover the pandemic and chip shortage. Other pandemic exclusions remain in force.
+- **Specific media exceptions** (Andrei, 2026-11-17): use the staged Tesla Roadster, Volonaut Airbike, Concord artwork, Pokémon farewell artwork, and GamesRadar Red Dead phone photograph despite missing documented reuse licences. Record their actual copyright status; this project exception grants no third-party rights. Cena retains his portrait; his GTA key-art post is not an exception.
+
+## Architecture invariants
+
+- Pure functions in `src/lib/` decide the order, the timeline and the countdown. `.astro` files only render.
+- Every asset is served from the site, except the AdSense script (above) and Umami (`umami.lav.ren`, self-hosted).
+- Every card in `src/content/cards/` is live and generated by `npm run cards`. A card that is not live keeps its image in `research/images/`, because Astro ships every imported image (`deploy/README.md` § Removing or holding a card). An `nsfw` card never becomes a link-preview image.
+- The image tag in a compose file is the deploy. CI writes it, and nobody edits it by hand.
+
+## Docs
+
+| Code path | Doc path | What drifts |
+|---|---|---|
+| `src/`, `scripts/` | `.planning/PROJECT.md`, `.planning/REQUIREMENTS.md` | Features, requirements, constraints |
+| `research/`, `scripts/sync-cards.js`, `scripts/lib/candidate.js` | `docs/superpowers/specs/2026-11-15-one-candidates-file-design.md` | The candidates file, tags, the sync |
+| `deploy/`, `.github/workflows/` | `deploy/README.md` | Stacks, secrets, one-time setup |
+| `scripts/review/`, `scripts/review-candidates.js` | `docs/REVIEW.md` | Local review, image fetching, protected holds, and synchronization |
+
+## Life cockpit
+
+Tracked in the life-cockpit vault under `#personal` (tracker: `elfensky/beforegta6`). The cockpit is the
+control plane (what to work on); this repo is where the work happens. Report progress by
+opening/closing issues and PRs as usual — the cockpit pulls from the tracker on its next
+`/sync`. Nothing to update in the vault; don't mirror cockpit state (milestones, due dates) here.
+GSD projects: after `/gsd-new-project`, run `/cockpit-gsd-profile` once in this repo before planning the first slice.
+Roadmap: this repo owns its roadmap. `.planning/ROADMAP.md` (GSD) is the one roadmap file here; no second
+roadmap file lives in this repo.
+Pages: /handbook-align-pages in this repo updates the architecture notes and publishes the roadmap and architecture pages (~/vault/knowledge/developer/stack/page-kit.md).
+
+Display: <https://projects.lav.ren/beforegta6/roadmap/> and <https://projects.lav.ren/beforegta6/architecture/>.
+Republish only on request, through the handbook-align-pages skill.
+
+<!-- A new convention for this repo goes here in the same session, never into per-machine agent memory. -->

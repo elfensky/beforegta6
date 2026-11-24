@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+}
+.canvas {
+  background: #141417;
+  color: #fff7e9;
+  font-family: 'DM Sans', sans-serif;
+}
+h1 {
+  margin: 28px 0 0;
+  font:
+    400 144px/1.04 'Anton',
+    sans-serif;
+  letter-spacing: -2px;
+}
+.top {
+  position: absolute;
+  top: 210px;
+  left: 76px;
+  right: 160px;
+  z-index: 2;
+}
+.label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 27px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.label-dot {
+  width: 13px;
+  height: 13px;
+  background: #eaff68;
+  border-radius: 50%;
+}
+.label.light .label-dot {
+  background: #fff7e9;
+}
+.yellow {
+  color: #eaff68;
+}
+.pink {
+  color: #ff70b6;
+}
+.blue {
+  color: #4e9aff;
+}
+.red {
+  color: #ed354e;
+}
+.credit {
+  position: absolute;
+  left: 76px;
+  top: 1505px;
+  width: 820px;
+  font-size: 23px;
+  line-height: 1.45;
+  color: #c5bfc7;
+}
+.car {
+  background: #080a0b;
+}
+.film {
+  position: absolute;
+  top: 525px;
+  left: 0;
+  width: 1080px;
+  height: 900px;
+  overflow: hidden;
+}
+.film-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #080a0b 0%,
+    #080a0b 24%,
+    transparent 33%,
+    transparent 62%,
+    #080a0b 74%
+  );
+}
+.car .top h1 {
+  font-size: 150px;
+  line-height: 0.99;
+}
+.car-bottom {
+  position: absolute;
+  top: 1238px;
+  left: 76px;
+}
+.aside {
+  font-size: 34px;
+  color: #d6dbd7;
+}
+.context {
+  font-size: 25px;
+  margin-top: 26px;
+  color: #b9bec0;
+}
+.texas {
+  background: #101725;
+}
+.race-label {
+  position: absolute;
+  left: 76px;
+  top: 605px;
+  padding: 13px 22px;
+  color: #fff7e9;
+  border: 2px solid #5a6d8b;
+  font-size: 36px;
+  font-weight: 700;
+}
+.map {
+  position: absolute;
+  top: 790px;
+  left: 40px;
+  width: 950px;
+  transform-origin: 42% 70%;
+}
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tx-pin {
+  fill: #fff7e9;
+  font-size: 24px;
+  font-weight: 700;
+}
+.result {
+  display: flex;
+  gap: 26px;
+  position: absolute;
+  left: 76px;
+  top: 1358px;
+  font-size: 39px;
+  align-items: center;
+}
+.check {
+  font-size: 55px;
+  color: #4e9aff;
+}
+.result small {
+  display: block;
+  font-size: 30px;
+  color: #d5dbe5;
+  margin-top: 6px;
+}
+.chocolate {
+  background: #b82038;
+}
+.chocolate h1.number {
+  margin-top: 10px;
+  font-size: 250px;
+  letter-spacing: -5px;
+  line-height: 1.05;
+  display: flex;
+  align-items: end;
+  gap: 24px;
+  transform-origin: left bottom;
+}
+.number span {
+  font-size: 109px;
+  letter-spacing: -2px;
+  line-height: 1.3;
+}
+.of {
+  margin-top: 12px;
+  font-size: 69px;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+.candy-picture {
+  position: absolute;
+  left: 90px;
+  top: 750px;
+  background: white;
+  padding: 40px 25px 20px;
+  width: 820px;
+  box-shadow: 0 20px 40px #65132766;
+}
+.candy-picture img {
+  width: 100%;
+  display: block;
+}
+.candy-picture span {
+  display: block;
+  font-size: 19px;
+  color: #63585c;
+  letter-spacing: 2px;
+  margin-top: 24px;
+  text-align: center;
+}
+.road {
+  position: absolute;
+  top: 1110px;
+  width: 100%;
+  height: 250px;
+}
+.road-line {
+  position: absolute;
+  top: 204px;
+  width: 100%;
+  border-bottom: 3px dashed #f9b4b166;
+}
+.truck {
+  position: absolute;
+  width: 520px;
+  left: 235px;
+}
+.chocolate .credit {
+  color: #f3c9ce;
+}
+.website {
+  background: #180f24;
+}
+.website h1 {
+  font-size: 83px;
+  line-height: 1.14;
+  letter-spacing: -0.8px;
+}
+.site-window {
+  position: absolute;
+  left: 76px;
+  top: 617px;
+  width: 814px;
+  height: 730px;
+  overflow: hidden;
+  border: 2px solid #654d77;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px #0005;
+}
+.browser-bar {
+  height: 60px;
+  background: #34233f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 23px;
+}
+.browser-bar > span {
+  color: #a28cb7;
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+.site-view {
+  width: 810px;
+  height: 666px;
+  overflow: hidden;
+}
+.site-view img {
+  display: block;
+}
+.final-url {
+  position: absolute;
+  top: 1390px;
+  left: 76px;
+  font-size: 87px;
+  letter-spacing: -5px;
+  font-weight: 700;
+}
+.final-url span {
+  color: #ff70b6;
+}
+
+.intro {
+  background: #fff1da;
+  color: #161619;
+}
+.intro-title {
+  position: absolute;
+  top: 360px;
+  left: 76px;
+  font:
+    400 178px/1.08 'Anton',
+    sans-serif;
+  letter-spacing: -3px;
+}
+.intro-title span {
+  display: block;
+}
+.intro-gta {
+  color: #b82038;
+}
+.intro-line {
+  position: absolute;
+  top: 1240px;
+  left: 76px;
+  height: 12px;
+  background: #b82038;
+}
+.heist-joke {
+  position: absolute;
+  left: 76px;
+  top: 1340px;
+  color: #b82038;
+  background: #fff1da;
+  padding: 16px 22px;
+  font:
+    400 57px/1.1 'Anton',
+    sans-serif;
+  transform-origin: center;
+  box-shadow: 0 6px 0 #681022;
+}

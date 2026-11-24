@@ -1,0 +1,102 @@
+{
+  "note": "Hashes and byte counts record the files as copied on 2026-11-17; later edits to the copies are not reflected. Source paths name the session worktree that produced them.",
+  "copied": "2026-11-17",
+  "files": [
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/2026-11-17-tiktok-v2-brief.md",
+      "local": "docs/promotion/2026-11-17-tiktok-v2-brief.md",
+      "sha256": "830d6bcefde88e2d09366740785d18e03c9f4e0f0f1914b6067e0cb0bde16f78",
+      "bytes": 7381
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/AGENTS.md",
+      "local": "docs/promotion/sources/parent-AGENTS-2026-11-17.md",
+      "sha256": "f17a560b9cabcb889dea1bd75b5683949d48381d68a2c8ce85d5c08232c90d65",
+      "bytes": 7059
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/.planning/review-feedback/2026-11-17/final-image-sources.md",
+      "local": "docs/promotion/sources/final-image-sources-2026-11-17.md",
+      "sha256": "84ee0381d8212239761461faa91e1cf9e7dc5a8d54faa2445e4adc59c49397c8",
+      "bytes": 4203
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/voiceover.txt",
+      "local": "docs/promotion/assets/tiktok-homework/voiceover.txt",
+      "sha256": "784fde7ba7e9ce35d485b7fefb62f912973a54e911fcdd6daa8ebe16822932e3",
+      "bytes": 212
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/timing.json",
+      "local": "docs/promotion/assets/tiktok-homework/timing.json",
+      "sha256": "e1cffbe16a393e8923650f338dbf3817b5f5ce304040e11e231faa54f1fa6759",
+      "bytes": 1216
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/render.mjs",
+      "local": "docs/promotion/assets/tiktok-homework/render.mjs",
+      "sha256": "c73b0e1e13f6ba5c87269543df3e310d2977ea2c55b52da27980f18434cf97b8",
+      "bytes": 9056
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/captions.srt",
+      "local": "docs/promotion/assets/tiktok-homework/captions.srt",
+      "sha256": "0b454bc3d2e3a4dfa5b29fe6412e1b97129a44dffc133c343c5faca9ea9b9074",
+      "bytes": 372
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/temporary-narration.wav",
+      "local": "docs/promotion/assets/tiktok-homework/temporary-narration.wav",
+      "sha256": "0d00e2b31dd3a10806a21df7cb181ef368341b435acb88dfb7c17c7bee4334ab",
+      "bytes": 3436878
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/README.md",
+      "local": "docs/promotion/assets/tiktok-homework/README.md",
+      "sha256": "0cd966cfc71bac2bdf71c50d6862c1b13d85a70ff36978e2adc2de7be467d2af",
+      "bytes": 3344
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/website-scroll.png",
+      "local": "docs/promotion/assets/tiktok-homework/website-scroll.png",
+      "sha256": "1563f79ea58a1084f905f0801773f70a392813d54cad8a7fbcff7a478ba86676",
+      "bytes": 2252242
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/working-notes.md",
+      "local": "docs/promotion/assets/tiktok-homework/working-notes.md",
+      "sha256": "7e7a0c8a44ff23c514a69aeb07491e83ce39a0b6a68a1b96dcd40a2746e4ad88",
+      "bytes": 1242
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/.gitignore",
+      "local": "docs/promotion/assets/tiktok-homework/.gitignore",
+      "sha256": "0817912039b5ec4d6dd6af5dade1e88af20ea7568e2d8b7c947f25d27e3709ae",
+      "bytes": 106
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/caption.txt",
+      "local": "docs/promotion/assets/tiktok-homework/caption.txt",
+      "sha256": "0635016e8447f40ad28ee6e663007183b157ff56ab1d5c813029e0d3cad2c206",
+      "bytes": 606
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/contact-sheet.jpg",
+      "local": "docs/promotion/assets/tiktok-homework/contact-sheet.jpg",
+      "sha256": "f43941d66193fa2283f680a90e9f72b9587ad250ded60dea58e78fb55997da89",
+      "bytes": 52420
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/beforegta6-homework-draft.mp4",
+      "local": "docs/promotion/assets/tiktok-homework/beforegta6-homework-draft.mp4",
+      "sha256": "275e4c245fe5d747caea82ae6537820ad75d6438f370478b69693ca0a513eb91",
+      "bytes": 4565399
+    },
+    {
+      "source": "/Users/andrei/Developer/.worktrees/beforegta6/t3-9d82a03b-43861fdb17515a94/docs/promotion/assets/tiktok-homework/draft.html",
+      "local": "docs/promotion/assets/tiktok-homework/draft.html",
+      "sha256": "020de43162018ee0f4d05ac3adc616f8dffb390802465c45501b487f76f67a08",
+      "bytes": 10683
+    }
+  ]
+}

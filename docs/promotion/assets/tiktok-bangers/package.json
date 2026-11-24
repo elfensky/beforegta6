@@ -1,0 +1,28 @@
+{
+  "name": "beforegta6-tiktok-bangers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "studio": "remotion studio src/index.jsx",
+    "prepare": "node scripts/prepare.mjs",
+    "render": "node scripts/render.mjs",
+    "verify": "node scripts/verify.mjs",
+    "prepare:voice": "node scripts/prepare-recording.mjs"
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.3.0",
+    "@fontsource/dm-sans": "5.3.0",
+    "@playwright/test": "1.65.0",
+    "@remotion/bundler": "4.0.544",
+    "@remotion/cli": "4.0.544",
+    "@remotion/renderer": "4.0.544",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.544",
+    "sharp": "0.35.5"
+  }
+}
