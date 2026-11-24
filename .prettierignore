@@ -6,3 +6,5 @@ package-lock.json
 research/
 src/content/
 *.md
+docs/promotion/assets/tiktok-bangers/out/
+docs/promotion/assets/tiktok-bangers/.cache/

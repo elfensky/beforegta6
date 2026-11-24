@@ -1,0 +1,44 @@
+{
+  "source": "sources/recordings/preferred-take.m4a",
+  "originalFilename": "best one I think.m4a",
+  "sha256": "d924400adea76f390217c2c2b93c8a6dd4f88ab5c7f8c6cb83ee0250d3f45910",
+  "sourceDuration": 16.426667,
+  "speed": 1,
+  "segments": [
+    {
+      "sourceStart": 0.15,
+      "sourceEnd": 3.08,
+      "destinationStart": 0,
+      "scene": "intro",
+      "text": "Things we got before GTA six."
+    },
+    {
+      "sourceStart": 3.12,
+      "sourceEnd": 4.78,
+      "destinationStart": 3.1,
+      "scene": "car",
+      "text": "Flying cars."
+    },
+    {
+      "sourceStart": 4.84,
+      "sourceEnd": 6.12,
+      "destinationStart": 6.5,
+      "scene": "texas",
+      "text": "Blue Texas."
+    },
+    {
+      "sourceStart": 6.22,
+      "sourceEnd": 9.45,
+      "destinationStart": 8.7,
+      "scene": "chocolate",
+      "text": "And somebody stealing twelve tonnes of KitKats."
+    },
+    {
+      "sourceStart": 10.3,
+      "sourceEnd": 14.5,
+      "destinationStart": 12.2,
+      "scene": "website",
+      "text": "Find out more at before GTA six dot W T F."
+    }
+  ]
+}

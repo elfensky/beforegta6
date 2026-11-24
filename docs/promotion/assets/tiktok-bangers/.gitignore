@@ -1,0 +1,16 @@
+node_modules/
+.cache/
+out/
+public/temporary-*.wav
+public/mix.wav
+public/andrei-narration.wav
+sources/recordings/
+public/tesla-action.mp4
+public/website-scroll.png
+public/card-*.png
+sources/*.mp4
+sources/*.webm
+sources/*.part
+sources/*.ytdl
+sources/download.log
+public/narration-timing.json

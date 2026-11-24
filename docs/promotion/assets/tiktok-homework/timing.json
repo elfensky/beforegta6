@@ -1,0 +1,49 @@
+{
+  "scenes": [
+    {
+      "index": 0,
+      "text": "I started fact-checking the before GTA six meme.",
+      "audio": ".render-cache/voice-0.aiff",
+      "start": 0,
+      "speech": 3.487528,
+      "length": 3.8
+    },
+    {
+      "index": 1,
+      "text": "Google's AI suggested glue on pizza.",
+      "audio": ".render-cache/voice-1.aiff",
+      "start": 3.8,
+      "speech": 2.463719,
+      "length": 2.7666666666666666
+    },
+    {
+      "index": 2,
+      "text": "America put tariffs on islands full of penguins.",
+      "audio": ".render-cache/voice-2.aiff",
+      "start": 6.566666666666666,
+      "speech": 3.230794,
+      "length": 3.533333333333333
+    },
+    {
+      "index": 3,
+      "text": "Katy Perry went to space.",
+      "audio": ".render-cache/voice-3.aiff",
+      "start": 10.1,
+      "speech": 1.836281,
+      "length": 2.1666666666666665
+    },
+    {
+      "index": 4,
+      "text": "Anyway, I accidentally made a history website.",
+      "audio": ".render-cache/voice-4.aiff",
+      "start": 12.266666666666666,
+      "speech": 3.371202,
+      "length": 5.633333333333334
+    }
+  ],
+  "duration": 17.9,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "voice": "macOS Daniel, temporary"
+}
