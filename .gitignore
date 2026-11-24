@@ -40,3 +40,6 @@ test-results/
 research/.review-pending
 research/candidates.json.*.tmp
 research/images/.review-*
+
+# graphify knowledge graph (per machine)
+graphify-out/
