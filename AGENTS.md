@@ -30,7 +30,7 @@ This file holds only what is true of this repo. A personal project (Andrei, 2026
 
 `develop` integrates and builds staging. `main` releases to production on a push.
 CI writes image pins to `deploy/staging` and `deploy/production`; Arcane reads those branches.
-Merge feature PRs with `gh pr merge --rebase`, then `git push origin --delete <branch>`.
+Merge feature PRs with `gh pr merge --rebase`. GitHub deletes the merged branch.
 Release PRs from `develop` to `main` use `gh pr merge --merge`.
 Both source branches require PRs and the `check` status. Issue #24 was completed on 2026-11-16.
 The migration procedure is in `deploy/README.md`; live evidence is in `.planning/verification/2026-11-16-completion.md`.
