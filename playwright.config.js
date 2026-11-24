@@ -8,6 +8,8 @@ export default defineConfig({
   testDir: 'e2e',
   testIgnore: 'review.spec.js',
   fullyParallel: true,
+  // A stray test.only would quietly narrow the required check.
+  forbidOnly: !!process.env.CI,
   reporter: process.env.CI ? 'github' : 'list',
   use: { baseURL: `http://127.0.0.1:${PORT}` },
   webServer: {
