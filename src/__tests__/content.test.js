@@ -7,6 +7,11 @@ const cards = readdirSync(DIR)
   .filter((f) => f.endsWith('.md'))
   .map((f) => ({ f, text: readFileSync(`${DIR}/${f}`, 'utf8') }));
 
+// The checks below pass on an empty list, so prove that discovery found the cards.
+test('finds the cards', () => {
+  expect(cards.length).toBeGreaterThan(0);
+});
+
 // Visitors read blurbs in the grid, on card pages and in link previews; research notes must not reach them.
 test('no research notes in blurbs', () => {
   const leaks = cards.filter(({ text }) =>
