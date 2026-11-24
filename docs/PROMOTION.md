@@ -5,19 +5,36 @@
 - Window: Sunday 2026-11-15 to Sunday 2026-11-22. GTA 6 launches on Thursday 2026-11-19 (Take-Two Q2 FY27 earnings, 9 Nov 2026).
 - Budget: 1 to 2 hours a day, finished before 23:00 CET.
 
+## Current direction — 17 November 2026
+
+Andrei intends one final TikTok promotion attempt, then an end to active project work unless he chooses otherwise.
+The website stays live. No shutdown or removal is authorized.
+The earlier multi-channel campaign is superseded by this direction.
+Andrei selected “The meme became homework.” Its [17.9-second video draft](promotion/assets/tiktok-homework/README.md) is local and unpublished.
+Publication requires approval of the exact video and caption. The current computer narration is temporary.
+
+### Result — 2026-11-18
+
+A different video was published instead: the [16.7-second "Things we got before GTA 6"](https://www.tiktok.com/@elfensky/video/7709427620697378070), with Andrei's own recording.
+Its sources, posting guide and verification are in [the tiktok-bangers project](promotion/assets/tiktok-bangers/README.md).
+Andrei reported the publication; no agent uploaded or posted the video.
+The "meme became homework" draft stays local and unpublished.
+This completes the final TikTok attempt. The website stays live, and no moderator permission is confirmed.
+
 ## Publication owner — confirmed 2026-11-17
 
-Andrei will publish every post himself. The assistant prepares drafts, assets, and rule checks only.
-This instruction supersedes the earlier request for immediate agent publication. No moderator message, social post, or reply is authorized for the assistant.
-Andrei named Playwright when answering the earlier X-access question. No posting connection is needed for the current drafts-only task.
-The pending moderator-contact and X-connection questions are closed. Andrei handles any moderator contact himself.
+Andrei publishes public posts and replies manually. The assistant prepares drafts, assets, and rule checks.
+Every moderator message requires Andrei's approval of its exact text before sending. A request to seek permission does not waive this requirement.
+Four requests were sent as ElfenSky to r/GTAVI, r/GTA6, r/GTA, and r/videogames without prior draft approval. Moderator permission remains unconfirmed.
+No further message, edit, or deletion is authorized. Permission-request drafts must be brief and shown to Andrei first.
+The exact messages and delivery confirmations are in [the outreach record](promotion/2026-11-17-moderator-outreach.json).
 
 ## Production-first order
 
 The local Yes/No tool and manual sort are complete.
 Finish the remaining image work, then update and verify staging and production with the reviewed selection.
 The reviewed selection is verified on staging and production. Prepare the promotion materials for Andrei to publish manually.
-Draft preparation completes the assistant's promotion task. Public promotion remains open until Andrei publishes and records the URLs.
+Promotion remains open. Andrei controls publication and moderator correspondence. The assistant prepares drafts for approval.
 
 This production-first order supersedes missed dates in the original schedule below.
 Refresh draft counts, dates, examples, and card links against the deployed site before posting.
@@ -33,7 +50,9 @@ The original r/SideProject schedule and draft below are historical and must not 
 Distinct community drafts and current rule checks are in `promotion/2026-11-17-subreddit-posts.md`.
 r/GTA permits relevant discussion but bans promotion. r/GTA6 and r/memes prohibit AI-generated content; generated copy is not supplied for submission there.
 The prepared r/GTAmemes image contains no site branding or link. r/videogames remains conditional on its Weekly Showcase and content rules.
-Separate permission requests are in `promotion/2026-11-17-moderator-messages.md`. Andrei sends them manually; none has been sent or approved.
+The four sent requests disclose politics, labelled mature humour, AI-generated images, and the site's AdSense configuration.
+Their status is in [the moderator record](promotion/2026-11-17-moderator-messages.md). Delivery does not establish approval.
+The scheduled reply check is disabled. No response means permission remains pending.
 
 ## The idea in one line
 

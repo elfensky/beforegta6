@@ -38,6 +38,8 @@ Deployment branches remain writable by CI. Never add the source-branch PR requir
 
 ## This repo's own rules
 
+- **Moderator messages need exact-draft approval** (Andrei, 2026-11-17). An agent sends a moderator message only after Andrei approves its exact text. Approval to prepare a draft, or to seek permission, is insufficient. Public posts and replies stay Andrei's own work.
+
 - **Documented exceptions** (Andrei, 2026-11-13):
   - The AdSense script loads from Google's servers. This goes against the no-CDN rule.
   - AdSense is a US service. This goes against the EU-first preference.

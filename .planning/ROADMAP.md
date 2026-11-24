@@ -10,19 +10,23 @@ This repo owns this plan. Phase structure follows Andrei's own frame (2026-11-15
 
 ## Current execution order
 
+Latest direction, 18 November: the final TikTok attempt is complete. Andrei published the [16.7-second video](https://www.tiktok.com/@elfensky/video/7709427620697378070) on 2026-11-18 and reported it himself.
+Keep the website live. The “meme became homework” draft stays unpublished. The older promotion calendar is superseded.
+Active project work stops unless Andrei decides otherwise.
+
 Andrei confirmed these three goals and their order on 2026-11-17. This order takes priority over the original calendar below.
 
 | Order | Goal | State and completion condition |
 |---|---|---|
 | 1 | Create the local Tinder-like Yes/No tool and sort the items. | **Done.** The tool and manual sort are complete. Choices and notes are saved. |
 | 2 | Update staging and production with the completed selection. | **Done.** All 46 images are complete. PRs #29 and #30 are merged. Both environments match all 206 selected pages, 192 card rows, and 18 milestones. |
-| 3 | Prepare distinct promotion drafts; Andrei publishes them manually. | **Publication started.** The [X post](https://x.com/elfensky/status/2122730891772391740) is verified on 17 November. Further posts remain manual. The removed r/gaming post must not be repeated. r/SideProject is excluded. |
+| 3 | Prepare promotion drafts, obtain moderator approval, and support Andrei's manual publication. | **In progress.** The [X post](https://x.com/elfensky/status/2122730891772391740) is verified. Requests to r/GTAVI, r/GTA6, r/GTA, and r/videogames await approval. The final TikTok video was [published](https://www.tiktok.com/@elfensky/video/7709427620697378070) on 2026-11-18 and reported by Andrei. Further posts remain manual. r/gaming remains closed; r/SideProject is excluded. |
 
 The completed image and release work is in [Finish selected images, release, and prepare promotion](t3-thread://v2/f4c33bd2-f973-45a5-884e-44ab0aedef3d/mcp:launch:eae5b6b0cbce70b768e41fa5f560fd2175f4704879b5437c3a3d89009ea3a91d).
-Andrei's latest instruction replaces agent publication with draft preparation. He will publish everything himself.
+Andrei publishes public posts himself. Every moderator message requires his approval of the exact draft before sending.
 Release evidence belongs with CONT-06 in `.planning/REQUIREMENTS.md`. Posting scope and stop rules remain in `docs/PROMOTION.md`.
 
-**eli14:** The finished album is on the website. The invitations are prepared; Andrei sends them himself.
+**eli14:** The finished album is online. Four noticeboard owners have received permission requests. Their replies determine where Andrei can advertise it.
 
 ## Milestones
 
@@ -122,14 +126,15 @@ Andrei confirmed AdSense remains in review. Approval and dashboard settings rema
 **Success Criteria** (what must be TRUE):
   1. The Cloudflare Cache Rule `HTML at the edge` is applied before the first link post, and the second request to `/` shows `cf-cache-status: HIT`.
   2. Production card pages carry the share button. After the launch moment on 2026-11-19 the title reads "We got all of this before GTA 6." and the line "And we got GTA 6 before The Winds of Winter." shows under it.
-  3. Distinct posts and assets are prepared after production verification. Andrei publishes them manually under the rules in `docs/PROMOTION.md`. Draft preparation completes the assistant task; public promotion still needs post URLs.
+  3. Distinct posts and assets are prepared after production verification. Moderator decisions are recorded for the four requested communities. Andrei publishes permitted posts manually under `docs/PROMOTION.md`; completion needs verified post URLs.
   4. The card `gta5-farewell-drive` is live on 2026-11-18.
   5. On 2026-11-22 Andrei reads Umami referrers per channel, and the AdSense approval state is written down (approved, pending or refused). Phase 6 can close with ADS-03 still open: Google's approval is external.
 **Plans**: TBD
 **Status**: In progress since 2026-11-15. Production serves the share assets and post-launch code, verified 2026-11-16.
 The HTML cache is active. Two production requests returned `cf-cache-status: HIT`.
-The reviewed selection must reach staging and production before the social promotion starts.
-The drafts are prepared. Andrei owns publication and any moderator contact, subject to the channel limits and stop rules.
+The reviewed selection is verified on staging and production. The first X post is verified.
+Four moderator requests were sent without prior draft approval. Moderator permission remains unconfirmed. The scheduled reply check is disabled.
+Andrei owns public publication, subject to the channel limits and stop rules. Promotion remains open.
 The dated card release, launch-day check, and result reading remain pending.
 
 ### Phase 7: Candidate review
@@ -179,7 +184,7 @@ Keeping these records separate lets checks protect source changes while automati
 
 **Execution Order:**
 Phases 1 to 5, 7, and 8 are complete. The reviewed selection is verified on staging and production.
-Promotion drafts are prepared. Andrei publishes manually; the assistant must not send posts or moderator messages.
+Promotion drafts are prepared. Andrei publishes manually. The assistant must obtain approval before sending any moderator message.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|

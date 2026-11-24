@@ -1,12 +1,12 @@
 # Final TikTok: production proposal
 
-Evidence date: 17 November 2026. Publication date: unset.
+Evidence date: 17 November 2026. Publication date: 2026-11-18, reported by Andrei, as “Things we got before GTA 6” ([result](../PROMOTION.md#result--2026-11-18)).
 
 Status: production setup selected. Andrei selected flying cars, blue Texas, and the KitKat heist for the next version.
 Andrei selected Remotion and his recorded voice on 17 November 2026. The edit and script below remain proposals.
 The first video remains a local draft. Andrei approved a fresh production thread to install Remotion and create the second draft.
 No paid service is selected. The final narration will use Andrei's recording.
-The final video and caption require exact approval before publication. The website remains live afterwards.
+Andrei published the finished video and caption on 2026-11-18. The website remains live afterwards.
 
 ## Creative direction
 
