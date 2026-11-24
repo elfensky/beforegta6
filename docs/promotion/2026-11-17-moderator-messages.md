@@ -1,7 +1,27 @@
 # Moderator permission requests
 
-Prepared on 17 November 2026 for Andrei to send manually. No message has been sent and no permission has been granted.
-Each request describes the website rather than assuming permission for a promotional post.
+## Current status — 17 November 2026
+
+Four requests were sent through ElfenSky without Andrei's prior approval of the drafts. Each future message requires explicit draft approval.
+Reddit returned a successful delivery result for each request. All four conversations appear in Reddit Chat.
+No moderator approval is recorded. Public posts remain manual.
+
+| Community | Sent, UTC | Requested permission | Status |
+| --- | --- | --- | --- |
+| r/GTAVI | 17:46:09 | One website link post, with the required format and flair | Awaiting reply |
+| r/GTA6 | 17:48:16 | One website post under the relevance, AI, and promotion rules | Awaiting reply |
+| r/GTA | 17:48:38 | An approved showcase route or a specific exception to the promotion ban | Awaiting reply |
+| r/videogames | 17:48:39 | One Weekly Showcase comment, including destination content and AI-rule clarification | Awaiting reply |
+
+The [outreach record](2026-11-17-moderator-outreach.json) contains the exact sent text and delivery results.
+Each message discloses politics, labelled mature humour, AI-generated images, and the site's AdSense configuration.
+The r/videogames request also asks for the current Showcase thread.
+The scheduled reply check is disabled. No response is not approval.
+Moderator replies must define the permitted destination, format, and relevant content before publication.
+
+## Earlier drafts — not sent verbatim
+
+The drafts below remain historical reference material. No request was sent to r/GTAmemes or r/memes.
 These are AI-assisted correspondence drafts. They do not establish that an AI-generated public submission is permitted.
 The community checks and dated archives are in [the Reddit post pack](2026-11-17-subreddit-posts.md).
 

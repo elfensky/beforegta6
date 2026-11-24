@@ -64,7 +64,7 @@
 - [x] **PROMO-01**: The Cloudflare Cache Rule `HTML at the edge` is active for the apex. Two production requests returned `cf-cache-status: HIT` and `age: 290` on 2026-11-16. Tiered Cache uses Automatic Upper Tiers. Always Online is off. Evidence: `deploy/README.md`, step 8.
 - [x] **PROMO-02**: Production card pages serve the share control and its share-sheet or clipboard script. The control stays hidden without JavaScript. Source: `REQ-card-pages` (share part). Evidence: PR #22 (1ae4c79), release PR #18, and production markup plus script verified on 2026-11-16.
 - [ ] **PROMO-03**: After the launch moment on 2026-11-19, the line "And we got GTA 6 before The Winds of Winter." shows under the title. Source: `REQ-countdown` (second part). Built in PR #22 (1ae4c79) with the e2e test "shows after the launch, with the flipped title". The live check happens on 2026-11-19.
-- [ ] **PROMO-04**: Prepare unique social-media drafts and assets after CONT-06 is verified in production. Andrei publishes every post himself. The assistant sends no posts, replies, or moderator messages. Draft preparation is complete. Manual publication started with the verified [X post](https://x.com/elfensky/status/2122730891772391740) on 17 November 2026. Further promotion remains in progress. Use `docs/PROMOTION.md` for the channels, limits, and stop rules. Source: Andrei's latest clarification, 2026-11-17.
+- [ ] **PROMO-04**: Prepare unique promotion drafts and assets after staging and production are verified. Andrei publishes public posts and replies manually. Every moderator message requires his approval of the exact draft before sending. Four requests were sent without prior draft approval. Moderator permission remains unconfirmed. Manual publication started with the verified [X post](https://x.com/elfensky/status/2122730891772391740) on 17 November and the final TikTok video, [published](https://www.tiktok.com/@elfensky/video/7709427620697378070) on 18 November. Promotion remains open. Use `docs/PROMOTION.md` for the channels, limits, and stop rules. Source: Andrei's latest instruction, 2026-11-17.
 - [ ] **PROMO-05**: On 2026-11-22 Andrei reads Umami referrers per channel and records the result.
 
 ### Candidate review
@@ -135,7 +135,7 @@ Each v1 requirement maps to exactly one phase.
 | PROMO-01 | Phase 6 | Complete (2026-11-16) |
 | PROMO-02 | Phase 6 | Complete (2026-11-16) |
 | PROMO-03 | Phase 6 | In progress (built; live check on 2026-11-19) |
-| PROMO-04 | Phase 6 | Publication started: X post verified on 2026-11-17. Andrei owns further posts. r/gaming remains closed. |
+| PROMO-04 | Phase 6 | In progress: X post verified; final TikTok video published on 2026-11-18; four moderator requests await approval. Andrei owns public posts. r/gaming remains closed. |
 | PROMO-05 | Phase 6 | Pending (2026-11-22) |
 | CONT-05 | Phase 6 | Pending (2026-11-18) |
 | CONT-06 | Phase 6 | Complete (2026-11-17; both environments verified) |
@@ -180,6 +180,6 @@ Every entry of `.planning/intel/requirements.md` maps to at least one requiremen
 
 ---
 *Requirements defined: 2026-11-15*
-*Last updated: 2026-11-17 with verified production (CONT-06) and Andrei's drafts-only instruction for the assistant (PROMO-04).*
+*Last updated: 2026-11-18 with verified production (CONT-06), manual public posting, the published TikTok video, and required draft approval for moderator messages (PROMO-04).*
 
 The media exceptions in `AGENTS.md` permit five specified replacements without documented reuse licences. Their actual copyright status remains recorded.
