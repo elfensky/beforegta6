@@ -6,6 +6,8 @@ export default defineConfig({
   testDir: 'e2e',
   testMatch: 'review.spec.js',
   workers: 1,
+  // A stray test.only would quietly narrow the required check.
+  forbidOnly: !!process.env.CI,
   reporter: process.env.CI ? 'github' : 'list',
   use: { baseURL: `http://127.0.0.1:${port}` },
   webServer: {
